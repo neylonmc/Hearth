@@ -1,10 +1,11 @@
 * {
-    background-image: url("../images/desktop-background.png");
+    background-image: url("../images/desktop.png");
 }
 
 @media (max-width: 480px){
     * {
         background-image: url("../images/mobile-background.png");
+        background-size: stretch;
     }
 }
 
