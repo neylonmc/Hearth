@@ -22,4 +22,14 @@ const usersSchema = new Schema({
 
 const User = mongoose.model("User", usersSchema);
 
+// hashes password before user is created
+User.addHook("beforeCreate", function(user) {
+    user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
+  });
+
+// checks hashed bersus unhashed password
+User.prototype.validPassword = function(password) {
+    return bcrypt.compareSync(password, this.password);
+  };
+
 module.exports = User;
