@@ -1,0 +1,12 @@
+* {
+    background-image: url("../images/desktop-background.png");
+}
+
+@media (max-width: 480px){
+    * {
+        background-image: url("../images/mobile-background.png");
+    }
+}
+
+/* PAGE STYLING */
+/* LOGIN */
