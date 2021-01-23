@@ -3,7 +3,7 @@ module.exports = function(req, res, next) {
         return next();
     }
 
-    return res.redirect("/")
+    return res.redirect("/login")
 };
 
 /////////////may need to change redirect route depending on route and file names///////////////
