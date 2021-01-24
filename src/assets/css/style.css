@@ -18,7 +18,7 @@ h1 {
 /* LOGIN */
 .login-container {
     text-align: center;
-    margin-top: 20%;
+    margin-top: 15%;
     margin-left: 40%;
     max-width: 20rem;
 
@@ -26,7 +26,7 @@ h1 {
 
 .login-header {
     font-size: 600%;
-    
+    text-shadow: 3px 2px rgb(190,42,13, 0.85);
     color: #d9a51f;
     letter-spacing: 1rem;
     margin-bottom: 1.5rem;
