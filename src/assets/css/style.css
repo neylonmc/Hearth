@@ -1,9 +1,9 @@
-* {
+body {
     background-image: url("../images/desktop.png");
 }
 
 @media (max-width: 480px){
-    * {
+    body {
         background-image: url("../images/mobile-background.png");
         background-size: stretch;
     }

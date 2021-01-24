@@ -13,6 +13,7 @@ import Topic from "./pages/Topic";
 import Settings from "./pages/Settings";
 import NoMatch from "./pages/NoMatch";
 import './App.css';
+import 'rsuite/lib/styles/index.less'
 
 function App() {
   return (
