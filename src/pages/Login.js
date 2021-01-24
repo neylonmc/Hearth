@@ -3,7 +3,7 @@ import {
     Row,
     Col,
     Button } from "rsuite";
-import 'rsuite/dist/styles/rsuite-default.css';
+import 'rsuite/dist/styles/rsuite-dark.css';
 
 function Login() {
 
@@ -18,12 +18,22 @@ function Login() {
             </Row>
             <Row> 
                 <Col>
-                    <Button appearance="primary">Login</Button>
+                    <Button 
+                        id="login-buttons" 
+                        className="login-btn"
+                        size="lg" 
+                        appearance="primary"
+                    > Login </Button>
                 </Col>
             </Row>
             <Row> 
                 <Col>
-                    <Button appearance="ghost">Create Account</Button>
+                    <Button 
+                        id="login-buttons" 
+                        className="account-btn"
+                        size="lg" 
+                        appearance="ghost"
+                    > Create Account </Button>
                 </Col>
             </Row>
         </div>

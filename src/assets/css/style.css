@@ -2,12 +2,50 @@ body {
     background-image: url("../images/desktop.png");
 }
 
+h1 {
+    font-family: 'Righteous', cursive;
+}
+
+
+
+/* PAGE STYLING -------------------------------------- */
+/* LOGIN */
+.login-container {
+    text-align: right;
+    margin-top: 20%;
+    margin-right: 25%;
+}
+
+.login-header {
+    font-size: 600%;
+    color: #d9a51f;
+    text-shadow: 2px 2px #62130a;
+    margin-bottom: 2rem;
+}
+
+.login-btn {
+    background-color: #62130a;
+}
+
+.account-btn {
+    border-color: #62130a;
+    color: #62130a;
+}
+
+#login-buttons {
+    margin: 0.5rem;
+    font-weight: 800;
+}
+
+
+/* MOBILE VERSION ----------------------------------- */
 @media (max-width: 480px){
+
     body {
         background-image: url("../images/mobile-background.png");
         background-size: stretch;
     }
-}
 
-/* PAGE STYLING */
-/* LOGIN */
+
+
+}
