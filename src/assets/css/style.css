@@ -1,0 +1,70 @@
+body {
+    background-image: url("../images/desktop.png");
+}
+
+body:before {
+    content: "";
+    position: absolute;
+    left: 0; right: 0;
+    top: 0; bottom: 0;
+    background: rgba(98,19,10, 0.25);
+}
+
+h1 {
+    font-family: 'Righteous', cursive;
+}
+
+/* PAGE STYLING -------------------------------------- */
+/* LOGIN */
+.login-container {
+    text-align: center;
+    margin-top: 20%;
+    margin-left: 40%;
+    max-width: 20rem;
+
+}
+
+.login-header {
+    font-size: 600%;
+    
+    color: #d9a51f;
+    letter-spacing: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.login-btn {
+    background-color: rgb(190,42,13, 0.95);
+}
+
+.account-btn {
+    background-color: rgb(190,42,13, 0.6);
+    border: 0.1rem solid #be2a0d;
+    color: #fff;
+}
+
+#login-buttons {
+    margin: 0.2rem 0rem;
+}
+
+/* MOBILE VERSION ----------------------------------- */
+@media (max-width: 480px){
+
+    body {
+        background-image: url("../images/mobile-background.png");
+        background-size: stretch;
+    }
+
+    .login-container {
+        margin-left: 19%;
+        padding-top: 51%;
+        max-width: 15rem;
+    }
+
+    .login-header {
+        font-size: 500%;
+        opacity: 0.85;
+        margin-bottom: 0.3rem;
+        letter-spacing: 0.35rem;
+    }
+
+}
