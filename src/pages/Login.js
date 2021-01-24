@@ -9,7 +9,6 @@ function Login() {
 
 
     return (
-        
         <div className="login-container">
             <Row> 
                 <Col>
@@ -23,6 +22,7 @@ function Login() {
                         className="login-btn"
                         size="lg" 
                         appearance="primary"
+                        block
                     > Login </Button>
                 </Col>
             </Row>
@@ -32,7 +32,7 @@ function Login() {
                         id="login-buttons" 
                         className="account-btn"
                         size="lg" 
-                        appearance="ghost"
+                        block
                     > Create Account </Button>
                 </Col>
             </Row>
