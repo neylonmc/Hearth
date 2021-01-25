@@ -17,7 +17,8 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "rsuite": "^5.0.0-alpha.3",
-    "web-vitals": "^0.2.4"
+    "web-vitals": "^0.2.4",
+    "webkit": "^0.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
