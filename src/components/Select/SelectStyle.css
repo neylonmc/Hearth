@@ -1,0 +1,32 @@
+.flex-container {
+  position: absolute;
+  top: 40%;
+  margin-top: -50px;
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.select-item {
+  font-family: "Raleway", cursive;
+  color: #62130a;
+  font-size: 30px;
+  text-align: center;
+  background-color: #d9a51f;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.title-item {
+  font-family: "Spicy Rice", cursive;
+  color: #d9a51f;
+  font-size: 40px;
+  text-align: center;
+  background-color: #62130a;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.dashboard-panel {
+  font-family: "Raleway", cursive;
+}

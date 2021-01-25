@@ -1,0 +1,20 @@
+.flex {
+  position: absolute;
+  top: 15%;
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.checkboxList {
+  background-color: "#C3C49E";
+  text-align: center;
+  color: #c3c49e;
+  font-family: "Raleway", cursive;
+  font-size: "25px";
+  border-radius: 10px;
+}
+
+.title-item {
+  font-family: "Raleway", cursive;
+}

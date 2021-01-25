@@ -1,0 +1,23 @@
+.flex-dashboard {
+  position: absolute;
+  top: 15%;
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.dashboard-title {
+  font-family: "Raleway", cursive;
+  color: #d9a51f;
+  font-size: 40px;
+  text-align: center;
+  background-color: #62130a;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.panel-item {
+  background-color: #c3c49e;
+  font-family: "Raleway", cursive;
+  color: #62130a;
+}
