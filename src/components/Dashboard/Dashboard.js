@@ -11,7 +11,7 @@ export class Dashboard extends Component {
   render() {
     return (
       <div className="flex-dashboard">
-        <h1 className="dashboard-title">dashboard</h1>
+        <h1 className="dashboard-title">Dashboard</h1>
         <div className="dashboard-cards">
           <Panel
             shaded
@@ -24,7 +24,7 @@ export class Dashboard extends Component {
               alt="movie"
               style={{ width: "100%", height: "300px" }}
             />
-            <Panel header="top movie" className="panel-item">
+            <Panel header="Top Movie" className="panel-item">
               <p>
                 <small>Top movie from users. maybe show rating</small>
               </p>
@@ -42,7 +42,7 @@ export class Dashboard extends Component {
               style={{ width: "100%", height: "300px" }}
               alt="book"
             />
-            <Panel header="top book" className="panel-item">
+            <Panel header="Top Book" className="panel-item">
               <p>
                 <small>Top book from users. maybe show rating</small>
               </p>
@@ -60,7 +60,7 @@ export class Dashboard extends Component {
               alt="movie"
               style={{ width: "100%", height: "300px" }}
             />
-            <Panel header="top televison" className="panel-item">
+            <Panel header="Top Televison" className="panel-item">
               <p>
                 <small>Top artist from users. maybe show rating</small>
               </p>
@@ -78,7 +78,7 @@ export class Dashboard extends Component {
               alt="music"
               style={{ width: "100%", height: "300px" }}
             />
-            <Panel header="top music" className="panel-item">
+            <Panel header="Top Music" className="panel-item">
               <p>
                 <small>Top television from users. maybe show rating</small>
               </p>

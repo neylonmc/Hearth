@@ -10,20 +10,20 @@ const Select = () => {
       <ButtonToolbar className="button">
         <Button
           className="select-button"
-          block
           style={{
-            backgroundColor: "#c3c49e",
+            backgroundColor: "#dcddc7",
             fontFamily: "Raleway",
             color: "#62130A",
             fontSize: "20px",
           }}
+          block
         >
           Books
         </Button>
         <Button
           className="select-button"
           style={{
-            backgroundColor: "#c3c49e",
+            backgroundColor: "#dcddc7",
             fontFamily: "Raleway",
             color: "#62130A",
             fontSize: "20px",
@@ -35,7 +35,7 @@ const Select = () => {
         <Button
           className="select-button"
           style={{
-            backgroundColor: "#c3c49e",
+            backgroundColor: "#dcddc7",
             fontFamily: "Raleway",
             color: "#62130A",
             fontSize: "20px",
@@ -47,10 +47,10 @@ const Select = () => {
         <Button
           className="select-button"
           style={{
-            backgroundColor: "#c3c49e",
+            backgroundColor: "#dcddc7",
             fontFamily: "Raleway",
-            fontSize: "20px",
             color: "#62130A",
+            fontSize: "20px",
           }}
           block
         >

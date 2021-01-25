@@ -12,104 +12,26 @@ const Header = ({ onSelect, activeKey }) => {
       </Navbar.Header>
       <Navbar.Body>
         <Nav onSelect={onSelect} activeKey={activeKey} pullRight>
-          <Nav.Item
-            eventKey="1"
-            style={{
-              fontFamily: "Spicy Rice",
-              fontSize: "20px",
-            }}
-          >
+          <Nav.Item eventKey="1" className="nav-links">
             <Link to="/dashboard" style={{ color: "#d9a51f" }}>
               Dashboard
             </Link>
           </Nav.Item>
-          <Nav.Item
-            eventKey="2"
-            style={{
-              fontFamily: "Spicy Rice",
-              color: "#c3c49e",
-              fontSize: "20px",
-            }}
-          >
+          <Nav.Item eventKey="2" className="nav-links">
             <Link to="/select" style={{ color: "#d9a51f" }}>
               Select
             </Link>
           </Nav.Item>
-          <Nav.Item
-            eventKey="3"
-            style={{
-              fontFamily: "Spicy Rice",
-              color: "#c3c49e",
-              fontSize: "20px",
-            }}
-          >
+          <Nav.Item eventKey="3" className="nav-links">
             <Link to="/createnew" style={{ color: "#d9a51f" }}>
               Create New
             </Link>
           </Nav.Item>
-          <Nav.Item
-            eventKey="4"
-            style={{
-              fontFamily: "Spicy Rice",
-              color: "#c3c49e",
-              fontSize: "20px",
-            }}
-          >
+          <Nav.Item eventKey="4" className="nav-links">
             <Link to="/login" style={{ color: "#d9a51f" }}>
               Login
             </Link>
           </Nav.Item>
-
-          {/* <Dropdown
-            title="Interest"
-            style={{
-              backgroundColor: "#62130A",
-              fontFamily: "Spicy Rice",
-              color: "#62130A",
-              fontSize: "20px",
-            }}
-          >
-            <Dropdown.Item
-              eventKey="4"
-              style={{
-                fontFamily: "Spicy Rice",
-                color: "#c3c49e",
-                fontSize: "20px",
-              }}
-            >
-              Movies
-            </Dropdown.Item>
-            <Dropdown.Item
-              eventKey="5"
-              style={{
-                fontFamily: "Spicy Rice",
-                color: "#c3c49e",
-                fontSize: "20px",
-              }}
-            >
-              Television
-            </Dropdown.Item>
-            <Dropdown.Item
-              eventKey="6"
-              style={{
-                fontFamily: "Spicy Rice",
-                color: "#c3c49e",
-                fontSize: "20px",
-              }}
-            >
-              Books
-            </Dropdown.Item>
-            <Dropdown.Item
-              eventKey="6"
-              style={{
-                fontFamily: "Spicy Rice",
-                color: "#c3c49e",
-                fontSize: "20px",
-              }}
-            >
-              Music
-            </Dropdown.Item>
-          </Dropdown> */}
         </Nav>
       </Navbar.Body>
     </Navbar>

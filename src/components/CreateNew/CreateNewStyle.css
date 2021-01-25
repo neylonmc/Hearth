@@ -7,14 +7,24 @@
 }
 
 .checkboxList {
-  background-color: "#C3C49E";
+  background-color: #dcddc7;
   text-align: center;
-  color: #c3c49e;
+  color: #62130a;
   font-family: "Raleway", cursive;
   font-size: "25px";
   border-radius: 10px;
+  margin-top: 10px;
+}
+
+.review-header {
+  font-family: "Raleway", cursive;
 }
 
 .title-item {
-  font-family: "Raleway", cursive;
+  font-family: "Righteous", cursive;
+  text-shadow: 3px 2px rgb(190, 42, 13, 0.85);
+  color: #62130a;
+  text-align: center;
+  background-color: #d9a51f;
+  border-radius: 10px;
 }
