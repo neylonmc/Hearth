@@ -6,11 +6,19 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.3",
     "@testing-library/user-event": "^12.6.2",
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.13",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "rsuite": "^5.0.0-alpha.3",
-    "web-vitals": "^0.2.4"
+    "web-vitals": "^0.2.4",
+    "webkit": "^0.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
