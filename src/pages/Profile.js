@@ -5,7 +5,6 @@ import {
     Button 
 } from "rsuite";
 import 'rsuite/dist/styles/rsuite-dark.css';
-// import Nav rom "../components/Nav";
 // import UserInterests from "../components/UserInterests";
 // import UserActivity from "../components/UserActivity";
 
@@ -13,23 +12,25 @@ function Profile(props) {
 
     return(
         <div id="page-container">
-            {/* <Nav /> */}
-            <Row>
-                <Col>
-                    {/* PROFILE PICTURE */}
-                    <img 
-                        className= "profile-picture"
-                        src= { props.avatar_url || "./images/no-avatar.png" }
-                        alt= "selected user's profile photograph"/>
-                </Col>
-            </Row>
+            <div id="page-header">
+                <Row>
+                    <Col>
+                        {/* PROFILE PICTURE */}
+                        <img 
+                            id="page-image"
+                            className= "profile-picture"
+                            src= { props.avatar_url || "./images/no-image.png" }
+                            alt= "page photograph"/>
+                    </Col>
+                </Row>
 
-            <Row>
-                <Col>
-                    {/* USERNAME */}
-                    <h1 className="username">{ props.username || "username" }</h1>
-                </Col>
-            </Row>
+                <Row>
+                    <Col>
+                        {/* USERNAME */}
+                        <h1 id="page-title" className="username">{ props.username || "username" }</h1>
+                    </Col>
+                </Row>
+            </div>
 
             {/* NOW STREAMING */}
             <Row className="user-now-streaming">
@@ -54,7 +55,7 @@ function Profile(props) {
             </Row>
 
             {/* USER INTERESTS */}
-            <Row id="page-block" className="usr-int-container">
+            <Row id="page-block-1" className="usr-int-container">
                 <Row>
                     <Col xs={20}>
                         <h2 id="block-header">user interests</h2>
@@ -73,7 +74,7 @@ function Profile(props) {
                 </Row>
             </Row>
 
-            <Row id="page-block" className="usr-act-container">
+            <Row id="page-block-2" className="usr-act-container">
                 <Row>
                     <Col xs={24}>
                         <h2 id="block-header">user activity</h2>
