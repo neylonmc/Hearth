@@ -14,7 +14,7 @@ function Profile(props) {
         <div id="page-container">
             <div id="page-header">
                 <Row>
-                    <Col>
+                    <Col id="page-image-cont">
                         {/* PROFILE PICTURE */}
                         <img 
                             id="page-image"
@@ -63,7 +63,7 @@ function Profile(props) {
                     <Col xs={4}>
                         <Button
                             className="edit-usr-int-btn"
-                            size="sm"
+                            size="lg"
                             appearance= "subtle"
                         > edit </Button>
                     </Col>
