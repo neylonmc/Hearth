@@ -8,14 +8,9 @@
   background-color: #dcddc7;
   text-align: center;
   color: #62130a;
-  font-family: "Raleway", cursive;
   font-size: "25px";
   border-radius: 10px;
   margin-top: 10px;
-}
-
-.review-header {
-  font-family: "Raleway", cursive;
 }
 
 .title-item {
@@ -33,7 +28,6 @@
   border-radius: 10px;
   padding: 5px;
   background-color: #dcddc7 !important;
-  font-family: "Raleway", cursive;
   font-size: 15px;
 }
 

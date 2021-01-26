@@ -8,28 +8,30 @@ const Header = ({ onSelect, activeKey }) => {
   return (
     <Navbar className="navContainer" style={{ width: "100%", backgroundColor: "transparent" }}>
       <Navbar.Header>
-        <div className="title">hearth</div>
+        <Link className="title" to="/">
+              hearth
+        </Link>
       </Navbar.Header>
       <Navbar.Body>
         <Nav onSelect={onSelect} activeKey={activeKey} pullRight>
-          <Nav.Item eventKey="1" className="nav-links">
-            <Link to="/dashboard" style={{ color: "#d9a51f" }}>
-              Dashboard
+          <Nav.Item eventKey="1">
+            <Link id="nav-links" to="/dashboard">
+              dashboard
             </Link>
           </Nav.Item>
-          <Nav.Item eventKey="2" className="nav-links">
-            <Link to="/select" style={{ color: "#d9a51f" }}>
-              Select
+          <Nav.Item eventKey="2">
+            <Link id="nav-links" to="/select">
+              select
             </Link>
           </Nav.Item>
-          <Nav.Item eventKey="3" className="nav-links">
-            <Link to="/createnew" style={{ color: "#d9a51f" }}>
-              Create New
+          <Nav.Item eventKey="3">
+            <Link id="nav-links" to="/createnew">
+              create new
             </Link>
           </Nav.Item>
-          <Nav.Item eventKey="4" className="nav-links">
-            <Link to="/login" style={{ color: "#d9a51f" }}>
-              Login
+          <Nav.Item eventKey="4">
+            <Link id="nav-links" to="/login">
+              login
             </Link>
           </Nav.Item>
         </Nav>
@@ -37,6 +39,7 @@ const Header = ({ onSelect, activeKey }) => {
     </Navbar>
   );
 };
+
 
 //   return (
 //     <Navbar className="nav-toggle" style={{ height: "100%" }}>
