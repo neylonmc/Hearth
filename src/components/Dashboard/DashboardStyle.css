@@ -1,0 +1,44 @@
+.flex-dashboard {
+  position: absolute;
+  top: 15%;
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.dashboard-title {
+  text-align: center;
+  background-color: #d9a51f;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-family: "Righteous", cursive;
+  text-shadow: 3px 2px rgb(190, 42, 13, 0.85);
+  color: #62130a;
+}
+
+.panel-item {
+  background-color: #dcddc7;
+  font-family: "Raleway", cursive;
+  color: #62130a;
+}
+
+.dashboard-cards {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 480px) {
+  .flex-dashboard {
+    width: fit-content;
+    padding-top: 8px;
+  }
+  .panel-item,
+  .dashboard-title {
+    opacity: 0.85;
+    margin-bottom: 0.3rem;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
