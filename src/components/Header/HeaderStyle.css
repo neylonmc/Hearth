@@ -1,0 +1,29 @@
+.title {
+  font-family: 'Dosis', sans-serif;
+  font-size: 35px;
+  text-align: center;
+  padding-top: 9px;
+  margin-left: 1rem;
+  background: -webkit-linear-gradient(#d9a51f, #be2a0d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.nav-links {
+  font-family: 'Dosis', sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.2rem;
+  color: #d9a51f;
+}
+
+.navContainer {
+  display: none;
+}
+
+@media (max-width: 480px) {
+
+  
+
+}

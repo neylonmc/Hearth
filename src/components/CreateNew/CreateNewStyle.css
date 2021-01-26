@@ -1,0 +1,50 @@
+.flex {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+.checkboxList {
+  background-color: #dcddc7;
+  text-align: center;
+  color: #62130a;
+  font-family: "Raleway", cursive;
+  font-size: "25px";
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.review-header {
+  font-family: "Raleway", cursive;
+}
+
+.title-item {
+  font-family: 'Dosis', sans-serif;
+  text-shadow: 3px 2px rgb(190, 42, 13, 0.85);
+  color: #62130a;
+  text-align: center;
+  background-color: #d9a51f;
+  border-radius: 10px;
+}
+
+.form-style {
+  color: #62130a;
+  margin-top: 10px;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #dcddc7 !important;
+  font-family: "Raleway", cursive;
+  font-size: 15px;
+}
+
+/*-------------------Mobile View --------------*/
+@media (max-width: 480px) {
+  .flex {
+    width: fit-content;
+  }
+  .title-item {
+    opacity: 0.85;
+    margin-bottom: 0.3rem;
+    padding-left: 30px;
+  }
+}

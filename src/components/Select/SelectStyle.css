@@ -1,0 +1,33 @@
+.flex-container {
+  position: absolute;
+  top: 40%;
+  margin-top: -50px;
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.select-item {
+  text-align: center;
+  background-color: #d9a51f;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-family: "Righteous", cursive;
+  text-shadow: 3px 2px rgb(190, 42, 13, 0.85);
+  color: #62130a;
+}
+
+.dashboard-panel {
+  font-family: "Raleway", cursive;
+  background-color: #dcddc7;
+}
+
+@media (max-width: 480px) {
+  .flex-container {
+    width: fit-content;
+  }
+  .select-item {
+    opacity: 0.85;
+    margin-bottom: 0.3rem;
+  }
+}
