@@ -6,7 +6,7 @@ import "./HeaderStyle.css";
 
 const Header = ({ onSelect, activeKey }) => {
   return (
-    <Navbar style={{ width: "100%", backgroundColor: "#62130A" }}>
+    <Navbar className="navContainer" style={{ width: "100%", backgroundColor: "transparent" }}>
       <Navbar.Header>
         <div className="title">hearth</div>
       </Navbar.Header>

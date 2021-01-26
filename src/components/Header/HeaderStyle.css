@@ -1,18 +1,29 @@
 .title {
-  font-family: "Righteous", cursive;
+  font-family: 'Dosis', sans-serif;
   font-size: 35px;
   text-align: center;
   padding-top: 9px;
-  margin-left: 5px;
-  text-shadow: 3px 2px rgb(190, 42, 13, 0.85);
-  color: #d9a51f;
-  letter-spacing: 1rem;
+  margin-left: 1rem;
+  background: -webkit-linear-gradient(#d9a51f, #be2a0d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.8rem;
   margin-bottom: 1.5rem;
 }
 
 .nav-links {
-  font-family: "Righteous", cursive;
+  font-family: 'Dosis', sans-serif;
   font-size: 20px;
-  /* text-shadow: 3px 2px rgb(190, 42, 13, 0.85); */
+  letter-spacing: 0.2rem;
   color: #d9a51f;
+}
+
+.navContainer {
+  display: none;
+}
+
+@media (max-width: 480px) {
+
+  
+
 }
