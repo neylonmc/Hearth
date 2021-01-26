@@ -1,14 +1,17 @@
 body {
   background-image: linear-gradient(-45deg, #d9a51f, #d95515, #be2a0d, #62130a);
-  background-size: 100% 250%;
+  background-size: 100% 200%;
+  font-family: 'Dosis', sans-serif;
+  color: #dee2e6;
 }
 
 h1 {
-  font-family: 'Dosis', sans-serif;
+  background: -webkit-linear-gradient(#d9a51f, #be2a0d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-/* PAGE STYLING -------------------------------------- */
-/* LOGIN */
+/* LOGIN PAGE ------------------------------------------------------ */
 .login-container {
   text-align: center;
   margin-top: 15%;
@@ -18,9 +21,6 @@ h1 {
 
 .login-header {
   font-size: 500%;
-  background: -webkit-linear-gradient(#d9a51f, #be2a0d);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   font-weight: 300;
   text-align: center;
   letter-spacing: 2rem;
@@ -41,50 +41,55 @@ h1 {
   margin: 0.2rem 0rem;
 }
 
-/* PROFILE/TOPIC PAGES */
+/* PROFILE/TOPIC PAGES ------------------------------------------------ */
 #page-container {
-    background-color: rgb(190,42,13, 0.4);
+    max-width: 60rem;
     align-self: center;
-    margin-top: 10%;
+    margin-top: 5%;
     padding: 2rem 5rem;
     border-radius: 2%;
 }
 
+#page-header {
+  text-align: center;
+  margin-bottom: 0.4rem;
+}
+
+#page-image {
+  max-height: 15rem;
+  opacity: 0.95;
+  border-radius: 1%;
+}
+
+#page-title {
+  font-weight: 400;
+  letter-spacing: 0.3rem;
+}
+
 #block-header {
     font-size: 130%;
-    font-weight: 700;
+    font-weight: 500;
     text-align: left;
     margin: 0rem 0.8rem;
     letter-spacing: 0.3rem;
 }
 
-#page-block {
+#page-block-1 {
+    background-color: rgb(190,42,13, 0.5);
     border-radius: 2%;
     padding: 1rem 0.5rem;
     margin: 0.5rem 0rem;
 }
 
-    /* BLOCK ONE  */
-    .usr-int-container {
-        background-color: rgb(190,42,13, 0.8);
-    }
-
-    /* BLOCK TW0  */
-   .usr-act-container {
-        background-color: rgb(98,19,10, 0.8);
-   }
+#page-block-2 {
+  background-color: rgb(98,19,10, 0.5);
+  border-radius: 2%;
+  padding: 1rem 0.5rem;
+  margin: 0.5rem 0rem;
+}
     
 
-/* USER  */
-.profile-picture {
-    max-width: 8rem;
-    border-radius: 50%;
-}
-
-.username {
-    margin-top: -0.5rem;
-}
-
+/* USER PAGE ------------------------------------------------ */
     /* STREAM BUTTONS */
     #usr-stream {
         margin: 0rem 0.5rem;
@@ -106,13 +111,8 @@ h1 {
         animation-play-state: paused;
     }
 
-    /* USER INTERESTS */
-    .edit-usr-int-btn {
-        margin-bottom: -1.8rem;
-        letter-spacing: 0.1rem;
-    }
     
-/* MOBILE VERSION ----------------------------------- */
+/* MOBILE VERSION ----------------------------------------------------------------------------------------------------------------  */
 @media (max-width: 480px) {
  
     /* LOGIN PAGE */
@@ -130,7 +130,7 @@ h1 {
         letter-spacing: 1rem;
     }
 
-    /* PROFILE/TOPIC PAGES */
+    /* PROFILE/TOPIC PAGES ------------------------------------------------ */
     #page-container {
         max-width: 35rem;
         margin-top: 20%;
@@ -145,7 +145,7 @@ h1 {
         font-size: 115%;
     }
 
-    /* PROFILE PAGE */
+    /* PROFILE PAGE ------------------------------------------------ */
     #usr-stream {
         width: 8rem;
     }
@@ -157,7 +157,7 @@ h1 {
 
 }
 
-/* ANIMATIONS */
+/* ANIMATIONS ------------------------------------------------ */
 
 @keyframes floatText {
     to {
