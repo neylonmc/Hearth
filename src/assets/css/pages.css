@@ -1,6 +1,6 @@
 body {
   background-image: linear-gradient(-45deg, #d9a51f, #d95515, #be2a0d, #62130a);
-  background-size: 100% 280%;
+  background-size: 100% 250%;
 }
 
 h1 {
@@ -12,8 +12,8 @@ h1 {
 .login-container {
   text-align: center;
   margin-top: 15%;
-  margin-left: 40%;
-  max-width: 20rem;
+  margin-left: 38%;
+  max-width: 27rem;
 }
 
 .login-header {
