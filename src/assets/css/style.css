@@ -9,7 +9,7 @@ body:before {
   right: 0;
   top: 0;
   bottom: 0;
-  background: rgba(98, 19, 10, 0.25);
+  /* background: rgba(98, 19, 10, 0.25); */
 }
 
 h1 {

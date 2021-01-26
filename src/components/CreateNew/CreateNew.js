@@ -1,115 +1,65 @@
 import React from "react";
 import {
-  Checkbox,
-  CheckboxGroup,
-  Whisper,
-  Tooltip,
-  Input,
-  Rate,
+  Form,
+  FormGroup,
+  FormControl,
+  ControlLabel,
+  HelpBlock,
+  ButtonToolbar,
   Button,
+  Radio,
+  RadioGroup,
+  Rate,
   SelectPicker,
 } from "rsuite";
 import "rsuite/lib/styles/index.less";
 import "./CreateNewStyle.css";
-import selection from "../../pages/Selection";
+import selections from "../../pages/Genre";
 
 const CreateNew = () => {
   return (
     <div className="flex">
-      <h1 className="title-item">Create New Review</h1>
+      <h1 className="title-item" style={{ backgroundColor: "#d9a51f" }}>
+        Create New Review
+      </h1>
 
-      <div className="checkbox">
-        <CheckboxGroup inline className="checkboxList">
-          <h2 className="review-header">What type of entertainment?</h2>
-          <Checkbox>Book</Checkbox>
-          <Checkbox>Movie</Checkbox>
-          <Checkbox>Television</Checkbox>
-          <Checkbox>Music</Checkbox>
-        </CheckboxGroup>
-
-        <div className="checkboxList">
-          <h2 className="review-header">What type of genre?</h2>
-          <div>
-            <SelectPicker data={selection} />
-          </div>
-        </div>
-
-        <div className="checkboxList">
-          <h2 className="review-header">
-            Please enter a title.
-            <Whisper trigger="focus" speaker={<Tooltip>Required</Tooltip>}>
-              <Input
-                style={{
-                  width: 300,
-                  backgroundColor: "fbfef9",
-                  fontFamily: "Raleway",
-                  color: "#62130A",
-                  display: "block",
-                  marginLeft: "auto",
-                  marginRight: "auto",
-                  paddingBottom: "5px",
-                }}
-                placeholder="Please enter a title."
-              />
-            </Whisper>
-          </h2>
-        </div>
-
-        <div className="checkboxList">
-          <h2 className="review-header">
-            Select your rating
-            <Rate
-              defaultValue={2.5}
-              allowHalf
-              style={{
-                backgroundColor: "#DCDDC7",
-                color: "#62130A",
-                display: "block",
-                marginLeft: "auto",
-                marginRight: "auto",
-                textAlign: "center",
-                borderRadius: "10px",
-              }}
-            />
-          </h2>
-        </div>
-
-        <div className="checkboxList">
-          <h2 className="review-header">
-            Please type a review if you'd like!
-            <Input
-              componentClass="textarea"
-              rows={3}
-              placeholder="Add a review."
-              style={{
-                marginTop: "10px",
-                fontFamily: "Raleway",
-                fontSize: "15px",
-                color: "#62130A",
-                backgroundColor: "rgb(251, 254, 249, .8)",
-              }}
-            />
-          </h2>
-        </div>
-
-        <Button
-          type="submit"
-          className="sumbit-button"
-          style={{
-            marginTop: "10px",
-            fontFamily: "Righteous",
-            fontSize: "20px",
-            color: "#62130a",
-            backgroundColor: "#d9a51f",
-            display: "block",
-            marginLeft: "auto",
-            marginRight: "auto",
-            textAlign: "center",
-          }}
-        >
-          Submit
-        </Button>
-      </div>
+      <Form fluid className="form-style">
+        <FormGroup controlId="radioList">
+          <ControlLabel>What Would You Like To Review?</ControlLabel>
+          <RadioGroup name="radioList" inline>
+            <Radio value="A">Movie</Radio>
+            <Radio value="B">Tv</Radio>
+            <Radio value="C">Book</Radio>
+            <Radio value="D">Music</Radio>
+          </RadioGroup>
+        </FormGroup>
+        <FormGroup>
+          <ControlLabel>Please Enter the Title</ControlLabel>
+          <FormControl name="title" type="input" className="form-title" />
+          <HelpBlock>Required</HelpBlock>
+        </FormGroup>
+        <FormGroup>
+          <ControlLabel>Please Select You Rating</ControlLabel>
+          <Rate defaultValue={2.5} allowHalf style={{ color: "#62130a" }} />
+        </FormGroup>
+        <FormGroup>
+          <ControlLabel>Please Select a Genre</ControlLabel>
+          <SelectPicker
+            data={selections}
+            style={{ width: 224, marginBottom: "10px" }}
+          />
+          <ControlLabel>Leave A Review!</ControlLabel>
+          <FormControl rows={3} name="textarea" componentClass="textarea" />
+        </FormGroup>
+        <FormGroup>
+          <ButtonToolbar>
+            <Button style={{ backgroundColor: "#62130a", color: "#d9a51f" }}>
+              Submit
+            </Button>
+            <Button appearance="default">Cancel</Button>
+          </ButtonToolbar>
+        </FormGroup>
+      </Form>
     </div>
   );
 };

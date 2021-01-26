@@ -13,6 +13,6 @@
 .nav-links {
   font-family: "Righteous", cursive;
   font-size: 20px;
-  text-shadow: 3px 2px rgb(190, 42, 13, 0.85);
+  /* text-shadow: 3px 2px rgb(190, 42, 13, 0.85); */
   color: #d9a51f;
 }

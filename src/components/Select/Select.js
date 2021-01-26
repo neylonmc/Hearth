@@ -1,5 +1,6 @@
 import React from "react";
 import { ButtonToolbar, Button } from "rsuite";
+import { Link } from "react-router-dom";
 import "rsuite/lib/styles/index.less";
 import "./SelectStyle.css";
 
@@ -55,6 +56,20 @@ const Select = () => {
           block
         >
           Music
+        </Button>
+        <Button
+          style={{
+            backgroundColor: "#dcddc7",
+            fontFamily: "Raleway",
+            color: "#62130A",
+            fontSize: "20px",
+          }}
+          block
+        >
+          <Link to="/createnew" style={{ color: "#62130A" }}>
+            {" "}
+            Create New Review
+          </Link>
         </Button>
       </ButtonToolbar>
     </div>

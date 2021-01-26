@@ -23,6 +23,22 @@
 }
 
 .dashboard-cards {
-  /* Center vertically and horizontally */
-  position: relative;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 480px) {
+  .flex-dashboard {
+    width: fit-content;
+    padding-top: 8px;
+  }
+  .panel-item,
+  .dashboard-title {
+    opacity: 0.85;
+    margin-bottom: 0.3rem;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }

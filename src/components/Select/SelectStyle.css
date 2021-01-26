@@ -21,3 +21,13 @@
   font-family: "Raleway", cursive;
   background-color: #dcddc7;
 }
+
+@media (max-width: 480px) {
+  .flex-container {
+    width: fit-content;
+  }
+  .select-item {
+    opacity: 0.85;
+    margin-bottom: 0.3rem;
+  }
+}
