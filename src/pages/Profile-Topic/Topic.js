@@ -4,6 +4,7 @@ import {
     Col
 } from "rsuite";
 import 'rsuite/dist/styles/rsuite-dark.css';
+import "./Profile-Topic.css";
 // import TopicInfo from "../components/TopicInfo";
 // import TopicActivity from "../components/TopicActivity";
 

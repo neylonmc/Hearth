@@ -1,6 +1,7 @@
 import React from "react";
 import { Row, Col, Button } from "rsuite";
 import "rsuite/dist/styles/rsuite-dark.css";
+import "./Login.css";
 
 function Login() {
   return (

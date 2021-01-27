@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Panel, Button, ButtonToolbar, ButtonGroup } from "rsuite";
 import "rsuite/lib/styles/index.less";
-import "./DashboardStyle.css";
+import "./Dashboard.css";
 import movie from "../assets/images/movieIcon.jpeg";
 import book from "../assets/images/bookIcon.jpg";
 import tv from "../assets/images/tvIcon.jpg";

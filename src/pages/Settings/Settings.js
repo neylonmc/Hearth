@@ -11,6 +11,7 @@ import {
     ButtonToolbar,
     Toggle  
 } from 'rsuite';
+import "./Settings.css";
 
 function Settings() {
 

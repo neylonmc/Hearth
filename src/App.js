@@ -1,17 +1,17 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Container } from "rsuite";
-import Login from "./pages/Login";
+import Login from "./pages/Login/Login";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Select from "./components/Select/Select";
 import CreateNew from "./components/CreateNew/CreateNew";
 import Header from "./components/Header/Header";
-import Profile from "./pages/Profile";
-import Topic from "./pages/Topic";
-import Settings from "./pages/Settings";
-import NoMatch from "./pages/NoMatch";
-import "./App.css";
+import Profile from "./pages/Profile-Topic/Profile";
+import Topic from "./pages/Profile-Topic/Topic";
+import Settings from "./pages/Settings/Settings";
+import NoMatch from "./pages/NoMatch/NoMatch";
 import "rsuite/dist/styles/rsuite-default.css";
+import "./App.css";
 
 function App() {
   return (

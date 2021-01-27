@@ -5,6 +5,7 @@ import {
     Button 
 } from "rsuite";
 import 'rsuite/dist/styles/rsuite-dark.css';
+import "./Profile-Topic.css";
 // import UserInterests from "../components/UserInterests";
 // import UserActivity from "../components/UserActivity";
 
