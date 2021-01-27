@@ -14,7 +14,7 @@ import {
 } from "rsuite";
 import "rsuite/lib/styles/index.less";
 import "./CreateNewStyle.css";
-import selections from "../../pages/Genre";
+import selections from "../../utils/Genre";
 
 const CreateNew = () => {
   return (
