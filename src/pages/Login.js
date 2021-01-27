@@ -18,8 +18,8 @@ function Login() {
             size="lg"
             appearance="primary"
             block
-          >
-            Login
+            onClick={"/login"}
+          >Login
           </Button>
         </Col>
       </Row>
