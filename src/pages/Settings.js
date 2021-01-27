@@ -50,6 +50,7 @@ function Settings() {
                             <FormGroup>
                                 <ButtonToolbar>
                                     <Button 
+                                        id="account-submit"
                                         className="save-new-username"
                                         appearance="primary"
                                     > save new username</Button>
@@ -64,22 +65,23 @@ function Settings() {
                             <FormGroup>
                                 <FormControl 
                                     id="input-form"
-                                    className="new-password" 
-                                    placeholder="new password" 
+                                    className="old-password" 
+                                    placeholder="old password" 
                                     type="password"
                                 />
                             </FormGroup>
                             <FormGroup>
                                 <FormControl 
                                     id="input-form"
-                                    className="verify-password" 
-                                    placeholder="verify password" 
+                                    className="new-password" 
+                                    placeholder="new password" 
                                     type="password"
                                 />
                             </FormGroup>
                             <FormGroup>
                                 <ButtonToolbar>
                                     <Button 
+                                        id="account-submit"
                                         className="save-new-password"
                                         appearance="primary"
                                     > save new password</Button>
@@ -99,7 +101,7 @@ function Settings() {
             >
                 <Panel 
                     id="preference-block"
-                    header="alert preferences"
+                    header="mobile alerts"
                 >
                     <Row>
                         <Col xs={20}><h4 id="preference-label">
@@ -139,7 +141,7 @@ function Settings() {
                 <Panel 
                     id="preference-block" 
                     className="notification-container"
-                    header="notification preferences"
+                    header="email notifications"
                 >
                     <Row>
                         <Col xs={20}><h4 id="preference-label">
