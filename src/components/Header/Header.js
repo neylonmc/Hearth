@@ -6,10 +6,13 @@ import "./HeaderStyle.css";
 
 const Header = ({ onSelect, activeKey }) => {
   return (
-    <Navbar className="navContainer" style={{ width: "100%", backgroundColor: "transparent" }}>
+    <Navbar
+      className="navContainer"
+      style={{ width: "100%", backgroundColor: "transparent" }}
+    >
       <Navbar.Header>
         <Link className="title" to="/">
-              hearth
+          hearth
         </Link>
       </Navbar.Header>
       <Navbar.Body>
@@ -34,12 +37,16 @@ const Header = ({ onSelect, activeKey }) => {
               login
             </Link>
           </Nav.Item>
+          <Nav.Item eventKey="5">
+            <Link id="nav-links" to="/settings">
+              settings
+            </Link>
+          </Nav.Item>
         </Nav>
       </Navbar.Body>
     </Navbar>
   );
 };
-
 
 //   return (
 //     <Navbar className="nav-toggle" style={{ height: "100%" }}>
