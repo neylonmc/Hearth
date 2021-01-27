@@ -99,7 +99,6 @@ h1 {
   margin: 0.5rem 0rem;
 }
     
-
 /* USER PAGE ------------------------------------------------ */
     /* STREAM BUTTONS */
     #usr-stream {
@@ -122,12 +121,59 @@ h1 {
         animation-play-state: paused;
     }
 
+
+/* SETTINGS PAGE -------------------------------------------------- */
+.settings-container {
+  text-align: center;
+  margin: 0rem 20rem;
+  padding-top: 5%;
+  min-width: 35rem;
+  overflow: scroll;
+}
+
+.settings-header {
+  font-weight: 300;
+  letter-spacing: 1.5rem;
+}
+
+#settings-block {
+  margin: 0.5rem 0rem 1rem 0rem;
+  padding: 1rem 0rem;
+}
+
+  /* ACCOUNT SETTINGS */
+  .acct-set-container {
+    background-color: rgb(98,19,10, 0.35);
+    border: 1px solid #62130a;
+  }
+
+  #input-form {
+    max-width: 20rem;
+  }
+
+  /* USER PREFERENCES */
+  .usr-pref-container {
+    background-color: rgb(217,85,21, 0.35);
+    border: 1px solid #D95515;
+  }
+
+  #preference-block{
+    margin: -0.5rem 0.5rem;
+    background-color: transparent;
+  }
+
+  #preference-label {
+    text-align: left;
+    font-weight: 400;
+    font-size: 130%;
+  }
+
+
 /* NO MATCHES PAGE ------------------------------------------------ */
 
 .no-match-container {
   text-align: center;
   margin-top: 7%;
-
 };
 
 .no-match-image {
@@ -192,6 +238,13 @@ h1 {
     .edit-usr-int-btn {
         font-size: 90%;
         margin-left: -1rem;
+    }
+
+    /* SETTINGS PAGE -------------------------------------------------- */
+
+    .settings-container {
+      margin: 0rem 1rem;
+
     }
 
 }
