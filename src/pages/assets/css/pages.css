@@ -1,6 +1,6 @@
 body {
   background-image: linear-gradient(-45deg, #d9a51f, #d95515, #be2a0d, #62130a);
-  background-size: 100% 200%;
+  background-size: 120% 200%;
   font-family: 'Dosis', sans-serif;
   color: #dee2e6;
 }
@@ -121,6 +121,30 @@ h1 {
     #usr-stream-btn:hover {
         animation-play-state: paused;
     }
+
+/* NO MATCHES PAGE ------------------------------------------------ */
+
+.no-match-container {
+  text-align: center;
+  margin-top: 7%;
+
+};
+
+.no-match-image {
+  border-radius: 5%;
+}
+
+.no-match-title {
+  font-weight: 500;
+  letter-spacing: 1rem;
+}
+
+#no-match-body {
+  font-weight: 200;
+  font-size: 150%;
+  letter-spacing: 0.2rem;
+  color: #dee2e6;
+}
     
 /* MOBILE VERSION ----------------------------------------------------------------------------------------------------------------  */
 @media (max-width: 480px) {
@@ -129,12 +153,13 @@ h1 {
     .login-container {
         margin-left: 4rem;
         margin-bottom: 0.5rem;
-        padding-top: 9rem;
+        padding-top: 3rem;
         max-width: 15rem;
     }
 
     .login-header {
-        font-size: 500%;
+        font-size: 325%;
+        text-align: center;
         opacity: 0.85;
         margin-bottom: 0.8rem;
         letter-spacing: 1rem;
@@ -170,6 +195,7 @@ h1 {
     }
 
 }
+
 
 /* ANIMATIONS ------------------------------------------------ */
 

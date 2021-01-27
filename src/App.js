@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Container } from "rsuite";
 import Login from "./pages/Login";
-import Dashboard from "./components/Dashboard/Dashboard";
+import Dashboard from "./pages/Dashboard/Dashboard";
 import Select from "./components/Select/Select";
 import CreateNew from "./components/CreateNew/CreateNew";
 import Header from "./components/Header/Header";
@@ -25,7 +25,7 @@ function App() {
             </Route>
             <Route exact path="/select" component={Select} />
             <Route exact path="/dashboard" component={Dashboard} />
-            <Route exact path="/createnew" component={CreateNew} />
+            <Route exact path="/create-new" component={CreateNew} />
             <Route exact path="/profile">
               <Profile />
             </Route>
