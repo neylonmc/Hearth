@@ -128,7 +128,6 @@ h1 {
   margin: 0rem 20rem;
   padding-top: 5%;
   min-width: 35rem;
-  overflow: scroll;
 }
 
 .settings-header {
@@ -160,12 +159,13 @@ h1 {
   #preference-block{
     margin: -0.5rem 0.5rem;
     background-color: transparent;
+    color: #212529;
   }
 
   #preference-label {
     text-align: left;
     font-weight: 400;
-    font-size: 130%;
+    font-size: 120%;
   }
 
 
@@ -241,12 +241,10 @@ h1 {
     }
 
     /* SETTINGS PAGE -------------------------------------------------- */
-
     .settings-container {
-      margin: 0rem 1rem;
-
+      margin: 0rem 0.5rem;
+      width: 100%;
     }
-
 }
 
 

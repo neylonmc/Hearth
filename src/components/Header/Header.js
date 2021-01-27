@@ -24,22 +24,22 @@ const Header = ({ onSelect, activeKey }) => {
           </Nav.Item>
           <Nav.Item eventKey="2">
             <Link id="nav-links" to="/select">
-              select
+              topics
             </Link>
           </Nav.Item>
           <Nav.Item eventKey="3">
             <Link id="nav-links" to="/create-new">
-              create new
-            </Link>
-          </Nav.Item>
-          <Nav.Item eventKey="4">
-            <Link id="nav-links" to="/login">
-              log out
+              new post
             </Link>
           </Nav.Item>
           <Nav.Item eventKey="5">
             <Link id="nav-links" to="/settings">
               settings
+            </Link>
+          </Nav.Item>
+          <Nav.Item eventKey="4">
+            <Link id="nav-links" to="/login">
+              log out
             </Link>
           </Nav.Item>
         </Nav>
