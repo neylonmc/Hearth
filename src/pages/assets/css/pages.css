@@ -192,19 +192,18 @@ h1 {
 /* USER PAGE ------------------------------------------------ */
     /* STREAM BUTTONS */
     #usr-stream {
-        margin: 0rem 0.5rem;
-        width: 15rem;
+        margin: 0rem 2rem;
         overflow: hidden;
         white-space: nowrap;
     }  
 
     #usr-stream-txt {
-        margin: 0rem 1rem;
         font-size: 90%;
         color: #d9a51f;
         font-weight: 400;
         letter-spacing: 0.1rem;
         animation: floatText 5s infinite linear;
+        text-align: center;
     }
     
     #usr-stream-btn:hover {
@@ -240,6 +239,16 @@ h1 {
     max-width: 20rem;
   }
 
+  #account-submit {
+      background-color: rgb(98,19,10, 0.9);
+      border: 1px solid #62130a;
+  }
+
+  #account-submit:hover {
+    background-color: rgb(98,19,10, 0.5);
+    border: 1px solid #62130a;
+  } 
+
   /* USER PREFERENCES */
   .usr-pref-container {
     background-color: rgb(217,85,21, 0.35);
@@ -258,9 +267,18 @@ h1 {
     font-size: 120%;
   }
 
+  .save-new-preferences {
+    background-color: rgb(217,85,21, 0.9);
+    border: 1px solid #d95515;
+  }
+
+  .save-new-preferences:hover {
+    background-color: rgb(217,85,21, 0.5);
+    border: 1px solid #d95515;
+  } 
+
 
 /* NO MATCHES PAGE ------------------------------------------------ */
-
 .no-match-container {
   text-align: center;
   margin-top: 7%;
@@ -323,6 +341,7 @@ h1 {
     /* PROFILE PAGE ------------------------------------------------ */
     #usr-stream {
         width: 8rem;
+        margin: 0rem 1rem;
     }
 
     .edit-usr-int-btn {
