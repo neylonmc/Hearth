@@ -7,7 +7,9 @@ function Login() {
     <div className="login-container">
       <Row>
         <Col>
-          <h1 className="login-header animate__animated animate__fadeInUp">welcome</h1>
+          <h1 className="login-header animate__animated animate__fadeInUp">
+            welcome
+          </h1>
         </Col>
       </Row>
       <Row>
