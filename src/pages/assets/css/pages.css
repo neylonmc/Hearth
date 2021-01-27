@@ -102,19 +102,18 @@ h1 {
 /* USER PAGE ------------------------------------------------ */
     /* STREAM BUTTONS */
     #usr-stream {
-        margin: 0rem 0.5rem;
-        width: 15rem;
+        margin: 0rem 2rem;
         overflow: hidden;
         white-space: nowrap;
     }  
 
     #usr-stream-txt {
-        margin: 0rem 1rem;
         font-size: 90%;
         color: #d9a51f;
         font-weight: 400;
         letter-spacing: 0.1rem;
         animation: floatText 5s infinite linear;
+        text-align: center;
     }
     
     #usr-stream-btn:hover {
@@ -242,6 +241,7 @@ h1 {
     /* PROFILE PAGE ------------------------------------------------ */
     #usr-stream {
         width: 8rem;
+        margin: 0rem 1rem;
     }
 
     .edit-usr-int-btn {

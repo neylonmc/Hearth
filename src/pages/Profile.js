@@ -27,17 +27,20 @@ function Profile(props) {
                 <Row>
                     <Col>
                         {/* USERNAME */}
-                        <h1 id="page-title" className="username">{ props.username || "username" }</h1>
+                        <h1 
+                            id="page-title" 
+                            className="username"
+                        > { props.username || "username" } </h1>
                     </Col>
                 </Row>
             </div>
 
             {/* NOW STREAMING */}
-            <Row className="user-now-streaming">
+            <Row className="user-now-streaming"  >
                 <Col 
                     id="usr-stream"
                     className="usr-listening"
-                    xs={12} 
+                    xs={10} 
                 >   
                     <h3 id="usr-stream-txt">
                         now listening to...
@@ -46,7 +49,7 @@ function Profile(props) {
                 <Col 
                     id="usr-stream"
                     className="usr-watching"
-                    xs={12}
+                    xs={10}
                 >
                     <h3 id="usr-stream-txt"> 
                         now watching... 
