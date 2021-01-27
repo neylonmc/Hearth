@@ -177,6 +177,16 @@ h1 {
     font-size: 120%;
   }
 
+  .save-new-preferences {
+    background-color: rgb(217,85,21, 0.9);
+    border: 1px solid #d95515;
+  }
+
+  .save-new-preferences:hover {
+    background-color: rgb(217,85,21, 0.5);
+    border: 1px solid #d95515;
+  } 
+
 
 /* NO MATCHES PAGE ------------------------------------------------ */
 .no-match-container {

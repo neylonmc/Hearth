@@ -176,8 +176,12 @@ function Settings() {
                         </Col>
                     </Row>
                 </Panel>
-            </PanelGroup>
 
+                <Button 
+                    className="save-new-preferences"
+                    appearance="primary"
+                > save preferences </Button>
+            </PanelGroup>
         </div>
     )
 
