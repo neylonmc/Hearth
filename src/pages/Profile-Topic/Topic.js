@@ -1,6 +1,16 @@
+<<<<<<< HEAD:src/pages/Topic.js
 import React from "react";
 import { Row, Col, Panel, PanelGroup, Rate, Button } from "rsuite";
 import "rsuite/dist/styles/rsuite-dark.css";
+=======
+import React from 'react';
+import { 
+    Row,
+    Col
+} from "rsuite";
+import 'rsuite/dist/styles/rsuite-dark.css';
+import "./Profile-Topic.css";
+>>>>>>> elisabeth:src/pages/Profile-Topic/Topic.js
 // import TopicInfo from "../components/TopicInfo";
 // import TopicActivity from "../components/TopicActivity";
 
