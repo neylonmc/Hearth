@@ -39,6 +39,18 @@ const activitySeed = [
     description: "This is a placeholder",
     comments: [],
     Polls: []
+  },
+  {
+    title: "Placeholder2fsdfds",
+    type: "Test",
+    ageRange: "All ages",
+    category: "category",
+    Tags: [],
+    totalRatings: 0,
+    averageRating: 4,
+    description: "This is a placeholder",
+    comments: [],
+    Polls: []
   }
 ];
 
