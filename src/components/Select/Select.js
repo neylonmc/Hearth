@@ -6,71 +6,27 @@ import "./SelectStyle.css";
 
 const Select = () => {
   return (
-    <div className="flex-container">
-      <h1 className="select-item">Select An Entertainment Type</h1>
+    <div className="select-container">
+      <h3 className="select-title">select entertainment type</h3>
       <ButtonToolbar className="button">
-        <Button
-          className="select-button"
-          style={{
-            backgroundColor: "#dcddc7",
-            fontFamily: "Raleway",
-            color: "#62130A",
-            fontSize: "20px",
-          }}
-          block
-        >
-          Books
-        </Button>
-        <Button
-          className="select-button"
-          style={{
-            backgroundColor: "#dcddc7",
-            fontFamily: "Raleway",
-            color: "#62130A",
-            fontSize: "20px",
-          }}
-          block
-        >
-          Movies
-        </Button>
-        <Button
-          className="select-button"
-          style={{
-            backgroundColor: "#dcddc7",
-            fontFamily: "Raleway",
-            color: "#62130A",
-            fontSize: "20px",
-          }}
-          block
-        >
-          Television
-        </Button>
-        <Button
-          className="select-button"
-          style={{
-            backgroundColor: "#dcddc7",
-            fontFamily: "Raleway",
-            color: "#62130A",
-            fontSize: "20px",
-          }}
-          block
-        >
-          Music
-        </Button>
-        <Button
-          style={{
-            backgroundColor: "#dcddc7",
-            fontFamily: "Raleway",
-            color: "#62130A",
-            fontSize: "20px",
-          }}
-          block
-        >
-          <Link to="/createnew" style={{ color: "#62130A" }}>
-            {" "}
-            Create New Review
-          </Link>
-        </Button>
+        <Button id="select-button" block >
+            books
+          </Button>
+          <Button id="select-button" block >
+            movies
+          </Button>
+          <Button id="select-button" block >
+            television
+          </Button>
+          <Button id="select-button" block >
+            music
+          </Button>
+          <Button id="select-button" block >
+            <Link style={{"color": "#dee2e6"}} to="/createnew">
+              {" "}
+              create new review
+            </Link>
+          </Button>
       </ButtonToolbar>
     </div>
   );

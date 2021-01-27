@@ -11,15 +11,8 @@
   margin-bottom: 1.5rem;
 }
 
-.nav-links {
-  font-family: 'Dosis', sans-serif;
-  font-size: 20px;
+#nav-links {
   letter-spacing: 0.2rem;
-  color: #d9a51f;
-}
-
-@media (max-width: 480px) {
-
-  
-
+  padding-top: 0.3rem;
+  color: #62130a;
 }

@@ -28,18 +28,27 @@ h1 {
 }
 
 .login-btn {
-  background-color: rgb(217,165,31, 0.65);
+  background-color: rgb(98,19,10, 0.65);
+  border: 0.1rem solid #62130A ;
 }
 
 .account-btn {
-  background-color: rgb(217,165,31, 0.35);
-  border: 0.1rem solid #d9a51f;
+  background-color: rgb(98,19,10, 0.35);
+  border: 0.1rem solid #62130A ;
   color: #fff;
 }
 
 #login-buttons {
   margin: 0.2rem 0rem;
+  letter-spacing: 0.4rem;
 }
+
+#login-buttons:hover {
+    background-color: rgb(190,42,13, 0.65) !important;
+    border: 0.1rem solid #BE2A0D ;
+    color: #fff;
+}
+
 
 /* PROFILE/TOPIC PAGES ------------------------------------------------ */
 #page-container {
@@ -56,6 +65,8 @@ h1 {
 }
 
 #page-image {
+  object-fit: cover;
+  width: 50rem;
   max-height: 15rem;
   opacity: 0.95;
   border-radius: 1%;
@@ -110,7 +121,6 @@ h1 {
     #usr-stream-btn:hover {
         animation-play-state: paused;
     }
-
     
 /* MOBILE VERSION ----------------------------------------------------------------------------------------------------------------  */
 @media (max-width: 480px) {
@@ -133,8 +143,12 @@ h1 {
     /* PROFILE/TOPIC PAGES ------------------------------------------------ */
     #page-container {
         max-width: 35rem;
-        margin-top: 20%;
+        margin-top: -5%;
         padding: 3rem 1rem 1rem 1rem;
+    }
+
+    #page-image {
+      max-width: 20rem;
     }
 
     #page-block {

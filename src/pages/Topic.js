@@ -13,7 +13,7 @@ function Topic(props) {
         <div id="page-container">
             <div id="page-header">
                 <Row>
-                    <Col>
+                    <Col id="page-image-cont">
                         {/* TOPIC PICTURE */}
                         <img 
                             id="page-image"
