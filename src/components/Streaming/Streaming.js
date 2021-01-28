@@ -12,7 +12,7 @@ function Streaming() {
             <Col 
                 id="usr-stream"
                 className="usr-listening"
-                xs={10} 
+                xs={12} 
             >   
                 <h3 id="usr-stream-txt">
                     now listening to...
@@ -21,7 +21,7 @@ function Streaming() {
             <Col 
                 id="usr-stream"
                 className="usr-watching"
-                xs={10}
+                xs={12}
             >
                 <h3 id="usr-stream-txt"> 
                     now watching... 

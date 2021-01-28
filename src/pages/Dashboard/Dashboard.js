@@ -19,72 +19,67 @@ export class Dashboard extends Component {
   render() {
     return (
       <div className="dashboard-container">
-
         {/* INITIAL BLOCKS */}
-        <Row className="header-container">
-
+        <Row>
           {/* USER INFO */}
-          <Col xs={12}>
+          <Col xs={7} id="block-container">
             <Panel
-              id="right-block"
+              id="left-block"
               className="user-container"
               bordered
             >
               <Row>
-                <Col xs={4}>
+                <Col>
                   <img
                     className="dash-avatar"
                     src="./images/no-avatar.jpg"
                   />
                 </Col>
-                <Col xs={20}>
-                  <h1>username</h1>
+              </Row>
+              <Row>
+                <Col>
+                   <h1 className="dash-username">username</h1>
                 </Col>
               </Row>
 
               <Streaming />
-
             </Panel>
 
+            {/* POLLS */}
+            <Panel
+              id="left-block"
+              className="polls-container"
+              bordered
+            >
+              <h2>top polls</h2>
+            </Panel>
+            
             {/* SIMILAR USERS */}
             <Panel
-              id="right-block"
+              id="left-block"
               className="similar-container"
               bordered
             >
               <h2>similar users</h2>
               <SimilarUsers />
             </Panel>
-          </Col>
 
-          {/* POLLS */}
-          <Col xs={12}>
-            <Panel
-              id="poll-act-block"
-              className="polls-container"
-              bordered
-            >
-              <h2>top polls</h2>
-            </Panel>
           </Col>
-        </Row>
 
         {/* DASHBOARD ACTIVITY */}
-        <Row>
-          <Col xs={24}>
+          <Col xs={17} id="block-container">
             <Panel
-              id="poll-act-block"
               className="activity-container"
               bordered
             >
               <h2>activity</h2>
             </Panel>
           </Col>
+
         </Row>
 
       </div>
     );
   }
 }
-
 export default Dashboard;

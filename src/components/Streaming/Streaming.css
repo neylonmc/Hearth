@@ -1,6 +1,5 @@
 #usr-stream {
     text-align: center;
-    margin: 1rem 1rem;
     overflow: hidden;
     white-space: nowrap;
 }  
@@ -19,9 +18,16 @@
 }
 
 /* ANIMATIONS */
-
 @keyframes floatText {
     to {
       transform: translateX(-100%);
     }
   }
+
+/* MOBILE ---------------------------------------------------------------------- */
+@media (max-width: 480px) {
+    #usr-stream {
+        width: 8rem;
+        margin: 0rem 1rem;
+    }
+}

@@ -7,7 +7,6 @@
 }
 
 #page-header {
-  text-align: center;
   margin-bottom: 0.4rem;
 }
 
@@ -46,10 +45,6 @@
   margin: 0.5rem 0rem;
 }
     
-/* USER PAGE ------------------------------------------------ */
-    
-    
-
 @media (max-width: 480px) {
 
     #page-container {
@@ -71,10 +66,7 @@
     }
 
     /* PROFILE PAGE ------------------------------------------------ */
-    #usr-stream {
-        width: 8rem;
-        margin: 0rem 1rem;
-    }
+   
 
     .edit-usr-int-btn {
         font-size: 90%;
