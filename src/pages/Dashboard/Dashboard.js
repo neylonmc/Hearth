@@ -27,7 +27,6 @@ export class Dashboard extends Component {
             <Panel
               id="right-block"
               className="user-container"
-              header="user info"
               bordered
             >
             </Panel>
@@ -36,9 +35,9 @@ export class Dashboard extends Component {
             <Panel
               id="right-block"
               className="similar-container"
-              header="similar users"
               bordered
             >
+              <h2>similar users</h2>
               <SimilarUsers />
             </Panel>
           </Col>
@@ -48,9 +47,9 @@ export class Dashboard extends Component {
             <Panel
               id="poll-act-block"
               className="polls-container"
-              header="polls"
               bordered
             >
+              <h2>top polls</h2>
             </Panel>
           </Col>
         </Row>
@@ -61,9 +60,9 @@ export class Dashboard extends Component {
             <Panel
               id="poll-act-block"
               className="activity-container"
-              header="activity"
               bordered
             >
+              <h2>activity</h2>
             </Panel>
           </Col>
         </Row>

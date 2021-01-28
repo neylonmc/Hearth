@@ -1,0 +1,7 @@
+#avatar {
+    margin: 0.01rem 0.1rem;
+}
+
+#avatar:hover {
+    opacity: 0.9;
+}

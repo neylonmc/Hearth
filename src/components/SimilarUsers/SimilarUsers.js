@@ -10,7 +10,7 @@ import API from "../../utils/RandomAPI";
 import { render } from '@testing-library/react';
 
 function SimilarUsers() {
-
+    // DUMBY DATA
     const [searchState, setSearch] = useState([]);
     useEffect(() => {
         API.randomUsers().then(users => {
@@ -24,7 +24,7 @@ function SimilarUsers() {
         searchState.map(user => {
             console.log(user)
             return( 
-                <Avatar size="lg" src={user.picture.thumbnail}>
+                <Avatar id="avatar" size="lg" src={user.picture.medium}>
                     {user.name.first[0]}{user.name.last[0]}
                 </Avatar>
             )
