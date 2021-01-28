@@ -16,7 +16,7 @@ import "./Settings.css";
 function Settings() {
 
     return(
-        <div className="settings-container">
+        <div className="settings-container animate__animated animate__fadeIn">
             <Row>
                 <Col>
                     <h1 className="settings-header">settings</h1>

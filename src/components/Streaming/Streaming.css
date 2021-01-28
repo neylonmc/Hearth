@@ -1,5 +1,5 @@
 #usr-stream {
-    text-align: center;
+    text-align: center !important;
     overflow: hidden;
     white-space: nowrap;
 }  

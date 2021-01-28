@@ -13,7 +13,7 @@ import Streaming from "../../components/Streaming/Streaming";
 function Profile(props) {
 
     return(
-        <div id="page-container">
+        <div id="page-container" className=" animate__animated animate__fadeIn">
             <div id="page-header">
                 <Row>
                     <Col id="page-image-cont">
@@ -35,10 +35,10 @@ function Profile(props) {
                         > { props.username || "username" } </h1>
                     </Col>
                 </Row>
-            </div>
 
-            {/* NOW STREAMING */}
-            <Streaming />
+                {/* NOW STREAMING */}
+                <Streaming />
+            </div>
 
             {/* USER INTERESTS */}
             <Row id="page-block-1" className="usr-int-container">
