@@ -11,62 +11,59 @@ h2 {
   margin: 2rem 5rem;
 }
 
-.header-container {
-  display: inline-flex;
-  width: 100%;
-  max-height: 24rem;
-  min-height: 15rem;
-  margin-bottom: 0.5rem;
-
-}
-
-#poll-act-block, #right-block {
+.activity-container, #left-block {
   padding: -1.5rem !important;
   overflow: scroll;
 }
 
-#poll-act-block {
-  background-color: rgb(98,19,10, 0.35) !important;
-  border: 1px solid #62130a !important;
-}
-
-#right-block {
+/* LEFT BLOCKS ---------------------------------------------------------- */
+#left-block {
   background-color: rgb(217,85,21, 0.35) !important;
   border: 1px solid #62130a !important;
+  margin-bottom: 0.5rem;
 }
 
-/* POLLS BLOCK --------------------------------------------- */
-.polls-container { 
-  min-height: 100%;
-  margin-right: -0.5rem;
-}
-
-/* USER INFO BLOCK --------------------------------------------- */
+/* USER INFO BLOCK  */
 .user-container {
-  height: 49%;
+  text-align: center;
+  max-height: 15rem;
+  overflow: hidden !important;
+}
+.dash-avatar {
+  max-width: 4.5rem;
+  border-radius: 50%;
 }
 
+/* POLLS BLOCK  */
+.polls-container { 
+  min-height: 15rem;
+}
+
+<<<<<<< HEAD
 .dash-avatar {
   max-width: 5rem;
   border-radius: 50%;
 }
 
 /* SIMILAR USERS BLOCK  --------------------------------------------- */
+=======
+/* SIMILAR USERS BLOCK   */
+>>>>>>> elisabeth
 .similar-container {
-  height: 50%;
-  margin-top: 0.15rem;
   text-align: center;
+  height: 15rem;
 }
 
-/* ACTIVITY BLOCK --------------------------------------------- */
+/* ACTIVITY BLOCK ---------------------------------------------------------- */
 .activity-container {
-  min-height: 20rem;
+  background-color: rgb(98,19,10, 0.35) !important;
+  border: 1px solid #62130a !important;
+  min-height: 45rem;
 }
-
 
 /* MOBILE ---------------------------------------------------------------------- */
 @media (max-width: 480px) {
   .dashboard-container {
-    margin: 0rem 0.3rem 1.5rem 0.3rem;
+    margin: 0rem 0.1rem 1.5rem 0.1rem;
   }
 }

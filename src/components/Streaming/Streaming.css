@@ -1,0 +1,33 @@
+#usr-stream {
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+}  
+
+#usr-stream-txt {
+    font-size: 90%;
+    color: #d9a51f;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    animation: floatText 5s infinite linear;
+    text-align: center;
+}
+
+#usr-stream-btn:hover {
+    animation-play-state: paused;
+}
+
+/* ANIMATIONS */
+@keyframes floatText {
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+/* MOBILE ---------------------------------------------------------------------- */
+@media (max-width: 480px) {
+    #usr-stream {
+        width: 8rem;
+        margin: 0rem 1rem;
+    }
+}
