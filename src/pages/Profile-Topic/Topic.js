@@ -11,7 +11,7 @@ import "./Profile-Topic.css";
 function Topic(props) {
 
     return(
-        <div id="page-container">
+        <div id="page-container" className=" animate__animated animate__fadeIn">
             <div id="page-header">
                 <Row>
                     <Col id="page-image-cont">

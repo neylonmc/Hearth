@@ -18,7 +18,7 @@ import SimilarUsers from "../../components/SimilarUsers/SimilarUsers";
 export class Dashboard extends Component {
   render() {
     return (
-      <div className="dashboard-container">
+      <div className="dashboard-container  animate__animated animate__fadeIn">
         {/* INITIAL BLOCKS */}
         <Row>
           {/* USER INFO */}
