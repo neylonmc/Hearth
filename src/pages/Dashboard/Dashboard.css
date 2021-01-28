@@ -46,6 +46,11 @@ h2 {
   height: 49%;
 }
 
+.dash-avatar {
+  max-width: 5rem;
+  border-radius: 50%;
+}
+
 /* SIMILAR USERS BLOCK  --------------------------------------------- */
 .similar-container {
   height: 50%;

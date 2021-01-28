@@ -29,6 +29,17 @@ export class Dashboard extends Component {
               className="user-container"
               bordered
             >
+
+                <Row className="user-header">
+                  <Col xs={4}>
+                    <img 
+                      className="dash-avatar" 
+                      src="./images/no-avatar.png"
+                    />
+                  </Col>
+
+                </Row>
+
             </Panel>
 
             {/* SIMILAR USERS */}
