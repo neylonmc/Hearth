@@ -47,26 +47,7 @@
 }
     
 /* USER PAGE ------------------------------------------------ */
-    /* STREAM BUTTONS */
-    #usr-stream {
-        margin: 0rem 2rem;
-        overflow: hidden;
-        white-space: nowrap;
-    }  
-
-    #usr-stream-txt {
-        font-size: 90%;
-        color: #d9a51f;
-        font-weight: 400;
-        letter-spacing: 0.1rem;
-        animation: floatText 5s infinite linear;
-        text-align: center;
-    }
     
-    #usr-stream-btn:hover {
-        animation-play-state: paused;
-    }
-
     
 
 @media (max-width: 480px) {
@@ -102,10 +83,3 @@
 
 }  
 
-/* ANIMATIONS */
-
-@keyframes floatText {
-    to {
-      transform: translateX(-100%);
-    }
-  }

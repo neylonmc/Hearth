@@ -6,6 +6,7 @@ import {
 } from "rsuite";
 import 'rsuite/dist/styles/rsuite-dark.css';
 import "./Profile-Topic.css";
+import Streaming from "../../components/Streaming/Streaming";
 // import UserInterests from "../components/UserInterests";
 // import UserActivity from "../components/UserActivity";
 
@@ -37,26 +38,7 @@ function Profile(props) {
             </div>
 
             {/* NOW STREAMING */}
-            <Row className="user-now-streaming"  >
-                <Col 
-                    id="usr-stream"
-                    className="usr-listening"
-                    xs={10} 
-                >   
-                    <h3 id="usr-stream-txt">
-                        now listening to...
-                    </h3>
-                </Col>
-                <Col 
-                    id="usr-stream"
-                    className="usr-watching"
-                    xs={10}
-                >
-                    <h3 id="usr-stream-txt"> 
-                        now watching... 
-                    </h3>
-                </Col>
-            </Row>
+            <Streaming />
 
             {/* USER INTERESTS */}
             <Row id="page-block-1" className="usr-int-container">

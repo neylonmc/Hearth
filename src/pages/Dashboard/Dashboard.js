@@ -8,6 +8,7 @@ import {
   ButtonGroup } from "rsuite";
 import "rsuite/lib/styles/index.less";
 import "./Dashboard.css";
+import Streaming from "../../components/Streaming/Streaming";
 import SimilarUsers from "../../components/SimilarUsers/SimilarUsers";
 // import movie from "../assets/images/movieIcon.jpeg";
 // import book from "../assets/images/bookIcon.jpg";
@@ -29,6 +30,20 @@ export class Dashboard extends Component {
               className="user-container"
               bordered
             >
+              <Row>
+                <Col xs={4}>
+                  <img
+                    className="dash-avatar"
+                    src="./images/no-avatar.jpg"
+                  />
+                </Col>
+                <Col xs={20}>
+                  <h1>username</h1>
+                </Col>
+              </Row>
+
+              <Streaming />
+
             </Panel>
 
             {/* SIMILAR USERS */}
