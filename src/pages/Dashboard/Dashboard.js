@@ -8,10 +8,11 @@ import {
   ButtonGroup } from "rsuite";
 import "rsuite/lib/styles/index.less";
 import "./Dashboard.css";
-import movie from "../assets/images/movieIcon.jpeg";
-import book from "../assets/images/bookIcon.jpg";
-import tv from "../assets/images/tvIcon.jpg";
-import musicIcon from "../assets/images/musicIcon.jpeg";
+import SimilarUsers from "../../components/SimilarUsers/SimilarUsers";
+// import movie from "../assets/images/movieIcon.jpeg";
+// import book from "../assets/images/bookIcon.jpg";
+// import tv from "../assets/images/tvIcon.jpg";
+// import musicIcon from "../assets/images/musicIcon.jpeg";
 
 export class Dashboard extends Component {
   render() {
@@ -20,6 +21,8 @@ export class Dashboard extends Component {
 
         {/* INITIAL BLOCKS */}
         <Row className="header-container">
+
+          {/* USER INFO */}
           <Col xs={12}>
             <Panel
               id="right-block"
@@ -28,15 +31,19 @@ export class Dashboard extends Component {
               bordered
             >
             </Panel>
+
+            {/* SIMILAR USERS */}
             <Panel
               id="right-block"
               className="similar-container"
               header="similar users"
               bordered
             >
+              <SimilarUsers />
             </Panel>
           </Col>
 
+          {/* POLLS */}
           <Col xs={12}>
             <Panel
               id="poll-act-block"

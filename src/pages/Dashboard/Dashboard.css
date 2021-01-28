@@ -5,8 +5,10 @@
 .header-container {
   display: inline-flex;
   width: 100%;
+  max-height: 20rem;
   min-height: 15rem;
   margin-bottom: 0.5rem;
+
 }
 
 #poll-act-block {
@@ -35,6 +37,7 @@
 .similar-container {
   height: 50%;
   margin-top: 0.15rem;
+  text-align: center;
 }
 
 /* ACTIVITY BLOCK --------------------------------------------- */

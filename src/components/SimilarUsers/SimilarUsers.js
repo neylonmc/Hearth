@@ -1,0 +1,39 @@
+import React, {useState, useEffect } from 'react';
+import axios from 'axios';
+import {
+    Row,
+    Col,
+    Avatar
+} from 'rsuite';
+import "./SimilarUsers.css";
+import API from "../../utils/RandomAPI";
+import { render } from '@testing-library/react';
+
+function SimilarUsers() {
+
+    const [searchState, setSearch] = useState([]);
+    useEffect(() => {
+        API.randomUsers().then(users => {
+            console.log(users.data.results);
+            setSearch(users.data.results);
+        });
+    }, []);
+
+    return(
+
+        searchState.map(user => {
+            console.log(user)
+            return( 
+                <Avatar size="lg" src={user.picture.thumbnail}>
+                    {user.name.first[0]}{user.name.last[0]}
+                </Avatar>
+            )
+
+        })
+    )
+
+    
+
+};
+
+export default SimilarUsers;
