@@ -37,6 +37,7 @@ export class Dashboard extends Component {
                   />
                 </Col>
               </Row>
+
               <Row>
                 <Col>
                    <h1 className="dash-username">username</h1>
@@ -44,6 +45,7 @@ export class Dashboard extends Component {
               </Row>
 
               <Streaming />
+
             </Panel>
 
             {/* POLLS */}
