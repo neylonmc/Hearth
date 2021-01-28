@@ -28,19 +28,6 @@ export class Dashboard extends Component {
               className="user-container"
               bordered
             >
-<<<<<<< HEAD
-
-                <Row className="user-header">
-                  <Col xs={4}>
-                    <img 
-                      className="dash-avatar" 
-                      src="./images/no-avatar.png"
-                    />
-                  </Col>
-
-                </Row>
-
-=======
               <Row>
                 <Col>
                   <img
@@ -49,6 +36,7 @@ export class Dashboard extends Component {
                   />
                 </Col>
               </Row>
+
               <Row>
                 <Col>
                    <h1 className="dash-username">username</h1>
@@ -56,7 +44,7 @@ export class Dashboard extends Component {
               </Row>
 
               <Streaming />
->>>>>>> elisabeth
+
             </Panel>
 
             {/* POLLS */}
