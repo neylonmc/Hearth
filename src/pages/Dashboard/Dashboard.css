@@ -1,42 +1,50 @@
-.flex-dashboard {
-  position: absolute;
-  top: 15%;
+.dashboard-container {
+  margin: 2rem 5rem;
+}
+
+
+.header-container {
+  display: inline-flex;
   width: 100%;
-  padding-left: 30px;
-  padding-right: 30px;
+  min-height: 15rem;
+  margin-bottom: 0.5rem;
 }
 
-.dashboard-title {
-  text-align: center;
-  background-color: #d9a51f;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  text-shadow: 3px 2px rgb(190, 42, 13, 0.85);
-  color: #62130a;
+#poll-act {
+  background-color: rgb(98,19,10, 0.35) !important;
+  border: 1px solid #62130a !important;
 }
 
-.panel-item {
-  background-color: #dcddc7;
-  color: #62130a;
+#right-block {
+  height: 49%;
+  background-color: rgb(217,85,21, 0.35) !important;
+  border: 1px solid #62130a !important;
 }
 
-.dashboard-cards {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 10px;
+/* POLLS BLOCK --------------------------------------------- */
+
+.polls-container { 
+  min-height: 100%;
+  margin-right: -0.5rem;
 }
 
+/* USER INFO BLOCK --------------------------------------------- */
+.user-container {
+
+}
+
+/* SIMILAR USERS BLOCK  --------------------------------------------- */
+.similar-container {
+  margin-top: 0.15rem;
+}
+
+/* ACTIVITY BLOCK --------------------------------------------- */
+.activity-container {
+  min-height: 20rem;
+}
+
+
+/* MOBILE ---------------------------------------------------------------------- */
 @media (max-width: 480px) {
-  .flex-dashboard {
-    width: fit-content;
-    padding-top: 8px;
-  }
-  .panel-item,
-  .dashboard-title {
-    opacity: 0.85;
-    margin-bottom: 0.3rem;
-    padding-left: 30px;
-    padding-right: 30px;
-  }
+
 }
