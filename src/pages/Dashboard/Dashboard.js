@@ -36,10 +36,10 @@ export class Dashboard extends Component {
             >
             </Panel>
           </Col>
-          
+
           <Col xs={12}>
             <Panel
-              id="poll-act"
+              id="poll-act-block"
               className="polls-container"
               header="polls"
               bordered
@@ -52,7 +52,7 @@ export class Dashboard extends Component {
         <Row>
           <Col xs={24}>
             <Panel
-              id="poll-act"
+              id="poll-act-block"
               className="activity-container"
               header="activity"
               bordered

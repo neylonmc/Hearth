@@ -2,7 +2,6 @@
   margin: 2rem 5rem;
 }
 
-
 .header-container {
   display: inline-flex;
   width: 100%;
@@ -10,13 +9,12 @@
   margin-bottom: 0.5rem;
 }
 
-#poll-act {
+#poll-act-block {
   background-color: rgb(98,19,10, 0.35) !important;
   border: 1px solid #62130a !important;
 }
 
 #right-block {
-  height: 49%;
   background-color: rgb(217,85,21, 0.35) !important;
   border: 1px solid #62130a !important;
 }
@@ -30,11 +28,12 @@
 
 /* USER INFO BLOCK --------------------------------------------- */
 .user-container {
-
+  height: 49%;
 }
 
 /* SIMILAR USERS BLOCK  --------------------------------------------- */
 .similar-container {
+  height: 50%;
   margin-top: 0.15rem;
 }
 
@@ -46,5 +45,7 @@
 
 /* MOBILE ---------------------------------------------------------------------- */
 @media (max-width: 480px) {
-
+  .dashboard-container {
+    margin: 0rem 0.3rem 1.5rem 0.3rem;
+  }
 }

@@ -2,7 +2,7 @@ import React from "react";
 import { Navbar, Nav } from "rsuite";
 import { Link } from "react-router-dom";
 import "rsuite/lib/styles/index.less";
-import "./HeaderStyle.css";
+import "./Nav.css";
 
 const Header = ({ onSelect, activeKey }) => {
   return (
