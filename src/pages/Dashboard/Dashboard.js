@@ -33,6 +33,7 @@ export class Dashboard extends Component {
                   <img
                     className="dash-avatar"
                     src="./images/no-avatar.jpg"
+                    alt="dashboard user avatar"
                   />
                 </Col>
               </Row>
