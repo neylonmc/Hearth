@@ -1,42 +1,67 @@
-.flex-dashboard {
-  position: absolute;
-  top: 15%;
+h2 {
+  font-size: 110% !important;
+  font-weight: 500 !important;
+  margin-left: 0.8rem !important;
+  margin-top: -0.5rem !important;
+  letter-spacing: 0.35rem;
+  text-align: left;
+}
+
+.dashboard-container {
+  margin: 2rem 5rem;
+}
+
+.header-container {
+  display: inline-flex;
   width: 100%;
-  padding-left: 30px;
-  padding-right: 30px;
+  max-height: 24rem;
+  min-height: 15rem;
+  margin-bottom: 0.5rem;
+
 }
 
-.dashboard-title {
+#poll-act-block, #right-block {
+  padding: -1.5rem !important;
+  overflow: scroll;
+}
+
+#poll-act-block {
+  background-color: rgb(98,19,10, 0.35) !important;
+  border: 1px solid #62130a !important;
+}
+
+#right-block {
+  background-color: rgb(217,85,21, 0.35) !important;
+  border: 1px solid #62130a !important;
+}
+
+/* POLLS BLOCK --------------------------------------------- */
+.polls-container { 
+  min-height: 100%;
+  margin-right: -0.5rem;
+}
+
+/* USER INFO BLOCK --------------------------------------------- */
+.user-container {
+  height: 49%;
+}
+
+/* SIMILAR USERS BLOCK  --------------------------------------------- */
+.similar-container {
+  height: 50%;
+  margin-top: 0.15rem;
   text-align: center;
-  background-color: #d9a51f;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  text-shadow: 3px 2px rgb(190, 42, 13, 0.85);
-  color: #62130a;
 }
 
-.panel-item {
-  background-color: #dcddc7;
-  color: #62130a;
+/* ACTIVITY BLOCK --------------------------------------------- */
+.activity-container {
+  min-height: 20rem;
 }
 
-.dashboard-cards {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 10px;
-}
 
+/* MOBILE ---------------------------------------------------------------------- */
 @media (max-width: 480px) {
-  .flex-dashboard {
-    width: fit-content;
-    padding-top: 8px;
-  }
-  .panel-item,
-  .dashboard-title {
-    opacity: 0.85;
-    margin-bottom: 0.3rem;
-    padding-left: 30px;
-    padding-right: 30px;
+  .dashboard-container {
+    margin: 0rem 0.3rem 1.5rem 0.3rem;
   }
 }

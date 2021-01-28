@@ -1,108 +1,72 @@
 import React, { Component } from "react";
-import { Panel, Button, ButtonToolbar, ButtonGroup } from "rsuite";
+import { 
+  Row,
+  Col,
+  Panel, 
+  Button, 
+  ButtonToolbar, 
+  ButtonGroup } from "rsuite";
 import "rsuite/lib/styles/index.less";
 import "./Dashboard.css";
-import movie from "../assets/images/movieIcon.jpeg";
-import book from "../assets/images/bookIcon.jpg";
-import tv from "../assets/images/tvIcon.jpg";
-import musicIcon from "../assets/images/musicIcon.jpeg";
+import SimilarUsers from "../../components/SimilarUsers/SimilarUsers";
+// import movie from "../assets/images/movieIcon.jpeg";
+// import book from "../assets/images/bookIcon.jpg";
+// import tv from "../assets/images/tvIcon.jpg";
+// import musicIcon from "../assets/images/musicIcon.jpeg";
 
 export class Dashboard extends Component {
   render() {
     return (
-      <div className="flex-dashboard">
-        <h1 className="dashboard-title">Dashboard</h1>
-        <div className="dashboard-cards">
-          <Panel
-            shaded
-            bordered
-            bodyFill
-            style={{ display: "inline-block", width: 240 }}
-          >
-            <img
-              src={movie}
-              alt="movie"
-              style={{ width: "100%", height: "300px" }}
-            />
-            <Panel header="Top Movie" className="panel-item">
-              <p>
-                <small>Top movie from users. maybe show rating</small>
-              </p>
-            </Panel>
-          </Panel>
+      <div className="dashboard-container">
 
-          <Panel
-            shaded
-            bordered
-            bodyFill
-            style={{ display: "inline-block", width: 240 }}
-          >
-            <img
-              src={book}
-              style={{ width: "100%", height: "300px" }}
-              alt="book"
-            />
-            <Panel header="Top Book" className="panel-item">
-              <p>
-                <small>Top book from users. maybe show rating</small>
-              </p>
-            </Panel>
-          </Panel>
+        {/* INITIAL BLOCKS */}
+        <Row className="header-container">
 
-          <Panel
-            shaded
-            bordered
-            bodyFill
-            style={{ display: "inline-block", width: 240 }}
-          >
-            <img
-              src={tv}
-              alt="movie"
-              style={{ width: "100%", height: "300px" }}
-            />
-            <Panel header="Top Televison" className="panel-item">
-              <p>
-                <small>Top artist from users. maybe show rating</small>
-              </p>
+          {/* USER INFO */}
+          <Col xs={12}>
+            <Panel
+              id="right-block"
+              className="user-container"
+              bordered
+            >
             </Panel>
-          </Panel>
 
-          <Panel
-            shaded
-            bordered
-            bodyFill
-            style={{ display: "inline-block", width: 240 }}
-          >
-            <img
-              src={musicIcon}
-              alt="music"
-              style={{ width: "100%", height: "300px" }}
-            />
-            <Panel header="Top Music" className="panel-item">
-              <p>
-                <small>Top television from users. maybe show rating</small>
-              </p>
+            {/* SIMILAR USERS */}
+            <Panel
+              id="right-block"
+              className="similar-container"
+              bordered
+            >
+              <h2>similar users</h2>
+              <SimilarUsers />
             </Panel>
-          </Panel>
-        </div>
+          </Col>
 
-        <Panel
-          header="dashboard"
-          className="dashboard-panel"
-          collapsible
-          bordered
-          style={{ marginBottom: "5px" }}
-        >
-          Find something cool
-          <ButtonToolbar>
-            <ButtonGroup>
-              <Button>Movies</Button>
-              <Button>Books</Button>
-              <Button>TV</Button>
-              <Button>Music</Button>
-            </ButtonGroup>
-          </ButtonToolbar>
-        </Panel>
+          {/* POLLS */}
+          <Col xs={12}>
+            <Panel
+              id="poll-act-block"
+              className="polls-container"
+              bordered
+            >
+              <h2>top polls</h2>
+            </Panel>
+          </Col>
+        </Row>
+
+        {/* DASHBOARD ACTIVITY */}
+        <Row>
+          <Col xs={24}>
+            <Panel
+              id="poll-act-block"
+              className="activity-container"
+              bordered
+            >
+              <h2>activity</h2>
+            </Panel>
+          </Col>
+        </Row>
+
       </div>
     );
   }

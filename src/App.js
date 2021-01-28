@@ -5,7 +5,7 @@ import Login from "./pages/Login/Login";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Select from "./components/Select/Select";
 import CreateNew from "./components/CreateNew/CreateNew";
-import Header from "./components/Header/Header";
+import Nav from "./components/Nav/Nav";
 import Profile from "./pages/Profile-Topic/Profile";
 import Topic from "./pages/Profile-Topic/Topic";
 import Settings from "./pages/Settings/Settings";
@@ -17,7 +17,7 @@ function App() {
   return (
     <Router>
       <div className="app">
-        <Header />
+        <Nav />
         <Container>
           <Switch>
             <Route exact path={["/", "/login"]}>
