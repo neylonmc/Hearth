@@ -66,8 +66,13 @@
 @media (max-width: 480px) {
 
     .settings-container {
-        margin: 0rem 1rem;
+        margin: -1rem 1rem;
         min-width: 20rem;
       }
+
+    .settings-header {
+      font-size: 270%;
+      padding: 0rem 2rem;
+    }  
 
 }    
