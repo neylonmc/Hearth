@@ -22,7 +22,7 @@ function LoginForm() {
 
   return (
     <div className="Login">
-      <Form onSubmit={handleSubmit}>
+      <Form action="/login" method="post" onSubmit={handleSubmit}>
         <FormGroup size="lg" controlId="email">
           <FormControlLabel>Email</FormControlLabel>
           <FormControl
