@@ -10,6 +10,7 @@ import Profile from "./pages/Profile-Topic/Profile";
 import Topic from "./pages/Profile-Topic/Topic";
 import Settings from "./pages/Settings/Settings";
 import NoMatch from "./pages/NoMatch/NoMatch";
+import LoginForm from "./components/LoginForm/LoginForm";
 import "rsuite/dist/styles/rsuite-default.css";
 import "./App.css";
 
@@ -20,7 +21,10 @@ function App() {
         <Nav />
         <Container>
           <Switch>
-            <Route exact path={["/", "/login"]}>
+            <Route exact path="/login">
+              <LoginForm />
+            </Route>
+            <Route exact path="/">
               <Login />
             </Route>
             <Route exact path="/topics" component={Topics} />
