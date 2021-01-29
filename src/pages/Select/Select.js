@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
     Row,
     Col,
     Button
 } from 'rsuite';
 import "./Select.css";
+import Entertainment from "./utils/TopEntertainment";
 
 function Select() {
+    console.log(Entertainment)
+
     return(
         <div className="select-container">
             <div className="select-header-container">
@@ -25,182 +28,28 @@ function Select() {
                 </Row>
             </div>
             <Row>
-                <Col md={6} sm={12}>
-                    <Button id="button-container" bordered>
-                        <img 
-                            id="button-image" 
-                            src="./images/no-image.png"
-                            alt="artist or work"
-                        />
-                        <h1 id="button-title">title</h1>
-                    </Button>
-                </Col>
-                <Col md={6} sm={12}>
-                    <Button id="button-container" bordered>
-                        <img 
-                            id="button-image" 
-                            src="./images/no-image.png"
-                            alt="artist or work"
-                        />
-                        <h1 id="button-title">title</h1>
-                    </Button>
-                </Col>
-                <Col md={6} sm={12}>
-                    <Button id="button-container" bordered>
-                        <img 
-                            id="button-image" 
-                            src="./images/no-image.png"
-                            alt="artist or work"
-                        />
-                        <h1 id="button-title">title</h1>
-                    </Button>
-                </Col>
-                <Col md={6} sm={12}>
-                    <Button id="button-container" bordered>
-                        <img 
-                            id="button-image" 
-                            src="./images/no-image.png"
-                            alt="artist or work"
-                        />
-                        <h1 id="button-title">title</h1>
-                    </Button>
-                </Col>
-                <Col 
-                    md={6} sm={12}>
-                    <Button id="button-container" bordered>
-                        <img 
-                            id="button-image" 
-                            src="./images/no-image.png"
-                            alt="artist or work"
-                        />
-                        <h1 id="button-title">title</h1>
-                    </Button>
-                </Col>
-                <Col md={6} sm={12}>
-                    <Button id="button-container" bordered>
-                        <img 
-                            id="button-image" 
-                            src="./images/no-image.png"
-                            alt="artist or work"
-                        />
-                        <h1 id="button-title">title</h1>
-                    </Button>
-                </Col>
-                <Col md={6} sm={12}
-                >
-                    <Button id="button-container" bordered>
-                        <img 
-                            id="button-image" 
-                            src="./images/no-image.png"
-                            alt="artist or work"
-                        />
-                        <h1 id="button-title">title</h1>
-                    </Button>
-                </Col>
-                <Col md={6} sm={12}
-                >
-                    <Button id="button-container" bordered>
-                        <img 
-                            id="button-image" 
-                            src="./images/no-image.png"
-                            alt="artist or work"
-                        />
-                        <h1 id="button-title">title</h1>
-                    </Button>
-                </Col>
-                <Col 
-                    md={6} sm={12}
-                >
-                    <Button id="button-container" bordered>
-                        <img 
-                            id="button-image" 
-                            src="./images/no-image.png"
-                            alt="artist or work"
-                        />
-                        <h1 id="button-title">title</h1>
-                    </Button>
-                </Col>
-                <Col md={6} sm={12}
-                >
-                    <Button id="button-container" bordered>
-                        <img 
-                            id="button-image" 
-                            src="./images/no-image.png"
-                            alt="artist or work"
-                        />
-                        <h1 id="button-title">title</h1>
-                    </Button>
-                </Col>
-                <Col md={6} sm={12}
-                >
-                    <Button id="button-container" bordered>
-                        <img 
-                            id="button-image" 
-                            src="./images/no-image.png"
-                            alt="artist or work"
-                        />
-                        <h1 id="button-title">title</h1>
-                    </Button>
-                </Col>
-                <Col md={6} sm={12}
-                >
-                    <Button id="button-container" bordered>
-                        <img 
-                            id="button-image" 
-                            src="./images/no-image.png"
-                            alt="artist or work"
-                        />
-                        <h1 id="button-title">title</h1>
-                    </Button>
-                </Col>
-                <Col 
-                    md={6} sm={12}
-                >
-                    <Button id="button-container" bordered>
-                        <img 
-                            id="button-image" 
-                            src="./images/no-image.png"
-                            alt="artist or work"
-                        />
-                        <h1 id="button-title">title</h1>
-                    </Button>
-                </Col>
-                <Col md={6} sm={12}
-                >
-                    <Button id="button-container" bordered>
-                        <img 
-                            id="button-image" 
-                            src="./images/no-image.png"
-                            alt="artist or work"
-                        />
-                        <h1 id="button-title">title</h1>
-                    </Button>
-                </Col>
-                <Col md={6} sm={12}
-                >
-                    <Button id="button-container" bordered>
-                        <img 
-                            id="button-image" 
-                            src="./images/no-image.png"
-                            alt="artist or work"
-                        />
-                        <h1 id="button-title">title</h1>
-                    </Button>
-                </Col>
-                <Col md={6} sm={12}
-                >
-                    <Button id="button-container" bordered>
-                        <img 
-                            id="button-image" 
-                            src="./images/no-image.png"
-                            alt="artist or work"
-                        />
-                        <h1 id="button-title">title</h1>
-                    </Button>
-                </Col>
+                { Entertainment.map(data => {
+                        return(
+                            <Col md={6} sm={12}>
+                                <Button id="button-container" bordered>
+                                    <img 
+                                        id="button-image" 
+                                        src={ data.img }
+                                        alt={ data.title }
+                                    />
+                                    <h1 id="button-title">{ data.title }</h1>
+                                </Button>
+                            </Col>
+                        )
+                    })
+                }
             </Row>
         </div>
     )
+
+    
+
+    
 
 };
 
