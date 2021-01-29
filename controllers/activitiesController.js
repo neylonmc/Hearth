@@ -15,21 +15,23 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+  //type will probobly be switched to medium
   findByType: function (req, res) {
     db.Activity
-      .find({category: req.params.type})
+      .find({type: req.params.type})
       .sort({ date: -1 })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   findByHighest: function (req, res) {
     db.Activity
-      .find({category: req.params.type})
+      .find({type: req.params.type})
       .sort({ averageRating: -1})
       .limit(1)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+  //category will probably be switched to genre
   findByCategory: function (req, res) {
     db.Activity
       .find({category: req.params.tag})
