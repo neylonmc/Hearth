@@ -1,7 +1,6 @@
 import React from "react";
 import { Navbar, Nav } from "rsuite";
 import { Link } from "react-router-dom";
-import "rsuite/lib/styles/index.less";
 import "./Nav.css";
 
 const Header = ({ onSelect, activeKey }) => {
@@ -28,7 +27,7 @@ const Header = ({ onSelect, activeKey }) => {
             </Link>
           </Nav.Item>
           <Nav.Item eventKey="3">
-            <Link id="nav-links" to="/select">
+            <Link id="nav-links" to="/topics">
               topics
             </Link>
           </Nav.Item>
