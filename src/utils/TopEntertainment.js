@@ -17,27 +17,27 @@
     },{
         title: "The Hobbit",
         type: "Book",
-        genre: "Adventure, Fantasy",
+        genre: ["Adventure", "Fantasy"],
         img: "./images/topEntertainment/hobbit.jpg"
     },{
         title: "The Hunger Games",
         type: "Book",
-        genre: "Action, Adventure, Sci-Fi, Thriller",
+        genre: ["Action", "Adventure", "Sci-Fi", "Thriller"],
         img: "./images/topEntertainment/hunger-games.jpg"
     },{
         title: "Titanic",
         type: "Movie",
-        genre: "Drama, Romance",
+        genre: ["Drama", "Romance"],
         img: "./images/topEntertainment/titanic.jpg"
     },{
         title: "Star Wars",
         type: "Movie",
-        genre: "Action, Adventure, Fantasy, Sci-Fi",
+        genre: ["Action", "Adventure", "Fantasy", "Sci-Fi"],
         img: "./images/topEntertainment/star-wars.jpg"
     },{
         title: "Gone with the Wind",
         type: "Movie",
-        genre: "Drama, History, Romance, War",
+        genre: ["Drama", "History", "Romance", "War"],
         img: "./images/topEntertainment/gone-wind.jpg"
     },{
         title: "Dumb and Dumber",
@@ -47,47 +47,47 @@
     },{
         title: "Spirited Away",
         type: "Movie",
-        genre: "Animation, Adventure, Family, Fantasy, Mystery",
+        genre: ["Animation", "Adventure", "Family", "Fantasy", "Mystery"],
         img: "./images/topEntertainment/spirited-away.jpg"
     },{
         title: "The Dark Knight",
         type: "Movie",
-        genre: "action",
+        genre: ["Action", "Crime", "Drama", "Thriller"],
         img: "./images/topEntertainment/dark-knight.jpg"
     },{
         title: "Soul",
         type: "Movie",
-        genre: "Animation, Adventure, Comedy, Family, Fantasy, Music",
+        genre: ["Animation", "Adventure", "Comedy", "Family", "Fantasy", "Music"],
         img: "./images/topEntertainment/soul.jpg"
     },{
         title: "Game of Thrones",
         type: "TV",
-        genre: "Action, Adventure, Drama, Fantasy, Romance",
+        genre: ["Action", "Drama", "Fantasy", "Romance"],
         img: "./images/topEntertainment/game-thrones.jpg"
     },{
         title: "The Mandalorian",
         type: "TV",
-        genre: "Action, Adventure, Sci-Fi",
+        genre: ["Action", "Adventure", "Sci-Fi"],
         img: "./images/topEntertainment/mandalorian.jpg"
     },{
         title: "The Crown",
         type: "TV",
-        genre: "Biography, Drama, History",
+        genre: ["Biography", "Drama", "History"],
         img: "./images/topEntertainment/crown.jpg"
     },{
         title: "Attack on Titan",
         type: "TV",
-        genre: "Animation, Action, Adventure, Drama, Fantasy, Horror",
+        genre: ["Animation", "Action", "Adventure", "Drama", "Fantasy", "Horror"],
         img: "./images/topEntertainment/attack-titan.jpg"
     },{
         title: "Spongebob Squarepants",
         type: "TV",
-        genre: "Animation, Comedy, Family, Fantasy",
+        genre: ["Animation", "Comedy", "Family", "Fantasy"],
         img: "./images/topEntertainment/spongebob.jpg"
     },{
         title: "Mindhunter",
         type: "TV",
-        genre: "Crime, Drama, Thriller",
+        genre: ["Crime", "Drama", "Thriller"],
         img: "./images/topEntertainment/mindhunter.jpg"
     },{
         title: "Planet Earth",
@@ -97,27 +97,27 @@
     },{
         title: "Pulp Fiction",
         type: "Movie",
-        genre: "Crime, Drama",
+        genre: ["Crime", "Drama"],
         img: "./images/topEntertainment/pulp-fiction.jpg"
     },{
         title: "Euphoria",
         type: "TV",
-        genre: "Drama, LGTBQ",
+        genre: ["Drama", "LGTBQ"],
         img: "./images/topEntertainment/euphoria.jpg"
     },{
         title: "Americanah",
         type: "Book",
-        genre: "Drama, Romance",
+        genre: ["Drama", "Romance"],
         img: "./images/topEntertainment/americanah.jpg"
     },{
         title: "House",
         type: "TV",
-        genre: "Drama, Mystery",
+        genre: ["Drama", "Mystery"],
         img: "./images/topEntertainment/house.jpg"
     },{
         title: "Rick and Morty",
         type: "TV",
-        genre: "Animation, Adventure, Comedy, Sci-Fi",
+        genre: ["Animation", "Adventure", "Comedy", "Sci-Fi"],
         img: "./images/topEntertainment/rick-morty.jpg"
     },{
         title: "Lady Gaga",
@@ -127,7 +127,7 @@
     },{
         title: "Drake",
         type: "Music",
-        genre: "Rap, R&B",
+        genre: ["Rap", "R&B"],
         img: "./images/topEntertainment/drake.jpg"
     },{
         title: "Tim McGraw",
@@ -147,22 +147,22 @@
     },{
         title: "The Smiths",
         type: "Music",
-        genre: "Rock, Britpop",
+        genre: ["Rock", "Britpop"],
         img: "./images/topEntertainment/the-smiths.jpg"
     },{
         title: "H.E.R.",
         type: "Music",
-        genre: "R&B, Soul",
+        genre: ["R&B", "Soul"],
         img: "./images/topEntertainment/h-e-r.jpg"
     },{
         title: "Zedd",
         type: "Music",
-        genre: "Dance, Electronic",
+        genre: ["Dance", "Electronic"],
         img: "./images/topEntertainment/zedd.jpg"
     },{
         title: "Black Sabbath",
         type: "Music",
-        genre: "Classic Metal",
+        genre: ["Classic Metal", "Metal"],
         img: "./images/topEntertainment/black-sabbath.jpg"
     },{
         title: "Nirvana",
@@ -172,12 +172,12 @@
     },{
         title: "Jojo Siwa",
         type: "Music",
-        genre: "Pop, Family",
+        genre: ["Pop", "Family"],
         img: "./images/topEntertainment/jojo-siwa.jpg"
     },{
         title: "One Direction",
         type: "Music",
-        genre: "Pop, Boyband",
+        genre: ["Rock", "Britpop"],
         img: "./images/topEntertainment/one-direction.jpg"
     }
  ];
