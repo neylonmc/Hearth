@@ -1,73 +1,71 @@
 .settings-container {
-    text-align: center;
-    margin: 0rem 20rem;
-    padding-top: 5%;
-    min-width: 35rem;
-  }
-  
-  .settings-header {
-    font-weight: 300;
-    letter-spacing: 1.5rem;
-  }
-  
-  #settings-block {
-    margin: 0.5rem 0rem 1rem 0rem;
-    padding: 1rem 0rem;
-  }
-  
-    /* ACCOUNT SETTINGS */
-    .acct-set-container {
-      background-color: rgb(98,19,10, 0.35) !important;
-      border: 1px solid #62130a !important;
-    }
-  
-    #input-form {
-      max-width: 20rem;
-    }
-  
-    #account-submit {
-        background-color: rgb(98,19,10, 0.9);
-        border: 1px solid #62130a;
-    }
-  
-    #account-submit:hover {
-      background-color: rgb(98,19,10, 0.5);
-      border: 1px solid #62130a;
-    } 
-  
-    /* USER PREFERENCES */
-    .usr-pref-container {
-      background-color: rgb(217,85,21, 0.35);
-      border: 1px solid #D95515;
-    }
-  
-    #preference-block{
-      margin: -0.5rem 0.5rem;
-      background-color: transparent;
-      color: #212529;
-    }
-  
-    #preference-label {
-      text-align: left;
-      font-weight: 400;
-      font-size: 120%;
-    }
-  
-    .save-new-preferences {
-      background-color: rgb(217,85,21, 0.9) !important;
-      border: 1px solid #d95515 !important;
-    }
-  
-    .save-new-preferences:hover {
-      background-color: rgb(217,85,21, 0.5) !important;
-      border: 1px solid #d95515 !important;
-    } 
+  text-align: center;
+  margin: 0rem 20rem;
+  padding-top: 5%;
+  min-width: 35rem;
+}
+
+.settings-header {
+  font-weight: 300;
+  letter-spacing: 1.5rem;
+}
+
+#settings-block {
+  margin: 0.5rem 0rem 1rem 0rem;
+  padding: 1rem 0rem;
+}
+
+/* ACCOUNT SETTINGS */
+.acct-set-container {
+  background-color: rgb(98, 19, 10, 0.35) !important;
+  border: 1px solid #62130a !important;
+}
+
+#input-form {
+  max-width: 20rem;
+}
+
+#account-submit {
+  background-color: rgb(98, 19, 10, 0.9);
+  border: 1px solid #62130a;
+}
+
+#account-submit:hover {
+  background-color: rgb(98, 19, 10, 0.5);
+  border: 1px solid #62130a;
+}
+
+/* USER PREFERENCES */
+.usr-pref-container {
+  background-color: rgb(217, 85, 21, 0.35);
+  border: 1px solid #d95515;
+}
+
+#preference-block {
+  margin: -0.5rem 0.5rem;
+  background-color: transparent;
+  color: #212529;
+}
+
+#preference-label {
+  text-align: left;
+  font-weight: 400;
+  font-size: 120%;
+}
+
+.save-new-preferences {
+  background-color: rgb(217, 85, 21, 0.9) !important;
+  border: 1px solid #d95515 !important;
+}
+
+.save-new-preferences:hover {
+  background-color: rgb(217, 85, 21, 0.5) !important;
+  border: 1px solid #d95515 !important;
+}
 
 @media (max-width: 480px) {
-
-    .settings-container {
-        margin: 0rem 1rem;
-        min-width: 20rem;
-      }
-
-}    
+  .settings-container {
+    margin: 0rem 1rem;
+    min-width: 20rem;
+  }
+}
