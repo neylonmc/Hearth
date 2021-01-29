@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
     Row,
     Col,
@@ -30,14 +30,13 @@ function Select() {
             <Row>
                 { Entertainment.map(data => {
                         return(
-                            <Col md={6} sm={12}>
+                            <Col md={6} sm={12} id="button-column">
                                 <Button id="button-container" bordered>
                                     <img 
                                         id="button-image" 
                                         src={ data.img }
                                         alt={ data.title }
                                     />
-                                    <h1 id="button-title">{ data.title }</h1>
                                 </Button>
                             </Col>
                         )
@@ -46,11 +45,6 @@ function Select() {
             </Row>
         </div>
     )
-
-    
-
-    
-
 };
 
 export default Select;

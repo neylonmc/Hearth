@@ -4,9 +4,7 @@
     letter-spacing: 0.2rem;
 }
 
-
 /* BUTTONS */
-
 #button-container {
     background-color: rgb(217,85,21, 0.55) ;
     border: 1px solid #d95515;
@@ -14,22 +12,32 @@
 }
 
 #button-container:hover {
-    opacity: 0.9;
-}
-
-#button-container:active {
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 #button-image {
-    border-radius: 3%;
     object-fit: cover;
+    border-radius: 3%;
+    overflow: hidden;
+    height: 18rem;
     width: 100%;
-    min-height: 8rem;
-    min-width: 8rem;
 }
 
 #button-title {
     font-size: 180%;
     text-align: center;
 }
+
+@media (max-width: 480px) {
+
+    #button-container {
+        width: 50%;
+        margin: 0rem;
+    }
+ 
+    #button-image {
+        height: 10rem;
+    }
+    
+
+}    
