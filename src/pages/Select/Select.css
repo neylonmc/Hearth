@@ -1,0 +1,18 @@
+#button-container:hover {
+    opacity: 0.9;
+}
+
+#button-container:active {
+    opacity: 0.9;
+}
+
+#button-image {
+    width: 100%;
+    border-radius: 5%;
+}
+
+#button-title {
+    font-size: 180%;
+    text-align: center;
+    margin-top: 1rem;
+}

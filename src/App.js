@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Container } from "rsuite";
 import Login from "./pages/Login/Login";
+import Select from "./pages/Select/Select";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Topics from "./components/Topics/Topics";
 import CreateNew from "./components/CreateNew/CreateNew";
@@ -20,9 +21,8 @@ function App() {
         <Nav />
         <Container>
           <Switch>
-            <Route exact path={["/", "/login"]}>
-              <Login />
-            </Route>
+            <Route exact path={["/", "/login"]} component={Login} />
+            <Route exact path="/select" component={Select}/>
             <Route exact path="/topics" component={Topics} />
             <Route exact path="/dashboard" component={Dashboard} />
             <Route exact path="/create-new" component={CreateNew} />
