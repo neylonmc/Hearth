@@ -1,3 +1,18 @@
+.select-header-container {
+    text-align: center;
+    margin-bottom: 1rem;
+    letter-spacing: 0.2rem;
+}
+
+
+/* BUTTONS */
+
+#button-container {
+    background-color: rgb(217,85,21, 0.55) ;
+    border: 1px solid #d95515;
+    margin-bottom: 0.5rem;
+}
+
 #button-container:hover {
     opacity: 0.9;
 }
@@ -7,12 +22,14 @@
 }
 
 #button-image {
+    border-radius: 3%;
+    object-fit: cover;
     width: 100%;
-    border-radius: 5%;
+    min-height: 8rem;
+    min-width: 8rem;
 }
 
 #button-title {
     font-size: 180%;
     text-align: center;
-    margin-top: 1rem;
 }

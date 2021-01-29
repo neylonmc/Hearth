@@ -8,64 +8,198 @@ import "./Select.css";
 
 function Select() {
     return(
-        <Row className="select-container">
-            <Col 
-                id="button-container"
-                md={6} 
-                sm={12}
-            >
-                <Button bordered>
-                    <img 
-                        id="button-image" 
-                        src="./images/no-image.png"
-                        alt="artist or work"
-                    />
-                    <h1 id="button-title">title</h1>
-                </Button>
-            </Col>
-            <Col 
-                id="button-container"
-                md={6} 
-                sm={12}
-            >
-                <Button bordered>
-                    <img 
-                        id="button-image" 
-                        src="./images/no-image.png"
-                        alt="artist or work"
-                    />
-                    <h1 id="button-title">title</h1>
-                </Button>
-            </Col>
-            <Col 
-                id="button-container"
-                md={6} 
-                sm={12}
-            >
-                <Button bordered>
-                    <img 
-                        id="button-image" 
-                        src="./images/no-image.png"
-                        alt="artist or work"
-                    />
-                    <h1 id="button-title">title</h1>
-                </Button>
-            </Col>
-            <Col 
-                id="button-container"
-                md={6} 
-                sm={12}
-            >
-                <Button bordered>
-                    <img 
-                        id="button-image" 
-                        src="./images/no-image.png"
-                        alt="artist or work"
-                    />
-                    <h1 id="button-title">title</h1>
-                </Button>
-            </Col>
-        </Row>
+        <div className="select-container">
+            <div className="select-header-container">
+                <Row>
+                    <Col>
+                        <h1>select your favorites</h1>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>
+                        <p>
+                            give us an idea of what
+                            you're interested in
+                        </p>
+                    </Col>
+                </Row>
+            </div>
+            <Row>
+                <Col md={6} sm={12}>
+                    <Button id="button-container" bordered>
+                        <img 
+                            id="button-image" 
+                            src="./images/no-image.png"
+                            alt="artist or work"
+                        />
+                        <h1 id="button-title">title</h1>
+                    </Button>
+                </Col>
+                <Col md={6} sm={12}>
+                    <Button id="button-container" bordered>
+                        <img 
+                            id="button-image" 
+                            src="./images/no-image.png"
+                            alt="artist or work"
+                        />
+                        <h1 id="button-title">title</h1>
+                    </Button>
+                </Col>
+                <Col md={6} sm={12}>
+                    <Button id="button-container" bordered>
+                        <img 
+                            id="button-image" 
+                            src="./images/no-image.png"
+                            alt="artist or work"
+                        />
+                        <h1 id="button-title">title</h1>
+                    </Button>
+                </Col>
+                <Col md={6} sm={12}>
+                    <Button id="button-container" bordered>
+                        <img 
+                            id="button-image" 
+                            src="./images/no-image.png"
+                            alt="artist or work"
+                        />
+                        <h1 id="button-title">title</h1>
+                    </Button>
+                </Col>
+                <Col 
+                    md={6} sm={12}>
+                    <Button id="button-container" bordered>
+                        <img 
+                            id="button-image" 
+                            src="./images/no-image.png"
+                            alt="artist or work"
+                        />
+                        <h1 id="button-title">title</h1>
+                    </Button>
+                </Col>
+                <Col md={6} sm={12}>
+                    <Button id="button-container" bordered>
+                        <img 
+                            id="button-image" 
+                            src="./images/no-image.png"
+                            alt="artist or work"
+                        />
+                        <h1 id="button-title">title</h1>
+                    </Button>
+                </Col>
+                <Col md={6} sm={12}
+                >
+                    <Button id="button-container" bordered>
+                        <img 
+                            id="button-image" 
+                            src="./images/no-image.png"
+                            alt="artist or work"
+                        />
+                        <h1 id="button-title">title</h1>
+                    </Button>
+                </Col>
+                <Col md={6} sm={12}
+                >
+                    <Button id="button-container" bordered>
+                        <img 
+                            id="button-image" 
+                            src="./images/no-image.png"
+                            alt="artist or work"
+                        />
+                        <h1 id="button-title">title</h1>
+                    </Button>
+                </Col>
+                <Col 
+                    md={6} sm={12}
+                >
+                    <Button id="button-container" bordered>
+                        <img 
+                            id="button-image" 
+                            src="./images/no-image.png"
+                            alt="artist or work"
+                        />
+                        <h1 id="button-title">title</h1>
+                    </Button>
+                </Col>
+                <Col md={6} sm={12}
+                >
+                    <Button id="button-container" bordered>
+                        <img 
+                            id="button-image" 
+                            src="./images/no-image.png"
+                            alt="artist or work"
+                        />
+                        <h1 id="button-title">title</h1>
+                    </Button>
+                </Col>
+                <Col md={6} sm={12}
+                >
+                    <Button id="button-container" bordered>
+                        <img 
+                            id="button-image" 
+                            src="./images/no-image.png"
+                            alt="artist or work"
+                        />
+                        <h1 id="button-title">title</h1>
+                    </Button>
+                </Col>
+                <Col md={6} sm={12}
+                >
+                    <Button id="button-container" bordered>
+                        <img 
+                            id="button-image" 
+                            src="./images/no-image.png"
+                            alt="artist or work"
+                        />
+                        <h1 id="button-title">title</h1>
+                    </Button>
+                </Col>
+                <Col 
+                    md={6} sm={12}
+                >
+                    <Button id="button-container" bordered>
+                        <img 
+                            id="button-image" 
+                            src="./images/no-image.png"
+                            alt="artist or work"
+                        />
+                        <h1 id="button-title">title</h1>
+                    </Button>
+                </Col>
+                <Col md={6} sm={12}
+                >
+                    <Button id="button-container" bordered>
+                        <img 
+                            id="button-image" 
+                            src="./images/no-image.png"
+                            alt="artist or work"
+                        />
+                        <h1 id="button-title">title</h1>
+                    </Button>
+                </Col>
+                <Col md={6} sm={12}
+                >
+                    <Button id="button-container" bordered>
+                        <img 
+                            id="button-image" 
+                            src="./images/no-image.png"
+                            alt="artist or work"
+                        />
+                        <h1 id="button-title">title</h1>
+                    </Button>
+                </Col>
+                <Col md={6} sm={12}
+                >
+                    <Button id="button-container" bordered>
+                        <img 
+                            id="button-image" 
+                            src="./images/no-image.png"
+                            alt="artist or work"
+                        />
+                        <h1 id="button-title">title</h1>
+                    </Button>
+                </Col>
+            </Row>
+        </div>
     )
 
 };
