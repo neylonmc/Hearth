@@ -5,13 +5,27 @@ import {
     Button
 } from 'rsuite';
 import "./Select.css";
-import Entertainment from "./utils/TopEntertainment";
+import Entertainment from "../../utils/TopEntertainment";
 
 function Select() {
-    console.log(Entertainment)
+
+    // Shuffle Data [Fisher-Yates Method]
+    function shuffle(array) {
+        var currentIndex = array.length, temporaryValue, randomIndex;
+        while (0 !== currentIndex) {
+          randomIndex = Math.floor(Math.random() * currentIndex);
+          currentIndex -= 1;
+          temporaryValue = array[currentIndex];
+          array[currentIndex] = array[randomIndex];
+          array[randomIndex] = temporaryValue;
+        }
+        return array;
+    }
+
+    var shuffledArray = shuffle(Entertainment);
 
     return(
-        <div className="select-container">
+        <div className="select-container animate__animated animate__fadeIn">
             <div className="select-header-container">
                 <Row>
                     <Col>
@@ -27,7 +41,7 @@ function Select() {
                 </Row>
             </div>
             <Row className="button-parent-container">
-                { Entertainment.map(data => {
+                { shuffledArray.map(data => {
                         return(
                             <Col md={6} sm={12} id="button-column">
                                 <Button id="button-container" bordered>
