@@ -5,7 +5,7 @@ import {
     Button
 } from 'rsuite';
 import "./Select.css";
-import Entertainment from "./utils/TopEntertainment";
+import Entertainment from "../../utils/TopEntertainment";
 
 function Select() {
 
