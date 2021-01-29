@@ -109,6 +109,76 @@
         type: "Book",
         genre: "Drama, Romance",
         img: "./images/topEntertainment/americanah.jpg"
+    },{
+        title: "House",
+        type: "TV",
+        genre: "Drama, Mystery",
+        img: "./images/topEntertainment/house.jpg"
+    },{
+        title: "Rick and Morty",
+        type: "TV",
+        genre: "Animation, Adventure, Comedy, Sci-Fi",
+        img: "./images/topEntertainment/rick-morty.jpg"
+    },{
+        title: "Lady Gaga",
+        type: "Music",
+        genre: "Pop",
+        img: "./images/topEntertainment/lady-gaga.jpg"
+    },{
+        title: "Drake",
+        type: "Music",
+        genre: "Rap, R&B",
+        img: "./images/topEntertainment/drake.jpg"
+    },{
+        title: "Tim McGraw",
+        type: "Music",
+        genre: "Country",
+        img: "./images/topEntertainment/tim-mcgraw.jpg"
+    },{
+        title: "Billie Eilish",
+        type: "Music",
+        genre: "Pop",
+        img: "./images/topEntertainment/billie-eilish.jpg"
+    },{
+        title: "Fleetwood Mac",
+        type: "Music",
+        genre: "Classic Rock",
+        img: "./images/topEntertainment/fleetwood-mac.jpg"
+    },{
+        title: "The Smiths",
+        type: "Music",
+        genre: "Rock, Britpop",
+        img: "./images/topEntertainment/the-smiths.jpg"
+    },{
+        title: "H.E.R.",
+        type: "Music",
+        genre: "R&B, Soul",
+        img: "./images/topEntertainment/h-e-r.jpg"
+    },{
+        title: "Zedd",
+        type: "Music",
+        genre: "Dance, Electronic",
+        img: "./images/topEntertainment/zedd.jpg"
+    },{
+        title: "Black Sabbath",
+        type: "Music",
+        genre: "Classic Metal",
+        img: "./images/topEntertainment/black-sabbath.jpg"
+    },{
+        title: "Nirvana",
+        type: "Music",
+        genre: "Punk Rock",
+        img: "./images/topEntertainment/nirvana.jpg"
+    },{
+        title: "Jojo Siwa",
+        type: "Music",
+        genre: "Pop, Family",
+        img: "./images/topEntertainment/jojo-siwa.jpg"
+    },{
+        title: "One Direction",
+        type: "Music",
+        genre: "Pop, Boyband",
+        img: "./images/topEntertainment/one-direction.jpg"
     }
  ];
 

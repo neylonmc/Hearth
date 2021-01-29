@@ -18,8 +18,7 @@ function Select() {
                         <h1>select your favorites</h1>
                     </Col>
                 </Row>
-                <Row>
-                    <Col>
+                <Row><Col>
                         <p>
                             give us an idea of what
                             you're interested in
@@ -27,7 +26,7 @@ function Select() {
                     </Col>
                 </Row>
             </div>
-            <Row>
+            <Row className="button-parent-container">
                 { Entertainment.map(data => {
                         return(
                             <Col md={6} sm={12} id="button-column">
