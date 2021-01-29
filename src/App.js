@@ -1,24 +1,24 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Container } from "rsuite";
-import Login from "./pages/Login";
-import Dashboard from "./components/Dashboard/Dashboard";
+import Login from "./pages/Login/Login";
+import Dashboard from "./pages/Dashboard/Dashboard";
 import Select from "./components/Select/Select";
 import CreateNew from "./components/CreateNew/CreateNew";
-import Header from "./components/Header/Header";
-import Profile from "./pages/Profile";
-import Topic from "./pages/Topic";
-import Settings from "./pages/Settings";
-import NoMatch from "./pages/NoMatch";
+import Nav from "./components/Nav/Nav";
+import Profile from "./pages/Profile-Topic/Profile";
+import Topic from "./pages/Profile-Topic/Topic";
+import Settings from "./pages/Settings/Settings";
+import NoMatch from "./pages/NoMatch/NoMatch";
 import LoginForm from "./components/LoginForm/LoginForm";
-import "./App.css";
 import "rsuite/dist/styles/rsuite-default.css";
+import "./App.css";
 
 function App() {
   return (
     <Router>
       <div className="app">
-        <Header />
+        <Nav />
         <Container>
           <Switch>
             <Route exact path="/login">
@@ -29,7 +29,7 @@ function App() {
             </Route>
             <Route exact path="/select" component={Select} />
             <Route exact path="/dashboard" component={Dashboard} />
-            <Route exact path="/createnew" component={CreateNew} />
+            <Route exact path="/create-new" component={CreateNew} />
             <Route exact path="/profile">
               <Profile />
             </Route>

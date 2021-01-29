@@ -22,7 +22,7 @@ const Select = () => {
             music
           </Button>
           <Button id="select-button" block >
-            <Link style={{"color": "#dee2e6"}} to="/createnew">
+            <Link style={{"color": "#dee2e6"}} to="/create-new">
               {" "}
               create new review
             </Link>

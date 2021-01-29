@@ -13,6 +13,15 @@ export default {
   deleteActivity: function (id) {
     return axios.delete("/api/activities/" + id);
   },
+  getActivitiesByType: function (type) {
+    return axios.get("/api/activities/type/" + type);
+  },
+  getActivitiesByTypeHighestRated: function (type) {
+    return axios.get("/api/activities/highest/" + type);
+  },
+  getActivitiesByTag: function (tag) {
+    return axios.get("/api/activities/tag/" + tag);
+  },
   // Saves an activity to the database
   saveActivity: function (activityData) {
     return axios.post("/api/activities", activityData);

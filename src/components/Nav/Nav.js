@@ -2,14 +2,17 @@ import React from "react";
 import { Navbar, Nav } from "rsuite";
 import { Link } from "react-router-dom";
 import "rsuite/lib/styles/index.less";
-import "./HeaderStyle.css";
+import "./Nav.css";
 
 const Header = ({ onSelect, activeKey }) => {
   return (
-    <Navbar className="navContainer" style={{ width: "100%", backgroundColor: "transparent" }}>
+    <Navbar
+      className="navContainer"
+      style={{ width: "100%", backgroundColor: "transparent" }}
+    >
       <Navbar.Header>
         <Link className="title" to="/">
-              hearth
+          hearth
         </Link>
       </Navbar.Header>
       <Navbar.Body>
@@ -20,18 +23,28 @@ const Header = ({ onSelect, activeKey }) => {
             </Link>
           </Nav.Item>
           <Nav.Item eventKey="2">
-            <Link id="nav-links" to="/select">
-              select
+            <Link id="nav-links" to="/profile">
+              profile
             </Link>
           </Nav.Item>
           <Nav.Item eventKey="3">
-            <Link id="nav-links" to="/createnew">
-              create new
+            <Link id="nav-links" to="/select">
+              topics
             </Link>
           </Nav.Item>
           <Nav.Item eventKey="4">
+            <Link id="nav-links" to="/create-new">
+              create post
+            </Link>
+          </Nav.Item>
+          <Nav.Item eventKey="5">
+            <Link id="nav-links" to="/settings">
+              settings
+            </Link>
+          </Nav.Item>
+          <Nav.Item eventKey="6">
             <Link id="nav-links" to="/login">
-              login
+              log out
             </Link>
           </Nav.Item>
         </Nav>
@@ -39,7 +52,6 @@ const Header = ({ onSelect, activeKey }) => {
     </Navbar>
   );
 };
-
 
 //   return (
 //     <Navbar className="nav-toggle" style={{ height: "100%" }}>

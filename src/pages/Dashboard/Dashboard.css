@@ -1,0 +1,60 @@
+h2 {
+  font-size: 110% !important;
+  font-weight: 500 !important;
+  margin-left: 0.8rem !important;
+  margin-top: -0.5rem !important;
+  letter-spacing: 0.35rem;
+  text-align: left;
+}
+
+.dashboard-container {
+  margin: 2rem 5rem;
+}
+
+.activity-container, #left-block {
+  padding: -1.5rem !important;
+  overflow: scroll;
+}
+
+/* LEFT BLOCKS ---------------------------------------------------------- */
+#left-block {
+  background-color: rgb(217,85,21, 0.35) !important;
+  border: 1px solid #62130a !important;
+  margin-bottom: 0.5rem;
+}
+
+/* USER INFO BLOCK  */
+.user-container {
+  text-align: center;
+  max-height: 15rem;
+  overflow: hidden !important;
+}
+.dash-avatar {
+  max-width: 4.5rem;
+  border-radius: 50%;
+}
+
+/* POLLS BLOCK  */
+.polls-container { 
+  min-height: 15rem;
+}
+
+/* SIMILAR USERS BLOCK   */
+.similar-container {
+  text-align: center;
+  height: 15rem;
+}
+
+/* ACTIVITY BLOCK ---------------------------------------------------------- */
+.activity-container {
+  background-color: rgb(98,19,10, 0.35) !important;
+  border: 1px solid #62130a !important;
+  min-height: 44.5rem;
+}
+
+/* MOBILE ---------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  .dashboard-container {
+    margin: 0rem 0.1rem 1.5rem 0.1rem;
+  }
+}

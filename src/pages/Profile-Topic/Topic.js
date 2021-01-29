@@ -4,13 +4,14 @@ import {
     Col
 } from "rsuite";
 import 'rsuite/dist/styles/rsuite-dark.css';
+import "./Profile-Topic.css";
 // import TopicInfo from "../components/TopicInfo";
 // import TopicActivity from "../components/TopicActivity";
 
 function Topic(props) {
 
     return(
-        <div id="page-container">
+        <div id="page-container" className=" animate__animated animate__fadeIn">
             <div id="page-header">
                 <Row>
                     <Col id="page-image-cont">

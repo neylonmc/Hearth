@@ -5,13 +5,15 @@ import {
     Button 
 } from "rsuite";
 import 'rsuite/dist/styles/rsuite-dark.css';
+import "./Profile-Topic.css";
+import Streaming from "../../components/Streaming/Streaming";
 // import UserInterests from "../components/UserInterests";
 // import UserActivity from "../components/UserActivity";
 
 function Profile(props) {
 
     return(
-        <div id="page-container">
+        <div id="page-container" className=" animate__animated animate__fadeIn">
             <div id="page-header">
                 <Row>
                     <Col id="page-image-cont">
@@ -27,32 +29,16 @@ function Profile(props) {
                 <Row>
                     <Col>
                         {/* USERNAME */}
-                        <h1 id="page-title" className="username">{ props.username || "username" }</h1>
+                        <h1 
+                            id="page-title" 
+                            className="username"
+                        > { props.username || "username" } </h1>
                     </Col>
                 </Row>
-            </div>
 
-            {/* NOW STREAMING */}
-            <Row className="user-now-streaming">
-                <Col 
-                    id="usr-stream"
-                    className="usr-listening"
-                    xs={12} 
-                >   
-                    <h3 id="usr-stream-txt">
-                        now listening to...
-                    </h3>
-                </Col>
-                <Col 
-                    id="usr-stream"
-                    className="usr-watching"
-                    xs={12}
-                >
-                    <h3 id="usr-stream-txt"> 
-                        now watching... 
-                    </h3>
-                </Col>
-            </Row>
+                {/* NOW STREAMING */}
+                <Streaming />
+            </div>
 
             {/* USER INTERESTS */}
             <Row id="page-block-1" className="usr-int-container">
