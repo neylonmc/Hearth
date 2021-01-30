@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   Form,
   FormGroup,
@@ -14,11 +14,63 @@ import {
   Row,
   Col,
 } from "rsuite";
-import "rsuite/lib/styles/index.less";
 import "./CreateNewStyle.css";
 import selections from "../../utils/Genre";
+import API from "../../utils/API";
+
 
 const CreateNew = () => {
+  const [developerState, setDeveloperState] = useState({});
+  const [formObject, setFormObject] = useState({})
+
+  useEffect(() => {
+  }, [])
+
+
+  function createPost() {
+  }
+
+  /*function handleInputChange(event) {
+    console.log(event.target);
+    const { name, value } = event.target;
+    setFormObject({...formObject, [name]: value})
+  };*/
+
+
+  function handleFormSubmit(event) {
+    event.preventDefault();
+    console.log(formObject);
+  }
+
+  function handleFormCancel(event) {
+    event.preventDefault();
+    setFormObject({ })
+  }
+
+
+  //need these over handleInputChange because event.target is undefined for non-input forms
+  function handleInputChangeRadio(event) {
+    setFormObject({ ...formObject, type: event })
+  };
+
+  function handleInputChangeTitle(event) {
+    setFormObject({ ...formObject, title: event })
+  };
+
+  function handleInputChangeRating(event) {
+    setFormObject({ ...formObject, rating: event })
+  };
+
+  function handleInputChangeGenre(event) {
+    setFormObject({ ...formObject, category: event })
+  };
+
+  function handleInputChangeReview(event) {
+    setFormObject({ ...formObject, review: event })
+  };
+
+
+
   return (
     <div className="create-container">
       <Row>
@@ -33,17 +85,17 @@ const CreateNew = () => {
           {/* REVIEW RADIO */}
           <FormControlLabel>what would you like to review?</FormControlLabel>
 
-          <RadioGroup name="radioList" className="createnew-radio" inline>
-            <Radio value="A">movie</Radio>
-            <Radio value="B">tv</Radio>
-            <Radio value="C">book</Radio>
-            <Radio value="D">music</Radio>
+          <RadioGroup onChange={handleInputChangeRadio} name="radioList" className="createnew-radio" inline>
+            <Radio value="Movie">movie</Radio>
+            <Radio value="TV">tv</Radio>
+            <Radio value="Book">book</Radio>
+            <Radio value="Music">music</Radio>
           </RadioGroup>
 
           {/* REVIEW TITLE */}
           <FormGroup>
             <FormControlLabel>please enter a title</FormControlLabel>
-            <FormControl name="title" type="input" className="form-title" />
+            <FormControl onChange={handleInputChangeTitle} name="title" type="input" className="form-title" />
             <FormHelpText>required</FormHelpText>
           </FormGroup>
 
@@ -52,7 +104,7 @@ const CreateNew = () => {
             <FormControlLabel className="createnew-rating">
               please select your rating
             </FormControlLabel>
-            <Rate defaultValue={2.5} allowHalf />
+            <Rate onChange={handleInputChangeRating} defaultValue={2.5} allowHalf />
           </FormGroup>
 
           {/* REVIEW GENRE */}
@@ -61,7 +113,7 @@ const CreateNew = () => {
             <FormControlLabel className="createnew-genre">
               please select a genre
             </FormControlLabel>
-            <SelectPicker data={selections} />
+            <SelectPicker onChange={handleInputChangeGenre} data={selections} />
           </FormGroup>
 
           {/* COMMENT REVIEW */}
@@ -69,15 +121,15 @@ const CreateNew = () => {
             <FormControlLabel className="createnew-review">
               leave a review
             </FormControlLabel>
-            <FormControl rows={3} name="textarea" componentClass="textarea" />
+            <FormControl onChange={handleInputChangeReview} rows={3} name="textarea" componentClass="textarea" />
           </FormGroup>
 
           {/* SUBMIT BUTTON */}
           <ButtonToolbar>
-            <Button id="createnew-submit" appearance="primary">
+            <Button id="createnew-submit"  appearance="primary" onClick={handleFormSubmit}>
               submit
             </Button>
-            <Button id="createnew-cancel" appearance="default">
+            <Button id="createnew-cancel" appearance="default" onClick={handleFormCancel}>
               cancel
             </Button>
           </ButtonToolbar>

@@ -33,7 +33,7 @@ function Select() {
                     </Col>
                 </Row>
                 <Row><Col>
-                        <p>
+                        <p className="subhead">
                             give us an idea of what
                             you're interested in
                         </p>
