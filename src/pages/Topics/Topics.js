@@ -1,9 +1,7 @@
 import React from "react";
 import { ButtonToolbar, Button } from "rsuite";
-import { Link } from "react-router-dom";
 import "rsuite/lib/styles/index.less";
 import "./Topics.css";
-import Categories from "../Categories/Categories";
 import allTopics from "../../utils/Topics";
 
 const Topics = () => {
@@ -19,7 +17,7 @@ const Topics = () => {
             return( 
               <Button 
                 id="select-button"
-                href= {topic.topic_url}
+                href= { topic.topic_url }
                 block 
               >
                   { topic.topic }
