@@ -14,7 +14,6 @@ import {
   Row,
   Col,
 } from "rsuite";
-import "rsuite/lib/styles/index.less";
 import "./CreateNewStyle.css";
 import selections from "../../utils/Genre";
 

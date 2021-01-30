@@ -8,6 +8,11 @@
     margin: 0rem -7rem;
 }
 
+.subhead {
+    font-weight: 500;
+    font-size: 130%;
+}
+
 /* BUTTONS */
 #button-container {
     text-align: center;
