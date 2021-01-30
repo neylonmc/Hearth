@@ -29,7 +29,7 @@ function Login() {
         </Row>
         <Row>
           <Col>
-            <Button id="login-buttons" className="account-btn" size="lg" block>
+            <Button id="login-buttons" className="account-btn" size="lg" href="/select"block>
               Create Account
             </Button>
           </Col>

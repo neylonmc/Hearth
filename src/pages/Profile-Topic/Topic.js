@@ -32,7 +32,6 @@ function Topic(props) {
                 </Row>
             </div>
 
-
             {/* TOPIC INFO */}
             <Row id="page-block-1" className="topic-info-container">
                 <Row>

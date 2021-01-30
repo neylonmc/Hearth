@@ -6,7 +6,6 @@ import {
   Button, 
   ButtonToolbar, 
   ButtonGroup } from "rsuite";
-import "rsuite/lib/styles/index.less";
 import "./Dashboard.css";
 import Streaming from "../../components/Streaming/Streaming";
 import SimilarUsers from "../../components/SimilarUsers/SimilarUsers";

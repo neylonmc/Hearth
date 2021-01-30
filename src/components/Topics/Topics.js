@@ -2,9 +2,9 @@ import React from "react";
 import { ButtonToolbar, Button } from "rsuite";
 import { Link } from "react-router-dom";
 import "rsuite/lib/styles/index.less";
-import "./SelectStyle.css";
+import "./Topics.css";
 
-const Select = () => {
+const Topics = () => {
   return (
     <div className="select-container">
       <h3 className="select-title">select entertainment type</h3>
@@ -32,4 +32,4 @@ const Select = () => {
   );
 };
 
-export default Select;
+export default Topics;
