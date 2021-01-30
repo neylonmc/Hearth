@@ -8,7 +8,7 @@ import {
   useRouteMatch
 } from "react-router-dom";
 import { 
-  Row,
+  ButtonGroup,
   Col,
   Panel,
   Button
@@ -72,19 +72,21 @@ function Topic() {
     <div className="topic-container">
       <Panel
         className="topic-panel"
-        header={ topic }
-        bordered
       >
-        <div className="topic-results">
+        <ButtonGroup>
             { shuffledArray.map(data => {
               if (data.topic === topic) {
                 return(
-
-                  <Col md={6} sm={12} id="button-column">
-                      <Button bordered>
+                  <Col md={3} sm={12}>
+                      <Button  
+                        id="results-button"
+                        bordered
+                      >
                           <img 
-                              src={ data.img }
-                              alt={ data.title }
+                              id= "topic-image"
+                              src= { data.img }
+                              alt= { data.title }
+                              href={ data.topic_url }
                           />
                       </Button>
                   </Col>
@@ -92,7 +94,7 @@ function Topic() {
                 );
               } 
             }) }
-        </div>
+        </ButtonGroup>
       </Panel>
     </div>
   )

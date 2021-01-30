@@ -37,27 +37,40 @@
   background: rgb(217,85,21, 1);
 }
 
-/* ON TOGGLE ------------------------------------------------------------------------ */
-
+/* RESULTS ------------------------------------------------------------------------ */
 .topic-container {
   margin: 2rem 0rem;
 }
 
 .topic-panel {
-  background-color: rgb(217,85,21, 0.35) !important;
-  border: 1px solid #d95515 !important;
+  background-color: transparent;
+  text-align: center;
+}
+
+#results-button {
+  margin: 0.8em;
+  background-color: rgb(98,19,10, 0.55) ;
+  border: 1px solid #62130a;
+}
+
+#topic-image {
+    object-fit: cover;
+    border-radius: 3%;
+    overflow: hidden;
+    height: 12em;
+    width: 100%;
 }
 
 @media (max-width: 480px) {
 
- .select-container {
+ /* .select-container {
    padding: 0rem 1rem;
  } 
 
  .select-title {
    font-size: 200%;
    letter-spacing: 0.1rem;
- }
+ } */
   
 }
 
