@@ -11,8 +11,9 @@ import {
   RadioGroup,
   Rate,
   SelectPicker,
+  Row,
+  Col,
 } from "rsuite";
-import "rsuite/lib/styles/index.less";
 import "./CreateNewStyle.css";
 import selections from "../../utils/Genre";
 import API from "../../utils/API";
@@ -71,54 +72,69 @@ const CreateNew = () => {
 
 
   return (
-    <div className="flex">
-      <h1 className="title-item" style={{ backgroundColor: "#d9a51f" }}>
-        Create New Review
-      </h1>
+    <div className="create-container">
+      <Row>
+        <Col>
+          <h1 className="createnew-header">create new review</h1>
+        </Col>
+      </Row>
 
-      <Form fluid className="form-style">
-        <FormGroup controlId="radioList">
-          <FormControlLabel>What Would You Like To Review?</FormControlLabel>
-          <RadioGroup
-            onChange={handleInputChangeRadio}
-            name="radioList" inline>
-            <Radio value="Movie">Movie</Radio>
-            <Radio value="TV">Tv</Radio>
-            <Radio value="Book">Book</Radio>
-            <Radio value="Music">Music</Radio>
+      {/* FORM TO CREATE NEW REVIEW */}
+      <div className="createnew-form-container">
+        <Form fluid className="createnew-form">
+          {/* REVIEW RADIO */}
+          <FormControlLabel>what would you like to review?</FormControlLabel>
+
+          <RadioGroup onChange={handleInputChangeRadio} name="radioList" className="createnew-radio" inline>
+            <Radio value="Movie">movie</Radio>
+            <Radio value="TV">tv</Radio>
+            <Radio value="Book">book</Radio>
+            <Radio value="Music">music</Radio>
           </RadioGroup>
-        </FormGroup>
-        <FormGroup>
-          <FormControlLabel>Please Enter the Title</FormControlLabel>
-          <FormControl onChange={handleInputChangeTitle}
-            name="title" type="input" className="form-title" />
-          <FormHelpText>Required</FormHelpText>
-        </FormGroup>
-        <FormGroup>
-          <FormControlLabel>Please Select You Rating</FormControlLabel>
-          <Rate onChange={handleInputChangeRating} name="rating" defaultValue={2.5} allowHalf style={{ color: "#62130a" }} />
-        </FormGroup>
-        <FormGroup>
-          <FormControlLabel>Please Select a Genre</FormControlLabel>
-          <SelectPicker
-            data={selections}
-            style={{ width: 224, marginBottom: "10px" }}
-            onChange={handleInputChangeGenre}
-            name="category"
-          />
-          <FormControlLabel>Leave A Review!</FormControlLabel>
-          <FormControl onChange={handleInputChangeReview} rows={3} name="textarea" componentClass="textarea" />
-        </FormGroup>
-        <FormGroup>
+
+          {/* REVIEW TITLE */}
+          <FormGroup>
+            <FormControlLabel>please enter a title</FormControlLabel>
+            <FormControl onChange={handleInputChangeTitle} name="title" type="input" className="form-title" />
+            <FormHelpText>required</FormHelpText>
+          </FormGroup>
+
+          {/* REVIEW RATING */}
+          <FormGroup>
+            <FormControlLabel className="createnew-rating">
+              please select your rating
+            </FormControlLabel>
+            <Rate onChange={handleInputChangeRating} defaultValue={2.5} allowHalf />
+          </FormGroup>
+
+          {/* REVIEW GENRE */}
+
+          <FormGroup>
+            <FormControlLabel className="createnew-genre">
+              please select a genre
+            </FormControlLabel>
+            <SelectPicker onChange={handleInputChangeGenre} data={selections} />
+          </FormGroup>
+
+          {/* COMMENT REVIEW */}
+          <FormGroup>
+            <FormControlLabel className="createnew-review">
+              leave a review
+            </FormControlLabel>
+            <FormControl onChange={handleInputChangeReview} rows={3} name="textarea" componentClass="textarea" />
+          </FormGroup>
+
+          {/* SUBMIT BUTTON */}
           <ButtonToolbar>
-            <Button style={{ backgroundColor: "#62130a", color: "#d9a51f" }}
-              onClick={handleFormSubmit}>
-              Submit
+            <Button id="createnew-submit"  appearance="primary" onClick={handleFormSubmit}>
+              submit
             </Button>
-            <Button appearance="default"  onClick={handleFormCancel}>Cancel</Button>
+            <Button id="createnew-cancel" appearance="default" onClick={handleFormCancel}>
+              cancel
+            </Button>
           </ButtonToolbar>
-        </FormGroup>
-      </Form>
+        </Form>
+      </div>
     </div>
   );
 };
