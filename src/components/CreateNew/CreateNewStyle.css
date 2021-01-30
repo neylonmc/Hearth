@@ -1,44 +1,48 @@
-.flex {
-  margin: auto;
-  width: 50%;
+.create-container {
+  text-align: center;
+  margin: 0 auto;
+  min-width: 25rem;
+  position: relative;
+  margin-top: 5%;
+}
+
+.createnew-header {
+  font-size: 300%;
+  font-weight: 300;
+  text-align: center;
+  letter-spacing: 0.35rem;
+}
+
+.createnew-form-container {
+  margin: 0.5rem 0rem 1rem 0rem;
+  padding: 1rem 0rem;
+  background-color: rgb(217, 85, 21, 0.35);
+  border: 1px solid #d95515 !important;
+  border-radius: 0.5rem;
+}
+
+.createnew-form {
+  color: #212529;
+  text-align: left;
+  font-weight: 400;
+  font-size: 120%;
   padding: 10px;
 }
 
-.checkboxList {
-  background-color: #dcddc7;
-  text-align: center;
-  color: #62130a;
-  font-size: "25px";
-  border-radius: 10px;
-  margin-top: 10px;
+#createnew-submit {
+  background-color: rgb(217, 85, 21, 0.35);
+  border: 1px solid #d95515 !important;
 }
 
-.title-item {
-  font-family: 'Dosis', sans-serif;
-  text-shadow: 3px 2px rgb(190, 42, 13, 0.85);
-  color: #62130a;
-  text-align: center;
-  background-color: #d9a51f;
-  border-radius: 10px;
-}
-
-.form-style {
-  color: #62130a;
-  margin-top: 10px;
-  border-radius: 10px;
-  padding: 5px;
-  background-color: #dcddc7 !important;
-  font-size: 15px;
+#createnew-submit:hover {
+  border: 1px solid #d95515 !important;
+  background-color: rgba(185, 75, 20, 0.5) !important;
 }
 
 /*-------------------Mobile View --------------*/
 @media (max-width: 480px) {
-  .flex {
-    width: fit-content;
-  }
-  .title-item {
-    opacity: 0.85;
-    margin-bottom: 0.3rem;
-    padding-left: 30px;
+  .create-container {
+    margin: 0rem 1rem;
+    min-width: 20rem;
   }
 }
