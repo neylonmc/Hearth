@@ -4,8 +4,7 @@ import { Container } from "rsuite";
 import Login from "./pages/Login/Login";
 import Select from "./pages/Select/Select";
 import Dashboard from "./pages/Dashboard/Dashboard";
-import Topics from "./pages/Topics/Topics";
-import Categories from "./pages/Categories/Categories";
+import Browse from "./pages/Browse-Topics/Browse";
 import CreateNew from "./components/CreateNew/CreateNew";
 import Nav from "./components/Nav/Nav";
 import Profile from "./pages/Profile-Topic/Profile";
@@ -25,7 +24,7 @@ function App() {
           <Switch>
             <Route exact path={["/", "/login"]} component={Login} />
             <Route exact path="/select" component={Select}/>
-            <Route path="/topics" component={Topics} /> 
+            <Route path="/topics" component={Browse} /> 
             <Route exact path="/dashboard" component={Dashboard} />
             <Route exact path="/create-new" component={CreateNew} />
             <Route exact path="/profile" component={Profile} />

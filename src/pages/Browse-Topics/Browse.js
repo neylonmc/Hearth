@@ -9,12 +9,13 @@ import {
 } from "react-router-dom";
 import { 
   ButtonGroup,
+  Row,
   Col,
   Panel,
   Button
 } from "rsuite";
 import "rsuite/lib/styles/index.less";
-import "./Topics.css";
+import "./Browse.css";
 import allTopics from "../../utils/Topics";
 import Entertainment from "../../utils/TopEntertainment";
 
@@ -24,20 +25,22 @@ export default function Topics() {
   return (
     <div className="browse-container">
       <h3 className="browse-title">browse by topic</h3>
-      <div className="topic-links">
+      <Row className="topic-links">
         { allTopics.map(topic => {
             return( 
-              <Link 
-                id="topic-button"
-                to={`${url}/${topic.topic}`}
-              >
-                {topic.topic}
-              </Link>
+              <Col id="link-container" md={6} sm={12}>
+                <Link 
+                  id="topic-button"
+                  to={`${url}/${topic.topic}`}
+                >
+                  {topic.topic}
+                </Link>
+              </Col>
 
             )
           })
         }
-      </div>
+      </Row>
       
       <Switch>
         <Route exact path={path} />
@@ -73,11 +76,11 @@ function Topic() {
       <Panel
         className="topic-panel"
       >
-        <ButtonGroup>
+        <ButtonGroup className="button-container">
             { shuffledArray.map(data => {
               if (data.topic === topic) {
                 return(
-                  <Col md={3} sm={12}>
+                  <Col md={4} sm={12}>
                       <Button  
                         id="results-button"
                         bordered
