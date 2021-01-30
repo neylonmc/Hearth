@@ -6,7 +6,6 @@ import {
   FormControl,
   Button
 } from "rsuite";
-import "rsuite/lib/styles/index.less";
 
 function LoginForm() {
   const [email, setEmail] = useState("");
