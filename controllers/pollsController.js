@@ -15,6 +15,9 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+  //findByTop
+  //search sorted by highest
+  //date restrictions
   create: function(req, res) {
     db.Poll
       .create(req.body)
