@@ -11,54 +11,78 @@ import {
   RadioGroup,
   Rate,
   SelectPicker,
+  Row,
+  Col,
 } from "rsuite";
+import "rsuite/lib/styles/index.less";
 import "./CreateNewStyle.css";
 import selections from "../../utils/Genre";
 
 const CreateNew = () => {
   return (
-    <div className="flex">
-      <h1 className="title-item" style={{ backgroundColor: "#d9a51f" }}>
-        Create New Review
-      </h1>
+    <div className="create-container">
+      <Row>
+        <Col>
+          <h1 className="createnew-header">create new review</h1>
+        </Col>
+      </Row>
 
-      <Form fluid className="form-style">
-        <FormGroup controlId="radioList">
-          <FormControlLabel>What Would You Like To Review?</FormControlLabel>
-          <RadioGroup name="radioList" inline>
-            <Radio value="A">Movie</Radio>
-            <Radio value="B">Tv</Radio>
-            <Radio value="C">Book</Radio>
-            <Radio value="D">Music</Radio>
+      {/* FORM TO CREATE NEW REVIEW */}
+      <div className="createnew-form-container">
+        <Form fluid className="createnew-form">
+          {/* REVIEW RADIO */}
+          <FormControlLabel>what would you like to review?</FormControlLabel>
+
+          <RadioGroup name="radioList" className="createnew-radio" inline>
+            <Radio value="A">movie</Radio>
+            <Radio value="B">tv</Radio>
+            <Radio value="C">book</Radio>
+            <Radio value="D">music</Radio>
           </RadioGroup>
-        </FormGroup>
-        <FormGroup>
-          <FormControlLabel>Please Enter the Title</FormControlLabel>
-          <FormControl name="title" type="input" className="form-title" />
-          <FormHelpText>Required</FormHelpText>
-        </FormGroup>
-        <FormGroup>
-          <FormControlLabel>Please Select You Rating</FormControlLabel>
-          <Rate defaultValue={2.5} allowHalf style={{ color: "#62130a" }} />
-        </FormGroup>
-        <FormGroup>
-          <FormControlLabel>Please Select a Genre</FormControlLabel>
-          <SelectPicker
-            data={selections}
-            style={{ width: 224, marginBottom: "10px" }}
-          />
-          <FormControlLabel>Leave A Review!</FormControlLabel>
-          <FormControl rows={3} name="textarea" componentClass="textarea" />
-        </FormGroup>
-        <FormGroup>
+
+          {/* REVIEW TITLE */}
+          <FormGroup>
+            <FormControlLabel>please enter a title</FormControlLabel>
+            <FormControl name="title" type="input" className="form-title" />
+            <FormHelpText>required</FormHelpText>
+          </FormGroup>
+
+          {/* REVIEW RATING */}
+          <FormGroup>
+            <FormControlLabel className="createnew-rating">
+              please select your rating
+            </FormControlLabel>
+            <Rate defaultValue={2.5} allowHalf />
+          </FormGroup>
+
+          {/* REVIEW GENRE */}
+
+          <FormGroup>
+            <FormControlLabel className="createnew-genre">
+              please select a genre
+            </FormControlLabel>
+            <SelectPicker data={selections} />
+          </FormGroup>
+
+          {/* COMMENT REVIEW */}
+          <FormGroup>
+            <FormControlLabel className="createnew-review">
+              leave a review
+            </FormControlLabel>
+            <FormControl rows={3} name="textarea" componentClass="textarea" />
+          </FormGroup>
+
+          {/* SUBMIT BUTTON */}
           <ButtonToolbar>
-            <Button style={{ backgroundColor: "#62130a", color: "#d9a51f" }}>
-              Submit
+            <Button id="createnew-submit" appearance="primary">
+              submit
             </Button>
-            <Button appearance="default">Cancel</Button>
+            <Button id="createnew-cancel" appearance="default">
+              cancel
+            </Button>
           </ButtonToolbar>
-        </FormGroup>
-      </Form>
+        </Form>
+      </div>
     </div>
   );
 };
