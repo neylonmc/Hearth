@@ -65,7 +65,7 @@
     } 
 
 @media (max-width: 480px) {
-
+  
     .settings-container {
         margin: -1rem 1rem;
         min-width: 20rem;
@@ -77,3 +77,4 @@
     }  
 
 }    
+
