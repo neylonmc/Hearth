@@ -1,20 +1,25 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
-    InputPicker
+    InputPicker, Panel
 } from "rsuite";
 import Entertainment from "../../utils/TopEntertainment";
 import "./SearchBar.css";
 
-function SearchBar() {
-
+function SearchBar()  {
+    
     return(
         <InputPicker 
             className= "search-bar"
             data={ Entertainment } 
             size="md"
             placeholder="search"
+            defaultValue= "search"
+            onSelect= { function(value, item) {
+                window.location.href = item.ext;
+            } }
         />
     )
+    
 };
 
 export default SearchBar;

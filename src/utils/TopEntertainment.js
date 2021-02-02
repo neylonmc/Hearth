@@ -4,7 +4,8 @@
         label: "the catcher in the rye",
         topic: "books",
         genre: "Drama",
-        img: "/images/topEntertainment/catcher-rye.jpg"
+        img: "/images/topEntertainment/catcher-rye.jpg",
+        url_ext: ""
      },{
         title: "Dune",
         label: "dune",
