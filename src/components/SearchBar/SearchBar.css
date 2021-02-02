@@ -1,0 +1,12 @@
+.search-container {
+    float: right;
+    margin: 0.8em;
+}
+
+.search-input {
+    background: transparent !important;
+    border: 0.1em solid #d95515 !important;
+    color: #dee2e6 !important;
+    min-width: 15em;
+}
+
