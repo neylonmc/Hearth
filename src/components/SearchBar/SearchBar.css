@@ -1,8 +1,6 @@
 .search-bar {
     float: right;
     margin: 0.8em;
-    background-color: transparent !important;
-    border: 0.1em solid #d95515 !important;
     min-width: 15em;
     letter-spacing: 0.15em !important;
 }
