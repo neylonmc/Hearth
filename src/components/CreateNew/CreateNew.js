@@ -17,6 +17,8 @@ import {
 import "./CreateNewStyle.css";
 import selections from "../../utils/Genre";
 import API from "../../utils/API";
+import imdb from "../../utils/IMDB";
+import library from "../../utils/OpenLibrary";
 
 
 const CreateNew = () => {
@@ -40,6 +42,27 @@ const CreateNew = () => {
   function handleFormSubmit(event) {
     event.preventDefault();
     console.log(formObject);
+  /*  switch (formObject.type) {
+      case "Movie":
+        imdb.getImdb(formObject.title);
+        break;
+
+      case "TV":
+        imdb.getImdb(formObject.title);
+        break;
+
+      case "Book":
+        library.getBook(formObject.title);
+        break;
+
+      case "Music":
+
+        break;
+
+      default:
+        break;
+    }*/
+    API.saveActivity(formObject);
   }
 
   function handleFormCancel(event) {
@@ -126,7 +149,7 @@ const CreateNew = () => {
 
           {/* SUBMIT BUTTON */}
           <ButtonToolbar>
-            <Button id="createnew-submit"  appearance="primary" onClick={handleFormSubmit}>
+            <Button id="createnew-submit" appearance="primary" onClick={handleFormSubmit}>
               submit
             </Button>
             <Button id="createnew-cancel" appearance="default" onClick={handleFormCancel}>

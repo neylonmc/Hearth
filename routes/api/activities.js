@@ -14,14 +14,14 @@ router
   .delete(activitiesController.remove);
 
 //  Matches with "/api/type/:type"
-  router.route("/type/:type")
+router.route("/type/:type")
   .get(activitiesController.findByType);
 
-  //  Matches with "/api/highest/type"
-  router.route("/highest/:type")
+//  Matches with "/api/highest/type"
+router.route("/highest/:type")
   .get(activitiesController.findByHighest)
 
-  router.route("/tag/:tag")
+router.route("/tag/:tag")
   .get(activitiesController.findByCategory);
 
 
