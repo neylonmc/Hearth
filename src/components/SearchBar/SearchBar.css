@@ -1,22 +1,8 @@
-.search-container {
+.search-bar {
     float: right;
     margin: 0.8em;
-    background: transparent !important;
+    background-color: transparent !important;
     border: 0.1em solid #d95515 !important;
-    color: #dee2e6 !important;
     min-width: 15em;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.15em !important;
 }
-
-.search-input {
-    background: transparent !important;
-    border: 0.1em solid #d95515 !important;
-    color: #dee2e6 !important;
-    min-width: 15em;
-    letter-spacing: 0.15em;
-}
-
-.search-icon {
-    color: #d9a51f;
-}
-
