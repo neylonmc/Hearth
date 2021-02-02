@@ -43,7 +43,9 @@ export default function Topics() {
       </Row>
       
       <Switch>
-        <Route exact path={path} />
+        <Route exact path={path}>
+          <div className="empty-container"/>
+        </Route>
         <Route exact path={`${path}/:topic`}>
           <Topic />
         </Route>

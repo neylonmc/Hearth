@@ -1,5 +1,5 @@
-body {
-  background-size: 200% 350% !important; 
+.empty-container {
+  height: 20rem;
 }
 
 .browse-container {
