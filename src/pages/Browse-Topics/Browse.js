@@ -70,13 +70,13 @@ function Topic() {
                   <Col md={4} sm={12}>
                       <Button  
                         id="results-button"
+                        href={ data.local_ext }
                         bordered
                       >
                           <img 
                               id= "topic-image"
                               src= { data.img }
                               alt= { data.title }
-                              href={ data.topic_url }
                           />
                       </Button>
                   </Col>
