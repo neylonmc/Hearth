@@ -43,7 +43,9 @@ export default function Topics() {
       </Row>
       
       <Switch>
-        <Route exact path={path} />
+        <Route exact path={path}>
+          <div className="empty-container"/>
+        </Route>
         <Route exact path={`${path}/:topic`}>
           <Topic />
         </Route>
@@ -56,40 +58,25 @@ function Topic() {
 
   let { topic } = useParams();
 
-  // Shuffle Data [Fisher-Yates Method]
-  function shuffle(array) {
-    var currentIndex = array.length, temporaryValue, randomIndex;
-    while (0 !== currentIndex) {
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex -= 1;
-      temporaryValue = array[currentIndex];
-      array[currentIndex] = array[randomIndex];
-      array[randomIndex] = temporaryValue;
-    }
-    return array;
-  }
-
-  var shuffledArray = shuffle(Entertainment);
-
   return (
     <div className="topic-container">
       <Panel
         className="topic-panel"
       >
         <ButtonGroup className="button-container">
-            { shuffledArray.map(data => {
+            { Entertainment.map(data => {
               if (data.topic === topic) {
                 return(
                   <Col md={4} sm={12}>
                       <Button  
                         id="results-button"
+                        href={ data.local_ext }
                         bordered
                       >
                           <img 
                               id= "topic-image"
                               src= { data.img }
                               alt= { data.title }
-                              href={ data.topic_url }
                           />
                       </Button>
                   </Col>

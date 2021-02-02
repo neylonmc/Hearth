@@ -21,7 +21,6 @@ function SimilarUsers() {
     return(
 
         searchState.map(user => {
-            console.log(user)
             return( 
                 <Avatar id="avatar" size="lg" src={user.picture.medium}>
                     {user.name.first[0]}{user.name.last[0]}

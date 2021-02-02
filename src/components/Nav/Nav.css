@@ -17,3 +17,12 @@
   padding-top: 0.3rem;
   color: #d9a51f;
 }
+
+#nav-links:hover {
+  text-decoration: none;
+}
+
+#nav-links:focus {
+  text-decoration: none;
+  color: #dee2e6;
+}
