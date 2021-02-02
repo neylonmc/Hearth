@@ -3,8 +3,8 @@ import {
     InputGroup,
     Input,
 } from "rsuite";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import "./SearchBar.css";
 
 function SearchBar() {
@@ -15,7 +15,7 @@ function SearchBar() {
             <InputGroup inside className="search-group">
                 <Input className="search-input"/>
                 <InputGroup.Button className="search-button">
-                    <FontAwesomeIcon icon={faCoffee}/>
+                    <FontAwesomeIcon className="search-icon" icon={faSearch}/>
                 </InputGroup.Button>
             </InputGroup>
         </div>
