@@ -15,7 +15,7 @@ function SearchBar()  {
             placeholder="search"
             defaultValue= "search"
             onSelect= { function(value, item) {
-                window.location.href = item.ext;
+                window.location.href = item.local_ext;
             } }
         />
     )
