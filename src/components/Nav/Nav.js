@@ -1,6 +1,7 @@
 import React from "react";
 import { Navbar, Nav } from "rsuite";
 import { Link } from "react-router-dom";
+import SearchBar from "../SearchBar/SearchBar";
 import "./Nav.css";
 
 const Header = ({ onSelect, activeKey }) => {
@@ -47,6 +48,7 @@ const Header = ({ onSelect, activeKey }) => {
             </Link>
           </Nav.Item>
         </Nav>
+        <SearchBar />
       </Navbar.Body>
     </Navbar>
   );
