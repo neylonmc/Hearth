@@ -17,8 +17,9 @@ function NewPoll() {
         <div className="poll-container">    
 
             <p className="subheader">
-                select a topic you'd like to
-                create a poll for
+                choose which topic you'd 
+                like to poll - if you don't see it, 
+                <a id="link"href="/post/topic"> create it!</a>
             </p>
 
             <Form fluid>
@@ -27,14 +28,14 @@ function NewPoll() {
                     className="topic-picker"
                     data={Entertainment}
                     size="md"
-                    placeholder="select topic title"
+                    placeholder="topic (required)"
                     block
                 />
 
                 <FormGroup>
                         <FormControl 
                             name="question" 
-                            placeholder="poll question"
+                            placeholder="question (required)"
                         />
                 </FormGroup>
                 
@@ -43,13 +44,13 @@ function NewPoll() {
                         <FormGroup>
                             <FormControl 
                                 name="option-1" 
-                                placeholder="option 1"
+                                placeholder="option 1 (required)"
                             />
                         </FormGroup>
                         <FormGroup>
                             <FormControl 
                                 name="option-2" 
-                                placeholder="option 2"
+                                placeholder="option 2 (required)"
                             />
                         </FormGroup>
                     </Col>
