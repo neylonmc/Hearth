@@ -44,7 +44,7 @@ function Topic() {
                                     <h3 id="sub-header" className="page-title">{data.title}</h3>
                                 </Row>
                                 <Row>
-                                    <h4 className="topic-head">{data.topic} | { data.age_rating || data.genre.join(", ") }</h4>
+                                    <h4 className="topic-head">{data.topic} | { data.genre.join(", ") }</h4>
                                 </Row>
                             </Col>
                         </Row>
@@ -61,7 +61,9 @@ function Topic() {
                             >
                                 <TopicInfo 
                                     topic={data.topic}
-                                    ageRange={data.age_range.join(", ")}
+                                    ageRange= {data.age_range.join(", ")}
+                                    ageRating= {data.age_rating}
+                                    genre={data.genre.join(", ")}
                                     description={data.description}
                                 />
                             </Panel>

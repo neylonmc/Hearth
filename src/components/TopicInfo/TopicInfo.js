@@ -11,13 +11,14 @@ function TopicInfo(props) {
     if (topic === "Books" || topic === "Music") {
         return (
             <Row>
+                <p><strong>Ages: </strong>{ props.ageRange }</p>
                 <p>{ props.description }</p>
-                <p><strong>Rating: </strong>{ props.ageRange }</p>
             </Row>
         )
     } else if (topic === "Film" || topic === "Television") {
         return (
             <Row>
+                <p><strong>Rated: </strong>{ props.ageRating }</p>
                 <p>{ props.description }</p>
             </Row>
         )
