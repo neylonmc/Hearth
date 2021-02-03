@@ -15,17 +15,9 @@ header {
   .post-header {
     text-align: center;
     color: #ddd7d6;
-  }
-
-  .post-header h3 {
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: 0.5rem;
-  }
-
-  .post-header h4 {
-    font-weight: 300;
     margin-bottom: 1em;
-    letter-spacing: 0.3rem;
   }
   
   .post-links {

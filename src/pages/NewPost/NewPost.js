@@ -20,10 +20,7 @@ export default function NewPost() {
 
   return (
     <div className="post-container">
-      <header className="post-header">
-        <h3>create post</h3>
-        <h4>choose type</h4>
-      </header>
+      <h3 className="post-header">choose a post type</h3>
       <Row className="post-links">
           <Col id="link-container" md={8}>
             <Link 
