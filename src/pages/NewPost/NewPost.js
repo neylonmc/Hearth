@@ -3,13 +3,11 @@ import {
     Switch,
     Route,
     Link,
-    useParams,
     useRouteMatch
 } from "react-router-dom";
 import { 
   Row,
-  Col,
-  Panel
+  Col
 } from "rsuite";
 import "rsuite/lib/styles/index.less";
 import NewReview from "../../components/NewReview/NewReview";
@@ -22,36 +20,37 @@ export default function NewPost() {
 
   return (
     <div className="post-container">
-      <h3 className="post-title">create post</h3>
-      <h4>select post type</h4>
+      <header className="post-header">
+        <h3>create post</h3>
+        <h4>choose type</h4>
+      </header>
       <Row className="post-links">
-        
-              <Col id="link-container" md={6} sm={12}>
-                <Link 
-                  id="post-button"
-                  to={`${url}/review`}
-                >
-                  Review
-                </Link>
-              </Col>
+          <Col id="link-container" md={8}>
+            <Link 
+              id="post-button"
+              to={`${url}/review`}
+            >
+              New Review
+            </Link>
+          </Col>
 
-              <Col id="link-container" md={6} sm={12}>
-                <Link 
-                  id="post-button"
-                  to={`${url}/recommendation`}
-                >
-                  Recommendation
-                </Link>
-              </Col>
+          <Col id="link-container" md={8}>
+            <Link 
+              id="post-button"
+              to={`${url}/recommendation`}
+            >
+              New Recommendation
+            </Link>
+          </Col>
 
-              <Col id="link-container" md={6} sm={12}>
-                <Link 
-                  id="post-button"
-                  to={`${url}/poll`}
-                >
-                  Poll
-                </Link>
-              </Col>
+          <Col id="link-container" md={8}>
+            <Link 
+              id="post-button"
+              to={`${url}/poll`}
+            >
+              New Poll
+            </Link>
+          </Col>
       </Row>
       
       <Switch>
