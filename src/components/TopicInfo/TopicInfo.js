@@ -8,10 +8,16 @@ function TopicInfo(props) {
 
     const topic = props.topic;
     
-    if (topic === "Books" || topic === "Music") {
+    if (topic === "Books") {
         return (
             <Row>
                 <p><strong>Ages: </strong>{ props.ageRange }</p>
+                <p>{ props.description }</p>
+            </Row>
+        )
+    } else if (topic === "Music") {
+        return (
+            <Row>
                 <p>{ props.description }</p>
             </Row>
         )

@@ -15,7 +15,7 @@ import {
   Col,
 } from "rsuite";
 import "rsuite/lib/styles/index.less";
-import "./CreateNewStyle.css";
+import "./CreateNew.css";
 import selections from "../../utils/Genre";
 import API from "../../utils/API";
 
@@ -69,7 +69,6 @@ const CreateNew = () => {
   function handleInputChangeReview(event) {
     setFormObject({ ...formObject, review: event })
   };
-
 
 
   return (

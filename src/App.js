@@ -5,7 +5,8 @@ import Login from "./pages/Login/Login";
 import Select from "./pages/Select/Select";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Browse from "./pages/Browse-Topics/Browse";
-import CreateNew from "./components/CreateNew/CreateNew";
+import CreateNew from "./pages/CreateNew/CreateNew";
+import NewPost from "./pages/NewPost/NewPost";
 import Nav from "./components/Nav/Nav";
 import Profile from "./pages/Profile-Topic/Profile";
 import Topic from "./pages/Profile-Topic/Topic";
@@ -27,6 +28,7 @@ function App() {
             <Route path="/topics" component={Browse} /> 
             <Route exact path="/dashboard" component={Dashboard} />
             <Route exact path="/create-new" component={CreateNew} />
+            <Route path="/post" component={NewPost} />
             <Route exact path="/profile" component={Profile} />
             <Route exact path="/topic/:topic" component={Topic} />
             <Route exact path="/settings" component={Settings} />

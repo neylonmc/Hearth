@@ -16,7 +16,7 @@
 .createnew-form-container {
   margin: 0.5rem 0rem 1rem 0rem;
   padding: 1rem 0rem;
-  background-color: rgb(217, 85, 21, 0.35);
+  background-color: rgb(217, 85, 21, 0.35) !important;
   border: 1px solid #d95515 !important;
   border-radius: 0.5rem;
 }
@@ -30,7 +30,7 @@
 }
 
 #createnew-submit {
-  background-color: rgb(217, 85, 21, 0.35);
+  background-color: rgb(190,42,13, 0.35);
   border: 1px solid #d95515 !important;
 }
 
