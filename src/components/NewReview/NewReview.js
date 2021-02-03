@@ -24,19 +24,11 @@ const NewReview = () => {
   const [developerState, setDeveloperState] = useState({});
   const [formObject, setFormObject] = useState({})
 
-  useEffect(() => {
-  }, [])
-
-
-  function createPost() {
-  }
-
   /*function handleInputChange(event) {
     console.log(event.target);
     const { name, value } = event.target;
     setFormObject({...formObject, [name]: value})
   };*/
-
 
   function handleFormSubmit(event) {
     event.preventDefault();
@@ -47,7 +39,6 @@ const NewReview = () => {
     event.preventDefault();
     setFormObject({ })
   }
-
 
   //need these over handleInputChange because event.target is undefined for non-input forms
   function handleInputChangeRadio(event) {
@@ -70,14 +61,12 @@ const NewReview = () => {
     setFormObject({ ...formObject, review: event })
   };
 
+  const [ postState, setPost ]  = useState({
+      topic: "Film"
+  });
 
   return (
     <div className="create-container">
-      <Row>
-        <Col>
-          <h1 className="createnew-header">create new review</h1>
-        </Col>
-      </Row>
 
       {/* FORM TO CREATE NEW REVIEW */}
       <div className="createnew-form-container">
@@ -85,8 +74,16 @@ const NewReview = () => {
           {/* REVIEW RADIO */}
           <FormControlLabel>what would you like to review?</FormControlLabel>
 
-          <RadioGroup onChange={handleInputChangeRadio} name="radioList" className="createnew-radio" inline>
-            <Radio value="Movie">movie</Radio>
+          <RadioGroup 
+            onChange={ function(value) {
+                setPost({topic: value});
+            } } 
+            name="radioList" 
+            className="createnew-radio" 
+            defaultValue="Film"
+            inline
+            >
+            <Radio value="Film">film</Radio>
             <Radio value="TV">tv</Radio>
             <Radio value="Book">book</Radio>
             <Radio value="Music">music</Radio>
@@ -94,7 +91,7 @@ const NewReview = () => {
 
           {/* REVIEW TITLE */}
           <FormGroup>
-            <FormControlLabel>please enter a title</FormControlLabel>
+            <FormControlLabel>{postState.topic.toLowerCase()} title</FormControlLabel>
             <FormControl onChange={handleInputChangeTitle} name="title" type="input" className="form-title" />
             <FormHelpText>required</FormHelpText>
           </FormGroup>
@@ -102,7 +99,7 @@ const NewReview = () => {
           {/* REVIEW RATING */}
           <FormGroup>
             <FormControlLabel className="createnew-rating">
-              please select your rating
+              your rating
             </FormControlLabel>
             <Rate onChange={handleInputChangeRating} defaultValue={2.5} allowHalf />
           </FormGroup>
