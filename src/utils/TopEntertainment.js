@@ -5,6 +5,7 @@
         topic: "books",
         genre: "Drama",
         img: "/images/topEntertainment/catcher-rye.jpg",
+        ext: "the-catcher-in-the-rye",
         local_ext: "/topic/the-catcher-in-the-rye"
      },{
         title: "Dune",
@@ -12,6 +13,7 @@
         topic: "books",
         genre: "Action, Adventure, Sci-Fi",
         img: "/images/topEntertainment/dune.jpg",
+        ext: "dune",
         local_ext: "/topic/dune"
     },{
         title: "The Haunting of Hill House",
@@ -19,6 +21,7 @@
         topic: "books",
         genre: "Drama, Horror, Mystery, Thriller",
         img: "/images/topEntertainment/hill-house.jpg",
+        ext: "the-haunting-of-hill-house",
         local_ext: "/topic/the-haunting-of-hill-house"
     },{
         title: "The Hobbit",
@@ -26,6 +29,7 @@
         topic: "books",
         genre: ["Adventure", "Fantasy"],
         img: "/images/topEntertainment/hobbit.jpg",
+        ext: "the-hobbit",
         local_ext: "/topic/the-hobbit"
     },{
         title: "The Hunger Games",
@@ -33,6 +37,7 @@
         topic: "books",
         genre: ["Action", "Adventure", "Sci-Fi", "Thriller"],
         img: "/images/topEntertainment/hunger-games.jpg",
+        ext: "the-hunger-games",
         local_ext: "/topic/the-hunger-games"
     },{
         title: "Titanic",
@@ -40,6 +45,7 @@
         topic: "movies",
         genre: ["Drama", "Romance"],
         img: "/images/topEntertainment/titanic.jpg",
+        ext: "titanic",
         local_ext: "/topic/titanic"
     },{
         title: "Star Wars",
@@ -47,6 +53,7 @@
         topic: "movies",
         genre: ["Action", "Adventure", "Fantasy", "Sci-Fi"],
         img: "/images/topEntertainment/star-wars.jpg",
+        ext: "star-wars",
         local_ext: "/topic/star-wars"
     },{
         title: "Gone with the Wind",
@@ -54,6 +61,7 @@
         topic: "movies",
         genre: ["Drama", "History", "Romance", "War"],
         img: "/images/topEntertainment/gone-wind.jpg",
+        ext: "gone-with-the-wind",
         local_ext: "/topic/gone-with-the-wind"
     },{
         title: "Dumb and Dumber",
@@ -61,6 +69,7 @@
         topic: "movies",
         genre: "Comedy",
         img: "/images/topEntertainment/dumb-dumber.jpg",
+        ext: "dumb-and-dumber",
         local_ext: "/topic/dumb-and-dumber"
     },{
         title: "Spirited Away",
@@ -68,6 +77,7 @@
         topic: "movies",
         genre: ["Animation", "Adventure", "Family", "Fantasy", "Mystery"],
         img: "/images/topEntertainment/spirited-away.jpg",
+        ext: "spirited-away",
         local_ext: "/topic/spirited-away"
     },{
         title: "The Dark Knight",
@@ -75,6 +85,7 @@
         topic: "movies",
         genre: ["Action", "Crime", "Drama", "Thriller"],
         img: "/images/topEntertainment/dark-knight.jpg",
+        ext: "the-dark-knight",
         local_ext: "/topic/the-dark-knight"
     },{
         title: "Soul",
@@ -82,6 +93,7 @@
         topic: "movies",
         genre: ["Animation", "Adventure", "Comedy", "Family", "Fantasy", "music"],
         img: "/images/topEntertainment/soul.jpg",
+        ext: "soul",
         local_ext: "/topic/soul"
     },{
         title: "Game of Thrones",
@@ -89,6 +101,7 @@
         topic: "television",
         genre: ["Action", "Drama", "Fantasy", "Romance"],
         img: "/images/topEntertainment/game-thrones.jpg",
+        ext: "game-of-thrones",
         local_ext: "/topic/game-of-thrones"
     },{
         title: "The Mandalorian",
@@ -96,6 +109,7 @@
         topic: "television",
         genre: ["Action", "Adventure", "Sci-Fi"],
         img: "/images/topEntertainment/mandalorian.jpg",
+        ext: "the-mandalorian",
         local_ext: "/topic/the-mandalorian"
     },{
         title: "The Crown",
@@ -103,6 +117,7 @@
         topic: "television",
         genre: ["Biography", "Drama", "History"],
         img: "/images/topEntertainment/crown.jpg",
+        ext: "the-crown",
         local_ext: "/topic/the-crown"
     },{
         title: "Attack on Titan",
@@ -110,6 +125,7 @@
         topic: "television",
         genre: ["Animation", "Action", "Adventure", "Drama", "Fantasy", "Horror"],
         img: "/images/topEntertainment/attack-titan.jpg",
+        ext: "attack-on-titan",
         local_ext: "/topic/attack-on-titan"
     },{
         title: "Spongebob Squarepants",
@@ -117,6 +133,7 @@
         topic: "television",
         genre: ["Animation", "Comedy", "Family", "Fantasy"],
         img: "/images/topEntertainment/spongebob.jpg",
+        ext: "spongebob-squarepants",
         local_ext: "/topic/spongebob-squarepants"
     },{
         title: "Mindhunter",
@@ -124,6 +141,7 @@
         topic: "television",
         genre: ["Crime", "Drama", "Thriller"],
         img: "/images/topEntertainment/mindhunter.jpg",
+        ext: "mindhunter",
         local_ext: "/topic/mindhunter"
     },{
         title: "Planet Earth",
@@ -131,6 +149,7 @@
         topic: "television",
         genre: "Documentary",
         img: "/images/topEntertainment/planet-earth.jpg",
+        ext: "planet-earth",
         local_ext: "/topic/planet-earth"
     },{
         title: "Pulp Fiction",
@@ -138,6 +157,7 @@
         topic: "movies",
         genre: ["Crime", "Drama"],
         img: "/images/topEntertainment/pulp-fiction.jpg",
+        ext: "pulp-fiction",
         local_ext: "/topic/pulp-fiction"
     },{
         title: "Euphoria",
@@ -145,6 +165,7 @@
         topic: "television",
         genre: ["Drama", "LGTBQ"],
         img: "/images/topEntertainment/euphoria.jpg",
+        ext: "euphoria",
         local_ext: "/topic/euphoria"
     },{
         title: "Americanah",
@@ -152,6 +173,7 @@
         topic: "books",
         genre: ["Drama", "Romance"],
         img: "/images/topEntertainment/americanah.jpg",
+        ext: "americanah",
         local_ext: "/topic/americanah"
     },{
         title: "House",
@@ -159,6 +181,7 @@
         topic: "television",
         genre: ["Drama", "Mystery"],
         img: "/images/topEntertainment/house.jpg",
+        ext: "house",
         local_ext: "/topic/house"
     },{
         title: "Rick and Morty",
@@ -166,6 +189,7 @@
         topic: "television",
         genre: ["Animation", "Adventure", "Comedy", "Sci-Fi"],
         img: "/images/topEntertainment/rick-morty.jpg",
+        ext: "rick-and-morty",
         local_ext: "/topic/rick-and-morty"
     },{
         title: "Lady Gaga",
@@ -173,6 +197,7 @@
         topic: "music",
         genre: "Pop",
         img: "/images/topEntertainment/lady-gaga.jpg",
+        ext: "lady-gaga",
         local_ext: "/topic/lady-gaga"
     },{
         title: "Drake",
@@ -180,6 +205,7 @@
         topic: "music",
         genre: ["Rap", "R&B"],
         img: "/images/topEntertainment/drake.jpg",
+        ext: "drake",
         local_ext: "/topic/drake"
     },{
         title: "Tim McGraw",
@@ -187,6 +213,7 @@
         topic: "music",
         genre: "Country",
         img: "/images/topEntertainment/tim-mcgraw.jpg",
+        ext: "tim-mcgraw",
         local_ext: "/topic/tim-mcgraw"
     },{
         title: "Billie Eilish",
@@ -194,6 +221,7 @@
         topic: "music",
         genre: "Pop",
         img: "/images/topEntertainment/billie-eilish.jpg",
+        ext: "billie-eilish",
         local_ext: "/topic/billie-eilish"
     },{
         title: "Fleetwood Mac",
@@ -201,6 +229,7 @@
         topic: "music",
         genre: "Classic Rock",
         img: "/images/topEntertainment/fleetwood-mac.jpg",
+        ext: "fleetwood-mac",
         local_ext: "/topic/fleetwood-mac"
     },{
         title: "The Smiths",
@@ -208,6 +237,7 @@
         topic: "music",
         genre: ["Rock", "Britpop"],
         img: "/images/topEntertainment/the-smiths.jpg",
+        ext: "the-smiths",
         local_ext: "/topic/the-smiths"
     },{
         title: "H.E.R.",
@@ -215,6 +245,7 @@
         topic: "music",
         genre: ["R&B", "Soul"],
         img: "/images/topEntertainment/h-e-r.jpg",
+        ext: "h-e-r",
         local_ext: "/topic/h-e-r"
     },{
         title: "Zedd",
@@ -222,6 +253,7 @@
         topic: "music",
         genre: ["Dance", "Electronic"],
         img: "/images/topEntertainment/zedd.jpg",
+        ext: "zedd",
         local_ext: "/topic/zedd"
     },{
         title: "Black Sabbath",
@@ -229,13 +261,15 @@
         topic: "music",
         genre: ["Classic Metal", "Metal"],
         img: "/images/topEntertainment/black-sabbath.jpg",
+        ext: "black-sabbath",
         local_ext: "/topic/black-sabbath"
     },{
-        title: "Nirvana",
+        title: "Nirvana",         
         label: "nirvana",
         topic: "music",
         genre: "Punk Rock",
         img: "/images/topEntertainment/nirvana.jpg",
+        ext: "nirvana",
         local_ext: "/topic/nirvana"
     },{
         title: "Jojo Siwa",
@@ -243,6 +277,7 @@
         topic: "music",
         genre: ["Pop", "Family"],
         img: "/images/topEntertainment/jojo-siwa.jpg",
+        ext: "jojo-siwa",
         local_ext: "/topic/jojo-siwa"
     },{
         title: "One Direction",
@@ -250,6 +285,7 @@
         topic: "music",
         genre: ["Rock", "Britpop"],
         img: "/images/topEntertainment/one-direction.jpg",
+        ext: "one-direction",
         local_ext: "/topic/one-direction"
     }
  ];

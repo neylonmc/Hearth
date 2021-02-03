@@ -1,65 +1,75 @@
 import React from 'react';
+import {
+    useParams
+  } from "react-router-dom";
 import { 
     Row,
-    Col
+    Col,
+    PanelGroup,
+    Panel
 } from "rsuite";
-import 'rsuite/dist/styles/rsuite-dark.css';
 import "./Profile-Topic.css";
+import Entertainment from "../../utils/TopEntertainment";
+import API from "../../utils/API";
 // import TopicInfo from "../components/TopicInfo";
 // import TopicActivity from "../components/TopicActivity";
 
-function Topic(props) {
+function Topic() {
+    
+    let { topic } = useParams();
+
+    API.getActivities()
+        .then((res) => {
+            console.log(res)
+        }).catch(err => err)
 
     return(
-        <div id="page-container" className=" animate__animated animate__fadeIn">
-            <div id="page-header">
-                <Row>
-                    <Col id="page-image-cont">
-                        {/* TOPIC PICTURE */}
-                        <img 
-                            id="page-image"
-                            className= "topic-picture"
-                            src= { props.avatar_url || "./images/no-image.png" }
-                            alt= "page photograph"/>
-                    </Col>
-                </Row>
+        Entertainment.map((data) => {
+            if (data.ext === topic ) {
+                console.log(data.title);
 
-                <Row>
-                    <Col>
-                        {/* TOPIC NAME */}
-                        <h1 id="page-title" className="topic-name">{ props.topicName || "topic name" }</h1>
-                    </Col>
-                </Row>
-            </div>
+                return(
+                    <div className="page-container animate__animated animate__fadeIn">
+                        <Row className="header-container">
+                            <Col sm= {3} >
+                                <img 
+                                    className = "page-image"
+                                    src= { data.img } 
+                                    alt= "icon of topic poster"
+                                />
+                            </Col>
+                            <Col sm= {21}>
+                                <h3 className="page-title">{data.title}</h3>
+                            </Col>
+                        </Row>
 
-            {/* TOPIC INFO */}
-            <Row id="page-block-1" className="topic-info-container">
-                <Row>
-                    <Col xs={24}>
-                        <h2 id="block-header">topic info</h2>
-                    </Col>
-                </Row>
-                <Row>
-                    {/* PLACEHOLDER FOR TOPIC INFO */}
-                    {/* <TopicInfo /> */}
-                </Row>
-            </Row>
+                        <PanelGroup 
+                            className= "panel-container"
+                            accordion 
+                        >
+                            <Panel 
+                                id="panel"
+                                className="info-panel"
+                                header="info" 
+                                defaultExpanded
+                            >
+                                <p>hi</p>
+                            </Panel>
+                            <Panel 
+                                id="panel"
+                                className="activity-panel"
+                                header="activity" 
+                                defaultExpanded
+                            >
+                                <p>hi</p>
+                            </Panel>
+                        </PanelGroup>
 
-            <Row id="page-block-2" className="topic-act-container">
-                <Row>
-                    <Col xs={24}>
-                        <h2 id="block-header">topic activity</h2>
-                    </Col>
-                </Row>
-                <Row>
-                    {/* PLACEHOLDER FOR TOPIC ACTIVITY */}
-                    {/* <TopicActivity /> */}
-                </Row>
-            </Row>
-            
-        </div>
+                    </div>
+                )
+            } 
+        })
     )
-
 };
 
 export default Topic;
