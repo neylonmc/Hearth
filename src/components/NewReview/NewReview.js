@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   Form,
   FormGroup,
@@ -72,7 +72,7 @@ const NewReview = () => {
             <FormControl 
                 rows={5} 
                 name="textarea" 
-                placeholder="type review here"
+                placeholder="my review"
                 onChange={
                     function(value) {
                         setText(value)

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
     Row,
     Col,
@@ -13,6 +13,15 @@ import Entertainment from "../../utils/TopEntertainment";
 
 function NewPoll() {
 
+    const [ topicState, setTopic ] = useState("");
+    const [ questState, setQuest ] = useState("");
+    const [ firstState, setFirst ] = useState("");
+    const [ secondState, setSecond ] = useState("");
+    const [ thirdState, setThird ] = useState("");
+    const [ fourthState, setFourth ] = useState("");
+    
+    const [ pollState, setPoll ] = useState({});
+
     return(
         <div className="poll-container">    
 
@@ -26,16 +35,26 @@ function NewPoll() {
 
                 <InputPicker 
                     className="topic-picker"
-                    data={Entertainment}
+                    data={ Entertainment }
                     size="md"
                     placeholder="topic (required)"
+                    defaultValue=""
                     block
+                    onSelect= { function(value, item) {
+                        setTopic(item.title)
+                    }}
+                    
                 />
 
                 <FormGroup>
                         <FormControl 
                             name="question" 
                             placeholder="question (required)"
+                            onChange={
+                                function(value) {
+                                    setQuest(value);
+                                }
+                            }
                         />
                 </FormGroup>
                 
@@ -45,12 +64,22 @@ function NewPoll() {
                             <FormControl 
                                 name="option-1" 
                                 placeholder="option 1 (required)"
+                                onChange={
+                                    function(value) {
+                                        setFirst(value);
+                                    }
+                                }
                             />
                         </FormGroup>
                         <FormGroup>
                             <FormControl 
                                 name="option-2" 
                                 placeholder="option 2 (required)"
+                                onChange={
+                                    function(value) {
+                                        setSecond(value);
+                                    }
+                                }
                             />
                         </FormGroup>
                     </Col>
@@ -59,12 +88,22 @@ function NewPoll() {
                             <FormControl 
                                 name="option-3" 
                                 placeholder="option 3"
+                                onChange={
+                                    function(value) {
+                                        setThird(value);
+                                    }
+                                }
                             />
                         </FormGroup>
                         <FormGroup>
                             <FormControl 
                                 name="option-4" 
                                 placeholder="option 4"
+                                onChange={
+                                    function(value) {
+                                        setFourth(value);
+                                    }
+                                }
                             />
                         </FormGroup>
                     </Col>
@@ -74,6 +113,20 @@ function NewPoll() {
                     <Button 
                         className="submit-button"
                         appearance="primary"
+                        onClick= {
+                            function() {
+                                setPoll({
+                                    title: topicState,
+                                    question: questState,
+                                    option_1: firstState,
+                                    option_2: secondState,
+                                    option_3: thirdState,
+                                    option_4: fourthState
+                                })
+
+                                console.log(pollState);
+                            }
+                        }
                     > Submit </Button>
                 </FormGroup>
             </Form>
