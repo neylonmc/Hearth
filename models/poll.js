@@ -7,8 +7,8 @@ const pollSchema = new Schema({
     totalResponses: [Number],
     Active: {type: Boolean},
     winner: {type: String},
-    userId: {type: Number},
-    activityId: {type: Number}
+    userId: {type: String},
+    activityId: {type: String}
 });
 
 const Poll = mongoose.model("poll", pollSchema);
