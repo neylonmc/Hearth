@@ -11,8 +11,8 @@ import {
 import "./Profile-Topic.css";
 import Entertainment from "../../utils/TopEntertainment";
 import API from "../../utils/API";
-// import TopicInfo from "../components/TopicInfo";
-// import TopicActivity from "../components/TopicActivity";
+import TopicInfo from "../../components/TopicInfo/TopicInfo";
+import Activity from "../../components/Activity/Activity";
 
 function Topic() {
     
@@ -22,6 +22,7 @@ function Topic() {
         .then((res) => {
             console.log(res)
         }).catch(err => err)
+
 
     return(
         Entertainment.map((data) => {
@@ -39,7 +40,12 @@ function Topic() {
                                 />
                             </Col>
                             <Col sm= {21}>
-                                <h3 className="page-title">{data.title}</h3>
+                                <Row>
+                                    <h3 id="sub-header" className="page-title">{data.title}</h3>
+                                </Row>
+                                <Row>
+                                    <h4 className="topic-head">{data.topic} | { data.age_rating || data.genre.join(", ") }</h4>
+                                </Row>
                             </Col>
                         </Row>
 
@@ -50,10 +56,10 @@ function Topic() {
                             <Panel 
                                 id="panel"
                                 className="info-panel"
-                                header="info" 
+                                header="info"
                                 defaultExpanded
                             >
-                                <p>hi</p>
+                                <TopicInfo />
                             </Panel>
                             <Panel 
                                 id="panel"
@@ -61,7 +67,7 @@ function Topic() {
                                 header="activity" 
                                 defaultExpanded
                             >
-                                <p>hi</p>
+                                <Activity />
                             </Panel>
                         </PanelGroup>
 

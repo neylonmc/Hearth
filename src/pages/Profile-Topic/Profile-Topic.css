@@ -31,6 +31,15 @@
   background-color: rgb(98,19,10, 0.5) !important;
   margin-top: 1em;
 }
+
+/* TOPICS */
+
+.topic-head {
+  font-size: 130%;
+  margin-left: 1.5em;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+}
     
 @media (max-width: 480px) {
 

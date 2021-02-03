@@ -8,8 +8,8 @@ import {
 import 'rsuite/dist/styles/rsuite-dark.css';
 import "./Profile-Topic.css";
 import Streaming from "../../components/Streaming/Streaming";
-// import UserInterests from "../components/UserInterests";
-// import UserActivity from "../components/UserActivity";
+import UserInfo from "../../components/UserInfo/UserInfo";
+import Activity from "../../components/Activity/Activity";
 
 function Profile() {
 
@@ -43,7 +43,7 @@ function Profile() {
                     header="info" 
                     defaultExpanded
                 >
-                    <p>hi</p>
+                    <UserInfo />
                 </Panel>
                 <Panel 
                     id="panel"
@@ -51,7 +51,7 @@ function Profile() {
                     header="activity" 
                     defaultExpanded
                 >
-                    <p>hi</p>
+                    <Activity />
                 </Panel>
             </PanelGroup>
 
