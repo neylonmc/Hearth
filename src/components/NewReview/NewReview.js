@@ -23,14 +23,13 @@ const NewReview = () => {
   const [ topicState, setTopic ]  = useState("");
   const [ titleState, setTitle ] = useState("");
   const [ rateState, setRate ] = useState();
-  const [ genreState, setGenre ] = useState([]);
   const [ reviewState, setReview ] = useState("");
 
 //   Final Post State
   const [ postState, setPost ] = useState({});
 
   return (
-    <div className="create-container">
+    <div className="review-container">
 
       {/* FORM TO CREATE NEW REVIEW */}
       <div className="createnew-form-container">
@@ -69,32 +68,6 @@ const NewReview = () => {
             <FormHelpText>required</FormHelpText>
           </FormGroup>
 
-          {/* REVIEW RATING */}
-          <FormGroup>
-            <FormControlLabel className="createnew-rating" />
-            <Rate onChange={
-                function(value) {
-                    setRate(value);
-                }
-            }
-            defaultValue={2.5} 
-            allowHalf />
-          </FormGroup>
-
-          {/* REVIEW GENRE */}
-          <FormGroup>
-            <FormControlLabel className="createnew-genre"/>
-            <SelectPicker 
-                data={selections} 
-                placeholder="genre"
-                onChange={
-                    function(value) {
-                        setGenre(value);
-                    }
-                }
-            />
-          </FormGroup>
-
           {/* COMMENT REVIEW */}
           <FormGroup>
             <FormControlLabel className="createnew-review" />
@@ -109,6 +82,20 @@ const NewReview = () => {
                     }
                 }
             />
+            <FormHelpText>required</FormHelpText>
+          </FormGroup>
+
+          {/* REVIEW RATING */}
+          <FormGroup>
+            <FormControlLabel className="createnew-rating" />
+            <Rate onChange={
+                function(value) {
+                    setRate(value);
+                }
+            }
+            defaultValue={2.5} 
+            allowHalf />
+            <FormHelpText>required</FormHelpText>
           </FormGroup>
 
           {/* SUBMIT BUTTON */}
@@ -121,9 +108,8 @@ const NewReview = () => {
                         setPost({
                             topic: topicState, 
                             title: titleState,
-                            rating: rateState,
-                            genre: genreState,
-                            review: reviewState
+                            review: reviewState,
+                            rating: rateState
                         })
 
                         console.log(postState);
