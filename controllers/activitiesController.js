@@ -42,6 +42,11 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   create: function (req, res) {
+    //these will be environmental variables
+    const imdbApiKey = 'bfe070362amsh86909dbb9fbfe22p191db1jsnfb9dfda72961';
+    const host = 'imdb8.p.rapidapi.com';
+    let options = {};
+
     let activity = {
       title: "",
       type: req.body.type,
@@ -57,15 +62,43 @@ module.exports = {
     }
     switch (activity.type) {
       case "Movie":
-        //imdb.getImdb(formObject.title);
+        options = {
+          method: 'GET',
+          url: 'https://imdb8.p.rapidapi.com/title/auto-complete',
+          params: { q: req.body.title },
+          headers: {
+              'x-rapidapi-key': imdbApiKey,
+              'x-rapidapi-host': host
+          }
+          
+      };
+      axios.request(options).then(function (response) {
+        console.log(response.data);
+    }).catch(function (error) {
+        console.error(error);
+    });
         break;
 
       case "TV":
-        //imdb.getImdb(formObject.title);
+        options = {
+          method: 'GET',
+          url: 'https://imdb8.p.rapidapi.com/title/auto-complete',
+          params: { q: req.body.title },
+          headers: {
+              'x-rapidapi-key': imdbApiKey,
+              'x-rapidapi-host': host
+          }
+          
+      };
+      axios.request(options).then(function (response) {
+        console.log(response.data);
+    }).catch(function (error) {
+        console.error(error);
+    });
         break;
 
       case "Book":
-        const options = {
+        options = {
           method: 'GET',
           url: 'http://openlibrary.org/search.json?',
           params: { q: req.body.title }
