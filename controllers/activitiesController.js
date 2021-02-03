@@ -47,6 +47,12 @@ module.exports = {
     const host = 'imdb8.p.rapidapi.com';
     let options = {};
 
+    let comment = {
+      text: req.body.review,
+    userId: "",
+    activityId: ""
+    };
+
     let activity = {
       title: "",
       type: req.body.type,
@@ -67,16 +73,43 @@ module.exports = {
           url: 'https://imdb8.p.rapidapi.com/title/auto-complete',
           params: { q: req.body.title },
           headers: {
-              'x-rapidapi-key': imdbApiKey,
-              'x-rapidapi-host': host
+            'x-rapidapi-key': imdbApiKey,
+            'x-rapidapi-host': host
           }
-          
-      };
-      axios.request(options).then(function (response) {
-        console.log(response.data);
-    }).catch(function (error) {
-        console.error(error);
-    });
+
+        };
+        axios.request(options).then(function (response) {
+          activity.title =response.data.d[0].l;
+
+          db.Activity
+            .find({ title: activity.title })
+            .then(dbModel => {
+              if (!dbModel[0]) {
+                db.Activity
+                  .create(activity)
+                  .then(dbActivity => {
+                    comment.activityId = dbActivity._id;
+                    db.Comment
+                    .create(comment)
+                    .catch(err => { console.error(err); });
+                  })
+                  .catch(err => { console.error(err); });
+              }
+              else {
+                console.log(dbModel);
+                comment.activityId = dbModel[0]._id;
+                db.Comment
+                .create(comment)
+                .catch(err => { console.error(err); });
+
+              }
+            }).catch(function (error) {
+              console.error(error);
+            });
+
+        }).catch(function (error) {
+          console.error(error);
+        });
         break;
 
       case "TV":
@@ -85,16 +118,43 @@ module.exports = {
           url: 'https://imdb8.p.rapidapi.com/title/auto-complete',
           params: { q: req.body.title },
           headers: {
-              'x-rapidapi-key': imdbApiKey,
-              'x-rapidapi-host': host
+            'x-rapidapi-key': imdbApiKey,
+            'x-rapidapi-host': host
           }
-          
-      };
-      axios.request(options).then(function (response) {
-        console.log(response.data);
-    }).catch(function (error) {
-        console.error(error);
-    });
+
+        };
+        axios.request(options).then(function (response) {
+          activity.title =response.data.d[0].l;
+
+          db.Activity
+            .find({ title: activity.title })
+            .then(dbModel => {
+              if (!dbModel[0]) {
+                db.Activity
+                  .create(activity)
+                  .then(dbActivity => {
+                    comment.activityId = dbActivity._id;
+                    db.Comment
+                    .create(comment)
+                    .catch(err => { console.error(err); });
+                  })
+                  .catch(err => { console.error(err); });
+              }
+              else {
+                console.log(dbModel);
+                comment.activityId = dbModel[0]._id;
+                db.Comment
+                .create(comment)
+                .catch(err => { console.error(err); });
+
+              }
+            }).catch(function (error) {
+              console.error(error);
+            });
+
+        }).catch(function (error) {
+          console.error(error);
+        });
         break;
 
       case "Book":
@@ -106,16 +166,26 @@ module.exports = {
         axios.request(options).then(function (book) {
           activity.title = book.data.docs[0].title;
           db.Activity
-            .find({title: activity.title})
+            .find({ title: activity.title })
             .then(dbModel => {
               if (!dbModel[0]) {
                 db.Activity
                   .create(activity)
-                  .then(dbActivity => res.json(dbActivity))
-                  .catch(err => {console.error(err);});
+                  .then(dbActivity => {
+                    comment.activityId = dbActivity._id;
+                    db.Comment
+                    .create(comment)
+                    .catch(err => { console.error(err); });
+                  })
+                  .catch(err => { console.error(err); });
               }
               else {
                 console.log(dbModel);
+                comment.activityId = dbModel[0]._id;
+                db.Comment
+                .create(comment)
+                .catch(err => { console.error(err); });
+
               }
             }).catch(function (error) {
               console.error(error);
