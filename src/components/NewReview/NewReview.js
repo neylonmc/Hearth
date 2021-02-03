@@ -10,60 +10,24 @@ import {
   Radio,
   RadioGroup,
   Rate,
-  SelectPicker,
-  Row,
-  Col,
+  SelectPicker
 } from "rsuite";
 import "rsuite/lib/styles/index.less";
 import "./NewReview.css";
 import selections from "../../utils/Genre";
 import API from "../../utils/API";
 
-
 const NewReview = () => {
-  const [developerState, setDeveloperState] = useState({});
-  const [formObject, setFormObject] = useState({})
 
-  /*function handleInputChange(event) {
-    console.log(event.target);
-    const { name, value } = event.target;
-    setFormObject({...formObject, [name]: value})
-  };*/
+//   Review States
+  const [ topicState, setTopic ]  = useState("");
+  const [ titleState, setTitle ] = useState("");
+  const [ rateState, setRate ] = useState();
+  const [ genreState, setGenre ] = useState([]);
+  const [ reviewState, setReview ] = useState("");
 
-  function handleFormSubmit(event) {
-    event.preventDefault();
-    console.log(formObject);
-  }
-
-  function handleFormCancel(event) {
-    event.preventDefault();
-    setFormObject({ })
-  }
-
-  //need these over handleInputChange because event.target is undefined for non-input forms
-  function handleInputChangeRadio(event) {
-    setFormObject({ ...formObject, type: event })
-  };
-
-  function handleInputChangeTitle(event) {
-    setFormObject({ ...formObject, title: event })
-  };
-
-  function handleInputChangeRating(event) {
-    setFormObject({ ...formObject, rating: event })
-  };
-
-  function handleInputChangeGenre(event) {
-    setFormObject({ ...formObject, category: event })
-  };
-
-  function handleInputChangeReview(event) {
-    setFormObject({ ...formObject, review: event })
-  };
-
-  const [ postState, setPost ]  = useState({
-      topic: "Film"
-  });
+//   Final Post State
+  const [ postState, setPost ] = useState({});
 
   return (
     <div className="create-container">
@@ -72,15 +36,14 @@ const NewReview = () => {
       <div className="createnew-form-container">
         <Form fluid className="createnew-form">
           {/* REVIEW RADIO */}
-          <FormControlLabel>what would you like to review?</FormControlLabel>
+          <FormControlLabel/>
 
           <RadioGroup 
             onChange={ function(value) {
-                setPost({topic: value});
+                setTopic(value);
             } } 
             name="radioList" 
             className="createnew-radio" 
-            defaultValue="Film"
             inline
             >
             <Radio value="Film">film</Radio>
@@ -91,43 +54,83 @@ const NewReview = () => {
 
           {/* REVIEW TITLE */}
           <FormGroup>
-            <FormControlLabel>{postState.topic.toLowerCase()} title</FormControlLabel>
-            <FormControl onChange={handleInputChangeTitle} name="title" type="input" className="form-title" />
+            <FormControlLabel/>
+            <FormControl 
+                onChange={
+                    function(value){
+                        setTitle(value)
+                    } 
+                }
+                name="title" 
+                type="input" 
+                className="form-title" 
+                placeholder={`${topicState.toLowerCase()} title`}
+            />
             <FormHelpText>required</FormHelpText>
           </FormGroup>
 
           {/* REVIEW RATING */}
           <FormGroup>
-            <FormControlLabel className="createnew-rating">
-              your rating
-            </FormControlLabel>
-            <Rate onChange={handleInputChangeRating} defaultValue={2.5} allowHalf />
+            <FormControlLabel className="createnew-rating" />
+            <Rate onChange={
+                function(value) {
+                    setRate(value);
+                }
+            }
+            defaultValue={2.5} 
+            allowHalf />
           </FormGroup>
 
           {/* REVIEW GENRE */}
-
           <FormGroup>
-            <FormControlLabel className="createnew-genre">
-              please select a genre
-            </FormControlLabel>
-            <SelectPicker onChange={handleInputChangeGenre} data={selections} />
+            <FormControlLabel className="createnew-genre"/>
+            <SelectPicker 
+                data={selections} 
+                placeholder="genre"
+                onChange={
+                    function(value) {
+                        setGenre(value);
+                    }
+                }
+            />
           </FormGroup>
 
           {/* COMMENT REVIEW */}
           <FormGroup>
-            <FormControlLabel className="createnew-review">
-              leave a review
-            </FormControlLabel>
-            <FormControl onChange={handleInputChangeReview} rows={3} name="textarea" componentClass="textarea" />
+            <FormControlLabel className="createnew-review" />
+            <FormControl 
+                rows={3} 
+                name="textarea" 
+                componentClass="textarea" 
+                placeholder="type review here"
+                onChange={
+                    function(value) {
+                        setReview(value)
+                    }
+                }
+            />
           </FormGroup>
 
           {/* SUBMIT BUTTON */}
           <ButtonToolbar>
-            <Button id="createnew-submit"  appearance="primary" onClick={handleFormSubmit}>
+            <Button 
+                id="createnew-submit"  
+                appearance="primary"
+                onClick={
+                    function() {
+                        setPost({
+                            topic: topicState, 
+                            title: titleState,
+                            rating: rateState,
+                            genre: genreState,
+                            review: reviewState
+                        })
+
+                        console.log(postState);
+                    }
+                }
+            >
               submit
-            </Button>
-            <Button id="createnew-cancel" appearance="default" onClick={handleFormCancel}>
-              cancel
             </Button>
           </ButtonToolbar>
         </Form>

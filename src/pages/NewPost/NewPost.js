@@ -13,6 +13,7 @@ import "rsuite/lib/styles/index.less";
 import NewReview from "../../components/NewReview/NewReview";
 import NewRec from "../../components/NewRec/NewRec";
 import NewPoll from "../../components/NewPoll/NewPoll";
+import NewTopic from "../../components/NewTopic/NewTopic";
 import "./NewPost.css";
 
 export default function NewPost() {
@@ -22,7 +23,7 @@ export default function NewPost() {
     <div className="post-container">
       <h3 className="post-header">choose post type</h3>
       <Row className="post-links">
-          <Col id="link-container" md={8}>
+          <Col id="link-container" md={6}>
             <Link 
               id="post-button"
               to={`${url}/review`}
@@ -31,7 +32,7 @@ export default function NewPost() {
             </Link>
           </Col>
 
-          <Col id="link-container" md={8}>
+          <Col id="link-container" md={6}>
             <Link 
               id="post-button"
               to={`${url}/recommendation`}
@@ -40,12 +41,20 @@ export default function NewPost() {
             </Link>
           </Col>
 
-          <Col id="link-container" md={8}>
+          <Col id="link-container" md={6}>
             <Link 
               id="post-button"
               to={`${url}/poll`}
             >
               New Poll
+            </Link>
+          </Col>
+          <Col id="link-container" md={6}>
+            <Link 
+              id="post-button"
+              to={`${url}/topic`}
+            >
+              New Topic
             </Link>
           </Col>
       </Row>
@@ -62,6 +71,9 @@ export default function NewPost() {
         </Route>
         <Route exact path={`${path}/poll`}> 
             <NewPoll />
+        </Route>
+        <Route exact path={`${path}/topic`}> 
+            <NewTopic />
         </Route>
       </Switch>
     </div>
