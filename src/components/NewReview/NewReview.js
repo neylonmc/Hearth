@@ -9,24 +9,22 @@ import {
   Button,
   Radio,
   RadioGroup,
-  Rate,
-  SelectPicker
+  Rate
 } from "rsuite";
 import "rsuite/lib/styles/index.less";
 import "./NewReview.css";
-import selections from "../../utils/Genre";
 import API from "../../utils/API";
 
 const NewReview = () => {
 
-//   Review States
+//  States
   const [ topicState, setTopic ]  = useState("");
   const [ titleState, setTitle ] = useState("");
   const [ rateState, setRate ] = useState();
-  const [ reviewState, setReview ] = useState("");
+  const [ textState, setText ] = useState("");
 
-//   Final Post State
-  const [ postState, setPost ] = useState({});
+//  Final Review State
+  const [ reviewState, setReview ] = useState({});
 
   return (
     <div className="review-container">
@@ -72,13 +70,12 @@ const NewReview = () => {
           <FormGroup>
             <FormControlLabel className="createnew-review" />
             <FormControl 
-                rows={3} 
+                rows={5} 
                 name="textarea" 
-                componentClass="textarea" 
                 placeholder="type review here"
                 onChange={
                     function(value) {
-                        setReview(value)
+                        setText(value)
                     }
                 }
             />
@@ -105,14 +102,14 @@ const NewReview = () => {
                 appearance="primary"
                 onClick={
                     function() {
-                        setPost({
+                        setReview({
                             topic: topicState, 
                             title: titleState,
-                            review: reviewState,
+                            review: textState,
                             rating: rateState
                         })
 
-                        console.log(postState);
+                        console.log(reviewState);
                     }
                 }
             >

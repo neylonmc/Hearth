@@ -1,6 +1,6 @@
  
 .review-container {
-    margin: 2em 30em;
+    margin: 2em 20em;
     text-align: left;
 }
 
@@ -17,7 +17,7 @@ background-color: rgba(185, 75, 20);
 
 
   /*-------------------Mobile View --------------*/
-  @media (max-width: 480px) {
+  @media (max-width: 1000px) {
     .review-container {
       margin: 1.5em;
     }

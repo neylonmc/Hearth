@@ -1,0 +1,27 @@
+.poll-container {
+    margin: 2em 20em;
+    text-align: left;
+}
+
+.subheader {
+    margin: 0.5em;
+    font-size: 125%;
+}
+
+
+/* FORM  */
+.topic-picker {
+    margin-bottom: 1em !important;
+}
+
+.submit-button {
+    margin-top: 1em;
+    border: 1px solid #d95515 !important;
+    background-color: rgba(185, 75, 20, 0.2) !important;
+}
+
+.submit-button:hover {
+    border: 1px solid #d95515 !important;
+    background-color: rgba(185, 75, 20) !important;
+}
+
