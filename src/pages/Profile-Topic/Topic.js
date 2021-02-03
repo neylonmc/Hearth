@@ -55,11 +55,15 @@ function Topic() {
                         >
                             <Panel 
                                 id="panel"
-                                className="info-panel"
-                                header="info"
+                                className="about-panel"
+                                header="about"
                                 defaultExpanded
                             >
-                                <TopicInfo />
+                                <TopicInfo 
+                                    topic={data.topic}
+                                    ageRange={data.age_range.join(", ")}
+                                    description={data.description}
+                                />
                             </Panel>
                             <Panel 
                                 id="panel"

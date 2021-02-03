@@ -39,8 +39,8 @@ function Profile() {
             >
                 <Panel 
                     id="panel"
-                    className="info-panel"
-                    header="info" 
+                    className="about-panel"
+                    header="about" 
                     defaultExpanded
                 >
                     <UserInfo />
