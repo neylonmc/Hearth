@@ -1,0 +1,25 @@
+ 
+.review-container {
+    margin: 2em 20em;
+    text-align: left;
+}
+
+
+.submit-button {
+    border: 1px solid #d95515;
+    background-color: rgba(185, 75, 20, 0.2);
+}
+
+.submit-buttont:hover {
+    border: 1px solid #d95515;
+    background-color: rgba(185, 75, 20);
+}
+
+
+  /*-------------------Mobile View --------------*/
+  @media (max-width: 1000px) {
+    .review-container {
+      margin: 1.5em;
+    }
+  }
+  
