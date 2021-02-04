@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Container } from "rsuite";
-import Login from "./pages/Login/Login";
+import Home from "./pages/Home/Home";
 import Select from "./pages/Select/Select";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Browse from "./pages/Browse-Topics/Browse";
@@ -11,7 +11,7 @@ import Profile from "./pages/Profile-Topic/Profile";
 import Topic from "./pages/Profile-Topic/Topic";
 import Settings from "./pages/Settings/Settings";
 import NoMatch from "./pages/NoMatch/NoMatch";
-import LoginForm from "./components/LoginForm/LoginForm";
+import Login from "./pages/Login/Login";
 import "rsuite/dist/styles/rsuite-default.css";
 import "./App.css";
 
@@ -22,7 +22,8 @@ function App() {
         <Nav />
         <Container>
           <Switch>
-            <Route exact path={["/", "/login"]} component={Login} />
+            <Route exact path={["/", "/home"]} component={Home} />
+            <Route exact path="/login" component={Login}/>
             <Route exact path="/select" component={Select}/>
             <Route path="/topics" component={Browse} /> 
             <Route exact path="/dashboard" component={Dashboard} />

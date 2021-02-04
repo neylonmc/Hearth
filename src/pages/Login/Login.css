@@ -1,60 +1,7 @@
-.login-container {
-    text-align: center;
-    margin-top: 15%;
-    margin-left: 38%;
-    max-width: 27rem;
-}
-  
-.login-header {
-    font-size: 500%;
-    font-weight: 300;
-    text-align: center;
-    letter-spacing: 2rem;
-    margin-bottom: 1.5rem;
+.sub-container {
+    margin: 0.7em 0em;
 }
 
-.login-btn {
-    background-color: rgb(98,19,10, 0.65) !important;
-    border: 0.1rem solid #62130A !important;
-}
-
-.account-btn {
-    background-color: rgb(98,19,10, 0.35) !important;
-    border: 0.1rem solid #62130A !important;
-    color: #fff !important;
-}
-
-#login-buttons {
-    margin: 0.2rem 0rem;
-    letter-spacing: 0.4rem;
-}
-
-#login-buttons:hover {
-    background-color: rgb(190,42,13, 0.65) !important;
-    border: 0.1rem solid #BE2A0D ;
-    color: #fff;
-}
-
-
-  @media (max-width: 480px) {
- 
-    /* LOGIN PAGE */
-    .login-container {
-        margin-left: 4rem;
-        margin-bottom: 0.5rem;
-        padding-top: 3rem;
-        max-width: 15rem;
-    }
-
-    .login-header {
-        font-size: 325%;
-        text-align: center;
-        opacity: 0.85;
-        margin-bottom: 0.8rem;
-        letter-spacing: 1rem;
-    }
-
-
-    
-    
+#sub-btn a { 
+    color: #d9a51f !important;
 }

@@ -11,8 +11,8 @@
   width: 7em;
   height: 7em;
   opacity: 0.95;
-  border-radius: 50%;
-
+  border-radius: 5%;
+  margin: 0em 1em;
 }
 
 .page-title {

@@ -5,7 +5,6 @@ import {
     PanelGroup,
     Panel 
 } from "rsuite";
-import 'rsuite/dist/styles/rsuite-dark.css';
 import "./Profile-Topic.css";
 import Streaming from "../../components/Streaming/Streaming";
 import UserInfo from "../../components/UserInfo/UserInfo";
