@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import {
-    Row,
-    Col,
+    // Row,
+    // Col,
     Avatar
 } from 'rsuite';
 import "./SimilarUsers.css";
