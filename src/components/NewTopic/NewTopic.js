@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
     Row,
     Col,
@@ -18,6 +18,15 @@ import Ages from "../../utils/AgeRange";
 
 function NewRec() {
 
+    const [ titleState, setTitle ] = useState("");
+    const [ typeState, setType ] = useState("");
+    const [ genreState, setGenre ] = useState("");
+    const [ ageState, setAge ] = useState("");
+    const [ textState, setText ] = useState("");
+
+    const [ topicState, setTopic ] = useState({});
+
+
     return(
         <div className="topic-container   animate__animated animate__fadeIn">
 
@@ -33,6 +42,11 @@ function NewRec() {
                         className="topic-title"
                         name="name" 
                         placeholder="topic title"
+                        onChange= {
+                            function(value) {
+                                setTitle(value)
+                            }
+                        }
                     />
                 </FormGroup>
 
@@ -44,6 +58,11 @@ function NewRec() {
                                 data={ Topic }
                                 defaultValue=""
                                 placeholder="type"
+                                onSelect= {
+                                    function(value, item) {
+                                        setType(item.topic)
+                                    }
+                                }
                                 block
                             />
                         </FormGroup>
@@ -55,6 +74,11 @@ function NewRec() {
                                 data={ Genre }
                                 defaultValue=""
                                 placeholder="genre"
+                                onChange= {
+                                    function(value) {
+                                        setGenre(value)
+                                    }
+                                }
                                 block
                             />
                         </FormGroup>
@@ -66,6 +90,11 @@ function NewRec() {
                                 data={ Ages }
                                 defaultValue=""
                                 placeholder="audiance"
+                                onChange= {
+                                    function(value) {
+                                        setAge(value)
+                                    }
+                                }
                                 block
                             />
                         </FormGroup>
@@ -78,6 +107,11 @@ function NewRec() {
                         name="description" 
                         type="textarea" 
                         placeholder="topic description"
+                        onChange= {
+                            function(value) {
+                                setText(value)
+                            }
+                        }
                     />
                 </FormGroup>
 
@@ -86,6 +120,20 @@ function NewRec() {
                         <Button 
                             className="submit-button"
                             appearance="primary"
+                            onClick= {
+                                function() {
+                                    setTopic({
+                                        title: titleState,
+                                        topic: typeState,
+                                        genre: genreState,
+                                        age_range: ageState,
+                                        description: textState
+
+                                    })
+
+                                    console.log(topicState);
+                                }
+                            }
                         > submit</Button>
                     </ButtonToolbar>
                 </FormGroup>
