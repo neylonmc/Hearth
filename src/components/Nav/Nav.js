@@ -1,8 +1,11 @@
-import React from "react";
-import { Navbar, Nav } from "rsuite";
-import { Link } from "react-router-dom";
-import SearchBar from "../SearchBar/SearchBar";
+import React, { Component } from "react";
 import "./Nav.css";
+import { MenuItems } from "./MenuItem";
+import SearchBar from "../SearchBar/SearchBar";
+
+export class Navbar extends Component {
+  state = { clicked: false };
+
 
 const Header = ({ onSelect, activeKey }) => {
   return (
@@ -33,8 +36,8 @@ const Header = ({ onSelect, activeKey }) => {
             </Link>
           </Nav.Item>
           <Nav.Item eventKey="4">
-            <Link id="nav-links" to="/create-new">
-              create post
+            <Link id="nav-links" to="/post">
+              new post
             </Link>
           </Nav.Item>
           <Nav.Item eventKey="5">
@@ -54,90 +57,33 @@ const Header = ({ onSelect, activeKey }) => {
   );
 };
 
-//   return (
-//     <Navbar className="nav-toggle" style={{ height: "100%" }}>
-//       <Navbar.Body>
-//         <Nav pullRight>
-//           <Nav.Item
-//             onClick={onChange}
-//             style={{ width: 56, textAlign: "center" }}
-//           >
-//             <Icon icon={expand ? "angle-left" : "angle-right"} />
-//           </Nav.Item>
-//         </Nav>
-//       </Navbar.Body>
-//     </Navbar>
-//   );
-// };
+  handleClick = () => {
+    this.setState({ clicked: !this.state.clicked });
+  };
 
-// class Header2 extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       expand: true,
-//     };
-//     this.handleToggle = this.handleToggle.bind(this);
-//   }
-//   handleToggle() {
-//     this.setState({
-//       expand: !this.state.expand,
-//     });
-//   }
-//   render() {
-//     const { expand } = this.state;
-//     return (
-//       <div className="sidebar-page">
-//         <Container>
-//           <Sidebar
-//             style={{
-//               display: "flex",
-//               flexDirection: "column",
-//             }}
-//             width={expand ? 260 : 56}
-//             collapsible
-//           >
-//             <Sidenav.Header>
-//               <div className={headerStyles}>
-//                 <span className="title"> hearth </span>
-//               </div>
-//             </Sidenav.Header>
-//             <Sidenav
-//               expanded={expand}
-//               defaultOpenKeys={["3"]}
-//               defaultActiveKey="2"
-//               style={{ c }}
-//             >
-//               <Sidenav.Body>
-//                 <Nav>
-//                   <Nav.Item eventKey="1" active>
-//                     Dashboard
-//                   </Nav.Item>
-//                   <Nav.Item eventKey="2">Create New</Nav.Item>
-//                   <Nav.Item eventKey="2">View Topics</Nav.Item>
-//                   <Nav.Item eventKey="2">Settings</Nav.Item>
-//                   <Nav.Item eventKey="2">About</Nav.Item>
-//                   {/* <Dropdown
-//                     eventKey="3"
-//                     trigger="hover"
-//                     title="Advanced"
-//                     icon={<Icon icon="magic" />}
-//                     placement="rightTop"
-//                   >
-//                     <Dropdown.Item eventKey="3-1">Geo</Dropdown.Item>
-//                     <Dropdown.Item eventKey="3-2">Devices</Dropdown.Item>
-//                     <Dropdown.Item eventKey="3-3">Brand</Dropdown.Item>
-//                     <Dropdown.Item eventKey="3-4">Loyalty</Dropdown.Item>
-//                     <Dropdown.Item eventKey="3-5">Visit Depth</Dropdown.Item>
-//                   </Dropdown> */}
-//                 </Nav>
-//               </Sidenav.Body>
-//             </Sidenav>
-//             <NavToggle expand={expand} onChange={this.handleToggle} />
-//           </Sidebar>
-//         </Container>
-//       </div>
-//     );
-//   }
-// }
+  render() {
+    return (
+      <nav className="navbarItems">
+        <h1 className="navbar-logo">hearth</h1>
+        <div className="menu-icon" onClick={this.handleClick} pullRight>
+          <i className={this.state.clicked ? "fas fa-times" : "fas fa-bars"} />
+        </div>
 
-export default Header;
+        <div className={this.state.clicked ? "nav-menu active" : "nav-menu"}>
+          {MenuItems.map((item, index) => {
+            return (
+              <div key={index}>
+                <a className={item.name} href={item.url}>
+                  {item.title}
+                </a>
+              </div>
+            );
+          })}
+          <SearchBar />
+        </div>
+      </nav>
+    );
+  }
+}
+
+export default Navbar;

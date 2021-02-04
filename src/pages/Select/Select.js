@@ -14,7 +14,7 @@ function Select() {
             <div className="select-header-container">
                 <Row>
                     <Col>
-                        <h1>step one: select some favorites</h1>
+                        <h1>step one: select your favorites</h1>
                     </Col>
                 </Row>
                 <Row><Col>

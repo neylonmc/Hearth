@@ -1,15 +1,19 @@
 const Topics = [
     {
-        topic: "books",
+        topic: "Books",
+        label: "books",
         topic_url: "/topic/books"
     },{
-        topic: "movies",
+        topic: "Film",
+        label: "film",
         topic_url: "/topic/books"
     },{
-        topic: "television",
+        topic: "Television",
+        label: "tv",
         topic_url: "/topic/books"
     },{
-        topic: "music",
+        topic: "Music",
+        label: "music",
         topic_url: "/topic/books"
     }  
 ];
