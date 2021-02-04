@@ -1,13 +1,13 @@
 import React, {useState, useEffect } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import {
-    Row,
-    Col,
+    // Row,
+    // Col,
     Avatar
 } from 'rsuite';
 import "./SimilarUsers.css";
 import API from "../../utils/RandomAPI";
-import { render } from '@testing-library/react';
+// import { render } from '@testing-library/react';
 
 function SimilarUsers() {
     // DUMBY DATA

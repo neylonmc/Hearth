@@ -2,8 +2,10 @@ import React from "react";
 import { Row, Col, Button } from "rsuite";
 import "rsuite/dist/styles/rsuite-dark.css";
 import "./Login.css";
+// import LoginButton from "../../components/LoginButton/LoginButton";
 
 function Login() {
+  // handleClick() => 
   return (
     <div className="login-container">
       <Row>
@@ -29,7 +31,11 @@ function Login() {
         </Row>
         <Row>
           <Col>
-            <Button id="login-buttons" className="account-btn" size="lg" block>
+            <Button 
+              id="login-buttons" 
+              className="account-btn" 
+              size="lg" block
+            >
               Create Account
             </Button>
           </Col>
