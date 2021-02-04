@@ -20,7 +20,10 @@
   font-size: 270%;
   letter-spacing: 0.5rem;
   padding-top: 0.6em;
-  padding-left: 0.7em;
+}
+
+.page-title, .topic-head {
+  padding-left: 1.5em;
 }
 
 .about-panel {

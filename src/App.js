@@ -77,9 +77,10 @@ class App extends Component {
               <Route exact path="/signup" render={() => <SignUpForm />} />
               <Route exact path="/select" component={Select} />
               <Route path="/topics" component={Browse} />
+              <Route path="/post" component={NewPost} />
               <Route exact path="/dashboard" component={Dashboard} />
               <Route exact path="/profile" component={Profile} />
-              <Route exact path="/topic" component={Topic} />
+              <Route exact path="/topic/:topic" component={Topic} />
               <Route exact path="/settings" component={Settings} />
               <Route path="*" component={NoMatch} />
             </Switch>
