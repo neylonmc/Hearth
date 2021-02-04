@@ -24,7 +24,6 @@ function NewPoll() {
 
     return(
         <div className="poll-container">    
-
             <p className="subheader">
                 choose which topic you'd 
                 like to poll - if you don't see it, 
@@ -32,7 +31,6 @@ function NewPoll() {
             </p>
 
             <Form fluid>
-
                 <InputPicker 
                     className="topic-picker"
                     data={ Entertainment }
@@ -127,7 +125,7 @@ function NewPoll() {
                                 console.log(pollState);
                             }
                         }
-                    > Submit </Button>
+                    > submit </Button>
                 </FormGroup>
             </Form>
         </div>

@@ -29,3 +29,10 @@
     background-color: rgba(185, 75, 20) !important;
 }
 
+
+@media (max-width: 480px) {
+
+    .poll-container {
+        margin: 1em 1.5em;
+    }
+}

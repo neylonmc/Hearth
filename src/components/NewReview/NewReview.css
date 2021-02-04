@@ -5,14 +5,14 @@
 }
 
 
-#createnew-submit {
+.submit-button {
     border: 1px solid #d95515;
     background-color: rgba(185, 75, 20, 0.2);
 }
 
-#createnew-submit:hover {
-border: 1px solid #d95515;
-background-color: rgba(185, 75, 20);
+.submit-buttont:hover {
+    border: 1px solid #d95515;
+    background-color: rgba(185, 75, 20);
 }
 
 

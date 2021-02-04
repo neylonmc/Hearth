@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {
-    InputPicker, Panel
+    SelectPicker
 } from "rsuite";
 import Entertainment from "../../utils/TopEntertainment";
 import "./SearchBar.css";
@@ -8,7 +8,7 @@ import "./SearchBar.css";
 function SearchBar()  {
     
     return(
-        <InputPicker 
+        <SelectPicker 
             className= "search-bar"
             data={ Entertainment } 
             size="md"
