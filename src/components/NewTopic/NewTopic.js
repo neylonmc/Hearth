@@ -19,7 +19,14 @@ import Ages from "../../utils/AgeRange";
 function NewRec() {
 
     return(
-        <div className="topic-container">
+        <div className="topic-container   animate__animated animate__fadeIn">
+
+        <p className="subheader">
+            create a new topic and get 
+            the conversation flowing
+        </p>
+
+
             <Form fluid>
                 <FormGroup>
                     <FormControl 
@@ -29,9 +36,9 @@ function NewRec() {
                     />
                 </FormGroup>
 
-                <Row>
+                <Row className="mini-container">
                     <Col md={8}>
-                        <FormGroup>
+                        <FormGroup id="mini-picker">
                             <SelectPicker 
                                 className="type"
                                 data={ Topic }
@@ -42,19 +49,18 @@ function NewRec() {
                         </FormGroup>
                     </Col>
                     <Col md={8}>
-                        <FormGroup>
+                        <FormGroup id="mini-picker">
                             <TagPicker 
                                 className="genre"
                                 data={ Genre }
                                 defaultValue=""
                                 placeholder="genre"
-                                maxHeight= "0.5em"
                                 block
                             />
                         </FormGroup>
                     </Col>
                     <Col md={8}>
-                        <FormGroup>
+                        <FormGroup id="mini-picker">
                             <TagPicker 
                                 className="ages"
                                 data={ Ages }

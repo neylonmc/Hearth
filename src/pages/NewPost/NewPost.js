@@ -19,7 +19,7 @@ export default function NewPost() {
   let { path, url } = useRouteMatch();
 
   return (
-    <div className="post-container">
+    <div className="post-container  animate__animated animate__fadeIn">
       <h3 className="post-header">choose post type</h3>
       <Row className="post-links">
           <Col id="link-container" md={8}>

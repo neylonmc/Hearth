@@ -22,7 +22,7 @@ export default function Topics() {
   let { path, url } = useRouteMatch();
 
   return (
-    <div className="browse-container">
+    <div className="browse-container  animate__animated animate__fadeIn">
       <h3 className="browse-title">browse by topic</h3>
       <Row className="topic-links">
         { allTopics.map(topic => {
@@ -58,7 +58,7 @@ function Topic() {
   let { topic } = useParams();
 
   return (
-    <div className="topic-container">
+    <div className="topic-container  animate__animated animate__fadeIn">
       <Panel
         className="topic-panel"
       >
@@ -66,7 +66,11 @@ function Topic() {
             { Entertainment.map(data => {
               if (data.topic === topic) {
                 return(
-                  <Col md={4} sm={12}>
+                  <Col 
+                    className="  animate__animated animate__fadeIn"
+                    md={4} 
+                    sm={12}
+                  >
                       <Button  
                         id="results-button"
                         href={ data.local_ext }

@@ -25,7 +25,7 @@ const NewReview = () => {
   const [ reviewState, setReview ] = useState({});
 
   return (
-    <div className="review-container">
+    <div className="review-container  animate__animated animate__fadeIn">
 
         <p className="subheader">
             choose which topic you'd 

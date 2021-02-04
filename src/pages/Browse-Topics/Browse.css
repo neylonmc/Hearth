@@ -4,7 +4,7 @@
 
 .browse-container {
   margin-top: 5%;
-  padding: 0rem 10rem;
+  
 }
 
 .browse-title {
@@ -17,6 +17,7 @@
 
 .topic-links {
   text-align: center !important;
+  margin: 0em 25em !important;
 }
 
 #topic-button {
@@ -41,6 +42,7 @@
 /* RESULTS ------------------------------------------------------------------------ */
 .topic-container {
   margin: 2rem 0rem;
+  padding: 0em -5em;
 }
 
 .topic-panel {
@@ -49,6 +51,7 @@
 }
 
 #results-button {
+  width: 10em;
   margin: 0.8em;
   background-color: rgb(98,19,10, 0.55) ;
   border: 1px solid #62130a;
@@ -69,7 +72,7 @@
   }
 
   .topic-links {
-    margin: -2em 0em;
+    margin: -2em 0em !important;
   }
 
   #link-container {
@@ -84,7 +87,12 @@
     height: 25rem;
   }
 
-  
+  #results-button { 
+    width: 15em;
+    height: 25em;
+    margin: 0.5em -1em;
+    padding: 0.5em
+  }
 
   
 }

@@ -22,6 +22,7 @@ header {
   
   .post-links {
     text-align: center !important;
+    padding: 0em 15em;
   }
   
   #post-button {
@@ -123,7 +124,7 @@ header {
   }
   
   
-  @media (max-width: 480px) {
+  @media (max-width: 1000px) {
   
     .post-container {
       padding: 0rem;
@@ -131,13 +132,8 @@ header {
   
     .post-links {
       margin: -2em 0em;
+      padding: 0em 0em;
     }
-  
-  
-  
-    
-  
-    
   }
   
     

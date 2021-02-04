@@ -23,7 +23,7 @@ function NewPoll() {
     const [ pollState, setPoll ] = useState({});
 
     return(
-        <div className="poll-container">    
+        <div className="poll-container   animate__animated animate__fadeIn">    
             <p className="subheader">
                 choose which topic you'd 
                 like to poll - if you don't see it, 

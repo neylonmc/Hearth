@@ -34,7 +34,7 @@ const Header = ({ onSelect, activeKey }) => {
           </Nav.Item>
           <Nav.Item eventKey="4">
             <Link id="nav-links" to="/post">
-              post
+              new post
             </Link>
           </Nav.Item>
           <Nav.Item eventKey="5">
