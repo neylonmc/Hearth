@@ -1,11 +1,13 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-//const comment = require("/comment.js");
+const bcrypt = require("bcryptjs");
+mongoose.promise = Promise;
 //const activity = require("activity.js");
 
 const usersSchema = new Schema({
     name: { type: String, required: true },
-    password: { type: String, required: true },
+    username: { type: String, unique: false, required: false },
+	password: { type: String, unique: false, required: false },
     email: {type: String},
     Interests: [String],
     Ratings: [
@@ -20,16 +22,29 @@ const usersSchema = new Schema({
     Following: [{ UserId: Number }]
 });
 
+// methods for usersSchema
+usersSchema.methods = {
+	checkPassword: function (inputPassword) {
+		return bcrypt.compareSync(inputPassword, this.password)
+	},
+	hashPassword: plainTextPassword => {
+		return bcrypt.hashSync(plainTextPassword, 10)
+	}
+};
+
+// hooks for pre-saving
+usersSchema.pre("save", function (next) {
+	if (!this.password) {
+		console.log("models/user.js =======NO PASSWORD PROVIDED=======")
+		next()
+	} else {
+		console.log("models/user.js hashPassword in pre save");
+		
+		this.password = this.hashPassword(this.password)
+		next()
+	}
+});
+
 const User = mongoose.model("User", usersSchema);
-
-// hashes password before user is created
-/*User.addHook("beforeCreate", function(user) {
-    user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
-  });
-
-// checks hashed bersus unhashed password
-User.prototype.validPassword = function(password) {
-    return bcrypt.compareSync(password, this.password);
-  };*/
 
 module.exports = User;
