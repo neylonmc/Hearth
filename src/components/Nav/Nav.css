@@ -12,7 +12,17 @@
 }
 
 #nav-links {
+  font-weight: 600;
   letter-spacing: 0.2rem;
   padding-top: 0.3rem;
-  color: #62130a;
+  color: #d9a51f;
+}
+
+#nav-links:hover {
+  text-decoration: none;
+}
+
+#nav-links:focus {
+  text-decoration: none;
+  color: #dee2e6;
 }

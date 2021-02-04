@@ -2,8 +2,9 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Container } from "rsuite";
 import Login from "./pages/Login/Login";
+import Select from "./pages/Select/Select";
 import Dashboard from "./pages/Dashboard/Dashboard";
-import Topics from "./components/Topics/Topics";
+import Browse from "./pages/Browse-Topics/Browse";
 import CreateNew from "./components/CreateNew/CreateNew";
 import Nav from "./components/Nav/Nav";
 import Profile from "./pages/Profile-Topic/Profile";
@@ -21,27 +22,15 @@ function App() {
         <Nav />
         <Container>
           <Switch>
-            <Route exact path="/login">
-              <LoginForm />
-            </Route>
-            <Route exact path="/">
-              <Login />
-            </Route>
-            <Route exact path="/topics" component={Topics} />
+            <Route exact path={["/", "/login"]} component={Login} />
+            <Route exact path="/select" component={Select}/>
+            <Route path="/topics" component={Browse} /> 
             <Route exact path="/dashboard" component={Dashboard} />
             <Route exact path="/create-new" component={CreateNew} />
-            <Route exact path="/profile">
-              <Profile />
-            </Route>
-            <Route exact path="/topic">
-              <Topic />
-            </Route>
-            <Route exact path="/settings">
-              <Settings />
-            </Route>
-            <Route path="*">
-              <NoMatch />
-            </Route>
+            <Route exact path="/profile" component={Profile} />
+            <Route exact path="/topic" component={Topic} />
+            <Route exact path="/settings" component={Settings} />
+            <Route path="*"  component={NoMatch} />
           </Switch>
         </Container>
       </div>

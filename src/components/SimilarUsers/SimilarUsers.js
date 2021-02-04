@@ -1,5 +1,5 @@
-import React, {useState, useEffect } from 'react';
-// import axios from 'axios';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import {
     // Row,
     // Col,
@@ -7,7 +7,6 @@ import {
 } from 'rsuite';
 import "./SimilarUsers.css";
 import API from "../../utils/RandomAPI";
-// import { render } from '@testing-library/react';
 
 function SimilarUsers() {
     // DUMBY DATA
@@ -22,7 +21,6 @@ function SimilarUsers() {
     return(
 
         searchState.map(user => {
-            console.log(user)
             return( 
                 <Avatar id="avatar" size="lg" src={user.picture.medium}>
                     {user.name.first[0]}{user.name.last[0]}

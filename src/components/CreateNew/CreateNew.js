@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   Form,
   FormGroup,
@@ -11,55 +11,154 @@ import {
   RadioGroup,
   Rate,
   SelectPicker,
+  Row,
+  Col,
 } from "rsuite";
 import "rsuite/lib/styles/index.less";
 import "./CreateNewStyle.css";
 import selections from "../../utils/Genre";
+import API from "../../utils/API";
+import imdb from "../../utils/IMDB";
+import library from "../../utils/OpenLibrary";
+
 
 const CreateNew = () => {
-  return (
-    <div className="flex">
-      <h1 className="title-item" style={{ backgroundColor: "#d9a51f" }}>
-        Create New Review
-      </h1>
+  const [developerState, setDeveloperState] = useState({});
+  const [formObject, setFormObject] = useState({})
 
-      <Form fluid className="form-style">
-        <FormGroup controlId="radioList">
-          <FormControlLabel>What Would You Like To Review?</FormControlLabel>
-          <RadioGroup name="radioList" inline>
-            <Radio value="A">Movie</Radio>
-            <Radio value="B">Tv</Radio>
-            <Radio value="C">Book</Radio>
-            <Radio value="D">Music</Radio>
+  useEffect(() => {
+  }, [])
+
+
+  function createPost() {
+  }
+
+  /*function handleInputChange(event) {
+    console.log(event.target);
+    const { name, value } = event.target;
+    setFormObject({...formObject, [name]: value})
+  };*/
+
+
+  function handleFormSubmit(event) {
+    event.preventDefault();
+    console.log(formObject);
+  /*  switch (formObject.type) {
+      case "Movie":
+        imdb.getImdb(formObject.title);
+        break;
+
+      case "TV":
+        imdb.getImdb(formObject.title);
+        break;
+
+      case "Book":
+        library.getBook(formObject.title);
+        break;
+
+      case "Music":
+
+        break;
+
+      default:
+        break;
+    }*/
+    API.saveActivity(formObject);
+  }
+
+  function handleFormCancel(event) {
+    event.preventDefault();
+    setFormObject({ })
+  }
+
+
+  //need these over handleInputChange because event.target is undefined for non-input forms
+  function handleInputChangeRadio(event) {
+    setFormObject({ ...formObject, type: event })
+  };
+
+  function handleInputChangeTitle(event) {
+    setFormObject({ ...formObject, title: event })
+  };
+
+  function handleInputChangeRating(event) {
+    setFormObject({ ...formObject, rating: event })
+  };
+
+  function handleInputChangeGenre(event) {
+    setFormObject({ ...formObject, category: event })
+  };
+
+  function handleInputChangeReview(event) {
+    setFormObject({ ...formObject, review: event })
+  };
+
+
+
+  return (
+    <div className="create-container">
+      <Row>
+        <Col>
+          <h1 className="createnew-header">create new review</h1>
+        </Col>
+      </Row>
+
+      {/* FORM TO CREATE NEW REVIEW */}
+      <div className="createnew-form-container">
+        <Form fluid className="createnew-form">
+          {/* REVIEW RADIO */}
+          <FormControlLabel>what would you like to review?</FormControlLabel>
+
+          <RadioGroup onChange={handleInputChangeRadio} name="radioList" className="createnew-radio" inline>
+            <Radio value="Movie">movie</Radio>
+            <Radio value="TV">tv</Radio>
+            <Radio value="Book">book</Radio>
+            <Radio value="Music">music</Radio>
           </RadioGroup>
-        </FormGroup>
-        <FormGroup>
-          <FormControlLabel>Please Enter the Title</FormControlLabel>
-          <FormControl name="title" type="input" className="form-title" />
-          <FormHelpText>Required</FormHelpText>
-        </FormGroup>
-        <FormGroup>
-          <FormControlLabel>Please Select You Rating</FormControlLabel>
-          <Rate defaultValue={2.5} allowHalf style={{ color: "#62130a" }} />
-        </FormGroup>
-        <FormGroup>
-          <FormControlLabel>Please Select a Genre</FormControlLabel>
-          <SelectPicker
-            data={selections}
-            style={{ width: 224, marginBottom: "10px" }}
-          />
-          <FormControlLabel>Leave A Review!</FormControlLabel>
-          <FormControl rows={3} name="textarea" componentClass="textarea" />
-        </FormGroup>
-        <FormGroup>
+
+          {/* REVIEW TITLE */}
+          <FormGroup>
+            <FormControlLabel>please enter a title</FormControlLabel>
+            <FormControl onChange={handleInputChangeTitle} name="title" type="input" className="form-title" />
+            <FormHelpText>required</FormHelpText>
+          </FormGroup>
+
+          {/* REVIEW RATING */}
+          <FormGroup>
+            <FormControlLabel className="createnew-rating">
+              please select your rating
+            </FormControlLabel>
+            <Rate onChange={handleInputChangeRating} defaultValue={2.5} allowHalf />
+          </FormGroup>
+
+          {/* REVIEW GENRE */}
+
+          <FormGroup>
+            <FormControlLabel className="createnew-genre">
+              please select a genre
+            </FormControlLabel>
+            <SelectPicker onChange={handleInputChangeGenre} data={selections} />
+          </FormGroup>
+
+          {/* COMMENT REVIEW */}
+          <FormGroup>
+            <FormControlLabel className="createnew-review">
+              leave a review
+            </FormControlLabel>
+            <FormControl onChange={handleInputChangeReview} rows={3} name="textarea" componentClass="textarea" />
+          </FormGroup>
+
+          {/* SUBMIT BUTTON */}
           <ButtonToolbar>
-            <Button style={{ backgroundColor: "#62130a", color: "#d9a51f" }}>
-              Submit
+            <Button id="createnew-submit" appearance="primary" onClick={handleFormSubmit}>
+              submit
             </Button>
-            <Button appearance="default">Cancel</Button>
+            <Button id="createnew-cancel" appearance="default" onClick={handleFormCancel}>
+              cancel
+            </Button>
           </ButtonToolbar>
-        </FormGroup>
-      </Form>
+        </Form>
+      </div>
     </div>
   );
 };

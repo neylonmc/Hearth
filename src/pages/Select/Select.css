@@ -1,0 +1,61 @@
+.select-header-container {
+    letter-spacing: 0.2rem;
+}
+
+.select-container {
+    text-align: center;
+    margin: 0.8em 15em;
+}
+
+.subhead {
+    font-weight: 500;
+    font-size: 130%;
+}
+
+/* BUTTONS */
+#button-container {
+    text-align: center;
+    background-color: rgb(217,85,21, 0.55) ;
+    border: 1px solid #d95515;
+    margin: 1rem 0rem;;
+    width: 15em;
+}
+
+#button-container:hover {
+    opacity: 0.8;
+}
+
+#button-image {
+    object-fit: cover;
+    border-radius: 3%;
+    overflow: hidden;
+    height: 20em;
+    width: 100%;
+}
+
+#button-title {
+    font-size: 180%;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+
+    .select-container {
+        margin: 0.5rem -9rem;
+    }
+
+    .select-header-container {
+        margin: 0rem 9rem 1.5rem 9rem;
+    }
+
+    #button-container {
+        width: 50%;
+        margin: 0.5rem 0rem;
+    }
+ 
+    #button-image {
+        height: 25rem;
+    }
+    
+
+}    

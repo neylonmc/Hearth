@@ -4,16 +4,16 @@
     padding-top: 5%;
     min-width: 35rem;
   }
-  
-  .settings-header {
-    font-weight: 300;
-    letter-spacing: 1.5rem;
-  }
-  
-  #settings-block {
-    margin: 0.5rem 0rem 1rem 0rem;
-    padding: 1rem 0rem;
-  }
+
+.settings-header {
+  font-weight: 300;
+  letter-spacing: 1.5rem;
+}
+
+#settings-block {
+  margin: 0.5rem 0rem 1rem 0rem;
+  padding: 1rem 0rem;
+}
   
     /* ACCOUNT SETTINGS */
     .acct-set-container {
@@ -49,8 +49,9 @@
   
     #preference-label {
       text-align: left;
-      font-weight: 400;
+      font-weight: 500;
       font-size: 120%;
+      letter-spacing: 0.1em;
     }
   
     .save-new-preferences {
@@ -64,7 +65,7 @@
     } 
 
 @media (max-width: 480px) {
-
+  
     .settings-container {
         margin: -1rem 1rem;
         min-width: 20rem;
@@ -76,3 +77,4 @@
     }  
 
 }    
+
