@@ -15,6 +15,7 @@ import NoMatch from "./pages/NoMatch/NoMatch";
 import LoginForm from "./components/LoginForm/LoginForm";
 import SignUpForm from "./components/SignUpForm/SignUpForm";
 import Login from "./pages/Login/Login";
+import About from "./pages/About/About"
 import "rsuite/dist/styles/rsuite-default.css";
 import "./App.css";
 
