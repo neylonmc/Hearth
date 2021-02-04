@@ -12,6 +12,7 @@ import Topic from "./pages/Profile-Topic/Topic";
 import Settings from "./pages/Settings/Settings";
 import NoMatch from "./pages/NoMatch/NoMatch";
 import Login from "./pages/Login/Login";
+import About from "./pages/About/About"
 import "rsuite/dist/styles/rsuite-default.css";
 import "./App.css";
 
@@ -31,6 +32,7 @@ function App() {
             <Route exact path="/profile" component={Profile} />
             <Route exact path="/topic/:topic" component={Topic} />
             <Route exact path="/settings" component={Settings} />
+            <Route exact path="/about" component={About} />
             <Route path="*"  component={NoMatch} />
           </Switch>
         </Container>
