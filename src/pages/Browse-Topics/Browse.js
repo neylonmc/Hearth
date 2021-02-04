@@ -67,7 +67,8 @@ function Topic() {
               if (data.topic === topic) {
                 return(
                   <Col 
-                    className="  animate__animated animate__fadeIn"
+                    id="results-container"
+                    className="animate__animated animate__fadeIn"
                     md={4} 
                     sm={12}
                   >
