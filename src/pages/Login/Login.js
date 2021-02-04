@@ -28,7 +28,7 @@ function LoginForm() {
             type="email"
             value={email}
             placeholder="email"
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(value) => setEmail(value)}
             block
           />
         </FormGroup>
@@ -37,7 +37,7 @@ function LoginForm() {
             type="password"
             value={password}
             placeholder="password"
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={(value) => setPassword(value)}
             block
           />
         </FormGroup>
