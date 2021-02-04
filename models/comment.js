@@ -3,8 +3,8 @@ const Schema = mongoose.Schema;
 
 const commentSchema = new Schema({
     text: {type: String},
-    userId: {type: Number},
-    activityId: {type: Number}
+    userId: {type: String},
+    activityId: {type: String}
 });
 
 const Comment = mongoose.model("comment", commentSchema);
