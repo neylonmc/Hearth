@@ -31,7 +31,11 @@ h2 {
 }
 .dash-avatar {
   max-width: 4.5rem;
-  border-radius: 50%;
+  border-radius: 5%;
+}
+
+.dash-username {
+  font-size: 280%;
 }
 
 /* POLLS BLOCK  */
