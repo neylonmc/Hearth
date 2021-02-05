@@ -6,7 +6,8 @@ import {
   ButtonToolbar,
   Button,
   Rate,
-  InputPicker
+  InputPicker,
+  TagPicker
 } from "rsuite";
 import "rsuite/lib/styles/index.less";
 import "./NewReview.css";
@@ -32,7 +33,6 @@ const NewReview = () => {
             like to review - if you don't see it, 
             <a id="link"href="/post/topic"> create it!</a>
         </p>
-
 
       {/* FORM TO CREATE NEW REVIEW */}
       <div className="createnew-form-container">
@@ -79,6 +79,17 @@ const NewReview = () => {
                     }
                 }
             />
+          </FormGroup>
+
+          {/* SIMILAR TOPICS */}
+          <FormGroup>
+              <TagPicker 
+                  className="ages"
+                  data={ Entertainment }
+                  defaultValue=""
+                  placeholder="similar topics"
+                  block
+              />
           </FormGroup>
 
           {/* REVIEW RATING */}
