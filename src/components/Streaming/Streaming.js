@@ -4,6 +4,8 @@ import {
     Col
 } from 'rsuite';
 import "./Streaming.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMusic, faVideo } from '@fortawesome/free-solid-svg-icons'
 
 function Streaming() {
 
@@ -15,7 +17,9 @@ function Streaming() {
                 xs={12} 
             >   
                 <h3 id="usr-stream-txt">
-                    now listening to...
+                    <FontAwesomeIcon 
+                        icon={ faMusic} 
+                    /> now listening to...
                 </h3>
             </Col>
             <Col 
@@ -24,7 +28,9 @@ function Streaming() {
                 xs={12}
             >
                 <h3 id="usr-stream-txt"> 
-                    now watching... 
+                    <FontAwesomeIcon 
+                        icon={ faVideo} 
+                    /> now watching... 
                 </h3>
             </Col>
         </Row>

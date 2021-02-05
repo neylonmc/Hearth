@@ -6,7 +6,6 @@ import {
     Panel 
 } from "rsuite";
 import "./Profile-Topic.css";
-import Streaming from "../../components/Streaming/Streaming";
 import UserInfo from "../../components/UserInfo/UserInfo";
 import Activity from "../../components/Activity/Activity";
 
@@ -22,15 +21,10 @@ function Profile() {
                         alt= "icon of topic poster"
                     />
                 </Col>
-                <Col sm= {21}>
-                    <Row>
-                        <h3 className="page-title">username</h3>
-                    </Row>
-                    
+                <Col sm= {20}>
+                    <h3 className="page-title">username</h3>
                 </Col>
             </Row>
-
-            <Streaming />
 
             <PanelGroup 
                 className= "panel-container"
@@ -39,7 +33,6 @@ function Profile() {
                 <Panel 
                     id="panel"
                     className="about-panel"
-                    header="about" 
                     defaultExpanded
                 >
                     <UserInfo />
@@ -47,7 +40,7 @@ function Profile() {
                 <Panel 
                     id="panel"
                     className="activity-panel"
-                    header="activity" 
+                    header="activity"
                     defaultExpanded
                 >
                     <Activity />

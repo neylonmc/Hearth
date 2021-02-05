@@ -1,0 +1,21 @@
+.about-container {
+    text-align: center;
+    margin: 5em 0em;
+}
+
+.about-body {
+    padding: 1em 1em;
+    text-align: justify;
+}
+
+.about-link {
+    color: #d9a51f !important;
+    letter-spacing: 0.2em;
+}
+
+.about-link:hover {
+    text-decoration: none;
+    opacity: 0.7;
+}
+
+
