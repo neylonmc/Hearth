@@ -2,7 +2,7 @@
   "name": "hearth",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3000/",
+  "proxy": "http://localhost:3001/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-regular-svg-icons": "^5.15.2",
@@ -21,6 +21,7 @@
     "mongoose": "^5.11.13",
     "morgan": "^1.10.0",
     "passport": "^0.4.1",
+    "passport-facebook": "^3.0.0",
     "passport-local": "^1.0.0",
     "path": "^0.12.7",
     "react": "^17.0.1",

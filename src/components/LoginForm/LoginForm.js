@@ -26,7 +26,7 @@ class LoginForm extends Component {
         console.log("handleSubmit")
 
         axios
-            .post("http://localhost:3000/user/login", {
+            .post("localhost:3000/user/", {
                 username: this.state.username,
                 password: this.state.password
             })
@@ -57,6 +57,7 @@ class LoginForm extends Component {
         } else {
             return (
                 <div>
+                    <a href="/auth/facebook">Login with Facebook</a>
                     <h4>Login</h4>
                     <form className="form-horizontal">
                         <div className="form-group">

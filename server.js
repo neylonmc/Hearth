@@ -2,13 +2,13 @@ const express = require("express");
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const session = require('express-session');
-const dbConnection = require("./passport/connection");
-const MongoStore = require("connect-mongo")(session);
+// const dbConnection = require("./passport/connection");
+// const MongoStore = require("connect-mongo")(session);
 const passport = require("./passport");
 const routes = require("./routes");
 const user = require("./routes/user");
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
@@ -20,6 +20,7 @@ app.use(
 	})
 );
 app.use(bodyParser.json());
+app.use(session);
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
@@ -42,14 +43,14 @@ if (process.env.NODE_ENV === "production") {
 // );
 
 // sessions
-app.use(
-	session({
-		secret: 'fraggle-rock', //pick a random string to make the hash that is generated secure
-		store: new MongoStore({ mongooseConnection: dbConnection }),
-		resave: false, //required
-		saveUninitialized: false //required
-	})
-);
+// app.use(
+// 	session({
+// 		secret: 'fraggle-rock', //pick a random string to make the hash that is generated secure
+// 		store: new MongoStore({ mongooseConnection: dbConnection }),
+// 		resave: false, //required
+// 		saveUninitialized: false //required
+// 	})
+// );
 
 // Passport
 app.use(passport.initialize());
