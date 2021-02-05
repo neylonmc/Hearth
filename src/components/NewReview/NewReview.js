@@ -19,8 +19,9 @@ const NewReview = () => {
 //  States
   const [ topicState, setTopic ]  = useState("");
   const [ titleState, setTitle ] = useState("");
-  const [ rateState, setRate ] = useState(0);
   const [ textState, setText ] = useState("");
+  const [ simState, setSim ] = useState("");
+  const [ rateState, setRate ] = useState(0);
 
 //  Final Review State
   const [ reviewState, setReview ] = useState({});
@@ -71,7 +72,7 @@ const NewReview = () => {
             <FormControl 
                 rows={5} 
                 className="review-text" 
-                name="textarea" 
+                componentclass="textarea" 
                 placeholder="my review"
                 onChange={
                     function(value) {
@@ -84,12 +85,16 @@ const NewReview = () => {
           {/* SIMILAR TOPICS */}
           <FormGroup>
               <TagPicker 
-                  className="ages"
+                  className="similar-topics"
                   data={ Entertainment }
                   defaultValue=""
                   placeholder="similar topics"
+                  onSelect= { function(value, item) {
+                    setSim(item.title)
+                }}
                   block
               />
+              <p>this helps us spread the word</p>
           </FormGroup>
 
           {/* REVIEW RATING */}
@@ -117,6 +122,7 @@ const NewReview = () => {
                             topic: topicState, 
                             title: titleState,
                             review: textState,
+                            similar_topics: simState,
                             rating: rateState
                         })
 
