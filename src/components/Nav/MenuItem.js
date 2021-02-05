@@ -23,6 +23,10 @@ export const MenuItems = [
     title: "settings",
     url: "/settings",
     name: "nav-links",
+  },{
+    title: "about",
+    url: "/about",
+    name: "nav-links",
   },
   {
     title: "logout",

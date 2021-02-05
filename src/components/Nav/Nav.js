@@ -28,6 +28,7 @@ export class Navbar extends Component {
               </div>
             );
           })}
+          
           <SearchBar />
         </div>
       </nav>
