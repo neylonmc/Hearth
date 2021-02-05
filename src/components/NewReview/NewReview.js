@@ -52,7 +52,6 @@ const NewReview = () => {
                     
             />
 
-            {/* COMMENT REVIEW */}
           <FormGroup>
             <FormControl 
                 className="review-title" 
@@ -67,10 +66,10 @@ const NewReview = () => {
             />
           </FormGroup>
 
-          {/* COMMENT REVIEW */}
+
           <FormGroup>
             <FormControl 
-                rows={5} 
+                rows={3} 
                 className="review-text" 
                 componentclass="textarea" 
                 placeholder="my review"
