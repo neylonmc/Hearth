@@ -19,13 +19,16 @@
 
 .nav-links {
   letter-spacing: 0.2rem;
-  padding-top: 0.3rem;
+  margin: 0.5em;
+  padding-top: 0.5rem;
   color: #d9a51f;
   font-family: "Dosis", sans-serif;
 }
 
 .nav-links:hover {
   text-decoration: none;
+  color: #d9a51f !important;
+  opacity: 0.5;
 }
 
 .nav-menu {

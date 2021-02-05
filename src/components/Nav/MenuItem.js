@@ -15,8 +15,8 @@ export const MenuItems = [
     name: "nav-links",
   },
   {
-    title: "create new",
-    url: "/create-new",
+    title: "new post",
+    url: "/post",
     name: "nav-links",
   },
   {
