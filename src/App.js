@@ -15,7 +15,8 @@ import NoMatch from "./pages/NoMatch/NoMatch";
 import LoginForm from "./components/LoginForm/LoginForm";
 import SignUpForm from "./components/SignUpForm/SignUpForm";
 import Login from "./pages/Login/Login";
-import About from "./pages/About/About"
+import About from "./pages/About/About";
+import Logo from "./components/Logo/Logo";
 import "rsuite/dist/styles/rsuite-default.css";
 import "./App.css";
 
@@ -62,10 +63,28 @@ class App extends Component {
   }
 
   render() {
+    const NavRoutes = () => {
+      return (
+        <div className="app">
+          <Nav />
+          <Container>
+            <Switch>
+              <Route path="/topics" component={Browse} />
+              <Route exact path="/dashboard" component={Dashboard} />
+              <Route exact path="/profile" component={Profile} />
+              <Route exact path="/topic" component={Topic} />
+              <Route exact path="/settings" component={Settings} />
+              <Route exact path="/newpost" component={NewPost} />
+              <Route path="*" component={NoMatch} />
+            </Switch>
+          </Container>
+        </div>
+      );
+    };
+
     return (
       <Router>
         <div className="app">
-          <Nav />
           <Container>
             <Switch>
               <Route exact path={"/"} component={Home} />
@@ -76,13 +95,7 @@ class App extends Component {
               />
               <Route exact path="/signup" render={() => <SignUpForm />} />
               <Route exact path="/select" component={Select} />
-              <Route path="/topics" component={Browse} />
-              <Route path="/post" component={NewPost} />
-              <Route exact path="/dashboard" component={Dashboard} />
-              <Route exact path="/profile" component={Profile} />
-              <Route exact path="/topic/:topic" component={Topic} />
-              <Route exact path="/settings" component={Settings} />
-              <Route path="*" component={NoMatch} />
+              <Route component={NavRoutes} />
             </Switch>
           </Container>
         </div>

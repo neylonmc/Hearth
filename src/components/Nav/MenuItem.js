@@ -16,17 +16,22 @@ export const MenuItems = [
   },
   {
     title: "new post",
-    url: "/post",
+    url: "/newpost",
     name: "nav-links",
   },
   {
-    title: "settings",
-    url: "/settings",
+    title: "about",
+    url: "/about",
     name: "nav-links",
   },
   {
     title: "logout",
     url: "/login",
+    name: "nav-links",
+  },
+  {
+    title: <i class="fas fa-cog" />,
+    url: "/settings",
     name: "nav-links",
   },
 ];
