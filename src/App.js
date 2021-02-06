@@ -94,7 +94,7 @@ class App extends Component {
           <Container>
             <Switch>
               <Route exact path={"/"} component={Home} />
-              <Route exact path="/login" render={() => <LoginForm updateUser={this.updateUser} />} />
+              <Route exact path="/login" component={Login} />
               <Route exact path="/signup" render={() => <SignUpForm />} />
               <Route exact path="/select" component={Select} />
               <Route component={NavRoutes} />
