@@ -6,23 +6,28 @@ import {
   Button
 } from "rsuite";
 import "./Login.css";
+import GoogleLogin from "../../components/GoogleLogin/GoogleLogin";
+import GoogleLogout from "../../components/GoogleLogout/GoogleLogout";
 // import LoginButton from "../../components/LoginButton/LoginButton";
 
 function LoginForm() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState("");
 
-  function validateForm() {
-    return email.length > 0 && password.length > 0;
-  }
+  // function validateForm() {
+  //   return email.length > 0 && password.length > 0;
+  // }
 
-  function handleSubmit(event) {
-    event.preventDefault();
-  }
+  // function handleSubmit(event) {
+  //   event.preventDefault();
+  // }
 
   return (
     <div className="login-container">
-      <Form onSubmit={handleSubmit}>
+
+      <GoogleLogin />
+      <GoogleLogout />
+      {/* <Form onSubmit={handleSubmit}>
         <FormGroup size="lg" controlId="email">
           <FormControl
             autoFocus
@@ -56,7 +61,7 @@ function LoginForm() {
           <p id="sub-btn"><a href="/">reset password</a></p>
           <p id="sub-btn"><a href="/select">create account</a></p>
         </div>
-      </Form>
+      </Form> */}
     </div>
   );
 };
