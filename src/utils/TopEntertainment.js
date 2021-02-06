@@ -2,6 +2,7 @@
      {
         title: "The Catcher in the Rye", 
         label: "the catcher in the rye",
+        value: "the catcher in the rye",
         topic: "Books",
         genre: ["Drama"],
         age_range: ["Young Adult"],
@@ -12,6 +13,7 @@
      },{
         title: "Dune",
         label: "dune",
+        value: "dune",
         topic: "Books",
         genre: ["Action", "Adventure", "Sci-Fi"],
         age_range: ["Young Adult", "Adult"],
@@ -22,6 +24,7 @@
     },{
         title: "The Haunting of Hill House",
         label: "the haunting of hill house",
+        value: "the haunting of hill house",
         topic: "Books",
         genre: ["Drama", "Horror", "Mystery", "Thriller"],
         age_range: "Adult",
@@ -32,6 +35,7 @@
     },{
         title: "The Hobbit",
         label: "the hobbit",
+        value: "the hobbit",
         topic: "Books",
         genre: ["Adventure", "Fantasy"],
         age_range: ["Young Adult", "Adult"],
@@ -42,6 +46,7 @@
     },{
         title: "The Hunger Games",
         label: "the hunger games",
+        value: "the hunger games",
         topic: "Books",
         genre: ["Action", "Adventure", "Sci-Fi", "Thriller"],
         age_range: ["Young Adult"],
@@ -52,6 +57,7 @@
     },{
         title: "Titanic",
         label: "titanic",
+        value: "titanic",
         topic: "Film",
         genre: ["Drama", "Romance"],
         age_range: ["Young Adult", "Adult"],
@@ -63,6 +69,7 @@
     },{
         title: "Star Wars",
         label: "star wars",
+        value: "star wars",
         topic: "Film",
         genre: ["Action", "Adventure", "Fantasy", "Sci-Fi"],
         age_range: ["Kids", "Young Adult", "Adult"],
@@ -74,6 +81,7 @@
     },{
         title: "Gone with the Wind",
         label: "gone with the wind",
+        value: "gone with the wind",
         topic: "Film",
         genre: ["Drama", "History", "Romance", "War", "Classic"],
         age_range: ["Young Adult", "Adult"],
@@ -85,6 +93,7 @@
     },{
         title: "Dumb and Dumber",
         label: "dumb and dumber",
+        value: "dumb and dumber",
         topic: "Film",
         genre: ["Comedy"],
         age_range: ["Young Adult", "Adult"],
@@ -96,6 +105,7 @@
     },{
         title: "Spirited Away",
         label: "spirited away",
+        value: "spirited away",
         topic: "Film",
         genre: ["Animation", "Adventure", "Family", "Fantasy", "Mystery"],
         age_range: ["Kids", "Young Adult", "Adult"],
@@ -107,6 +117,7 @@
     },{
         title: "The Dark Knight",
         label: "the dark knight",
+        value: "the dark knight",
         topic: "Film",
         genre: ["Action", "Crime", "Drama", "Thriller"],
         age_range: ["Young Adult", "Adult"],
@@ -118,6 +129,7 @@
     },{
         title: "Soul",
         label: "soul",
+        value: "soul",
         topic: "Film",
         genre: ["Animation", "Adventure", "Comedy", "Family", "Fantasy", "Music"],
         age_range: ["Kids"],
@@ -129,6 +141,7 @@
     },{
         title: "Game of Thrones",
         label: "game of thrones",
+        value: "game of thrones",
         topic: "Television",
         genre: ["Action", "Drama", "Fantasy", "Romance"],
         age_range: ["Young Adult", "Adult"],
@@ -140,6 +153,7 @@
     },{
         title: "The Mandalorian",
         label: "the mandalorian",
+        value: "the mandalorian",
         topic: "Television",
         genre: ["Action", "Adventure", "Sci-Fi"],
         age_range: ["Young Adult", "Adult"],
@@ -151,6 +165,7 @@
     },{
         title: "The Crown",
         label: "the crown",
+        value: "the crown",
         topic: "Television",
         genre: ["Biography", "Drama", "History"],
         age_range: ["Young Adult", "Adult"],
@@ -162,6 +177,7 @@
     },{
         title: "Attack on Titan",
         label: "attack on titan",
+        value: "attack on titan",
         topic: "Television",
         genre: ["Animation", "Action", "Adventure", "Drama", "Fantasy", "Horror"],
         age_range: ["Young Adult", "Adult"],
@@ -173,6 +189,7 @@
     },{
         title: "Spongebob Squarepants",
         label: "spongebob squarepants",
+        value: "spongebob squarepants",
         topic: "Television",
         genre: ["Animation", "Comedy", "Family", "Fantasy"],
         age_range: ["Kids"],
@@ -184,6 +201,7 @@
     },{
         title: "Mindhunter",
         label: "mindhunter",
+        value: "mindhunter",
         topic: "Television",
         genre: ["Crime", "Drama", "Thriller"],
         age_range: ["Adult"],
@@ -195,6 +213,7 @@
     },{
         title: "Planet Earth",
         label: "planet earth",
+        value: "planet earth",
         topic: "Television",
         genre: ["Documentary"],
         age_range: ["Kids", "Young Adult", "Adult"],
@@ -206,6 +225,7 @@
     },{
         title: "Pulp Fiction",
         label: "pulp fiction",
+        value: "pulp fiction",
         topic: "Film",
         genre: ["Crime", "Drama"],
         age_range: ["Adult"],
@@ -217,6 +237,7 @@
     },{
         title: "Euphoria",
         label: "euphoria",
+        value: "euphoria",
         topic: "Television",
         genre: ["Drama", "LGTBQ"],
         age_range: ["Young Adult", "Adult"],
@@ -228,6 +249,7 @@
     },{
         title: "Americanah",
         label: "americanah",
+        value: "americanah",
         topic: "Books",
         genre: ["Drama", "Romance"],
         age_range: ["Young Adult", "Adult"],
@@ -238,6 +260,7 @@
     },{
         title: "House",
         label: "house",
+        value: "house",
         topic: "Television",
         genre: ["Drama", "Mystery"],
         age_range: ["Young Adult", "Adult"],
@@ -249,6 +272,7 @@
     },{
         title: "Rick and Morty",
         label: "rick and morty",
+        value: "rick and morty",
         topic: "Television",
         genre: ["Animation", "Adventure", "Comedy", "Sci-Fi"],
         age_range: ["Young Adult", "Adult"],
@@ -260,6 +284,7 @@
     },{
         title: "Lady Gaga",
         label: "lady gaga",
+        value: "lady gaga",
         topic: "Music",
         genre: ["Pop"],
         age_range: ["Young Adult", "Adult"],
@@ -270,6 +295,7 @@
     },{
         title: "Drake",
         label: "drake",
+        value: "drake",
         topic: "Music",
         genre: ["Rap", "R&B"],
         age_range: ["Young Adult", "Adult"],
@@ -280,6 +306,7 @@
     },{
         title: "Tim McGraw",
         label: "tim mcgraw",
+        value: "tim mcgraw",
         topic: "Music",
         genre: ["Country"],
         age_range: ["Young Adult", "Adult"],
@@ -290,6 +317,7 @@
     },{
         title: "Billie Eilish",
         label: "billie eilish",
+        value: "billie eilish",
         topic: "Music",
         genre: ["Pop"],
         age_range: ["Young Adult", "Adult"],
@@ -300,6 +328,7 @@
     },{
         title: "Fleetwood Mac",
         label: "fleetwood mac",
+        value: "fleetwood mac",
         topic: "Music",
         genre: ["Classic Rock"],
         age_range: ["Young Adult", "Adult"],
@@ -310,6 +339,7 @@
     },{
         title: "The Smiths",
         label: "the smiths",
+        value: "the smiths",
         topic: "Music",
         genre: ["Rock", "Britpop"],
         age_range: ["Young Adult", "Adult"],
@@ -320,6 +350,7 @@
     },{
         title: "H.E.R.",
         label: "h.e.r.",
+        value: "h.e.r.",
         topic: "Music",
         genre: ["R&B", "Soul"],
         age_range: ["Young Adult", "Adult"],
@@ -330,6 +361,7 @@
     },{
         title: "Zedd",
         label: "zedd",
+        value: "zedd",
         topic: "Music",
         genre: ["Dance", "Electronic"],
         age_range: ["Young Adult", "Adult"],
@@ -340,6 +372,7 @@
     },{
         title: "Black Sabbath",
         label: "black sabbath",
+        value: "black sabbath",
         topic: "Music",
         genre: ["Classic Metal", "Metal"],
         age_range: ["Young Adult", "Adult"],
@@ -350,6 +383,7 @@
     },{
         title: "Nirvana",         
         label: "nirvana",
+        value: "nirvana",
         topic: "Music",
         genre: ["Punk Rock", "Rock"],
         age_range: ["Young Adult", "Adult"],
@@ -360,6 +394,7 @@
     },{
         title: "Jojo Siwa",
         label: "jojo siwa",
+        value: "jojo siwa",
         topic: "Music",
         genre: ["Pop", "Family"],
         age_range: ["Kids"],
@@ -370,6 +405,7 @@
     },{
         title: "One Direction",
         label: "one direction",
+        value: "one direction",
         topic: "Music",
         genre: ["Rock", "Pop"],
         age_range: ["Kids", "Young Adult", "Adult"],

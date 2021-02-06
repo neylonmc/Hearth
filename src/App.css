@@ -1,15 +1,14 @@
 body {
     background-image: linear-gradient(-45deg, #d9a51f, #d95515, #be2a0d, #62130a);
-    background-size: 120% 200%;
+    background-size: 120% 300%;
     font-family: 'Dosis', sans-serif;
     color: #dee2e6;
+    height: 100%;
 }
-  
-h1 {
-    background: -webkit-linear-gradient(#d9a51f, #be2a0d);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 300;
-}
-  
 
+h1 {
+  background: -webkit-linear-gradient(#d9a51f, #be2a0d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 300;
+}

@@ -11,7 +11,6 @@ import {
     Button
 } from "rsuite";
 import "./NewTopic.css"
-import Entertainment from "../../utils/TopEntertainment";
 import Topic from "../../utils/Topics";
 import Genre from "../../utils/Genre";
 import Ages from "../../utils/AgeRange";
@@ -50,7 +49,7 @@ function NewRec() {
 
         <p className="subheader">
             create a new topic and get 
-            the conversation flowing
+            the conversation started
         </p>
 
 
