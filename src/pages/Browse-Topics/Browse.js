@@ -31,7 +31,7 @@ export default function Topics() {
             <Col id="link-container" md={6} sm={12}>
               <Link
                 id="topic-button"
-                to={`${url}/${topic.api}`}
+                to={`${url}/${topic.topic}`}
               >
                 {topic.topic}
               </Link>
