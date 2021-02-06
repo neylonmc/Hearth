@@ -4,6 +4,9 @@
     text-align: left;
 }
 
+.similar-topics {
+  margin-bottom: 0.5em;
+}
 
 .submit-button {
     border: 1px solid #d95515;
