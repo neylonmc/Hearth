@@ -3,8 +3,8 @@ const FacebookStrategy = require('passport-facebook').Strategy;
 const config = require("../server/config");
 
 // passport.use(new FacebookStrategy({
-//     clientID: 462411381453753,
-//     clientSecret: 9b9bc12738be0342b3acf4e3b91981a5,
+//     clientID: "",
+//     clientSecret: "",
 //     callbackURL: "http://www.hearthathome.com/"
 //     // will need to change callbackURL and fb auth setting after deployed
 //   },
