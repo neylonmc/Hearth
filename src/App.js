@@ -3,7 +3,6 @@ import axios from "axios";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Container } from "rsuite";
 
-import Home from "./pages/Home/Home";
 import Select from "./pages/Select/Select";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Browse from "./pages/Browse-Topics/Browse";
@@ -15,6 +14,7 @@ import NoMatch from "./pages/NoMatch/NoMatch";
 import Login from "./pages/Login/Login";
 import Logout from "./pages/Logout/Logout";
 import About from "./pages/About/About";
+
 import Nav from "./components/Nav/Nav";
 import SignUpForm from "./components/SignUpForm/SignUpForm";
 
@@ -70,13 +70,8 @@ class App extends Component {
           <Nav />
           <Container>
             <Switch>
-<<<<<<< HEAD
               <Route exact path={["/","/login"]} component={Login} />
-=======
-              <Route exact path={"/"} component={Home} />
-              <Route exact path="/login" component={Login} />
               <Route exact path="/logout" component={Logout} />
->>>>>>> 1ade0f42b7888d5c9e5407ab1ede3ccd6c3641b8
               <Route exact path="/signup" render={() => <SignUpForm />} />
               <Route exact path="/select" component={Select} />
               <Route path="/topics" component={Browse} />
