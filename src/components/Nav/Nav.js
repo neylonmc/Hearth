@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./Nav.css";
 import { MenuItems } from "./MenuItem";
 import SearchBar from "../SearchBar/SearchBar";
+import Logo from "../Logo/Logo";
 
 export class Navbar extends Component {
   state = { clicked: false };
@@ -13,9 +14,9 @@ export class Navbar extends Component {
   render() {
     return (
       <nav className="navbarItems">
-        <h1 className="navbar-logo"><a href="/">hearth</a></h1>
+        <Logo />
         <div className="menu-icon" onClick={this.handleClick} pullRight>
-          <i className={this.state.clicked ? "fas fa-times" : "fas fa-bars"}/>
+          <i className={this.state.clicked ? "fas fa-times" : "fas fa-bars"} />
         </div>
 
         <div className={this.state.clicked ? "nav-menu active" : "nav-menu"}>

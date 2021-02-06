@@ -20,8 +20,8 @@ export const MenuItems = [
     name: "nav-links",
   },
   {
-    title: "settings",
-    url: "/settings",
+    title: "about",
+    url: "/about",
     name: "nav-links",
   },{
     title: "about",
@@ -30,7 +30,12 @@ export const MenuItems = [
   },
   {
     title: "logout",
-    url: "/login",
+    url: "/logout",
+    name: "nav-links",
+  },
+  {
+    title: <i class="fas fa-cog" />,
+    url: "/settings",
     name: "nav-links",
   },
 ];

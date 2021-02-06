@@ -3,7 +3,6 @@ import axios from "axios";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Container } from "rsuite";
 
-import Home from "./pages/Home/Home";
 import Select from "./pages/Select/Select";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Browse from "./pages/Browse-Topics/Browse";
@@ -13,10 +12,10 @@ import Topic from "./pages/Profile-Topic/Topic";
 import Settings from "./pages/Settings/Settings";
 import NoMatch from "./pages/NoMatch/NoMatch";
 import Login from "./pages/Login/Login";
-import About from "./pages/About/About"
+import Logout from "./pages/Logout/Logout";
+import About from "./pages/About/About";
 
 import Nav from "./components/Nav/Nav";
-import LoginForm from "./components/LoginForm/LoginForm";
 import SignUpForm from "./components/SignUpForm/SignUpForm";
 
 import "rsuite/dist/styles/rsuite-default.css";
@@ -65,18 +64,14 @@ class App extends Component {
   }
 
   render() {
-    return (
-      <Router>
+    const NavRoutes = () => {
+      return (
         <div className="app">
           <Nav />
           <Container>
             <Switch>
-              <Route exact path={"/"} component={Home} />
-              <Route
-                exact
-                path="/login"
-                render={() => <LoginForm updateUser={this.updateUser} />}
-              />
+              <Route exact path={["/","/login"]} component={Login} />
+              <Route exact path="/logout" component={Logout} />
               <Route exact path="/signup" render={() => <SignUpForm />} />
               <Route exact path="/select" component={Select} />
               <Route path="/topics" component={Browse} />
@@ -85,8 +80,23 @@ class App extends Component {
               <Route exact path="/profile" component={Profile} />
               <Route exact path="/topic/:topic" component={Topic} />
               <Route exact path="/settings" component={Settings} />
-              <Route exact path="/about" component={About}/>
+              <Route exact path="/about" component={About} />
               <Route path="*" component={NoMatch} />
+            </Switch>
+          </Container>
+        </div>
+      );
+    };
+
+    return (
+      <Router>
+        <div className="app">
+          <Container>
+            <Switch>
+              <Route exact path={["/", "/login"]} component={Login} />
+              <Route exact path="/signup" render={() => <SignUpForm />} />
+              <Route exact path="/select" component={Select} />
+              <Route component={NavRoutes} />
             </Switch>
           </Container>
         </div>
