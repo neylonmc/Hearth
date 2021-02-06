@@ -13,9 +13,9 @@ router.use(function(req, res) {
 
 // Authenticated User will be sent to the dashboard page
 // Non-Authenticated User will be sent back to login page using middleware
-router.get("/members", authenticated, function(req, res) {
+/*router.get("/members", authenticated, function(req, res) {
   res.sendFile(path.join(__dirname, "../public/members.html"));
-});
+});*/
 ///////////////May need to change path depending on file names
 
 module.exports = router;
