@@ -1,14 +1,9 @@
 .settings-container {
-    text-align: center;
+    text-align: center !important;
     margin: 0rem 20rem;
     padding-top: 5%;
     min-width: 35rem;
   }
-
-.settings-header {
-  font-weight: 300;
-  letter-spacing: 1.5rem;
-}
 
 #settings-block {
   margin: 0.5rem 0rem 1rem 0rem;
