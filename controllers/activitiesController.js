@@ -42,32 +42,30 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   create: function (req, res) {
+    console.log("Test");
+
     //these will be environmental variables
     const imdbApiKey = 'bfe070362amsh86909dbb9fbfe22p191db1jsnfb9dfda72961';
     const host = 'imdb8.p.rapidapi.com';
     let options = {};
-
-    let comment = {
-      text: req.body.review,
-    userId: "",
-    activityId: ""
-    };
+    console.log(req.body);
 
     let activity = {
       title: "",
-      type: req.body.type,
-      ageRange: "all",
-      category: req.body.category,
+      type: req.body.topic,
+      ageRange: req.body.age_range,
+      category: req.body.genre,
       Tags: [],
       totalRatings: 0,
       averageRating: null,
-      description: "",
+      description: req.body.description,
       comments: [],
       Polls: [],
       Image: ""
     }
+    console.log(activity);
     switch (activity.type) {
-      case "Movie":
+      case "Film":
         options = {
           method: 'GET',
           url: 'https://imdb8.p.rapidapi.com/title/auto-complete',
@@ -79,7 +77,7 @@ module.exports = {
 
         };
         axios.request(options).then(function (response) {
-          activity.title =response.data.d[0].l;
+          activity.title = response.data.d[0].l;
 
           db.Activity
             .find({ title: activity.title })
@@ -88,20 +86,12 @@ module.exports = {
                 db.Activity
                   .create(activity)
                   .then(dbActivity => {
-                    comment.activityId = dbActivity._id;
-                    db.Comment
-                    .create(comment)
-                    .catch(err => { console.error(err); });
+                    console.log(dbActivity);
                   })
                   .catch(err => { console.error(err); });
               }
               else {
-                console.log(dbModel);
-                comment.activityId = dbModel[0]._id;
-                db.Comment
-                .create(comment)
-                .catch(err => { console.error(err); });
-
+                //alert already created
               }
             }).catch(function (error) {
               console.error(error);
@@ -112,7 +102,7 @@ module.exports = {
         });
         break;
 
-      case "TV":
+      case "Television":
         options = {
           method: 'GET',
           url: 'https://imdb8.p.rapidapi.com/title/auto-complete',
@@ -124,7 +114,7 @@ module.exports = {
 
         };
         axios.request(options).then(function (response) {
-          activity.title =response.data.d[0].l;
+          activity.title = response.data.d[0].l;
 
           db.Activity
             .find({ title: activity.title })
@@ -133,20 +123,13 @@ module.exports = {
                 db.Activity
                   .create(activity)
                   .then(dbActivity => {
-                    comment.activityId = dbActivity._id;
-                    db.Comment
-                    .create(comment)
-                    .catch(err => { console.error(err); });
+                    console.log(dbActivity);
+
                   })
                   .catch(err => { console.error(err); });
               }
               else {
-                console.log(dbModel);
-                comment.activityId = dbModel[0]._id;
-                db.Comment
-                .create(comment)
-                .catch(err => { console.error(err); });
-
+                //alert already created
               }
             }).catch(function (error) {
               console.error(error);
@@ -157,7 +140,7 @@ module.exports = {
         });
         break;
 
-      case "Book":
+      case "Books":
         options = {
           method: 'GET',
           url: 'http://openlibrary.org/search.json?',
@@ -172,20 +155,13 @@ module.exports = {
                 db.Activity
                   .create(activity)
                   .then(dbActivity => {
-                    comment.activityId = dbActivity._id;
-                    db.Comment
-                    .create(comment)
-                    .catch(err => { console.error(err); });
+                    console.log(dbActivity);
+
                   })
                   .catch(err => { console.error(err); });
               }
-              else {
-                console.log(dbModel);
-                comment.activityId = dbModel[0]._id;
-                db.Comment
-                .create(comment)
-                .catch(err => { console.error(err); });
-
+              else{
+                //alert already created
               }
             }).catch(function (error) {
               console.error(error);

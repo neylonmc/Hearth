@@ -2,8 +2,8 @@ const express = require("express");
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const session = require('express-session');
-// const dbConnection = require("./passport/connection");
-// const MongoStore = require("connect-mongo")(session);
+ const dbConnection = require("./passport/connection");
+ const MongoStore = require("connect-mongo")(session);
 const passport = require("./passport");
 const routes = require("./routes");
 const user = require("./routes/user");
@@ -14,13 +14,13 @@ const PORT = process.env.PORT || 3001;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(morgan('dev'));
-app.use(
+/*app.use(
 	bodyParser.urlencoded({
 		extended: false
 	})
-);
+);*/
 app.use(bodyParser.json());
-app.use(session);
+//app.use(session);
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
@@ -43,14 +43,14 @@ if (process.env.NODE_ENV === "production") {
 // );
 
 // sessions
-// app.use(
-// 	session({
-// 		secret: 'fraggle-rock', //pick a random string to make the hash that is generated secure
-// 		store: new MongoStore({ mongooseConnection: dbConnection }),
-// 		resave: false, //required
-// 		saveUninitialized: false //required
-// 	})
-// );
+ app.use(
+ 	session({
+ 		secret: 'fraggle-rock', //pick a random string to make the hash that is generated secure
+ 		store: new MongoStore({ mongooseConnection: dbConnection }),
+ 		resave: false, //required
+ 		saveUninitialized: false //required
+ 	})
+ );
 
 // Passport
 app.use(passport.initialize());
