@@ -1,6 +1,6 @@
 import React from "react";
 import "./Logout.css";
-import GoogleLogout from "../../components/GoogleLogout/GoogleLogout";
+import GoogleLogout from "../../components/GoogleAuth/GoogleLogout/GoogleLogout";
 // import LoginButton from "../../components/LoginButton/LoginButton";
 
 function Logout() {

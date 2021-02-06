@@ -1,7 +1,36 @@
-.sub-container {
-    margin: 0.7em 0em;
+
+.left-panel {
+    margin: 15em 8em 1em 8em;
 }
 
-#sub-btn a { 
-    color: #d9a51f !important;
+.sub-head {
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    padding-left: 0.15em;
+    margin-bottom: 0.5em;
+}
+
+.right-panel {
+    float: right !important;
+    margin-top: -30em;
+    margin-right: 2em;
+}
+
+
+@media (max-width: 480px) {
+ 
+    /* LOGIN PAGE */
+    .login-container {
+      margin: 1em;  
+    }
+
+    .left-panel {
+        margin: 2.5em 0.5em;
+    }
+
+    .right-panel {
+        margin: -5em;
+        
+    }
+    
 }

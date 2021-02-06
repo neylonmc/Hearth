@@ -6,7 +6,8 @@ import {
   ButtonToolbar,
   Button,
   Rate,
-  InputPicker
+  InputPicker,
+  TagPicker
 } from "rsuite";
 import "rsuite/lib/styles/index.less";
 import "./NewReview.css";
@@ -18,8 +19,9 @@ const NewReview = () => {
 //  States
   const [ topicState, setTopic ]  = useState("");
   const [ titleState, setTitle ] = useState("");
-  const [ rateState, setRate ] = useState(0);
   const [ textState, setText ] = useState("");
+  const [ simState, setSim ] = useState("");
+  const [ rateState, setRate ] = useState(0);
 
 //  Final Review State
   const [ reviewState, setReview ] = useState({});
@@ -32,7 +34,6 @@ const NewReview = () => {
             like to review - if you don't see it, 
             <a id="link"href="/post/topic"> create it!</a>
         </p>
-
 
       {/* FORM TO CREATE NEW REVIEW */}
       <div className="createnew-form-container">
@@ -51,7 +52,6 @@ const NewReview = () => {
                     
             />
 
-            {/* COMMENT REVIEW */}
           <FormGroup>
             <FormControl 
                 className="review-title" 
@@ -66,12 +66,12 @@ const NewReview = () => {
             />
           </FormGroup>
 
-          {/* COMMENT REVIEW */}
+
           <FormGroup>
             <FormControl 
-                rows={5} 
+                rows={3} 
                 className="review-text" 
-                name="textarea" 
+                componentclass="textarea" 
                 placeholder="my review"
                 onChange={
                     function(value) {
@@ -79,6 +79,21 @@ const NewReview = () => {
                     }
                 }
             />
+          </FormGroup>
+
+          {/* SIMILAR TOPICS */}
+          <FormGroup>
+              <TagPicker 
+                  className="similar-topics"
+                  data={ Entertainment }
+                  defaultValue=""
+                  placeholder="similar topics"
+                  onSelect= { function(value, item) {
+                    setSim(item.title)
+                }}
+                  block
+              />
+              <p>this helps us spread the word</p>
           </FormGroup>
 
           {/* REVIEW RATING */}
@@ -106,6 +121,7 @@ const NewReview = () => {
                             topic: topicState, 
                             title: titleState,
                             review: textState,
+                            similar_topics: simState,
                             rating: rateState
                         })
 
