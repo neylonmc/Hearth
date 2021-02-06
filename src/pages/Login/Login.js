@@ -9,6 +9,6 @@ function Login() {
         <GoogleLogin />
     </div>
   );
-};
+}
 
 export default Login;
