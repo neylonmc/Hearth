@@ -1,14 +1,10 @@
 import React, { useState } from "react";
-import {
-  Form,
-  FormGroup,
-  FormControl,
-  Button
-} from "rsuite";
+import { Form, FormGroup, FormControl, Button } from "rsuite";
 import "./Login.css";
 import GoogleLogin from "../../components/GoogleLogin/GoogleLogin";
 import GoogleLogout from "../../components/GoogleLogout/GoogleLogout";
 // import LoginButton from "../../components/LoginButton/LoginButton";
+import LoginLogo from "../../components/Logo/LoginLogo";
 
 function LoginForm() {
   // const [email, setEmail] = useState("");
@@ -24,7 +20,7 @@ function LoginForm() {
 
   return (
     <div className="login-container">
-
+      <LoginLogo />
       <GoogleLogin />
       <GoogleLogout />
       {/* <Form onSubmit={handleSubmit}>
@@ -64,6 +60,6 @@ function LoginForm() {
       </Form> */}
     </div>
   );
-};
+}
 
 export default LoginForm;
