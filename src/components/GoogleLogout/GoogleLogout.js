@@ -7,11 +7,13 @@ const clientId =
 function Logout() {
   const onSuccess = () => {
     console.log('Logout made successfully');
-    alert('Logout made successfully ✌');
+    // alert('Logout made successfully ✌');
+    window.location.replace("http://localhost:3000/")
   };
 
   return (
     <div>
+    <p>Click below if you are sure you would like to logout.</p>
       <GoogleLogout
         clientId={clientId}
         buttonText="Logout"
