@@ -23,10 +23,6 @@ export const MenuItems = [
     title: "about",
     url: "/about",
     name: "nav-links",
-  },{
-    title: "about",
-    url: "/about",
-    name: "nav-links",
   },
   {
     title: "logout",
