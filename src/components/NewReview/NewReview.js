@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Form,
   FormGroup,
@@ -26,6 +26,33 @@ const NewReview = () => {
 //  Final Review State
   const [ reviewState, setReview ] = useState({});
 
+  const [activityState, setActivity] = useState({});
+
+  useEffect(() => {
+    API.getActivities()
+          .then(res => {
+            setActivity(res.data);
+            console.log(res.data);
+            console.log(activityState);
+          })
+          .catch(err => console.log(err));
+  }, [])
+
+
+
+  function handleFormSubmit(event) {
+    event.preventDefault();
+    let form ={
+      topic: topicState, 
+      title: titleState,
+      review: textState,
+      rating: rateState
+    };
+    console.log(form);
+   API.saveComment(form);
+}
+
+
   return (
     <div className="review-container  animate__animated animate__fadeIn">
 
@@ -41,7 +68,7 @@ const NewReview = () => {
 
             <InputPicker 
                 className="topic-picker"
-                data={ Entertainment }
+                data={ activityState }
                 size="md"
                 placeholder="topic (required)"
                 defaultValue=""
@@ -115,19 +142,7 @@ const NewReview = () => {
             <Button 
                 className="submit-button"  
                 appearance="primary"
-                onClick={
-                    function() {
-                        setReview({
-                            topic: topicState, 
-                            title: titleState,
-                            review: textState,
-                            similar_topics: simState,
-                            rating: rateState
-                        })
-
-                        console.log(reviewState);
-                    }
-                }
+                onClick= {handleFormSubmit}                
             >
               submit
             </Button>
