@@ -70,6 +70,10 @@ class App extends Component {
           <Nav />
           <Container>
             <Switch>
+              <Route exact path={"/"} component={Home} />
+              <Route exact path="/login" component={Login} />
+              <Route exact path="/signup" render={() => <SignUpForm />} />
+              <Route exact path="/select" component={Select} />
               <Route path="/topics" component={Browse} />
               <Route path="/post" component={NewPost} />
               <Route exact path="/dashboard" component={Dashboard} />
@@ -90,11 +94,7 @@ class App extends Component {
           <Container>
             <Switch>
               <Route exact path={"/"} component={Home} />
-              <Route
-                exact
-                path="/login"
-                render={() => <LoginForm updateUser={this.updateUser} />}
-              />
+              <Route exact path="/login" component={Login} />
               <Route exact path="/signup" render={() => <SignUpForm />} />
               <Route exact path="/select" component={Select} />
               <Route component={NavRoutes} />

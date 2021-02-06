@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import axios from "axios"
 
-class Signup extends Component {
+class SignUpForm extends Component {
 	constructor() {
 		super()
 		this.state = {
@@ -19,15 +19,17 @@ class Signup extends Component {
 		})
 	}
 	handleSubmit(event) {
-		console.log("sign-up handleSubmit, username: ")
-		console.log(this.state.username)
-		event.preventDefault()
-
-		//request to server to add a new username/password
-		axios.post("http://localhost:3000/user/", {
+		console.log("sign-up handleSubmit, username: ");
+		console.log(this.state.username);
+		event.preventDefault();
+		const header = {
 			username: this.state.username,
 			password: this.state.password
-		})
+		};
+		
+		console.log(header);
+		//request to server to add a new username/password
+		axios.post("localhost:3000/user/", header)
 			.then(response => {
 				console.log(response)
 				if (!response.data.errmsg) {
@@ -95,4 +97,4 @@ render() {
 }
 }
 
-export default Signup;
+export default SignUpForm;
