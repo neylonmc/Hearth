@@ -52,6 +52,7 @@ module.exports = {
 
     let activity = {
       title: "",
+      label: "",
       type: req.body.topic,
       ageRange: req.body.age_range,
       category: req.body.genre,
@@ -78,6 +79,8 @@ module.exports = {
         };
         axios.request(options).then(function (response) {
           activity.title = response.data.d[0].l;
+          activity.label = response.data.d[0].l;
+
 
           db.Activity
             .find({ title: activity.title })
@@ -115,6 +118,8 @@ module.exports = {
         };
         axios.request(options).then(function (response) {
           activity.title = response.data.d[0].l;
+          activity.label = response.data.d[0].l;
+
 
           db.Activity
             .find({ title: activity.title })
@@ -148,6 +153,7 @@ module.exports = {
         };
         axios.request(options).then(function (book) {
           activity.title = book.data.docs[0].title;
+          activity.label = book.data.docs[0].title;
           db.Activity
             .find({ title: activity.title })
             .then(dbModel => {
