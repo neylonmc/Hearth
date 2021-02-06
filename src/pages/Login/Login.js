@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Form, FormGroup, FormControl, Button } from "rsuite";
 import "./Login.css";
-import GoogleLogin from "../../components/GoogleLogin/GoogleLogin";
-import GoogleLogout from "../../components/GoogleLogout/GoogleLogout";
+import GoogleLogin from "../../components/GoogleAuth/GoogleLogin/GoogleLogin";
+import GoogleLogout from "../../components/GoogleAuth/GoogleLogout/GoogleLogout";
 // import LoginButton from "../../components/LoginButton/LoginButton";
 import LoginLogo from "../../components/Logo/LoginLogo";
 

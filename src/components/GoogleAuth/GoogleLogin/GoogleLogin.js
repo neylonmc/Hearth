@@ -1,8 +1,9 @@
 import React from 'react';
+import "../GoogleAuth.css";
 
 import { GoogleLogin } from 'react-google-login';
 // refresh token
-import { refreshTokenSetup } from '../../utils/refreshToken';
+import { refreshTokenSetup } from '../../../utils/refreshToken';
 
 const clientId =
   "702121191168-sbq7ipqbrji9t75h21spb87lkhnlh5g8.apps.googleusercontent.com";
@@ -31,8 +32,16 @@ function Login() {
         onSuccess={onSuccess}
         onFailure={onFailure}
         cookiePolicy={'single_host_origin'}
-        style={{ marginTop: '100px' }}
         isSignedIn={true}
+        render={renderProps => (
+          <button  
+            id="google-auth"
+            className="google-login"
+            onClick={renderProps.onClick} 
+            disabled={renderProps.disabled}>
+              Login with Google
+          </button>
+        )}
       />
     </div>
   );

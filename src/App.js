@@ -70,8 +70,7 @@ class App extends Component {
           <Nav />
           <Container>
             <Switch>
-              <Route exact path={"/"} component={Home} />
-              <Route exact path="/login" component={Login} />
+              <Route exact path={["/","/login"]} component={Login} />
               <Route exact path="/signup" render={() => <SignUpForm />} />
               <Route exact path="/select" component={Select} />
               <Route path="/topics" component={Browse} />
@@ -93,8 +92,7 @@ class App extends Component {
         <div className="app">
           <Container>
             <Switch>
-              <Route exact path={"/"} component={Home} />
-              <Route exact path="/login" component={Login} />
+              <Route exact path={["/", "/login"]} component={Login} />
               <Route exact path="/signup" render={() => <SignUpForm />} />
               <Route exact path="/select" component={Select} />
               <Route component={NavRoutes} />
