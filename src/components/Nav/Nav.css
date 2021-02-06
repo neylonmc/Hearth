@@ -33,7 +33,7 @@
 
 .nav-menu {
   display: grid;
-  grid-template-columns: repeat(7, auto);
+  grid-template-columns: repeat(9, auto);
   grid-gap: 10px;
   list-style: none;
   text-align: center;
@@ -50,7 +50,7 @@
   display: none;
 }
 
-@media screen and (max-width: 975px) {
+@media screen and (max-width: 1080px) {
   .navbarItems {
     position: relative;
   }

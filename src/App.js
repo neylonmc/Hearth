@@ -13,8 +13,7 @@ import Topic from "./pages/Profile-Topic/Topic";
 import Settings from "./pages/Settings/Settings";
 import NoMatch from "./pages/NoMatch/NoMatch";
 import Login from "./pages/Login/Login";
-import About from "./pages/About/About"
-
+import About from "./pages/About/About";
 import Nav from "./components/Nav/Nav";
 import LoginForm from "./components/LoginForm/LoginForm";
 import SignUpForm from "./components/SignUpForm/SignUpForm";
@@ -65,10 +64,29 @@ class App extends Component {
   }
 
   render() {
+    const NavRoutes = () => {
+      return (
+        <div className="app">
+          <Nav />
+          <Container>
+            <Switch>
+              <Route path="/topics" component={Browse} />
+              <Route path="/post" component={NewPost} />
+              <Route exact path="/dashboard" component={Dashboard} />
+              <Route exact path="/profile" component={Profile} />
+              <Route exact path="/topic/:topic" component={Topic} />
+              <Route exact path="/settings" component={Settings} />
+              <Route exact path="/about" component={About} />
+              <Route path="*" component={NoMatch} />
+            </Switch>
+          </Container>
+        </div>
+      );
+    };
+
     return (
       <Router>
         <div className="app">
-          <Nav />
           <Container>
             <Switch>
               <Route exact path={"/"} component={Home} />
@@ -79,14 +97,7 @@ class App extends Component {
               />
               <Route exact path="/signup" render={() => <SignUpForm />} />
               <Route exact path="/select" component={Select} />
-              <Route path="/topics" component={Browse} />
-              <Route path="/post" component={NewPost} />
-              <Route exact path="/dashboard" component={Dashboard} />
-              <Route exact path="/profile" component={Profile} />
-              <Route exact path="/topic/:topic" component={Topic} />
-              <Route exact path="/settings" component={Settings} />
-              <Route exact path="/about" component={About}/>
-              <Route path="*" component={NoMatch} />
+              <Route component={NavRoutes} />
             </Switch>
           </Container>
         </div>
