@@ -1,12 +1,13 @@
 .search-bar {
   height: 40px;
+  width: 15rem;
   margin-top: -5px;
   margin-right: 1rem;
   text-align: left;
   letter-spacing: 0.15em !important;
 }
 
-@media screen and (max-width: 975px) {
+@media screen and (max-width: 1080px) {
   .search-bar {
     width: 80%;
     margin: 0.3rem auto auto auto;
