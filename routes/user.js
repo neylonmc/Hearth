@@ -2,6 +2,8 @@ const express = require("express")
 const router = express.Router()
 const User = require("../models/user")
 const passport = require("../passport")
+const apiRoutes = require("./api");
+
 
 router.post("/", (req, res) => {
     console.log("user signup");
@@ -64,5 +66,8 @@ router.post("/logout", (req, res) => {
         res.send({ msg: "no user to log out" })
     }
 })
+
+router.use("/api", apiRoutes);
+
 
 module.exports = router

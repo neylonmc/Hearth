@@ -8,8 +8,8 @@ const Schema = mongoose.Schema;
 const activitiesSchema = new Schema({
   title: { type: String, required: true },
   type: {type: String, required: true},
-  ageRange: {type: String, required: true},
-  category: { type: String, required: true },
+  ageRange:  [String],
+  category:  [String],
   Tags: [String],
   totalRatings: {type: Number},
   averageRating: {type: Number},

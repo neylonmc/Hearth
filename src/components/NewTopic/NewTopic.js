@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
     Row,
     Col,
@@ -14,6 +14,7 @@ import "./NewTopic.css"
 import Topic from "../../utils/Topics";
 import Genre from "../../utils/Genre";
 import Ages from "../../utils/AgeRange";
+import API from "../../utils/API";
 
 function NewRec() {
 
@@ -25,6 +26,23 @@ function NewRec() {
 
     const [ topicState, setTopic ] = useState({});
 
+
+    useEffect(() => {
+    }, [])
+
+    function handleFormSubmit(event) {
+        event.preventDefault();
+        let form ={
+            title: titleState,
+            topic: typeState,
+            genre: genreState,
+            age_range: ageState,
+            description: textState
+
+        };
+        console.log(form);
+       API.saveActivity(form);
+    }
 
     return(
         <div className="topic-container   animate__animated animate__fadeIn">
@@ -119,20 +137,7 @@ function NewRec() {
                         <Button 
                             className="submit-button"
                             appearance="primary"
-                            onClick= {
-                                function() {
-                                    setTopic({
-                                        title: titleState,
-                                        topic: typeState,
-                                        genre: genreState,
-                                        age_range: ageState,
-                                        description: textState
-
-                                    })
-
-                                    console.log(topicState);
-                                }
-                            }
+                            onClick= {handleFormSubmit}
                         > submit</Button>
                     </ButtonToolbar>
                 </FormGroup>
