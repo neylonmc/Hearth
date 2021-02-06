@@ -3,7 +3,7 @@ import React from "react";
 function LoginLogo() {
   return (
     <div>
-      <h1 className="login-header animate__animated animate__fadeInUp">
+      <h1 className="login-header">
         hearth
       </h1>
     </div>
