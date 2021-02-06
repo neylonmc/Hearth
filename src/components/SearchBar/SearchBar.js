@@ -4,13 +4,35 @@ import {
 } from "rsuite";
 import Entertainment from "../../utils/TopEntertainment";
 import "./SearchBar.css";
+import API from "../../utils/API";
 
 function SearchBar()  {
+
+      const [formObject, setFormObject] = useState([]);
+
+
+    useEffect(() => {
+      //  loadActivities();
+      }, [])
     
+    
+      function loadActivities() {
+        API.getActivities()
+          .then(res => {
+            setFormObject(res.data);
+            console.log(res.data);
+            setFormObject(res.data);
+            console.log(formObject);
+          })
+          .catch(err => console.log(err));
+        }
+    
+
+
     return(
         <SelectPicker 
             className= "search-bar"
-            data={ Entertainment } 
+            data={ formObject } 
             size="md"
             placeholder="search"
             defaultValue= "search"

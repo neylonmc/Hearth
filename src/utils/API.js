@@ -24,6 +24,7 @@ export default {
   },
   // Saves an activity to the database
   saveActivity: function (activityData) {
+    console.log("Test2");
     return axios.post("/api/activities", activityData);
   },
   // Gets all comments
