@@ -13,9 +13,9 @@ import Topic from "./pages/Profile-Topic/Topic";
 import Settings from "./pages/Settings/Settings";
 import NoMatch from "./pages/NoMatch/NoMatch";
 import Login from "./pages/Login/Login";
+import Logout from "./pages/Logout/Logout";
 import About from "./pages/About/About";
 import Nav from "./components/Nav/Nav";
-import LoginForm from "./components/LoginForm/LoginForm";
 import SignUpForm from "./components/SignUpForm/SignUpForm";
 
 import "rsuite/dist/styles/rsuite-default.css";
@@ -72,6 +72,7 @@ class App extends Component {
             <Switch>
               <Route exact path={"/"} component={Home} />
               <Route exact path="/login" component={Login} />
+              <Route exact path="/logout" component={Logout} />
               <Route exact path="/signup" render={() => <SignUpForm />} />
               <Route exact path="/select" component={Select} />
               <Route path="/topics" component={Browse} />
