@@ -28,6 +28,10 @@
     box-shadow: 0em 0em 2.5em 0.1em rgba(217,165,31, 0.75)
 }
 
+#team-headshot:hover {
+   opacity: 0.9;
+}
+
 #headshot-name {
     font-size: 140%;
     font-weight: 500;

@@ -51,40 +51,46 @@ function About() {
                 <h1 className="about-header">our team</h1>
                 <Row id="headshot-row">
                     <Col md={12}>
+                        <a href="https://github.com/eaclumpkens" target="_blank" rel='noreferrer'>
                         <img
                             id="team-headshot"
+                            href="https://github.com/eaclumpkens"
+                            target="_blank"
                             src="../images/headshots/elisabeth-headshot.jpg"
                             alt="elisabeth clumpkens - frontend developer"
-                        />
+                        /></a>
                         <h3 id="headshot-name">Elisabeth Clumpkens</h3>
                         <h3 id="headshot-roll">Frontend Developer</h3>
                     </Col>
                     <Col md={12}>
+                    <a href="https://github.com/drfrank22" target="_blank" rel='noreferrer'>
                         <img
                             id="team-headshot"
                             src="../images/headshots/dylan-headshot.jpg"
                             alt="dylan frank - backend developer"
-                        />
+                        /></a>
                         <h3 id="headshot-name">Dylan Frank</h3>
                         <h3 id="headshot-roll">Backend Developer</h3>
                     </Col>
                 </Row>
                 <Row id="headshot-row">
                     <Col md={12}>
+                    <a href="https://github.com/jaguar6105" target="_blank" rel='noreferrer'>
                         <img
                             id="team-headshot"
                             src="../images/headshots/joseph-headshot.png"
                             alt="joseph gill - backend developer"
-                        />
+                        /></a>
                         <h3 id="headshot-name">Joseph Gill</h3>
                         <h3 id="headshot-roll">Backend Developer</h3>
                     </Col>
                     <Col md={12}>
+                    <a href="https://github.com/neylonmc" target="_blank" rel='noreferrer'>
                         <img
                             id="team-headshot"
                             src="../images/headshots/meaghan-headshot.jpg"
                             alt="meaghan neylon - frontend developer"
-                        />
+                        /></a>
                         <h3 id="headshot-name">Meaghan Neylon</h3>
                         <h3 id="headshot-roll">Frontend Developer</h3>
                     </Col>
