@@ -17,7 +17,6 @@ import About from "./pages/About/About";
 
 import Nav from "./components/Nav/Nav";
 import SignUpForm from "./components/SignUpForm/SignUpForm";
-import Footer from "./components/Footer/Footer";
 
 import "rsuite/dist/styles/rsuite-default.css";
 import "./App.css";
@@ -71,7 +70,7 @@ class App extends Component {
           <Nav />
           <Container>
             <Switch>
-              <Route exact path={["/","/login"]} component={Login} />
+              <Route exact path={["/", "/login"]} component={Login} />
               <Route exact path="/logout" component={Logout} />
               <Route exact path="/signup" render={() => <SignUpForm />} />
               <Route exact path="/select" component={Select} />
@@ -85,7 +84,6 @@ class App extends Component {
               <Route path="*" component={NoMatch} />
             </Switch>
           </Container>
-          <Footer />
         </div>
       );
     };
