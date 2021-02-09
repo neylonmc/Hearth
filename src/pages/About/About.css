@@ -18,5 +18,27 @@
     opacity: 0.7;
 }
 
+/* Headshots */
+
+#team-headshot {
+    width: 10em;
+    border-radius: 50%;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    box-shadow: 0em 0em 2.5em 0.1em rgba(217,165,31, 0.75)
+}
+
+#headshot-name {
+    font-size: 140%;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+
+#headshot-roll {
+    font-size: 110%;
+    margin-top: -1.2em;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+}
 
 
