@@ -10,13 +10,11 @@ import {
   ButtonGroup,
   Row,
   Col,
-  Panel,
   Button
 } from "rsuite";
 import "rsuite/lib/styles/index.less";
 import "./Browse.css";
 import allTopics from "../../utils/Topics";
-import Entertainment from "../../utils/TopEntertainment";
 import API from "../../utils/API";
 
 export default function Topics() {

@@ -8,7 +8,7 @@ const Schema = mongoose.Schema;
 const activitiesSchema = new Schema({
   title: { type: String, required: true },
   label: {type: String, required: true},
-  topic: {type: String, required: true},
+  type: {type: String, required: true},
   value: {type: String, required: true},
   ageRange:  [String],
   category:  [String],
