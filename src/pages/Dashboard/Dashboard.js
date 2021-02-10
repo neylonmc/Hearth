@@ -18,12 +18,16 @@ function Dashboard() {
   const [ userState, setUser ] = useState([])
 
   useEffect(() => {
-    API.getUser((res) => {
-      console.log(res)
-    })
 
     setUser(JSON.parse(window.sessionStorage.getItem("myUserEntity")));
-  }, []);
+
+    API.getUser(userState.Id)
+      .then((res) => {
+        console.log(res.data)
+    }).catch(err => err)
+
+    
+  }, [userState.Id]);
 
     return (
       <div className="dashboard-container animate__animated animate__fadeIn">

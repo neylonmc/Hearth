@@ -1,19 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 import "./Activity.css"
-import API from "../../utils/API";  
 
-function UserActivity() {
 
-    let { topic } = useParams();
+function UserActivity(props) {
 
-    const [ topicState, setState ] = useState([]);
 
-    useEffect(() => {
-
-        setState(API.getUser());
-        console.log(topicState);
-    }, []);
+    var ratings = props.user.Ratings;
+    console.log(props.user);
+    console.log(ratings)
 
     return (
         <p>hello world</p>

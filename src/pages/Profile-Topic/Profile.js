@@ -8,15 +8,25 @@ import {
 import "./Profile-Topic.css";
 import UserInfo from "../../components/UserInfo/UserInfo";
 import UserActivity from "../../components/Activity/UserActivity";
+import API from "../../utils/API";
 
 function Profile() {
 
-  const [ userState, setUser ] = useState([])
+  const [ sessionState, setSession ] = useState([])
+  const [ userState, setUser ] = useState([]);
 
   useEffect(() => {
 
-    setUser(JSON.parse(window.sessionStorage.getItem("myUserEntity")));
-  }, []);
+    setSession(JSON.parse(window.sessionStorage.getItem("myUserEntity")));
+    
+        API.getUser(sessionState.Id)
+          .then((res) => {
+            setUser(res.data)
+        }).then(() => {
+            console.log("user data pulled")
+        }).catch(err => err)
+
+  }, [sessionState.Id]);
 
     return(
         <div className="page-container animate__animated animate__fadeIn">
@@ -24,12 +34,12 @@ function Profile() {
                 <Col sm= {3} >
                     <img 
                         className = "page-image"
-                        src= {userState.Image || "./images/no-image.png"}
+                        src= {sessionState.Image || "./images/no-image.png"}
                         alt= "icon of topic poster"
                     />
                 </Col>
                 <Col sm= {20}>
-                    <h3 className="page-title">{userState.Name || "username" }</h3>
+                    <h3 className="page-title">{sessionState.Name || "username" }</h3>
                 </Col>
             </Row>
 
@@ -42,7 +52,7 @@ function Profile() {
                     className="about-panel"
                     defaultExpanded
                 >
-                    <UserInfo />
+                    <UserInfo user={userState}/>
                 </Panel>
                 <Panel 
                     id="panel"
@@ -50,7 +60,7 @@ function Profile() {
                     header="activity"
                     defaultExpanded
                 >
-                    <UserActivity />
+                    <UserActivity user= {userState}/>
                 </Panel>
             </PanelGroup>
 
