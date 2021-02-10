@@ -16,7 +16,7 @@
 
 .topic-links {
   text-align: center !important;
-  margin: 0em 25em !important;
+  margin: auto;
 }
 
 #topic-button {
@@ -26,6 +26,8 @@
   font-weight: 500;
   letter-spacing: 0.2em;
   padding: 0.5em 2em;
+  display: inline-block;
+  margin-top: 0.5em;
 }
 
 #topic-button:hover {
