@@ -8,6 +8,7 @@ import {
   // ButtonGroup 
 } from "rsuite";
 import "./Dashboard.css";
+import API from "../../utils/API";
 import Streaming from "../../components/Streaming/Streaming";
 import SimilarUsers from "../../components/SimilarUsers/SimilarUsers";
 import Activity from "../../components/Activity/TopicActivity";
@@ -21,6 +22,16 @@ function Dashboard() {
     })
   }, []);
 
+<<<<<<< HEAD
+function Dashboard() {
+    // const id = sessionStorage.getItem("myUserEntity.Id")
+    // API.getUser(id)
+    //   .then((res) => {
+    //     console.log(res)
+    //   }).catch(err => err);
+  
+=======
+>>>>>>> f594c21847699181a9484251e7c88da7006d9222
     return (
       <div className="dashboard-container animate__animated animate__fadeIn">
         {/* INITIAL BLOCKS */}
@@ -44,7 +55,7 @@ function Dashboard() {
 
               <Row>
                 <Col>
-                   <h1 className="dash-username">username</h1>
+                   <h1 className="dash-username">user</h1>
                 </Col>
               </Row>
 
@@ -86,6 +97,12 @@ function Dashboard() {
 
       </div>
     );
+<<<<<<< HEAD
+  }
+
+export default Dashboard;
+=======
 }
 
 export default Dashboard;
+>>>>>>> f594c21847699181a9484251e7c88da7006d9222

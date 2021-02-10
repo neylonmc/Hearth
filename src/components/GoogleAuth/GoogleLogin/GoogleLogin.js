@@ -1,6 +1,6 @@
 import React from 'react';
 import "../GoogleAuth.css";
-
+import API from "../../../utils/API";
 import { GoogleLogin } from 'react-google-login';
 // refresh token
 import { refreshTokenSetup } from '../../../utils/refreshToken';
@@ -15,8 +15,28 @@ function Login() {
     //   `Logged in successfully welcome ${res.profileObj.name} 😍. \n See console for full profile object.`
     // );
     refreshTokenSetup(res);
+
+    const newUser = {
+      name: res.profileObj.name,
+      image: res.profileObj.imageUrl,
+      _id: res.profileObj.googleId
+    };
+    var myUserEntity = {};
+      myUserEntity.Id = res.profileObj.googleId;
+      myUserEntity.Name = res.profileObj.name;
+  
+  //Store the entity object in sessionStorage where it will be accessible from all pages of your site.
+    sessionStorage.setItem('myUserEntity',JSON.stringify(myUserEntity));
+
+    API.saveUser(newUser)
+      .then((res) => {
+        console.log(res)
+        console.log("user saved")
+      }).catch(err => err)
     window.location.replace("http://localhost:3000/dashboard");
+
   };
+  
 
   const onFailure = (res) => {
     console.log('Login failed: res:', res);
