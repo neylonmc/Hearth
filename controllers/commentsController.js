@@ -15,6 +15,12 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+  findByActivityId: function (req, res) {
+    db.Comment
+      .find({topicId: req.params.id})
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
   create: function (req, res) {
     let comment = {
       title: req.body.title,

@@ -12,7 +12,7 @@ function SearchBar()  {
 
 
     useEffect(() => {
-      //  loadActivities();
+        loadActivities();
       }, [])
     
     

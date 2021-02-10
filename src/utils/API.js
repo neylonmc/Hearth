@@ -6,8 +6,8 @@ export default {
     return axios.get("/api/activities");
   },
   // Gets the activity with the given id
-  getActivity: function (id) {
-    return axios.get("/api/activities/" + id);
+  getActivitybyTitle: function (title) {
+    return axios.get("/api/activities/" + title);
   },
   // Deletes the activity with the given id
   deleteActivity: function (id) {
@@ -31,8 +31,8 @@ export default {
   getComments: function () {
     return axios.get("/api/comments");
   },
-  // Gets the comments with the given id
-  getComment: function (id) {
+  // Gets the comments with the given Activity id
+  getCommentsByActivity: function (id) {
     return axios.get("/api/comments/" + id);
   },
   // Deletes the comments with the given id
