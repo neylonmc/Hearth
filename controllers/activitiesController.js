@@ -13,7 +13,7 @@ module.exports = {
   },
   findByTitle: function (req, res) {
     db.Activity
-      .find({title: req.params.title})
+      .find({local_ext: req.params.title})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
@@ -62,7 +62,8 @@ module.exports = {
       description: req.body.description,
       comments: [],
       Polls: [],
-      Image: ""
+      Image: "",
+      local_ext: ""
     }
     console.log(activity);
     switch (activity.type) {
@@ -81,6 +82,8 @@ module.exports = {
           activity.title = response.data.d[0].l;
           activity.label = response.data.d[0].l;
 
+          const split = activity.title.split(" ");
+          activity.local_ext = split.join("");
 
           db.Activity
             .find({ title: activity.title })
@@ -120,6 +123,8 @@ module.exports = {
           activity.title = response.data.d[0].l;
           activity.label = response.data.d[0].l;
 
+          const split = activity.title.split(" ");
+          activity.local_ext = split.join("");
 
           db.Activity
             .find({ title: activity.title })
@@ -154,6 +159,10 @@ module.exports = {
         axios.request(options).then(function (book) {
           activity.title = book.data.docs[0].title;
           activity.label = book.data.docs[0].title;
+
+          const split = activity.title.split(" ");
+          activity.local_ext = split.join("");
+
           db.Activity
             .find({ title: activity.title })
             .then(dbModel => {
