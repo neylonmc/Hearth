@@ -45,7 +45,7 @@
   letter-spacing: 0.2em;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1000px) {
   .page-container {
     max-width: 35rem;
     margin-top: -5%;

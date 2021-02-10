@@ -6,7 +6,9 @@ import {
 import "./UserInfo.css"
 import Streaming from "../../components/Streaming/Streaming";
 
-function UserInfo() {
+function UserInfo(props) {
+
+    var user = props.user;
 
     return (
         <div className="info-container">
@@ -18,16 +20,8 @@ function UserInfo() {
                     <p>
                         <strong 
                             id="bold"
-                        > Joined : </strong>
-
-                        { "Jan-2021" } 
-                    </p>
-                    <p>
-                        <strong 
-                            id="bold"
-                        > Top Genres : </strong>
-                        
-                        { "Rock, Pop" }
+                        > Interests : </strong>
+                        { user.Interests || "none saved" }
                     </p>
                 </Col>
                 <Col id="right-info" md={12}>
@@ -36,14 +30,14 @@ function UserInfo() {
                             id="bold"
                         > Following : </strong>
 
-                        { 0 } 
+                        { user.Following.length } 
                     </p>
                     <p>
                         <strong 
                             id="bold"
-                        > Follower : </strong>
+                        > Followers : </strong>
 
-                        { 0 } 
+                        { user.Following.length || 0 } 
                     </p>
                 </Col>
             </Row>

@@ -11,27 +11,24 @@ import "./Dashboard.css";
 import API from "../../utils/API";
 import Streaming from "../../components/Streaming/Streaming";
 import SimilarUsers from "../../components/SimilarUsers/SimilarUsers";
-import Activity from "../../components/Activity/Activity";
-import API from "../../utils/API";
+import Activity from "../../components/Activity/TopicActivity";
 
 function Dashboard() {
+
+  const [ userState, setUser ] = useState([])
 
   useEffect(() => {
-    API.getUser((res) => {
-      console.log(res)
-    })
-  }, []);
 
-<<<<<<< HEAD
-function Dashboard() {
-    // const id = sessionStorage.getItem("myUserEntity.Id")
-    // API.getUser(id)
-    //   .then((res) => {
-    //     console.log(res)
-    //   }).catch(err => err);
-  
-=======
->>>>>>> f594c21847699181a9484251e7c88da7006d9222
+    setUser(JSON.parse(window.sessionStorage.getItem("myUserEntity")));
+
+    API.getUser(userState.Id)
+      .then((res) => {
+        console.log(res.data)
+    }).catch(err => err)
+
+    
+  }, [userState.Id]);
+
     return (
       <div className="dashboard-container animate__animated animate__fadeIn">
         {/* INITIAL BLOCKS */}
@@ -47,7 +44,7 @@ function Dashboard() {
                 <Col>
                   <img
                     className="dash-avatar"
-                    src="./images/no-avatar.jpg"
+                    src={userState.Image || "./images/no-avatar.jpg"}
                     alt="dashboard user avatar"
                   />
                 </Col>
@@ -55,7 +52,7 @@ function Dashboard() {
 
               <Row>
                 <Col>
-                   <h1 className="dash-username">user</h1>
+                   <h1 className="dash-username">{userState.Name}</h1>
                 </Col>
               </Row>
 
@@ -97,12 +94,6 @@ function Dashboard() {
 
       </div>
     );
-<<<<<<< HEAD
-  }
-
-export default Dashboard;
-=======
 }
 
 export default Dashboard;
->>>>>>> f594c21847699181a9484251e7c88da7006d9222
