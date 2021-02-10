@@ -10,13 +10,11 @@ import {
   ButtonGroup,
   Row,
   Col,
-  Panel,
   Button
 } from "rsuite";
 import "rsuite/lib/styles/index.less";
 import "./Browse.css";
 import allTopics from "../../utils/Topics";
-import Entertainment from "../../utils/TopEntertainment";
 import API from "../../utils/API";
 
 export default function Topics() {
@@ -74,24 +72,11 @@ function Topic() {
 
   }
 
-
-
-
   return (
-    <div className="topic-container  animate__animated animate__fadeIn" >
-      <Panel
-        className="topic-panel"
-      >
+    <div className="animate__animated animate__fadeIn" >
         <ButtonGroup className="button-container">
           {formObject.map(data => {
             return (
-              <Col
-                id="results-container"
-                className="animate__animated animate__fadeIn"
-                md={4}
-                sm={12}
-              >
-                <p>{data.title}</p>
                 <Button
                   id="results-button"
                   href={`/topic/${data.local_ext}`}
@@ -99,17 +84,15 @@ function Topic() {
                 >
                   <img
                     id="topic-image"
-                    src={data.img}
+                    src={data.Image || "/images/no-image.png"}
                     alt={data.title}
                   />
+                  <p id="topic-title">{data.title}</p>
                 </Button>
-              </Col>
-
             );
 
           })}
         </ButtonGroup>
-      </Panel>
     </div>
   )
 

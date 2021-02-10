@@ -8,7 +8,7 @@ import API from "../../utils/API";
 
 function SearchBar()  {
 
-      const [formObject, setFormObject] = useState([]);
+    const [formObject, setFormObject] = useState([]);
 
 
     useEffect(() => {

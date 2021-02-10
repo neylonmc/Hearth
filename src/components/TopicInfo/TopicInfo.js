@@ -6,7 +6,8 @@ import "./TopicInfo.css"
 
 function TopicInfo(props) {
 
-    const topic = props.type;
+    const topic = props.topic;
+    console.log(topic);
 
     if (topic === "Books") {
         return (
@@ -24,7 +25,7 @@ function TopicInfo(props) {
     } else if (topic === "Film" || topic === "Television") {
         return (
             <Row>
-                <p><strong>Rated: </strong>{props.ageRating}</p>
+                <p><strong>Ages: </strong>{props.ageRange.join(", ")}</p>
                 <p>{props.description}</p>
             </Row>
         )
