@@ -200,6 +200,50 @@ module.exports = {
         break;
 
       case "Music":
+          const shazamAPIKey = 'bfe070362amsh86909dbb9fbfe22p191db1jsnfb9dfda72961';
+          const shazamAPIHost = 'shazam.p.rapidapi.com'
+
+        const options = {
+          method: 'GET',
+          url: 'https://shazam.p.rapidapi.com/search',
+          params: {term: req.body.title, locale: 'en-US', offset: '0', limit: '5'},
+          headers: {
+            'x-rapidapi-key': shazamAPIKey,
+            'x-rapidapi-host': shazamAPIHost
+          }
+        };
+        
+        axios.request(options).then(function (response) {
+          console.log(response.data.tracks.hits[0]);
+          activity.title = response.data.tracks.hits[0].track.title;
+          activity.label = response.data.tracks.hits[0].track.title;
+
+          const split = activity.title.split(" ");
+          activity.local_ext = split.join("");
+
+          db.Activity
+            .find({ title: activity.title })
+            .then(dbModel => {
+              if (!dbModel[0]) {
+                db.Activity
+                  .create(activity)
+                  .then(dbActivity => {
+                    console.log(dbActivity);
+
+                  })
+                  .catch(err => { console.error(err); });
+              }
+              else{
+                //alert already created
+              }
+            }).catch(function (error) {
+              console.error(error);
+            });
+
+        }).catch(function (error) {
+          console.error(error);
+        });
+
 
         break;
 
