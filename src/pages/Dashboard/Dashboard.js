@@ -15,10 +15,14 @@ import Activity from "../../components/Activity/TopicActivity";
 
 function Dashboard() {
 
+  const [ userState, setUser ] = useState([])
+
   useEffect(() => {
     API.getUser((res) => {
       console.log(res)
     })
+
+    setUser(JSON.parse(window.sessionStorage.getItem("myUserEntity")));
   }, []);
 
     return (
@@ -36,7 +40,7 @@ function Dashboard() {
                 <Col>
                   <img
                     className="dash-avatar"
-                    src="./images/no-avatar.jpg"
+                    src={userState.Image || "./images/no-avatar.jpg"}
                     alt="dashboard user avatar"
                   />
                 </Col>
@@ -44,7 +48,7 @@ function Dashboard() {
 
               <Row>
                 <Col>
-                   <h1 className="dash-username">user</h1>
+                   <h1 className="dash-username">{userState.Name}</h1>
                 </Col>
               </Row>
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { 
     Row,
     Col,
@@ -11,18 +11,25 @@ import UserActivity from "../../components/Activity/UserActivity";
 
 function Profile() {
 
+  const [ userState, setUser ] = useState([])
+
+  useEffect(() => {
+
+    setUser(JSON.parse(window.sessionStorage.getItem("myUserEntity")));
+  }, []);
+
     return(
         <div className="page-container animate__animated animate__fadeIn">
             <Row className="header-container">
                 <Col sm= {3} >
                     <img 
                         className = "page-image"
-                        src= "./images/no-image.png"
+                        src= {userState.Image || "./images/no-image.png"}
                         alt= "icon of topic poster"
                     />
                 </Col>
                 <Col sm= {20}>
-                    <h3 className="page-title">username</h3>
+                    <h3 className="page-title">{userState.Name || "username" }</h3>
                 </Col>
             </Row>
 
