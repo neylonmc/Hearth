@@ -22,17 +22,17 @@ function Topic() {
     const [topicObject, setTopic] = useState({});
 
     useEffect(() => {
+        console.log("Test");
         loadActivities(topic);
-    }, [topic])
+    }, [])
 
     function loadActivities(topic) {
         API.getActivitybyTitle(topic)
             .then((res) => {
-                console.log(res.data[0]);
+                console.log(res);
                 setTopic(res.data[0])
                 API.getCommentsByActivity(res.data[0]._id)
                     .then((res) => {
-                        console.log(res.data);
                         setData(res.data);
                     }).catch(err => err)
             }).catch(err => err)
