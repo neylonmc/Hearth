@@ -6,13 +6,14 @@ import {
     Panel 
 } from "rsuite";
 import "./Profile-Topic.css";
-import UserInfo from "../../components/UserInfo/UserInfo";
+// import UserInfo from "../../components/UserInfo/UserInfo";
 import UserActivity from "../../components/Activity/UserActivity";
 import API from "../../utils/API";
+import Streaming from "../../components/Streaming/Streaming";
 
 function Profile() {
 
-  const [ sessionState, setSession ] = useState([])
+  const [ sessionState, setSession ] = useState([]);
   const [ userState, setUser ] = useState([]);
 
   useEffect(() => {
@@ -52,7 +53,38 @@ function Profile() {
                     className="about-panel"
                     defaultExpanded
                 >
-                    <UserInfo user={userState}/>
+                    <div className="info-container">
+                        <Row>
+                            <Streaming />
+                        </Row>
+                        <Row>
+                            <Col md={12}>
+                                <p>
+                                    <strong 
+                                        id="bold"
+                                    > Interests : </strong>
+                                    
+                                    { userState.Interests || "none saved" }
+                                </p>
+                            </Col>
+                            <Col id="right-info" md={12}>
+                                <p>
+                                    <strong 
+                                        id="bold"
+                                    > Following : </strong>
+
+                                    { 0 } 
+                                </p>
+                                <p>
+                                    <strong 
+                                        id="bold"
+                                    > Followers : </strong>
+
+                                    { 0 } 
+                                </p>
+                            </Col>
+                        </Row>
+                    </div>
                 </Panel>
                 <Panel 
                     id="panel"
@@ -63,8 +95,9 @@ function Profile() {
                     <UserActivity user= {userState}/>
                 </Panel>
             </PanelGroup>
-
         </div>
+
+
     )
 
 };

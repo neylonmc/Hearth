@@ -9,7 +9,6 @@ import {
     Panel
 } from "rsuite";
 import "./Profile-Topic.css";
-import Entertainment from "../../utils/TopEntertainment";
 import API from "../../utils/API";
 import TopicInfo from "../../components/TopicInfo/TopicInfo";
 import TopicActivity from "../../components/Activity/TopicActivity";

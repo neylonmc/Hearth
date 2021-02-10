@@ -45,6 +45,17 @@
   letter-spacing: 0.2em;
 }
 
+/* PROFILE */
+
+#right-info {
+  text-align: right;
+}
+
+#bold {
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+
 @media (max-width: 1000px) {
   .page-container {
     max-width: 35rem;
