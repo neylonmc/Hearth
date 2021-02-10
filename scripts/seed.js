@@ -6,7 +6,7 @@ mongoose.connect(
     "mongodb://localhost/hearthdb"
 );
 
-const bookSeeds = [
+const seeds = [
     {
         title: "The Catcher in the Rye", 
         label: "the catcher in the rye",
@@ -73,11 +73,7 @@ const bookSeeds = [
         ext: "americanah",
         local_ext: "/topic/americanah",
         description: "Americanah tells the story of a young Nigerian woman, Ifemelu, who immigrates to the United States to attend university. The novel traces Ifemelu's life in both countries, threaded by her love story with high school classmate Obinze. It was Adichie's third novel, published on May 14, 2013 by Alfred A. Knopf."
-    }
-];
-
-const movieSeeds = [
-    {
+    },{
         title: "Titanic",
         label: "titanic",
         value: "titanic",
@@ -173,11 +169,7 @@ const movieSeeds = [
         ext: "pulp-fiction",
         local_ext: "/topic/pulp-fiction",
         description: "Vincent Vega (John Travolta) and Jules Winnfield (Samuel L. Jackson) are hitmen with a penchant for philosophical discussions. In this ultra-hip, multi-strand crime movie, their storyline is interwoven with those of their boss, gangster Marsellus Wallace (Ving Rhames) ; his actress wife, Mia (Uma Thurman) ; struggling boxer Butch Coolidge (Bruce Willis) ; master fixer Winston Wolfe (Harvey Keitel) and a nervous pair of armed robbers, 'Pumpkin' (Tim Roth) and 'Honey Bunny'' (Amanda Plummer)."
-    }
-];
-
-const tvSeeds = [
-    {
+    },{
         title: "Game of Thrones",
         label: "game of thrones",
         value: "game of thrones",
@@ -297,11 +289,7 @@ const tvSeeds = [
         ext: "rick-and-morty",
         local_ext: "/topic/rick-and-morty",
         description: "An animated series that follows the exploits of a super scientist and his not-so-bright grandson."
-    }
-];
-
-const musicSeeds = [
-    {
+    },{
         title: "Lady Gaga",
         label: "lady gaga",
         value: "lady gaga",
@@ -434,39 +422,18 @@ const musicSeeds = [
         local_ext: "/topic/one-direction",
         description: "The band was formed in 2010 and consisted of Liam Payne, Louis Tomlinson, Niall Horan, Harry Styles and Zayn Malik. Niall Horan is the only Irish member of the band. Louis Tomlinson is the oldest member - born 24 December 1991, while the youngest is Harry Styles who was born February 1st 1994."
     }
-
 ];
 
 db.Activity
   .remove({})
-  .then(() => db.Activity.insertMany(bookSeeds))
+  .then(() => db.Activity.insertMany(seeds))
   .then(data => {
-    console.log(data.result.n + " records inserted!");
-    db.Activity
-      .remove({})
-      .then(() => db.Activity.insertMany(movieSeeds))
-      .then(data => {
-        console.log(data.result.n + " records inserted!");
-        db.Activity
-          .remove({})
-          .then(() => db.Activity.insertMany(tvSeeds))
-          .then(data => {
-            console.log(data.result.n + " records inserted!");
-            db.Activity
-              .remove({})
-              .then(() => db.Activity.insertMany(musicSeeds))
-              .then(data => {
-                console.log(data.result.n + " records inserted!");
-                process.exit(0);
-              })
-              .catch(err => {
-                console.error(err);
-                process.exit(1);
-              });
-            })  
-        })
+    console.log(data)
+    console.log(data.length + " records inserted!");
+    process.exit(0);
     })
-  .catch(err => {
+.catch(err => {
     console.error(err);
     process.exit(1);
-  })
+});
+

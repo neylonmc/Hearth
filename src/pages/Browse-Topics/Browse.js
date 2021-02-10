@@ -81,8 +81,7 @@ function Topic() {
             return (
                 <Button
                   id="results-button"
-                  className="animate__animated animate__fadeIn"
-                  href={data.local_ext}
+                  href={`/topic/${data.local_ext}`}
                   bordered
                 >
                   <img

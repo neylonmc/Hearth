@@ -17,13 +17,9 @@ const activitiesSchema = new Schema({
   averageRating: {type: Number},
   description: {type: String},
   comments: [],
-  polls: [],
-  image: {type: String},
-  local_ext: { function() {
-    const title = this.title.join("-");
-    const url = "/topic/" + title
-    return(url);
-  }}
+  Polls: [],
+  Image: {type: String},
+  local_ext: {type: String, required: true}
 });
 
 const Activity = mongoose.model("Activity", activitiesSchema);
