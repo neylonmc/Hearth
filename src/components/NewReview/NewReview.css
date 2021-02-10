@@ -1,7 +1,7 @@
- 
 .review-container {
-    margin: 2em 20em;
-    text-align: left;
+  margin: 2em auto;
+  text-align: left;
+  max-width: 500px;
 }
 
 .similar-topics {
@@ -9,20 +9,20 @@
 }
 
 .submit-button {
-    border: 1px solid #d95515;
-    background-color: rgba(185, 75, 20, 0.2);
+  margin-top: 1em;
+  border: 1px solid #d95515;
+  background-color: rgba(185, 75, 20, 0.2);
 }
 
 .submit-buttont:hover {
-    border: 1px solid #d95515;
-    background-color: rgba(185, 75, 20);
+  border: 1px solid #d95515;
+  background-color: rgba(185, 75, 20);
 }
 
-
-  /*-------------------Mobile View --------------*/
-  @media (max-width: 1000px) {
-    .review-container {
-      margin: 1.5em;
-    }
+/* -------------------Mobile View -------------- */
+@media (max-width: 680px) {
+  .review-container {
+    margin: 1.5em;
+    max-height: fit-content;
   }
-  
+}
