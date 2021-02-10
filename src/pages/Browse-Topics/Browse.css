@@ -43,13 +43,14 @@
 /* RESULTS ------------------------------------------------------------------------ */
 
 .button-container {
-  margin: 1em 2em;
   width: 100%;
+  display: inline-flex;
+  padding: 1em;
 }
 
 #results-button {
-  width: 10%;
-  max-height: 18em;
+  max-width: 12%;
+  height: 18.5em;
   margin: 1em;
   background-color: rgb(98,19,10, 0.55) ;
   border: 1px solid #62130a;
@@ -64,6 +65,7 @@
 }
 
 #topic-title {
+  font-size: 110%;
   color: #dee2e6;
   padding: 1em 0.1em !important;
   margin-top: -0.6em;
@@ -85,7 +87,8 @@
   }
 
   #results-button { 
-    width: 10em;
+    max-width: 39%;
+    max-height: 19em;
     margin: 1.5em 1.2em;
   }
   

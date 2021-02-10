@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useEffect, useState } from "react";
 import { 
   Row,
   Col,
@@ -11,9 +11,16 @@ import "./Dashboard.css";
 import Streaming from "../../components/Streaming/Streaming";
 import SimilarUsers from "../../components/SimilarUsers/SimilarUsers";
 import Activity from "../../components/Activity/Activity";
+import API from "../../utils/API";
 
-export class Dashboard extends Component {
-  render() {
+function Dashboard() {
+
+  useEffect(() => {
+    API.getUser((res) => {
+      console.log(res)
+    })
+  }, []);
+
     return (
       <div className="dashboard-container animate__animated animate__fadeIn">
         {/* INITIAL BLOCKS */}
@@ -79,6 +86,6 @@ export class Dashboard extends Component {
 
       </div>
     );
-  }
 }
+
 export default Dashboard;
