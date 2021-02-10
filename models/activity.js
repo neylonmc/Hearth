@@ -17,7 +17,9 @@ const activitiesSchema = new Schema({
   description: {type: String},
   comments: [],
   Polls: [],
-  Image: {type: String}
+  Image: {type: String},
+  local_ext: {type: String, required: true}
+
 });
 
 const Activity = mongoose.model("Activity", activitiesSchema);

@@ -94,7 +94,7 @@ function Topic() {
                 <p>{data.title}</p>
                 <Button
                   id="results-button"
-                  href={data.local_ext}
+                  href={`/topic/${data.local_ext}`}
                   bordered
                 >
                   <img
