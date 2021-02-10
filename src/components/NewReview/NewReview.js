@@ -26,7 +26,7 @@ const NewReview = () => {
 //  Final Review State
   const [ reviewState, setReview ] = useState({});
 
-  const [activityState, setActivity] = useState({});
+  const [activityState, setActivity] = useState([]);
 
   useEffect(() => {
     API.getActivities()

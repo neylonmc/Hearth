@@ -8,8 +8,8 @@ router.route("/")
 
 // Matches with "/api/activities/:id"
 router
-  .route("/:id")
-  .get(activitiesController.findById)
+  .route("/:title")
+  .get(activitiesController.findByTitle)
   .put(activitiesController.update)
   .delete(activitiesController.remove);
 
