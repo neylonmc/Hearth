@@ -5,10 +5,11 @@ mongoose.promise = Promise;
 //const activity = require("activity.js");
 
 const usersSchema = new Schema({
+	_id: { type: Number, unique: true, required: true},
     name: { type: String, required: true },
     username: { type: String, unique: false, required: false },
 	password: { type: String, unique: false, required: false },
-    email: {type: String},
+    image: {type: String},
     Interests: [String],
     Ratings: [
         {
