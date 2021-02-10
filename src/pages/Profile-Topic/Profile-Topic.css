@@ -1,5 +1,7 @@
 .page-container {
   margin: 0em 25em;
+  font-size: 120% !important;
+  letter-spacing: 0.07em;
 }
 
 .header-container {
