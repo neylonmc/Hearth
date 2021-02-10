@@ -73,7 +73,7 @@ function Topic() {
   }
 
   return (
-    <div className="topic-container  animate__animated animate__fadeIn" >
+    <div className="animate__animated animate__fadeIn" >
         <ButtonGroup className="button-container">
           {formObject.map(data => {
             return (

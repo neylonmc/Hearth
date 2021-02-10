@@ -7,12 +7,12 @@ import { faMusic, faVideo } from "@fortawesome/free-solid-svg-icons";
 function Streaming() {
   return (
     <Row className="user-now-streaming">
-      <Col id="usr-stream" className="usr-listening" xs={12}>
+      <Col id="usr-stream" className="usr-listening" xs={24} sm={12} md={12}>
         <h3 id="usr-stream-txt">
           <FontAwesomeIcon icon={faMusic} /> now listening to...
         </h3>
       </Col>
-      <Col id="usr-stream" className="usr-watching" xs={12}>
+      <Col id="usr-stream" className="usr-watching" xs={24} sm={12} md={12}>
         <h3 id="usr-stream-txt">
           <FontAwesomeIcon icon={faVideo} /> now watching...
         </h3>

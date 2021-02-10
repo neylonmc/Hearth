@@ -4,7 +4,6 @@
 
 .browse-container {
   margin-top: 5%;
-  
 }
 
 .browse-title {
@@ -40,17 +39,16 @@
 }
 
 /* RESULTS ------------------------------------------------------------------------ */
-.topic-container {
-  margin: 2em 10em;
-}
 
-#results-container {
-  margin: 0em 0em;
+.button-container {
+  margin: 1em 2em;
+  width: 100%;
 }
 
 #results-button {
-  width: 12em;
-  margin: 0.5em;
+  width: 10%;
+  max-height: 18em;
+  margin: 1em;
   background-color: rgb(98,19,10, 0.55) ;
   border: 1px solid #62130a;
 }
@@ -66,13 +64,11 @@
 #topic-title {
   color: #dee2e6;
   padding: 1em 0.1em !important;
+  margin-top: -0.6em;
+  white-space: normal;
 }
 
 @media (max-width: 480px) {
-
-  .browse-container {
-    padding: 0rem;
-  }
 
   .topic-links {
     margin: -2em 0em !important;
@@ -86,17 +82,10 @@
     margin: 0rem 0rem;
   }
 
-  #topic-image {
-    height: 25rem;
-  }
-
   #results-button { 
-    width: 15em;
-    height: 25em;
-    margin: 0.5em -1em;
-    padding: 0.5em
+    width: 10em;
+    margin: 1.5em 1.2em;
   }
-
   
 }
 
