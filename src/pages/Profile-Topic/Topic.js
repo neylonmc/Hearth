@@ -19,83 +19,74 @@ function Topic() {
     let { topic } = useParams();
 
     const [commentsObject, setData] = useState([]);
-    const [topicObject, setTopic] = useState({});
+    const [topicObject, setTopic] = useState({
+        category: []
+
+    });
 
     useEffect(() => {
+        console.log(topic)
         loadActivities(topic);
-    }, [topic])
+    },[]);
 
     function loadActivities(topic) {
         API.getActivitybyTitle(topic)
             .then((res) => {
-                console.log(res.data[0]);
                 setTopic(res.data[0])
                 API.getCommentsByActivity(res.data[0]._id)
                     .then((res) => {
-                        console.log(res.data);
                         setData(res.data);
                     }).catch(err => err)
             }).catch(err => err)
     }
 
-
-
+    console.log(topicObject);
     return (
-        commentsObject.map((data) => {
-            console.log(data.title);
-
-            return (
-                <div className="page-container animate__animated animate__fadeIn">
-                    <Row className="header-container">
-                        <Col sm={3} >
-                            <img
-                                className="page-image"
-                                src={data.img}
-                                alt="icon of topic poster"
-                            />
-                        </Col>
-                        <Col sm={21}>
-                            <Row>
-                                <h3 id="sub-header" className="page-title">{data.title}</h3>
-                            </Row>
-                            <Row>
-                                <h4 className="topic-head">{topicObject.topic} | {topicObject.category.join(", ")}</h4>
-                            </Row>
-                        </Col>
+        <div className="page-container animate__animated animate__fadeIn">
+            <Row className="header-container">
+                <Col sm={3} >
+                    <img
+                        className="page-image"
+                        src={topicObject.Image || "./images/no-image.png"}
+                        alt="icon of topic poster"
+                    />
+                </Col>
+                <Col sm={21}>
+                    <Row>
+                        <h3 id="sub-header" className="page-title">{topicObject.title}</h3>
                     </Row>
+                    <Row>
+                        <h4 className="topic-head">{topicObject.type} | { topicObject.category.join(", ") }</h4>
+                    </Row>
+                </Col>
+            </Row>
 
-                    <PanelGroup
-                        className="panel-container"
-                        accordion
-                    >
-                        <Panel
-                            id="panel"
-                            className="about-panel"
-                            header="about"
-                            defaultExpanded
-                        >
-                            <TopicInfo
-                                topic={data.topic}
-                                ageRange={topicObject.ageRange.join(", ")}
-                                ageRating={""}
-                                genre={topicObject.category.join(", ")}
-                                description={data.description}
-                            />
-                        </Panel>
-                        <Panel
-                            id="panel"
-                            className="activity-panel"
-                            header="activity"
-                            defaultExpanded
-                        >
-                            <Activity />
-                        </Panel>
-                    </PanelGroup>
-
-                </div>
-            )
-
-        })
+            <PanelGroup
+                className="panel-container"
+                accordion
+            >
+                <Panel
+                    id="panel"
+                    className="about-panel"
+                    defaultExpanded
+                >
+                    <TopicInfo
+                        topic={topicObject.type}
+                        ageRange={topicObject.ageRange}
+                        genre={topicObject.category.join(", ")}
+                        description={topicObject.description}
+                    />
+                </Panel>
+                <Panel
+                    id="panel"
+                    className="activity-panel"
+                    header="activity"
+                    defaultExpanded
+                >
+                    <Activity />
+                </Panel>
+            </PanelGroup>
+        </div>
     )
 };
 

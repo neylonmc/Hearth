@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useEffect, useState } from "react";
 import { 
   Row,
   Col,
@@ -11,11 +11,18 @@ import "./Dashboard.css";
 import API from "../../utils/API";
 import Streaming from "../../components/Streaming/Streaming";
 import SimilarUsers from "../../components/SimilarUsers/SimilarUsers";
-// import movie from "../assets/images/movieIcon.jpeg";
-// import book from "../assets/images/bookIcon.jpg";
-// import tv from "../assets/images/tvIcon.jpg";
-// import musicIcon from "../assets/images/musicIcon.jpeg";
+import Activity from "../../components/Activity/Activity";
+import API from "../../utils/API";
 
+function Dashboard() {
+
+  useEffect(() => {
+    API.getUser((res) => {
+      console.log(res)
+    })
+  }, []);
+
+<<<<<<< HEAD
 function Dashboard() {
     // const id = sessionStorage.getItem("myUserEntity.Id")
     // API.getUser(id)
@@ -23,8 +30,10 @@ function Dashboard() {
     //     console.log(res)
     //   }).catch(err => err);
   
+=======
+>>>>>>> f594c21847699181a9484251e7c88da7006d9222
     return (
-      <div className="dashboard-container  animate__animated animate__fadeIn">
+      <div className="dashboard-container animate__animated animate__fadeIn">
         {/* INITIAL BLOCKS */}
         <Row>
           {/* USER INFO */}
@@ -79,9 +88,8 @@ function Dashboard() {
           <Col xs={17} id="block-container">
             <Panel
               className="activity-container"
-              bordered
             >
-              <h2>activity</h2>
+              <Activity />
             </Panel>
           </Col>
 
@@ -89,6 +97,12 @@ function Dashboard() {
 
       </div>
     );
+<<<<<<< HEAD
   }
 
 export default Dashboard;
+=======
+}
+
+export default Dashboard;
+>>>>>>> f594c21847699181a9484251e7c88da7006d9222

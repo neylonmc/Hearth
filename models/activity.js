@@ -9,15 +9,19 @@ const activitiesSchema = new Schema({
   title: { type: String, required: true },
   label: {type: String, required: true},
   type: {type: String, required: true},
+  value: {type: String, required: true},
   ageRange:  [String],
   category:  [String],
-  Tags: [String],
+  tags: [String],
   totalRatings: {type: Number},
   averageRating: {type: Number},
   description: {type: String},
   comments: [],
   Polls: [],
-  Image: {type: String}
+  Image: {type: String},
+  local_ext: {function() {
+    return(this.title.join("-"));
+  }}
 });
 
 const Activity = mongoose.model("Activity", activitiesSchema);

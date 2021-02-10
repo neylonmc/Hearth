@@ -8,7 +8,7 @@ import API from "../../utils/API";
 
 function SearchBar()  {
 
-      const [formObject, setFormObject] = useState([]);
+    const [formObject, setFormObject] = useState([]);
 
 
     useEffect(() => {
@@ -37,7 +37,7 @@ function SearchBar()  {
             placeholder="search"
             defaultValue= "search"
             onSelect= { function(value, item) {
-                window.location.href = item.local_ext;
+                window.location.href = `/topic/${item.local_ext}`;
             } }
         />
     )

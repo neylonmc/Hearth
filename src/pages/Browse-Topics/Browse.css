@@ -4,7 +4,6 @@
 
 .browse-container {
   margin-top: 5%;
-  
 }
 
 .browse-title {
@@ -17,7 +16,7 @@
 
 .topic-links {
   text-align: center !important;
-  margin: 0em 25em !important;
+  margin: auto;
 }
 
 #topic-button {
@@ -27,6 +26,8 @@
   font-weight: 500;
   letter-spacing: 0.2em;
   padding: 0.5em 2em;
+  display: inline-block;
+  margin-top: 0.5em;
 }
 
 #topic-button:hover {
@@ -40,23 +41,17 @@
 }
 
 /* RESULTS ------------------------------------------------------------------------ */
-.topic-container {
-  margin: 2rem 0rem;
-  padding: 0em -5em;
-}
 
-.topic-panel {
-  background-color: transparent !important;
-  text-align: center;
-}
-
-#results-container {
-  margin: 0em 0.8em;
+.button-container {
+  width: 100%;
+  display: inline-flex;
+  padding: 1em;
 }
 
 #results-button {
-  width: 10em;
-  margin: 0.8em;
+  max-width: 12%;
+  height: 18.5em;
+  margin: 1em;
   background-color: rgb(98,19,10, 0.55) ;
   border: 1px solid #62130a;
 }
@@ -69,11 +64,15 @@
     height: 12rem;
 }
 
-@media (max-width: 480px) {
+#topic-title {
+  font-size: 110%;
+  color: #dee2e6;
+  padding: 1em 0.1em !important;
+  margin-top: -0.6em;
+  white-space: normal;
+}
 
-  .browse-container {
-    padding: 0rem;
-  }
+@media (max-width: 480px) {
 
   .topic-links {
     margin: -2em 0em !important;
@@ -87,17 +86,11 @@
     margin: 0rem 0rem;
   }
 
-  #topic-image {
-    height: 25rem;
-  }
-
   #results-button { 
-    width: 15em;
-    height: 25em;
-    margin: 0.5em -1em;
-    padding: 0.5em
+    max-width: 39%;
+    max-height: 19em;
+    margin: 1.5em 1.2em;
   }
-
   
 }
 
