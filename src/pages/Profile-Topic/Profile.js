@@ -7,7 +7,7 @@ import {
 } from "rsuite";
 import "./Profile-Topic.css";
 import UserInfo from "../../components/UserInfo/UserInfo";
-import Activity from "../../components/Activity/Activity";
+import UserActivity from "../../components/Activity/UserActivity";
 
 function Profile() {
 
@@ -43,7 +43,7 @@ function Profile() {
                     header="activity"
                     defaultExpanded
                 >
-                    <Activity />
+                    <UserActivity />
                 </Panel>
             </PanelGroup>
 

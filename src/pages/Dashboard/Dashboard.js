@@ -10,7 +10,7 @@ import {
 import "./Dashboard.css";
 import Streaming from "../../components/Streaming/Streaming";
 import SimilarUsers from "../../components/SimilarUsers/SimilarUsers";
-import Activity from "../../components/Activity/Activity";
+import Activity from "../../components/Activity/TopicActivity";
 import API from "../../utils/API";
 
 function Dashboard() {
