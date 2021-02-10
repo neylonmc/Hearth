@@ -72,7 +72,7 @@ class App extends Component {
             <Switch>
               <Route exact path={["/", "/login"]} component={Login} />
               <Route exact path="/logout" component={Logout} />
-              <Route exact path="/signup" render={() => <SignUpForm />} />
+              {/* <Route exact path="/signup" render={() => <SignUpForm />} /> */}
               <Route exact path="/select" component={Select} />
               <Route path="/topics" component={Browse} />
               <Route path="/post" component={NewPost} />

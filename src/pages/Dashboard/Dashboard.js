@@ -8,6 +8,7 @@ import {
   // ButtonGroup 
 } from "rsuite";
 import "./Dashboard.css";
+import API from "../../utils/API";
 import Streaming from "../../components/Streaming/Streaming";
 import SimilarUsers from "../../components/SimilarUsers/SimilarUsers";
 // import movie from "../assets/images/movieIcon.jpeg";
@@ -15,8 +16,13 @@ import SimilarUsers from "../../components/SimilarUsers/SimilarUsers";
 // import tv from "../assets/images/tvIcon.jpg";
 // import musicIcon from "../assets/images/musicIcon.jpeg";
 
-export class Dashboard extends Component {
-  render() {
+function Dashboard() {
+    // const id = sessionStorage.getItem("myUserEntity.Id")
+    // API.getUser(id)
+    //   .then((res) => {
+    //     console.log(res)
+    //   }).catch(err => err);
+  
     return (
       <div className="dashboard-container  animate__animated animate__fadeIn">
         {/* INITIAL BLOCKS */}
@@ -40,7 +46,7 @@ export class Dashboard extends Component {
 
               <Row>
                 <Col>
-                   <h1 className="dash-username">username</h1>
+                   <h1 className="dash-username">user</h1>
                 </Col>
               </Row>
 
@@ -84,5 +90,5 @@ export class Dashboard extends Component {
       </div>
     );
   }
-}
+
 export default Dashboard;
