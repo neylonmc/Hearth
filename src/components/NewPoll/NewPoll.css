@@ -1,38 +1,38 @@
 .poll-container {
-    margin: 2em 20em;
-    text-align: left;
+  margin: 2em auto;
+  text-align: left;
+  max-width: 500px;
 }
 
 .subheader {
-    margin: 0.5em;
-    font-size: 115%;
-    text-align: center;
+  margin: 0.5em;
+  font-size: 115%;
+  text-align: center;
 }
 
 #link {
-    color: #d9a51f
+  color: #d9a51f;
 }
 
 /* FORM  */
 .topic-picker {
-    margin-bottom: 1em !important;
+  margin-bottom: 1em !important;
 }
 
 .submit-button {
-    margin-top: 1em;
-    border: 1px solid #d95515 !important;
-    background-color: rgba(185, 75, 20, 0.2) !important;
+  margin-top: 2em;
+  border: 1px solid #d95515 !important;
+  background-color: rgba(185, 75, 20, 0.2) !important;
 }
 
 .submit-button:hover {
-    border: 1px solid #d95515 !important;
-    background-color: rgba(185, 75, 20) !important;
+  border: 1px solid #d95515 !important;
+  background-color: rgba(185, 75, 20) !important;
 }
 
-
-@media (max-width: 480px) {
-
-    .poll-container {
-        margin: 1em 1.5em;
-    }
+@media (max-width: 680px) {
+  .poll-container {
+    margin: 1.5em;
+    max-height: fit-content;
+  }
 }

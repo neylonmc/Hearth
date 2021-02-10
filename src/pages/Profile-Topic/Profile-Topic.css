@@ -22,16 +22,17 @@
   padding-top: 0.6em;
 }
 
-.page-title, .topic-head {
+.page-title,
+.topic-head {
   padding-left: 1.5em;
 }
 
 .about-panel {
-    background-color: rgb(190,42,13, 0.5) !important;
+  background-color: rgb(190, 42, 13, 0.5) !important;
 }
 
 .activity-panel {
-  background-color: rgb(98,19,10, 0.5) !important;
+  background-color: rgb(98, 19, 10, 0.5) !important;
   margin-top: 1em;
 }
 
@@ -43,48 +44,44 @@
   font-weight: 500;
   letter-spacing: 0.2em;
 }
-    
+
 @media (max-width: 480px) {
+  .page-container {
+    max-width: 35rem;
+    margin-top: -5%;
+    padding: 3rem 1rem 1rem 1rem;
+  }
 
-    .page-container {
-        max-width: 35rem;
-        margin-top: -5%;
-        padding: 3rem 1rem 1rem 1rem;
-    }
+  .page-image {
+    max-width: 20rem;
+  }
 
-    .page-image {
-      max-width: 20rem;
-    }
+  #page-block {
+    min-width: 15rem;
+  }
 
-    #page-block {
-        min-width: 15rem;
-    }
+  #block-header {
+    font-size: 115%;
+  }
 
-    #block-header {
-        font-size: 115%;
-    }
+  /* PROFILE PAGE ------------------------------------------------ */
 
-    /* PROFILE PAGE ------------------------------------------------ */
+  .page-container {
+    margin: 0em 1em;
+  }
 
-    .page-container {
-      margin: 0em 1em;
-    }
-   
-   .header-container {
-      margin-top: -1em;
-      text-align: center;
-   } 
+  .header-container {
+    margin-top: -1em;
+    text-align: center;
+  }
 
+  .page-title {
+    font-size: 170%;
+    font-weight: 400;
+  }
 
-   .page-title {
-     font-size: 170%;
-     font-weight: 400;
-   }
-
-    .edit-usr-int-btn {
-        font-size: 90%;
-        margin-left: -1rem;
-    }
-
-}  
-
+  .edit-usr-int-btn {
+    font-size: 90%;
+    margin-left: -1rem;
+  }
+}

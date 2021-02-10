@@ -40,7 +40,7 @@
     "webkit": "^0.0.0"
   },
   "scripts": {
-    "start":"concurrently \"react-scripts start\" \"node server\"",
+    "start": "concurrently \"react-scripts start\" \"node server\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
