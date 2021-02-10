@@ -9,7 +9,7 @@ router.route("/")
 // Matches with "/api/comments/:id"
 router
   .route("/:id")
-  .get(commentsController.findById)
+  .get(commentsController.findByActivityId)
   .put(commentsController.update)
   .delete(commentsController.remove);
 

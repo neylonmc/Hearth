@@ -2,7 +2,7 @@
   "name": "hearth",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3000/",
+  "proxy": "http://localhost:3001/",
   "secure": false,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
@@ -40,7 +40,7 @@
     "webkit": "^0.0.0"
   },
   "scripts": {
-    "start": "react-scripts start && node server.js",
+    "start": "concurrently \"react-scripts start\" \"node server\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

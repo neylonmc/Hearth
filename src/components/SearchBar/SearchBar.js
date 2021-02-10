@@ -12,7 +12,7 @@ function SearchBar()  {
 
 
     useEffect(() => {
-      //  loadActivities();
+        loadActivities();
       }, [])
     
     
@@ -37,7 +37,7 @@ function SearchBar()  {
             placeholder="search"
             defaultValue= "search"
             onSelect= { function(value, item) {
-                window.location.href = item.local_ext;
+                window.location.href = `/topic/${item.local_ext}`;
             } }
         />
     )
