@@ -8,16 +8,22 @@ const Schema = mongoose.Schema;
 const activitiesSchema = new Schema({
   title: { type: String, required: true },
   label: {type: String, required: true},
-  type: {type: String, required: true},
+  topic: {type: String, required: true},
+  value: {type: String, required: true},
   ageRange:  [String],
   category:  [String],
-  Tags: [String],
+  tags: [String],
   totalRatings: {type: Number},
   averageRating: {type: Number},
   description: {type: String},
   comments: [],
-  Polls: [],
-  Image: {type: String}
+  polls: [],
+  image: {type: String},
+  local_ext: { function() {
+    const title = this.title.join("-");
+    const url = "/topic/" + title
+    return(url);
+  }}
 });
 
 const Activity = mongoose.model("Activity", activitiesSchema);

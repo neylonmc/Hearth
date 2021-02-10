@@ -74,42 +74,28 @@ function Topic() {
 
   }
 
-
-
-
   return (
     <div className="topic-container  animate__animated animate__fadeIn" >
-      <Panel
-        className="topic-panel"
-      >
         <ButtonGroup className="button-container">
           {formObject.map(data => {
             return (
-              <Col
-                id="results-container"
-                className="animate__animated animate__fadeIn"
-                md={4}
-                sm={12}
-              >
-                <p>{data.title}</p>
                 <Button
                   id="results-button"
+                  className="animate__animated animate__fadeIn"
                   href={data.local_ext}
                   bordered
                 >
                   <img
                     id="topic-image"
-                    src={data.img}
+                    src={data.Image || "/images/no-image.png"}
                     alt={data.title}
                   />
+                  <p id="topic-title">{data.title}</p>
                 </Button>
-              </Col>
-
             );
 
           })}
         </ButtonGroup>
-      </Panel>
     </div>
   )
 

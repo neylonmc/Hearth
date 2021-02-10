@@ -41,22 +41,16 @@
 
 /* RESULTS ------------------------------------------------------------------------ */
 .topic-container {
-  margin: 2rem 0rem;
-  padding: 0em -5em;
-}
-
-.topic-panel {
-  background-color: transparent !important;
-  text-align: center;
+  margin: 2em 10em;
 }
 
 #results-container {
-  margin: 0em 0.8em;
+  margin: 0em 0em;
 }
 
 #results-button {
-  width: 10em;
-  margin: 0.8em;
+  width: 12em;
+  margin: 0.5em;
   background-color: rgb(98,19,10, 0.55) ;
   border: 1px solid #62130a;
 }
@@ -67,6 +61,11 @@
     overflow: hidden;
     width: 100%;
     height: 12rem;
+}
+
+#topic-title {
+  color: #dee2e6;
+  padding: 1em 0.1em !important;
 }
 
 @media (max-width: 480px) {
