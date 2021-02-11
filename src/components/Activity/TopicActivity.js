@@ -18,21 +18,21 @@ function TopicActivity() {
 
     const placeholder = [
         {
-            topic: "Lorem ipsum",
+            topic: "Lorem ipsum ",
             title: "One of my Favorites",
             review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             rating: 5,
             related_titles: ["The Mandalorian", "Star Wars"]
         },
         {
-            topic: "Lorem ipsum",
-            title: "Eh",
-            review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            topic: "Lorem ipsum ",
+            title: "Not my thing",
+            review: "",
             rating: 3,
             related_titles: ["The Mandalorian", "Star Wars"]
         },
         {
-            topic: "Lorem ipsum",
+            topic: "Lorem ipsum ",
             title: "I had some issues with...",
             review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             rating: 2,

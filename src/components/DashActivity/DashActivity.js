@@ -8,6 +8,7 @@ import { useParams } from "react-router-dom";
   } from "rsuite";
 import "./DashActivity.css";
 import API from "../../utils/API";
+import Entertainment from "../../utils/TopEntertainment";
 
 function DashActivity() {
     let { topic } = useParams();
@@ -30,17 +31,17 @@ function DashActivity() {
     // recent activity from topics user follows
     return(
         <div className="animate__animated animate__fadeIn" >
-        <ButtonGroup className="button-container">
-          {formObject.map(data => {
+        <ButtonGroup className="dash-container">
+          {Entertainment.map(data => {
             return (
                 <Button
-                  id="results-button"
-                  href={`/topic/${data.local_ext}`}
+                  id="dash-button"
+                  href={ data.local_ext }
                   bordered
                 >
                   <img
-                    id="topic-image"
-                    src={data.Image || "/images/no-image.png"}
+                    id="dash-image"
+                    src={data.img || "/images/no-image.png"}
                     alt={data.title}
                   />
                   <p id="topic-title">{data.title}</p>

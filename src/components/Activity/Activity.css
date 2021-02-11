@@ -8,15 +8,15 @@
 }
 
 #card-title {
-    padding-top: 1em;
+    padding-top: 1.5em;
     padding-left: 0.2em;
     font-weight: 700 !important;
 }
 
 #card-rating {
-    font-size: 140% !important;
+    font-size: 120% !important;
     letter-spacing: 0.1em;
-    line-height: 2em;
+    padding-left: 0.2em;
 }
 
 #card-review {
@@ -45,9 +45,9 @@
 /* profile  */
 
 #card-header {
-    text-align: center;
-    font-size: 200%;
+    font-size: 220%;
     margin-bottom: -1em;
+    margin-left: 0.5em;
 }
 
 @media (max-width: 1000px) {
@@ -55,6 +55,10 @@
     #card-rating {
         text-align: center;
         margin-top: -2em;
+    }
+
+    #card-header {
+        text-align: center;
     }
 
     #card-title {
