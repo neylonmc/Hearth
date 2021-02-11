@@ -1,5 +1,5 @@
 <p align="center">
-<img src = "src/assets/images/Readmelogo.png" >
+<img src = "public/images/readme/Readmelogo.png" >
 </p>
 
 ---
@@ -25,7 +25,7 @@ Designed with community in mind, hearth allows users to rate, review and find so
 
 ## User Story
 
-The average person takes 23 minutes to find something to watch on Netflix and over 7 minutes picking out their next movie. With more time to watch, read and listen than ever before, we have developed an app that allows users to skip the long review threads and answer the question "What's next?", quicker.
+The average person takes 23 minutes to find something to watch on Netflix and over 7 minutes picking out their next movie. With more time to watch, read and listen than ever before, we have developed an app that allows users to skip the long review threads and answer the question "What's next?" more quick.
 
 ```
 AS an individual, I would like to find something to watch, read or listen.
@@ -115,27 +115,23 @@ Deployed App:
 
 Login Page:
 
-![Login Page](public/images/loginREAD.png)
-
-Dashboard:
-
-![Dashboard]()
+![Login Page](public/images/readme/loginREAD.png)
 
 Profile:
 
-![Profile]()
+![Profile](public/images/readme/profile.png)
 
 Topics:
 
-![Topics]()
+![Topics](public/images/readme/browse.png)
 
 New Post:
 
-![NewPost](public/images/topic.png)
+![NewPost](public/images/readme/topic.png)
 
 About:
 
-![About](public/images/about.png)
+![About](public/images/readme/about.png)
 
 ## Created by
 
