@@ -1,5 +1,5 @@
 import React from 'react';
-import "../GoogleAuth.css";
+import "./GoogleLogin.css";
 import API from "../../../utils/API";
 import { GoogleLogin } from 'react-google-login';
 // refresh token

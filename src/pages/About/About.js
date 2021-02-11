@@ -42,7 +42,7 @@ function About() {
 
                 <a 
                     className="about-link"
-                    href="/signup"
+                    href="/"
                 >join the community</a>
             
             <br/><br/><br/><hr/><br/>

@@ -3,6 +3,7 @@ import "./Nav.css";
 import { MenuItems } from "./MenuItem";
 import SearchBar from "../SearchBar/SearchBar";
 import Logo from "../Logo/Logo";
+import GoogleLogout from "../../components/GoogleAuth/GoogleLogout/GoogleLogout";
 
 export class Navbar extends Component {
   state = { clicked: false };
@@ -30,6 +31,7 @@ export class Navbar extends Component {
             );
           })}
           
+          <GoogleLogout/>
           <SearchBar />
         </div>
       </nav>
