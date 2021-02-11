@@ -15,22 +15,25 @@ function UserActivity(props) {
     const placeholder = [
         {
             topic: "Dune",
+            type: "Book",
             title: "One of my Favorites",
-            review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             rating: 5,
             related_titles: ["The Mandalorian", "Star Wars"]
         },
         {
-            topic: "Americanah",
-            title: "Eh",
-            review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            topic: "Soul",
+            type: "Film",
+            title: "Not my thing",
+            review: "",
             rating: 3,
-            related_titles: ["The Mandalorian", "Star Wars"]
+            related_titles: ["Inside Out", "Onward"]
         },
         {
             topic: "Ender's Game",
+            type: "Book",
             title: "I had some issues with...",
-            review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             rating: 2,
             related_titles: ["The Mandalorian", "Star Wars", "Dune", "Star Trek", "The Clone Wars", "Rebels" ]
         }
@@ -57,12 +60,9 @@ function UserActivity(props) {
                             <h1 id="card-header">{data.topic}</h1>
                         </Col>
                     </Row>
-                    <Row>
+                    <Row id="card-head-container">
                         <Col md={20}>
-                            <h2 id="card-title">{data.title}</h2>
-                        </Col>
-                        <Col md={4}>
-                            <h3 id="card-rating">Score: {data.rating} <FontAwesomeIcon icon={faStar} /></h3>
+                            <h2 id="card-title">{data.title} | {data.rating}<FontAwesomeIcon icon={faStar}/> {data.type}</h2>
                         </Col>
                     </Row>
                     <Row>

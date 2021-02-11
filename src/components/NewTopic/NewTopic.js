@@ -21,7 +21,7 @@ function NewRec() {
     const [ titleState, setTitle ] = useState("");
     const [ typeState, setType ] = useState("");
 
-    const [ topicState, setTopic ] = useState({});
+    // const [ topicState, setTopic ] = useState({});
 
 
     useEffect(() => {
@@ -35,7 +35,10 @@ function NewRec() {
 
         };
         console.log(form);
-       API.saveActivity(form);
+       API.saveActivity(form)
+        .then(res => {
+
+        });
     }
 
     return(
@@ -70,7 +73,7 @@ function NewRec() {
                                 placeholder="type"
                                 onSelect= {
                                     function(value, item) {
-                                        setType(item.topic)
+                                        setType(item.Topic)
                                     }
                                 }
                                 block

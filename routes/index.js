@@ -1,7 +1,7 @@
 const path = require("path");
 const router = require("express").Router();
 const apiRoutes = require("./api");
-const authenticated = require("../passport/middleware/authenticated");
+// const authenticated = require("../passport/middleware/authenticated");
 
 // API Routes
 router.use("/api", apiRoutes);

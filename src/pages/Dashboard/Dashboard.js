@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { useParams, useEffect, useState } from "react";
 import {
   Row,
   Col,
@@ -23,15 +23,10 @@ function Dashboard() {
       .then((res) => {
         console.log(res.data);
       })
-      .catch((err) => err);
+      .catch((err) => err);    
   }, [userState.Id]);
 
-// function Dashboard() {
-    // const id = sessionStorage.getItem("myUserEntity.Id")
-    // API.getUser(id)
-    //   .then((res) => {
-    //     console.log(res)
-    //   }).catch(err => err);
+
   
     return (
       <div className="dashboard-container animate__animated animate__fadeIn">
@@ -62,23 +57,8 @@ function Dashboard() {
               </Col>
             </Row>
 
-              {/* <Row>
-                <Col>
-                   <h1 className="dash-username">{userState.Name}</h1>
-                </Col>
-              </Row> */}
+            <Streaming />
 
-              <Streaming />
-
-            </Panel>
-
-            {/* POLLS */}
-            <Panel
-              id="left-block"
-              className="polls-container"
-              bordered
-            >
-              <h2>top polls</h2>
             </Panel>
             
             {/* SIMILAR USERS */}
@@ -98,6 +78,7 @@ function Dashboard() {
             <Panel
               className="activity-container"
             >
+              <h2 className="activity-title">start browsing popular entertainment...</h2>
               <DashActivity />
             </Panel>
           </Col>
