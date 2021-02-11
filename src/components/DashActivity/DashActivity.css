@@ -1,0 +1,26 @@
+#dash-container {
+    text-align: center;
+    background-color: rgb(217,85,21, 0.55) ;
+    border: 1px solid #d95515;
+    width: 5em;
+}
+
+#dash-container {
+    text-align: center;
+    background-color: rgb(217,85,21, 0.55) ;
+    border: 1px solid #d95515;
+    width: 10em;
+    margin: 0.5em;
+}
+
+#dash-container:hover {
+    opacity: 0.8;
+}
+
+#dash-image {
+    object-fit: cover;
+    border-radius: 3%;
+    overflow: hidden;
+    height: 12em;
+    width: 100%;
+}

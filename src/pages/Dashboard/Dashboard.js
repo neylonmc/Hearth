@@ -83,6 +83,7 @@ function Dashboard() {
             <Panel
               className="activity-container"
             >
+              <h2 className="activity-title">start browsing popular entertainment...</h2>
               <DashActivity />
             </Panel>
           </Col>
