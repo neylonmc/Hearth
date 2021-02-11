@@ -1,0 +1,62 @@
+#activity-card {
+    display: block;
+    margin: auto;
+    text-align: left;
+    border: 1px solid #d95515;
+    border-radius: 2%;
+    margin: 0.5em 0em;
+}
+
+#card-title {
+    padding-top: 1em;
+    line-height: 1.5em;
+}
+
+#card-rating {
+    font-size: 100%;
+    padding-top: 0.8em;
+}
+
+#card-review {
+    padding: 0em 1em;
+    text-align: justify
+}
+
+#sub-container {
+    margin: 1em;
+}
+
+#sub-title {
+    font-size: 100%;
+    letter-spacing: 0.2em;
+    font-weight: 500;
+}
+
+#card-subtitle {
+    background: rgba(217,85,21, 0.5);
+    text-align: center;
+    border-radius: 2%;
+    padding: 0.5em;
+    margin: 0.5em 0em;
+}
+
+/* profile  */
+
+#card-header {
+    text-align: center;
+    font-size: 200%;
+    margin-bottom: -1em;
+}
+
+@media (max-width: 1000px) {
+
+    #card-rating {
+        text-align: center;
+        margin-top: -2em;
+    }
+
+    #card-title {
+        padding: 3em 0em 1em 0em;
+        text-align: center;
+    }
+}
