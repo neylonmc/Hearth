@@ -25,7 +25,7 @@ Designed with community in mind, hearth allows users to rate, review and find so
 
 ## User Story
 
-The average person takes 23 minutes to find something to watch on Netflix and over 7 minutes picking out their next movie. With more time to watch, read and listen than ever before, we have developed an app that allows users to skip the long review threads and answer the question "What's next?" more quick.
+The average person takes 23 minutes to find something to watch on Netflix and over 7 minutes picking out their next movie. With more time to watch, read and listen than ever before, we have developed an app that allows users to skip the long review threads and answer the question "What's next?" more quickly.
 
 ```
 AS an individual, I would like to find something to watch, read or listen.
