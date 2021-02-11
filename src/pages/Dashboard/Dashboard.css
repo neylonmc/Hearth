@@ -44,7 +44,8 @@ h2 {
   font-size: 200%;
   letter-spacing: 0.1em;
   padding: auto;
-  margin: auto;
+  margin: 0.2em;
+  line-height: 1em;
 }
 
 /* POLLS BLOCK  */
@@ -69,7 +70,7 @@ h2 {
 }
 
 /* MOBILE ---------------------------------------------------------------------- */
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
   .dashboard-container {
     margin: 0rem 0.5rem 1.5rem 0.1rem;
   }
