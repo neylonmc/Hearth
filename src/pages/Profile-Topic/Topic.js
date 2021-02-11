@@ -9,10 +9,10 @@ import {
     Panel
 } from "rsuite";
 import "./Profile-Topic.css";
-import Entertainment from "../../utils/TopEntertainment";
 import API from "../../utils/API";
 import TopicInfo from "../../components/TopicInfo/TopicInfo";
-import Activity from "../../components/Activity/Activity";
+import TopicActivity from "../../components/Activity/TopicActivity";
+import FollowButton from "../../components/FollowButton/FollowButton";
 
 function Topic() {
 
@@ -44,14 +44,21 @@ function Topic() {
     return (
         <div className="page-container animate__animated animate__fadeIn">
             <Row className="header-container">
-                <Col sm={3} >
+                <Col md={24} >
                     <img
                         className="page-image"
                         src={topicObject.Image || "./images/no-image.png"}
                         alt="icon of topic poster"
                     />
                 </Col>
-                <Col sm={21}>
+            </Row>
+            <Row className="follow-container">
+                <Col md={24}>
+                    <FollowButton user={topicObject}/>
+                </Col>
+            </Row>
+            <Row>
+                <Col md={24}>
                     <Row>
                         <h3 id="sub-header" className="page-title">{topicObject.title}</h3>
                     </Row>
@@ -83,7 +90,7 @@ function Topic() {
                     header="activity"
                     defaultExpanded
                 >
-                    <Activity />
+                    <TopicActivity />
                 </Panel>
             </PanelGroup>
         </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import "../GoogleAuth.css";
+import "./GoogleLogin.css";
 import API from "../../../utils/API";
 import { GoogleLogin } from 'react-google-login';
 // refresh token
@@ -24,6 +24,7 @@ function Login() {
     var myUserEntity = {};
       myUserEntity.Id = res.profileObj.googleId;
       myUserEntity.Name = res.profileObj.name;
+      myUserEntity.Image = res.profileObj.imageUrl;
   
   //Store the entity object in sessionStorage where it will be accessible from all pages of your site.
     sessionStorage.setItem('myUserEntity',JSON.stringify(myUserEntity));
