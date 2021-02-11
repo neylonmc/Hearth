@@ -64,33 +64,6 @@ function Profile() {
                         <Row className="stream-container">
                             <Streaming />
                         </Row>
-                        <Row>
-                            <Col md={12}>
-                                <p>
-                                    <strong 
-                                        id="bold"
-                                    > Interests : </strong>
-                                    
-                                    { userState.Interests || "none saved" }
-                                </p>
-                            </Col>
-                            <Col id="right-info" md={12}>
-                                <p>
-                                    <strong 
-                                        id="bold"
-                                    > Following : </strong>
-
-                                    { 0 } 
-                                </p>
-                                <p>
-                                    <strong 
-                                        id="bold"
-                                    > Followers : </strong>
-
-                                    { 0 } 
-                                </p>
-                            </Col>
-                        </Row>
                     </div>
                 </Panel>
                 <Panel 

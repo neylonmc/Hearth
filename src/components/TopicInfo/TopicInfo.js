@@ -26,6 +26,7 @@ function TopicInfo(props) {
         return (
             <Row id="info-text">
                 <p><strong>Ages: </strong>{props.ageRange.join(", ")}</p>
+                <p><strong>Stream: </strong> Netflix, Amazon Prime, HULU</p>
                 <p>{props.description}</p>
             </Row>
         )
