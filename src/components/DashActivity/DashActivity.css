@@ -1,19 +1,14 @@
-#dash-container {
+#dash-button {
     text-align: center;
     background-color: rgb(217,85,21, 0.55) ;
     border: 1px solid #d95515;
-    width: 5em;
-}
-
-#dash-container {
-    text-align: center;
-    background-color: rgb(217,85,21, 0.55) ;
-    border: 1px solid #d95515;
+    border-radius: 2%;
     width: 10em;
+    height: 15em;
     margin: 0.5em;
 }
 
-#dash-container:hover {
+#dash-button:hover {
     opacity: 0.8;
 }
 
@@ -21,6 +16,6 @@
     object-fit: cover;
     border-radius: 3%;
     overflow: hidden;
-    height: 12em;
     width: 100%;
+    height: 10em;
 }

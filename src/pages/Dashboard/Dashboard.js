@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { useParams, useEffect, useState } from "react";
 import {
   Row,
   Col,
@@ -23,15 +23,10 @@ function Dashboard() {
       .then((res) => {
         console.log(res.data);
       })
-      .catch((err) => err);
+      .catch((err) => err);    
   }, [userState.Id]);
 
-// function Dashboard() {
-    // const id = sessionStorage.getItem("myUserEntity.Id")
-    // API.getUser(id)
-    //   .then((res) => {
-    //     console.log(res)
-    //   }).catch(err => err);
+
   
     return (
       <div className="dashboard-container animate__animated animate__fadeIn">
