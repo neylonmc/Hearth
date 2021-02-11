@@ -10,15 +10,27 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   findById: function (req, res) {
-    db.Comment
-      .findById(req.params.id)
-      .then(dbModel => res.json(dbModel))
+    db.Activity
+    .find({local_ext: req.params.id}).then(dbModel =>{
+      db.Comment
+      .find({topicId: dbModel[0]._id})
+      .then(dbModel => {
+        console.log(dbModel);
+        res.json(dbModel)})
+      .catch(err => res.status(422).json(err));
+    })
       .catch(err => res.status(422).json(err));
   },
   findByActivityId: function (req, res) {
-    db.Comment
-      .find({topicId: req.params.id})
-      .then(dbModel => res.json(dbModel))
+    db.Activity
+    .find({local_ext: req.params.id}).then(dbModel =>{
+      db.Comment
+      .find({topicId: dbModel[0]._id})
+      .then(dbModel => {
+        res.json(dbModel)})
+      .catch(err => res.status(422).json(err));
+    })
+
       .catch(err => res.status(422).json(err));
   },
   create: function (req, res) {
