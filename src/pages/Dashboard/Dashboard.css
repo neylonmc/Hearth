@@ -31,11 +31,19 @@ h2 {
 }
 .dash-avatar {
   max-width: 4.5rem;
-  border-radius: 5%;
+  border-radius: 50%;
+  opacity: 0.85;
+}
+
+.dash-avatar:hover {
+  opacity: 0.8;
 }
 
 .dash-username {
-  font-size: 280%;
+  font-size: 200%;
+  letter-spacing: 0.1em;
+  padding: auto;
+  margin: auto;
 }
 
 /* POLLS BLOCK  */
