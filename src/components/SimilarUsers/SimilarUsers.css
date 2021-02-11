@@ -1,7 +1,14 @@
 #avatar {
-    margin: 0.2rem;
+    margin: 0rem 0.08em;
 }
 
 #avatar:hover {
     opacity: 0.9
 }
+
+@media (max-width: 600px) {
+    #avatar {
+        width: 2em;
+    }
+  }
+  

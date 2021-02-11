@@ -20,7 +20,7 @@ h2 {
 /* LEFT BLOCKS ---------------------------------------------------------- */
 #left-block {
   background-color: rgb(217, 85, 21, 0.35) !important;
-  border: 1px solid #62130a !important;
+  border: 1px solid #d95515 !important;
   margin-bottom: 0.5rem;
 }
 
@@ -61,6 +61,11 @@ h2 {
 /* ACTIVITY BLOCK ---------------------------------------------------------- */
 .activity-container {
   background-color: transparent !important;
+  margin-top: -1.9em;
+}
+
+.activity-title {
+  color: #d9a51f;
 }
 
 /* MOBILE ---------------------------------------------------------------------- */
@@ -82,6 +87,11 @@ h2 {
   #left-block {
     margin: 0em -0.1em 0.5em 0.5em;
     min-width: none;
-    height: 400px;
+    max-height: 50%;
+  }
+
+  .activity-title {
+    line-height: 1em;
+    padding: 1em 0em;
   }
 }

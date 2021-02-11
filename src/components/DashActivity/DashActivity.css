@@ -1,0 +1,39 @@
+#dash-button {
+    text-align: center;
+    background-color: rgb(217,85,21, 0.55) ;
+    border: 1px solid #d95515;
+    border-radius: 2%;
+    width: 10em;
+    height: 15em;
+    margin: 0.5em;
+}
+
+#dash-button:hover {
+    opacity: 0.8;
+}
+
+#dash-image {
+    object-fit: cover;
+    border-radius: 3%;
+    overflow: hidden;
+    width: 100%;
+    height: 10em;
+}
+
+
+@media (max-width: 480px) {
+
+   #dash-button {
+       width: 6em;
+       height: 10em;
+   }
+
+   #dash-image {
+       height: 100%;
+   }
+    
+   #topic-title {
+       opacity: 0;
+   }
+
+}    

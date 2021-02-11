@@ -8,13 +8,15 @@
 }
 
 #card-title {
-    padding-top: 1em;
-    line-height: 1.5em;
+    padding-top: 1.5em;
+    padding-left: 0.2em;
+    font-weight: 700 !important;
 }
 
 #card-rating {
-    font-size: 100%;
-    padding-top: 0.8em;
+    font-size: 120% !important;
+    letter-spacing: 0.1em;
+    padding-left: 0.2em;
 }
 
 #card-review {
@@ -23,7 +25,7 @@
 }
 
 #sub-container {
-    margin: 1em;
+    margin: 1.3em;
 }
 
 #sub-title {
@@ -43,9 +45,9 @@
 /* profile  */
 
 #card-header {
-    text-align: center;
-    font-size: 200%;
+    font-size: 220%;
     margin-bottom: -1em;
+    margin-left: 0.5em;
 }
 
 @media (max-width: 1000px) {
@@ -55,8 +57,13 @@
         margin-top: -2em;
     }
 
+    #card-header {
+        text-align: center;
+    }
+
     #card-title {
-        padding: 3em 0em 1em 0em;
+        line-height: 1.8em;
+        padding: 2em 0em 1em 0em;
         text-align: center;
     }
 }

@@ -52,7 +52,7 @@ function Profile() {
             </Row>
 
             <PanelGroup 
-                className= "panel-container"x
+                className= "panel-container"
                 accordion 
             >
                 <Panel 
