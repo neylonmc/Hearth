@@ -25,6 +25,7 @@ export default function NewPost() {
             New Poll
           </Link>
         </Col> */}
+        
         <Col id="link-container" md={12}>
           <Link id="post-button" to={`${url}/topic`}>
             New Topic
