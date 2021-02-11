@@ -1,26 +1,30 @@
 import React, { Component, useEffect, useState } from "react";
-import { 
+import {
   Row,
   Col,
-  Panel, 
-  // Button, 
-  // ButtonToolbar, 
-  // ButtonGroup 
+  Panel,
+  // Button,
+  // ButtonToolbar,
+  // ButtonGroup
 } from "rsuite";
 import "./Dashboard.css";
 import API from "../../utils/API";
 import Streaming from "../../components/Streaming/Streaming";
 import SimilarUsers from "../../components/SimilarUsers/SimilarUsers";
-import Activity from "../../components/Activity/Activity";
-import API from "../../utils/API";
+import DashActivity from "../../components/DashActivity/DashActivity";
 
 function Dashboard() {
+  const [userState, setUser] = useState([]);
 
   useEffect(() => {
-    API.getUser((res) => {
-      console.log(res)
-    })
-  }, []);
+    setUser(JSON.parse(window.sessionStorage.getItem("myUserEntity")));
+
+    API.getUser(userState.Id)
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((err) => err);
+  }, [userState.Id]);
 
 // function Dashboard() {
     // const id = sessionStorage.getItem("myUserEntity.Id")
@@ -42,17 +46,25 @@ function Dashboard() {
             >
               <Row>
                 <Col>
-                  <img
-                    className="dash-avatar"
-                    src="./images/no-avatar.jpg"
-                    alt="dashboard user avatar"
-                  />
+                  <a href="/profile">
+                    <img
+                      className="dash-avatar"
+                      src={userState.Image || "./images/no-avatar.jpg"}
+                      alt="dashboard user avatar"
+                    />
+                  </a>
                 </Col>
               </Row>
+            <Row>
+              <Col>
+                <h1 className="dash-username">{userState.Name}</h1>
+
+              </Col>
+            </Row>
 
               <Row>
                 <Col>
-                   <h1 className="dash-username">user</h1>
+                   <h1 className="dash-username">{userState.Name}</h1>
                 </Col>
               </Row>
 
@@ -86,7 +98,7 @@ function Dashboard() {
             <Panel
               className="activity-container"
             >
-              <Activity />
+              <DashActivity />
             </Panel>
           </Col>
 
@@ -94,6 +106,6 @@ function Dashboard() {
 
       </div>
     );
-}
+};
 
 export default Dashboard;

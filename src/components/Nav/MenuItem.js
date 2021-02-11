@@ -25,11 +25,6 @@ export const MenuItems = [
     name: "nav-links",
   },
   {
-    title: "logout",
-    url: "/logout",
-    name: "nav-links",
-  },
-  {
     title: <i class="fas fa-cog" />,
     url: "/settings",
     name: "nav-links",

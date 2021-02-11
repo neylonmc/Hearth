@@ -1,0 +1,13 @@
+#google-auth {
+  border-radius: 2%;
+  margin: 0.5em;
+  min-width: 20em;
+  height: 3em;
+  letter-spacing: 0.4rem;
+  background-color: rgb(190, 42, 13, 0.5) !important;
+}
+
+#google-auth:hover {
+  background-color: rgb(190, 42, 13, 0.9) !important;
+  color: #fff;
+}

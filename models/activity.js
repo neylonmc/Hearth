@@ -5,6 +5,10 @@ const Schema = mongoose.Schema;
 //const poll = require("poll.js");
 
 
+function createExt(title) {
+  return(title.join("-"))
+}
+
 const activitiesSchema = new Schema({
   title: { type: String, required: true },
   label: {type: String, required: true},
@@ -19,9 +23,6 @@ const activitiesSchema = new Schema({
   comments: [],
   Polls: [],
   Image: {type: String},
-  local_ext: {function() {
-    return(this.title.join("-"));
-  }}
 });
 
 const Activity = mongoose.model("Activity", activitiesSchema);

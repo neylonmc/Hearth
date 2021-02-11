@@ -20,9 +20,6 @@ function NewRec() {
 
     const [ titleState, setTitle ] = useState("");
     const [ typeState, setType ] = useState("");
-    const [ genreState, setGenre ] = useState("");
-    const [ ageState, setAge ] = useState("");
-    const [ textState, setText ] = useState("");
 
     const [ topicState, setTopic ] = useState({});
 
@@ -34,10 +31,7 @@ function NewRec() {
         event.preventDefault();
         let form ={
             title: titleState,
-            topic: typeState,
-            genre: genreState,
-            age_range: ageState,
-            description: textState
+            topic: typeState
 
         };
         console.log(form);
@@ -47,15 +41,15 @@ function NewRec() {
     return(
         <div className="topic-container   animate__animated animate__fadeIn">
 
-        <p className="subheader">
-            create a new topic and get 
-            the conversation started
-        </p>
-
+            <p className="subheader">
+                create a new topic and get 
+                the conversation started
+            </p>
 
             <Form fluid>
                 <FormGroup>
                     <FormControl 
+                        block
                         className="topic-title"
                         name="name" 
                         placeholder="topic title"
@@ -68,10 +62,9 @@ function NewRec() {
                 </FormGroup>
 
                 <Row className="mini-container">
-                    <Col md={8}>
+                    <Col>
                         <FormGroup id="mini-picker">
                             <SelectPicker 
-                                className="type"
                                 data={ Topic }
                                 defaultValue=""
                                 placeholder="type"
@@ -84,53 +77,7 @@ function NewRec() {
                             />
                         </FormGroup>
                     </Col>
-                    <Col md={8}>
-                        <FormGroup id="mini-picker">
-                            <TagPicker 
-                                className="genre"
-                                data={ Genre }
-                                defaultValue=""
-                                placeholder="genre"
-                                onChange= {
-                                    function(value) {
-                                        setGenre(value)
-                                    }
-                                }
-                                block
-                            />
-                        </FormGroup>
-                    </Col>
-                    <Col md={8}>
-                        <FormGroup id="mini-picker">
-                            <TagPicker 
-                                className="ages"
-                                data={ Ages }
-                                defaultValue=""
-                                placeholder="audiance"
-                                onChange= {
-                                    function(value) {
-                                        setAge(value)
-                                    }
-                                }
-                                block
-                            />
-                        </FormGroup>
-                    </Col>
                 </Row>
-
-                <FormGroup>
-                    <FormControl 
-                        className="topic-description"
-                        name="description" 
-                        type="textarea" 
-                        placeholder="topic description"
-                        onChange= {
-                            function(value) {
-                                setText(value)
-                            }
-                        }
-                    />
-                </FormGroup>
 
                 <FormGroup>
                     <ButtonToolbar>
