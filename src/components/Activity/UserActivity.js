@@ -25,7 +25,7 @@ function UserActivity(props) {
             title: "Not my thing",
             review: "",
             rating: 3,
-            related_titles: ["The Mandalorian", "Star Wars"]
+            related_titles: ["Inside Out", "Onward"]
         },
         {
             topic: "Ender's Game",
