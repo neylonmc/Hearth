@@ -15,6 +15,7 @@ function UserActivity(props) {
     const placeholder = [
         {
             topic: "Dune",
+            type: "Book",
             title: "One of my Favorites",
             review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             rating: 5,
@@ -22,6 +23,7 @@ function UserActivity(props) {
         },
         {
             topic: "Soul",
+            type: "Film",
             title: "Not my thing",
             review: "",
             rating: 3,
@@ -29,6 +31,7 @@ function UserActivity(props) {
         },
         {
             topic: "Ender's Game",
+            type: "Book",
             title: "I had some issues with...",
             review: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             rating: 2,
@@ -59,7 +62,7 @@ function UserActivity(props) {
                     </Row>
                     <Row id="card-head-container">
                         <Col md={20}>
-                            <h2 id="card-title">{data.title} | {data.rating}<FontAwesomeIcon icon={faStar}/></h2>
+                            <h2 id="card-title">{data.title} | {data.rating}<FontAwesomeIcon icon={faStar}/> {data.type}</h2>
                         </Col>
                     </Row>
                     <Row>
