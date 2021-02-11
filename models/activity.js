@@ -23,6 +23,10 @@ const activitiesSchema = new Schema({
   comments: [],
   Polls: [],
   Image: {type: String},
+  Review: [{ type: mongoose.Schema.Types.ObjectId, ref: "Review"}],
+  Comment: [{ type: mongoose.Schema.Types.ObjectId, ref: "Comment"}],
+  Poll: [{ type: mongoose.Schema.Types.ObjectId, ref: "Poll"}],
+  Topic: [{ type: mongoose.Schema.Types.ObjectId, ref: "Topic"}]
 });
 
 const Activity = mongoose.model("Activity", activitiesSchema);

@@ -48,7 +48,7 @@ function Dashboard() {
                 <Col>
                   <a href="/profile">
                     <img
-                      className="dash-avatar"
+                      className = "dash-avatar"
                       src={userState.Image || "./images/no-avatar.jpg"}
                       alt="dashboard user avatar"
                     />
@@ -62,11 +62,11 @@ function Dashboard() {
               </Col>
             </Row>
 
-              <Row>
+              {/* <Row>
                 <Col>
                    <h1 className="dash-username">{userState.Name}</h1>
                 </Col>
-              </Row>
+              </Row> */}
 
               <Streaming />
 
