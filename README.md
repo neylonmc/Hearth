@@ -117,6 +117,10 @@ Login Page:
 
 ![Login Page](public/images/readme/loginREAD.png)
 
+Dashboard:
+
+![Dashboard](public/images/readme/dashboard.png)
+
 Profile:
 
 ![Profile](public/images/readme/profile.png)
@@ -127,7 +131,7 @@ Topics:
 
 New Post:
 
-![NewPost](public/images/readme/topic.png)
+![NewPost](public/images/readme/newtopic.png)
 
 About:
 
