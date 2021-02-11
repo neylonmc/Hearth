@@ -43,14 +43,16 @@ function Topic() {
     return (
         <div className="page-container animate__animated animate__fadeIn">
             <Row className="header-container">
-                <Col sm={3} >
+                <Col md={24} >
                     <img
                         className="page-image"
                         src={topicObject.Image || "./images/no-image.png"}
                         alt="icon of topic poster"
                     />
                 </Col>
-                <Col sm={21}>
+            </Row>
+            <Row>
+                <Col md={24}>
                     <Row>
                         <h3 id="sub-header" className="page-title">{topicObject.title}</h3>
                     </Row>

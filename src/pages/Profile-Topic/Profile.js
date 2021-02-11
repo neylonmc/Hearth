@@ -31,21 +31,27 @@ function Profile() {
 
     return(
         <div className="page-container animate__animated animate__fadeIn">
-            <Row className="header-container">
-                <Col sm= {3} >
+            <Row>
+                <Col md= {8} />
+                <Col md= {8} >
                     <img 
                         className = "page-image"
                         src= {sessionState.Image || "./images/no-image.png"}
                         alt= "icon of topic poster"
                     />
                 </Col>
-                <Col sm= {20}>
-                    <h3 className="page-title">{sessionState.Name || "username" }</h3>
+                <Col md= {8}/>
+            </Row>
+            <Row>
+                <Col md= {8}/>
+                <Col md= {8}>
+                    <h3 className="page-title">my profile</h3>
                 </Col>
+                <Col md= {8}/>
             </Row>
 
             <PanelGroup 
-                className= "panel-container"
+                className= "panel-container"x
                 accordion 
             >
                 <Panel 
@@ -54,7 +60,7 @@ function Profile() {
                     defaultExpanded
                 >
                     <div className="info-container">
-                        <Row>
+                        <Row className="stream-container">
                             <Streaming />
                         </Row>
                         <Row>

@@ -11,20 +11,20 @@ function TopicInfo(props) {
 
     if (topic === "Books") {
         return (
-            <Row>
+            <Row id="info-text">
                 <p><strong>Ages: </strong>{props.ageRange}</p>
                 <p>{props.description}</p>
             </Row>
         )
     } else if (topic === "Music") {
         return (
-            <Row>
+            <Row id="info-text">
                 <p>{props.description}</p>
             </Row>
         )
     } else if (topic === "Film" || topic === "Television") {
         return (
-            <Row>
+            <Row id="info-text">
                 <p><strong>Ages: </strong>{props.ageRange.join(", ")}</p>
                 <p>{props.description}</p>
             </Row>

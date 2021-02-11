@@ -3,28 +3,29 @@
 }
 
 .header-container {
-  margin: 1.5em 0em;
+  /* margin: 1.5em 0em; */
 }
 
 .page-image {
   object-fit: cover;
-  width: 7em;
-  height: 7em;
   opacity: 0.95;
-  border-radius: 5%;
-  margin: 0em 1em;
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 10em;
+  width: 10em;
 }
 
-.page-title {
+.page-title, .topic-head  {
   font-weight: 200;
-  font-size: 270%;
-  letter-spacing: 0.5rem;
-  padding-top: 0.6em;
-}
-
-.page-title,
-.topic-head {
-  padding-left: 1.5em;
+  font-size: 180%;
+  letter-spacing: 0.2rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 .about-panel {
@@ -37,10 +38,8 @@
 }
 
 /* TOPICS */
-
 .topic-head {
   font-size: 130%;
-  margin-left: 1.5em;
   font-weight: 500;
   letter-spacing: 0.2em;
 }
