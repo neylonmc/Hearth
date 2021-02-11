@@ -12,7 +12,7 @@ import "./Profile-Topic.css";
 import Entertainment from "../../utils/TopEntertainment";
 import API from "../../utils/API";
 import TopicInfo from "../../components/TopicInfo/TopicInfo";
-import Activity from "../../components/Activity/Activity";
+import TopicActivity from "../../components/Activity/TopicActivity";
 
 function Topic() {
 
@@ -83,7 +83,7 @@ function Topic() {
                     header="activity"
                     defaultExpanded
                 >
-                    <Activity />
+                    <TopicActivity />
                 </Panel>
             </PanelGroup>
         </div>

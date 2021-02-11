@@ -11,14 +11,15 @@ h2 {
   margin: 2rem 5rem;
 }
 
-.activity-container, #left-block {
+.activity-container,
+#left-block {
   padding: -1.5rem !important;
   overflow: scroll;
 }
 
 /* LEFT BLOCKS ---------------------------------------------------------- */
 #left-block {
-  background-color: rgb(217,85,21, 0.35) !important;
+  background-color: rgb(217, 85, 21, 0.35) !important;
   border: 1px solid #62130a !important;
   margin-bottom: 0.5rem;
 }
@@ -39,7 +40,7 @@ h2 {
 }
 
 /* POLLS BLOCK  */
-.polls-container { 
+.polls-container {
   min-height: 15rem;
 }
 
@@ -55,7 +56,7 @@ h2 {
 }
 
 /* MOBILE ---------------------------------------------------------------------- */
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .dashboard-container {
     margin: 0rem 0.5rem 1.5rem 0.1rem;
   }
@@ -64,15 +65,15 @@ h2 {
     width: 4em;
   }
 
-  .dash-username, .polls-container, #left-block h2 {
+  .dash-username,
+  .polls-container,
+  #left-block h2 {
     display: none;
   }
 
   #left-block {
-   margin: 0em -0.1em 0.5em 0.5em;
-   height: 50%;
+    margin: 0em -0.1em 0.5em 0.5em;
+    min-width: none;
+    height: 400px;
   }
-
- 
-
 }
