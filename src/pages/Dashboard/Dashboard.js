@@ -46,6 +46,7 @@ function Dashboard() {
             <Row>
               <Col>
                 <h1 className="dash-username">{userState.Name}</h1>
+
               </Col>
             </Row>
 
