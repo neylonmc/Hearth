@@ -14,18 +14,18 @@ export default function NewPost() {
     <div className="post-container  animate__animated animate__fadeIn">
       <h3 className="post-header">create something new</h3>
       <Row className="post-links">
-        <Col id="link-container" md={8}>
+        <Col id="link-container" md={12}>
           <Link id="post-button" to={`${url}/review`}>
             New Review
           </Link>
         </Col>
 
-        <Col id="link-container" md={8}>
+        {/* <Col id="link-container" md={8}>
           <Link id="post-button" to={`${url}/poll`}>
             New Poll
           </Link>
-        </Col>
-        <Col id="link-container" md={8}>
+        </Col> */}
+        <Col id="link-container" md={12}>
           <Link id="post-button" to={`${url}/topic`}>
             New Topic
           </Link>
