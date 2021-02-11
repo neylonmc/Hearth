@@ -20,7 +20,7 @@ const NewReview = () => {
   const [ topicState, setTopic ]  = useState("");
   const [ titleState, setTitle ] = useState("");
   const [ textState, setText ] = useState("");
-  const [ simState, setSim ] = useState("");
+  const [ simState, setSim ] = useState([]);
   const [ rateState, setRate ] = useState(0);
 
 //  Final Review State
@@ -46,7 +46,8 @@ const NewReview = () => {
       topic: topicState, 
       title: titleState,
       review: textState,
-      rating: rateState
+      rating: rateState,
+      related_titles: simState
     };
     console.log(form);
    API.saveComment(form);
