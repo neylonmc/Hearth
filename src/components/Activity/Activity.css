@@ -9,12 +9,14 @@
 
 #card-title {
     padding-top: 1em;
-    line-height: 1.5em;
+    padding-left: 0.2em;
+    font-weight: 700 !important;
 }
 
 #card-rating {
-    font-size: 100%;
-    padding-top: 0.8em;
+    font-size: 140% !important;
+    letter-spacing: 0.1em;
+    line-height: 2em;
 }
 
 #card-review {
@@ -23,7 +25,7 @@
 }
 
 #sub-container {
-    margin: 1em;
+    margin: 1.3em;
 }
 
 #sub-title {
@@ -56,7 +58,8 @@
     }
 
     #card-title {
-        padding: 3em 0em 1em 0em;
+        line-height: 1.8em;
+        padding: 2em 0em 1em 0em;
         text-align: center;
     }
 }

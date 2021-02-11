@@ -57,12 +57,12 @@ function UserActivity(props) {
                             <h1 id="card-header">{data.topic}</h1>
                         </Col>
                     </Row>
-                    <Row>
+                    <Row id="card-head-container">
                         <Col md={20}>
                             <h2 id="card-title">{data.title}</h2>
                         </Col>
                         <Col md={4}>
-                            <h3 id="card-rating">Score: {data.rating} <FontAwesomeIcon icon={faStar} /></h3>
+                            <h2 id="card-rating">{data.rating}<FontAwesomeIcon icon={faStar}/>s</h2>
                         </Col>
                     </Row>
                     <Row>
