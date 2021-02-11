@@ -27,6 +27,7 @@ function Dashboard() {
   }, [userState.Id]);
 
 
+<<<<<<< HEAD
     return (
       <div className="dashboard-container animate__animated animate__fadeIn">
         {/* INITIAL BLOCKS */}
@@ -49,6 +50,14 @@ function Dashboard() {
                   </a>
                 </Col>
               </Row>
+=======
+            <Row>
+              <Col>
+                <h1 className="dash-username">{userState.Name}</h1>
+
+              </Col>
+            </Row>
+>>>>>>> ea4e5ef733c7c55b797832c68c9bd7eefc0e8972
 
               <Row>
                 <Col>
