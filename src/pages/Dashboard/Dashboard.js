@@ -22,16 +22,13 @@ function Dashboard() {
     })
   }, []);
 
-<<<<<<< HEAD
-function Dashboard() {
+// function Dashboard() {
     // const id = sessionStorage.getItem("myUserEntity.Id")
     // API.getUser(id)
     //   .then((res) => {
     //     console.log(res)
     //   }).catch(err => err);
   
-=======
->>>>>>> f594c21847699181a9484251e7c88da7006d9222
     return (
       <div className="dashboard-container animate__animated animate__fadeIn">
         {/* INITIAL BLOCKS */}
@@ -97,12 +94,6 @@ function Dashboard() {
 
       </div>
     );
-<<<<<<< HEAD
-  }
-
-export default Dashboard;
-=======
 }
 
 export default Dashboard;
->>>>>>> f594c21847699181a9484251e7c88da7006d9222
