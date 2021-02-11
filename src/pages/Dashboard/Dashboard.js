@@ -11,7 +11,7 @@ import "./Dashboard.css";
 import API from "../../utils/API";
 import Streaming from "../../components/Streaming/Streaming";
 import SimilarUsers from "../../components/SimilarUsers/SimilarUsers";
-import Activity from "../../components/Activity/TopicActivity";
+import DashActivity from "../../components/DashActivity/DashActivity";
 
 function Dashboard() {
 
@@ -88,7 +88,7 @@ function Dashboard() {
             <Panel
               className="activity-container"
             >
-              <Activity />
+              <DashActivity />
             </Panel>
           </Col>
 

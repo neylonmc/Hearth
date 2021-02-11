@@ -12,6 +12,7 @@ import "./Profile-Topic.css";
 import API from "../../utils/API";
 import TopicInfo from "../../components/TopicInfo/TopicInfo";
 import TopicActivity from "../../components/Activity/TopicActivity";
+import FollowButton from "../../components/FollowButton/FollowButton";
 
 function Topic() {
 
@@ -49,6 +50,11 @@ function Topic() {
                         src={topicObject.Image || "./images/no-image.png"}
                         alt="icon of topic poster"
                     />
+                </Col>
+            </Row>
+            <Row className="follow-container">
+                <Col md={24}>
+                    <FollowButton user={topicObject}/>
                 </Col>
             </Row>
             <Row>
