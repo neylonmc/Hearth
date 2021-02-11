@@ -61,9 +61,12 @@ $ npm start
 
 - React
 - MongoDB
-- Mongoose
+- Animate.css
 - React Suite
 - Google Login
+- IMDB API
+- OpenLibrary
+- Random User API
 
 ## Functionality
 
@@ -102,7 +105,7 @@ Browsing reviews is an easy way to find something to keep yourself entertained q
 
 **Allowing users to create an account through the application instead of through Google.**
 
-Allowing users to create an account through hearth in case they don’t have a google account or don't feel like creating a google account.
+Allowing users to create an account through hearth. Easier way to save preferences, get notifications and make the application more tailored to the user.
 
 ## Links and Screenshots
 
@@ -128,11 +131,11 @@ Topics:
 
 New Post:
 
-![NewPost]()
+![NewPost](public/images/topic.png)
 
 About:
 
-![About]()
+![About](public/images/about.png)
 
 ## Created by
 

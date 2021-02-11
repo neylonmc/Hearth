@@ -1,11 +1,11 @@
 import React, { Component, useEffect, useState } from "react";
-import { 
+import {
   Row,
   Col,
-  Panel, 
-  // Button, 
-  // ButtonToolbar, 
-  // ButtonGroup 
+  Panel,
+  // Button,
+  // ButtonToolbar,
+  // ButtonGroup
 } from "rsuite";
 import "./Dashboard.css";
 import API from "../../utils/API";
@@ -14,20 +14,18 @@ import SimilarUsers from "../../components/SimilarUsers/SimilarUsers";
 import DashActivity from "../../components/DashActivity/DashActivity";
 
 function Dashboard() {
-
-  const [ userState, setUser ] = useState([])
+  const [userState, setUser] = useState([]);
 
   useEffect(() => {
-
     setUser(JSON.parse(window.sessionStorage.getItem("myUserEntity")));
 
     API.getUser(userState.Id)
       .then((res) => {
-        console.log(res.data)
-    }).catch(err => err)
-
-    
+        console.log(res.data);
+      })
+      .catch((err) => err);
   }, [userState.Id]);
+
 
     return (
       <div className="dashboard-container animate__animated animate__fadeIn">
@@ -96,6 +94,7 @@ function Dashboard() {
 
       </div>
     );
+
 }
 
 export default Dashboard;
