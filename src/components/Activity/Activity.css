@@ -1,0 +1,38 @@
+#activity-card {
+    display: block;
+    margin: auto;
+    text-align: left;
+    border: 1px solid #d95515;
+    margin: 0.5em 0em;
+}
+
+#card-title {
+    padding-top: 1em;
+}
+
+#card-rating {
+    font-size: 100%;
+    padding-top: 0.8em;
+}
+
+#card-review {
+    padding: 0em 1em;
+    text-align: justify
+}
+
+#sub-container {
+    margin: 1em;
+}
+
+#sub-title {
+    font-size: 100%;
+    letter-spacing: 0.2em;
+    font-weight: 500;
+}
+
+#card-subtitle {
+    background: rgba(217,85,21, 0.5);
+    text-align: center;
+    border-radius: 2%;
+    padding: 0.5em;
+}

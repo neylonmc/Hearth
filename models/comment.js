@@ -2,11 +2,11 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const commentSchema = new Schema({
-    title:{type: String},
-    userId: {type: String},
-    topicId: {type: String},
+    topic:{type: String},
+    title: {type: String},
     rating: {type: String},
-    topic: {type: String}
+    review: [{ type: Number, required: true }],
+    related_titles: [String]
 });
 
 const Comment = mongoose.model("comment", commentSchema);

@@ -23,6 +23,7 @@ function Profile() {
         API.getUser(sessionState.Id)
           .then((res) => {
             setUser(res.data)
+            console.log(res.data)
         }).then(() => {
             console.log("user data pulled")
         }).catch(err => err)
