@@ -1,5 +1,5 @@
 import React from 'react';
-import "../GoogleAuth.css";
+import "./GoogleLogout.css";
 import { GoogleLogout } from 'react-google-login';
 
 const clientId =
@@ -14,19 +14,16 @@ function Logout() {
 
   return (
     <div>
-    <p>Click below if you are sure you would like to logout.</p>
       <GoogleLogout
-        id="google-auth"
         clientId={clientId}
         buttonText="Logout"
         onLogoutSuccess={onSuccess}
         render={renderProps => (
           <button  
-            id="google-auth"
             className="google-logout"
             onClick={renderProps.onClick} 
             disabled={renderProps.disabled}>
-              Logout
+              logout
           </button>
         )}/> 
     </div>

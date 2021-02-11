@@ -1,0 +1,15 @@
+.follow-btn { 
+    display: block!important;
+    margin-left: auto!important;
+    margin-right: auto !important;
+    margin-top: 1em;
+    background-color: rgba(190,42,13) !important;
+    border: 1px solid #be2a0d !important;
+    color: #dee2e6 !important;
+    letter-spacing: 0.1em;
+}
+
+.follow-btn:hover {
+    background-color: transparent !important;
+    border: 1px solid #be2a0d !important;
+}

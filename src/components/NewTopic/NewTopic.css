@@ -4,10 +4,6 @@
   max-width: 500px;
 }
 
-.topic-description {
-  margin-top: 2em;
-}
-
 .submit-button {
   margin-top: 1em;
   border: 1px solid #d95515 !important;
@@ -17,10 +13,6 @@
 @media (max-width: 600px) {
   .topic-container {
     margin: 1.5em;
-  }
-
-  .mini-container {
-    margin: -1.5em 0em;
   }
 
   #mini-picker {
