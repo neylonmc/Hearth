@@ -62,23 +62,8 @@ function Dashboard() {
               </Col>
             </Row>
 
-              {/* <Row>
-                <Col>
-                   <h1 className="dash-username">{userState.Name}</h1>
-                </Col>
-              </Row> */}
+            <Streaming />
 
-              <Streaming />
-
-            </Panel>
-
-            {/* POLLS */}
-            <Panel
-              id="left-block"
-              className="polls-container"
-              bordered
-            >
-              <h2>top polls</h2>
             </Panel>
             
             {/* SIMILAR USERS */}

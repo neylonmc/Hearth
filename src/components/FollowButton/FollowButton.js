@@ -8,19 +8,26 @@ import {
 import API from "../../utils/API";
 import "./FollowButton.css";
 
-function FollowButton(props) {
+function FollowButton() {
 
-   const user = props.user
+    let { topic } = useParams();
 
     const [ followState, setFollow ] = useState({});
 
     useEffect(() => {
+
+        
         
     }, []) 
 
     return (
         <Button
             className= "follow-btn"
+            onClick={
+                function(topic) {
+                    setFollow(topic)
+                }
+            }
         > + Follow</Button>
     )
 
