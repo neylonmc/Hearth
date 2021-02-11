@@ -26,8 +26,13 @@ function Dashboard() {
       .catch((err) => err);
   }, [userState.Id]);
 
-
-<<<<<<< HEAD
+// function Dashboard() {
+    // const id = sessionStorage.getItem("myUserEntity.Id")
+    // API.getUser(id)
+    //   .then((res) => {
+    //     console.log(res)
+    //   }).catch(err => err);
+  
     return (
       <div className="dashboard-container animate__animated animate__fadeIn">
         {/* INITIAL BLOCKS */}
@@ -43,27 +48,25 @@ function Dashboard() {
                 <Col>
                   <a href="/profile">
                     <img
-                      className="dash-avatar"
+                      className = "dash-avatar"
                       src={userState.Image || "./images/no-avatar.jpg"}
                       alt="dashboard user avatar"
                     />
                   </a>
                 </Col>
               </Row>
-=======
             <Row>
               <Col>
                 <h1 className="dash-username">{userState.Name}</h1>
 
               </Col>
             </Row>
->>>>>>> ea4e5ef733c7c55b797832c68c9bd7eefc0e8972
 
-              <Row>
+              {/* <Row>
                 <Col>
                    <h1 className="dash-username">{userState.Name}</h1>
                 </Col>
-              </Row>
+              </Row> */}
 
               <Streaming />
 
@@ -103,7 +106,6 @@ function Dashboard() {
 
       </div>
     );
-
-}
+};
 
 export default Dashboard;
