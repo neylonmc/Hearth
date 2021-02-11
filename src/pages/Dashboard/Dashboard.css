@@ -89,4 +89,9 @@ h2 {
     min-width: none;
     max-height: 50%;
   }
+
+  .activity-title {
+    line-height: 1em;
+    padding: 1em 0em;
+  }
 }
