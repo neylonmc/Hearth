@@ -13,7 +13,7 @@ const activitiesSchema = new Schema({
   title: { type: String, required: true },
   label: {type: String, required: true},
   type: {type: String, required: true},
-  value: {type: String, required: true},
+  value: {type: String},
   ageRange:  [String],
   category:  [String],
   tags: [String],
@@ -26,7 +26,8 @@ const activitiesSchema = new Schema({
   Review: [{ type: mongoose.Schema.Types.ObjectId, ref: "Review"}],
   Comment: [{ type: mongoose.Schema.Types.ObjectId, ref: "Comment"}],
   Poll: [{ type: mongoose.Schema.Types.ObjectId, ref: "Poll"}],
-  Topic: [{ type: mongoose.Schema.Types.ObjectId, ref: "Topic"}]
+  Topic: [{ type: mongoose.Schema.Types.ObjectId, ref: "Topic"}],
+  local_ext: {type:String}
 });
 
 const Activity = mongoose.model("Activity", activitiesSchema);

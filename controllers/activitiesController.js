@@ -42,13 +42,10 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   create: function (req, res) {
-    console.log("Test");
 
     //these will be environmental variables
     const imdbApiKey = 'bfe070362amsh86909dbb9fbfe22p191db1jsnfb9dfda72961';
     const host = 'imdb8.p.rapidapi.com';
-    let options = {};
-    console.log(req.body);
 
     let activity = {
       title: "",
@@ -68,7 +65,7 @@ module.exports = {
     console.log(activity);
     switch (activity.type) {
       case "Film":
-        options = {
+        let options1 = {
           method: 'GET',
           url: 'https://imdb8.p.rapidapi.com/title/auto-complete',
           params: { q: req.body.title },
@@ -78,7 +75,7 @@ module.exports = {
           }
 
         };
-        axios.request(options).then(function (response) {
+        axios.request(options1).then(function (response) {
           activity.title = response.data.d[0].l;
           activity.label = response.data.d[0].l;
 
@@ -109,7 +106,7 @@ module.exports = {
         break;
 
       case "Television":
-        options = {
+        let options2 = {
           method: 'GET',
           url: 'https://imdb8.p.rapidapi.com/title/auto-complete',
           params: { q: req.body.title },
@@ -119,7 +116,7 @@ module.exports = {
           }
 
         };
-        axios.request(options).then(function (response) {
+        axios.request(options2).then(function (response) {
           activity.title = response.data.d[0].l;
           activity.label = response.data.d[0].l;
 
@@ -151,12 +148,12 @@ module.exports = {
         break;
 
       case "Books":
-        options = {
+        let options3 = {
           method: 'GET',
           url: 'http://openlibrary.org/search.json?',
           params: { q: req.body.title }
         };
-        axios.request(options).then(function (book) {
+        axios.request(options3).then(function (book) {
           activity.title = book.data.docs[0].title;
           activity.label = book.data.docs[0].title;
 
@@ -203,7 +200,7 @@ module.exports = {
           const shazamAPIKey = 'bfe070362amsh86909dbb9fbfe22p191db1jsnfb9dfda72961';
           const shazamAPIHost = 'shazam.p.rapidapi.com'
 
-        const options = {
+        const options4 = {
           method: 'GET',
           url: 'https://shazam.p.rapidapi.com/search',
           params: {term: req.body.title, locale: 'en-US', offset: '0', limit: '5'},
@@ -213,7 +210,7 @@ module.exports = {
           }
         };
         
-        axios.request(options).then(function (response) {
+        axios.request(options4).then(function (response) {
           console.log(response.data.tracks.hits[0]);
           activity.title = response.data.tracks.hits[0].track.title;
           activity.label = response.data.tracks.hits[0].track.title;
