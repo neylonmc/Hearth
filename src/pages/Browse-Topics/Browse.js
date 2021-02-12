@@ -84,7 +84,7 @@ function Topic() {
                 >
                   <img
                     id="topic-image"
-                    src={data.Image || "/images/no-image.png"}
+                    src={data.img || "/images/no-image.png"}
                     alt={data.title}
                   />
                   <p id="topic-title">{data.title}</p>

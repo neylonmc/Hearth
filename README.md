@@ -6,26 +6,22 @@
 
 Designed with community in mind, hearth allows users to rate, review and find something worth reading, listening or watching almost instantly.
 
-[Check out the deployed site here]()
+[Check out the deployed site here](https://hearthcommunity.netlify.app)
 
 ## Table of Contents
 
 - [User Story](#user-story)
 - [Installation](#installation)
-
 - [Technology](#technology)
 - [Functionality](#functionality)
 - [Future Developments](#future-developments)
-
 - [Links and Screenshots](#links-and-screenshots)
-
 - [Created By](#created-by)
-
 - [License](#license)
 
 ## User Story
 
-The average person takes 23 minutes to find something to watch on Netflix and over 7 minutes picking out their next movie. With more time to watch, read and listen than ever before, we have developed an app that allows users to skip the long review threads and answer the question "What's next?" more quick.
+The average person takes 23 minutes to find something to watch on Netflix and over 7 minutes picking out their next movie. With more time to watch, read and listen than ever before, we have developed an app that allows users to skip the long review threads and answer the question "What's next?" more quickly.
 
 ```
 AS an individual, I would like to find something to watch, read or listen.
@@ -111,11 +107,15 @@ Allowing users to create an account through hearth. Easier way to save preferenc
 
 Repo: https://github.com/neylonmc/Hearth
 
-Deployed App:
+Deployed App: https://hearthcommunity.netlify.app
 
 Login Page:
 
 ![Login Page](public/images/readme/loginREAD.png)
+
+Dashboard:
+
+![Dashboard](public/images/readme/dashboard.png)
 
 Profile:
 
@@ -127,7 +127,7 @@ Topics:
 
 New Post:
 
-![NewPost](public/images/readme/topic.png)
+![NewPost](public/images/readme/newtopic.png)
 
 About:
 

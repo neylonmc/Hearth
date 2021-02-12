@@ -33,6 +33,7 @@ function Topic() {
         API.getActivitybyTitle(topic)
             .then((res) => {
                 setTopic(res.data[0])
+                console.log(topicObject);
                 API.getCommentsByActivity(res.data[0]._id)
                     .then((res) => {
                         setData(res.data);
@@ -47,7 +48,7 @@ function Topic() {
                 <Col md={24} >
                     <img
                         className="page-image"
-                        src={topicObject.Image || "./images/no-image.png"}
+                        src={topicObject.img || "./images/no-image.png"}
                         alt="icon of topic poster"
                     />
                 </Col>
