@@ -24,6 +24,7 @@
     "http-proxy-middleware": "^0.19.1",
     "is-empty": "^1.2.0",
     "jsonwebtoken": "^8.5.1",
+    "loader": "^2.1.1",
     "mongoose": "^5.11.15",
     "morgan": "^1.10.0",
     "passport": "^0.4.1",
