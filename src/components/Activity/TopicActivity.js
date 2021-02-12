@@ -22,12 +22,11 @@ function TopicActivity() {
 
     useEffect(() => {
         API.getCommentsByActivity(topic).then(res => {
-            for(let i=0; i<res.data.length; i++) {
-            console.log(res.data[i]);
-            topicState.push(res.data[i]);
-            console.log(topicState);
+            for (let i = 0; i < res.data.length; i++) {
+                topicState.push(res.data[i]);
+                console.log(topicState);
             }
-            });
+        });
     }, []);
 
     return (
