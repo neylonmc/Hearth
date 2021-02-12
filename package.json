@@ -44,8 +44,7 @@
     "start": "concurrently \"react-scripts start\" \"node server\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
