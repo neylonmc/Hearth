@@ -39,13 +39,15 @@
     "rsuite": "^5.0.0-alpha.3",
     "validator": "^13.5.2",
     "web-vitals": "^0.2.4",
-    "webkit": "^0.0.0"
+    "webkit": "^0.0.0",
+    "webpack-dev-server": "^3.11.0"
   },
   "scripts": {
     "start": "concurrently \"react-scripts start\" \"node server\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "client": "npm start --prefix client"
   },
   "eslintConfig": {
     "extends": [
