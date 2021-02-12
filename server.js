@@ -26,20 +26,15 @@ app.use(bodyParser.json());
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("../client/build"));
+  app.use(express.static("../build"));
 }
 
-mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://localhost/hearthdb',
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false
-  }
-);
-
-
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/hearthdb", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+  useFindAndModify: false,
+});
 
 // // Connect to the Mongo DB
 // mongoose.connect(process.env.MONGODB_URI ||  "mongodb://localhost/hearthdb").then(
@@ -60,7 +55,7 @@ mongoose.connect(
 app.use(
   session({
     secret: "fraggle-rock", //pick a random string to make the hash that is generated secure
-    store: new MongoStore({mongooseConnection : mongoose.connection}),
+    store: new MongoStore({ mongooseConnection: mongoose.connection }),
     resave: false, //required
     saveUninitialized: false, //required
   })
@@ -78,4 +73,3 @@ app.use("/user", user);
 app.listen(PORT, function () {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
-
