@@ -39,6 +39,8 @@ mongoose.connect(
   }
 );
 
+
+
 // // Connect to the Mongo DB
 // mongoose.connect(process.env.MONGODB_URI ||  "mongodb://localhost/hearthdb").then(
 //   () => {
@@ -58,7 +60,7 @@ mongoose.connect(
 app.use(
   session({
     secret: "fraggle-rock", //pick a random string to make the hash that is generated secure
-    store: new MongoStore({ mongooseConnection: dbConnection }),
+    store: new MongoStore({mongooseConnection : mongoose.connection}),
     resave: false, //required
     saveUninitialized: false, //required
   })
@@ -76,3 +78,4 @@ app.use("/user", user);
 app.listen(PORT, function () {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
+
