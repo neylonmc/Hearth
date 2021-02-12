@@ -51,12 +51,12 @@ module.exports = {
       title: "",
       label: "",
       type: req.body.topic,
-      ageRange: req.body.age_range,
-      category: req.body.genre,
+      ageRange: "",
+      category: "",
       Tags: [],
       totalRatings: 0,
       averageRating: null,
-      description: req.body.description,
+      description: "",
       comments: [],
       Polls: [],
       Image: "",
@@ -78,7 +78,6 @@ module.exports = {
         axios.request(options1).then(function (response) {
           activity.title = response.data.d[0].l;
           activity.label = response.data.d[0].l;
-
           const split = activity.title.split(" ");
           activity.local_ext = split.join("");
 

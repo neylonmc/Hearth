@@ -73,7 +73,7 @@ function NewRec() {
                                 placeholder="type"
                                 onSelect= {
                                     function(value, item) {
-                                        setType(item.Topic)
+                                        setType(item.topic)
                                     }
                                 }
                                 block
