@@ -24,8 +24,6 @@
     "http-proxy-middleware": "^0.19.1",
     "is-empty": "^1.2.0",
     "jsonwebtoken": "^8.5.1",
-    "loader": "^2.1.1",
-    "mongo": "^0.1.0",
     "mongoose": "^5.11.15",
     "morgan": "^1.10.0",
     "passport": "^0.4.1",
@@ -46,12 +44,10 @@
   },
   "scripts": {
     "start": "concurrently \"react-scripts start\" \"node server\"",
-    "build": "cd client && npm run build",
-    "install": "cd client && npm install",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "nodemon server",
-    "client": "npm start --prefix client",
+    "client": "npm start --prefix client"
   },
   "eslintConfig": {
     "extends": [
