@@ -46,10 +46,12 @@
   },
   "scripts": {
     "start": "concurrently \"react-scripts start\" \"node server\"",
-    "build": "react-scripts build",
+    "build": "cd client && npm run build",
+    "install": "cd client && npm install",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "client": "npm start --prefix client"
+    "server": "nodemon server",
+    "client": "npm start --prefix client",
   },
   "eslintConfig": {
     "extends": [
